@@ -41,7 +41,7 @@ export function Process() {
   });
 
   return (
-    <section className="border-y border-edge bg-surface">
+    <section className="border-y border-edge bg-surface/60">
       <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-36">
         <SectionHeading
           number="03"

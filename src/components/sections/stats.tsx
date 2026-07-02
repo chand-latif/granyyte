@@ -4,7 +4,7 @@ import { CountUp } from "@/components/fx/count-up";
 
 export function Stats() {
   return (
-    <section className="border-y border-edge bg-surface">
+    <section className="border-y border-edge bg-surface/60">
       <div className="mx-auto grid max-w-6xl grid-cols-2 divide-x divide-edge md:grid-cols-4">
         {site.stats.map((stat, i) => (
           <Reveal key={stat.label} delay={i * 0.08} className="px-5 py-10 text-center md:py-16">

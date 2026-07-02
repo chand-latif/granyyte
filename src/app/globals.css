@@ -94,8 +94,13 @@
   }
 }
 
-body {
+html {
   background: var(--color-base);
+}
+
+body {
+  /* Actual backdrop lives in AmbientBackground (fixed, -z-10) */
+  background: transparent;
   color: var(--color-fg);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;

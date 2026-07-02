@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/ui/json-ld";
 import { SmoothScroll } from "@/components/fx/smooth-scroll";
 import { Cursor } from "@/components/fx/cursor";
 import { Preloader } from "@/components/fx/preloader";
+import { AmbientBackground } from "@/components/fx/ambient-background";
 import { site } from "@/config/site";
 
 const inter = Inter({
@@ -103,11 +104,12 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-base text-fg">
+      <body className="flex min-h-full flex-col text-fg">
         <JsonLd data={organizationJsonLd} />
         <JsonLd data={websiteJsonLd} />
         <Preloader />
         <Cursor />
+        <AmbientBackground />
         {/* Film grain over everything */}
         <div
           className="pointer-events-none fixed inset-0 z-[150] bg-grain opacity-[0.05] mix-blend-overlay"

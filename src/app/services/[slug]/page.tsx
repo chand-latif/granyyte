@@ -132,7 +132,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
       </section>
 
       {/* FAQ */}
-      <section className="border-y border-edge bg-surface">
+      <section className="border-y border-edge bg-surface/60">
         <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
           <Reveal>
             <div className="mb-12 max-w-2xl">

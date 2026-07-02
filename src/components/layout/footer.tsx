@@ -32,7 +32,7 @@ const serviceLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-edge bg-surface">
+    <footer className="border-t border-edge bg-surface/70">
       <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1.2fr]">
           <div>
