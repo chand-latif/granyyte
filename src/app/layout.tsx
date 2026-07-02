@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Inter, Space_Grotesk, JetBrains_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { JsonLd } from "@/components/ui/json-ld";
+import { SmoothScroll } from "@/components/fx/smooth-scroll";
+import { Cursor } from "@/components/fx/cursor";
+import { Preloader } from "@/components/fx/preloader";
 import { site } from "@/config/site";
 
 const inter = Inter({
@@ -19,6 +22,13 @@ const spaceGrotesk = Space_Grotesk({
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -91,14 +101,23 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-base text-fg">
         <JsonLd data={organizationJsonLd} />
         <JsonLd data={websiteJsonLd} />
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <Preloader />
+        <Cursor />
+        {/* Film grain over everything */}
+        <div
+          className="pointer-events-none fixed inset-0 z-[150] bg-grain opacity-[0.05] mix-blend-overlay"
+          aria-hidden
+        />
+        <SmoothScroll>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

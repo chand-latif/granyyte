@@ -56,11 +56,8 @@ export default function ContactPage() {
       <JsonLd data={professionalServiceJsonLd} />
       <PageHeader
         label="Contact"
-        title={
-          <>
-            Let&apos;s build something <span className="text-lime">worth shipping</span>
-          </>
-        }
+        title="Let's build something"
+        accent="worth shipping."
         description="Tell us what you're working on. We reply within 24 hours — with honest feedback, not a sales script."
       />
 

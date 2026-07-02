@@ -16,9 +16,15 @@
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
 
   --animate-marquee: marquee 40s linear infinite;
+  --animate-marquee-slow: marquee 60s linear infinite;
   --animate-pulse-dot: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-orb-a: orb-a 18s ease-in-out infinite;
+  --animate-orb-b: orb-b 24s ease-in-out infinite;
+  --animate-orb-c: orb-c 20s ease-in-out infinite;
+  --animate-scroll-cue: scroll-cue 2s ease-in-out infinite;
 
   @keyframes marquee {
     from {
@@ -40,10 +46,52 @@
       box-shadow: 0 0 0 5px rgb(200 243 29 / 0);
     }
   }
-}
 
-html {
-  scroll-behavior: smooth;
+  @keyframes orb-a {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(80px, -60px) scale(1.2);
+    }
+    66% {
+      transform: translate(-50px, 40px) scale(0.9);
+    }
+  }
+
+  @keyframes orb-b {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    40% {
+      transform: translate(-90px, 50px) scale(1.15);
+    }
+    70% {
+      transform: translate(60px, -30px) scale(0.95);
+    }
+  }
+
+  @keyframes orb-c {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(40px, 70px) scale(1.25);
+    }
+  }
+
+  @keyframes scroll-cue {
+    0% {
+      transform: translateY(-100%);
+    }
+    50%,
+    100% {
+      transform: translateY(100%);
+    }
+  }
 }
 
 body {
@@ -51,11 +99,18 @@ body {
   color: var(--color-fg);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 ::selection {
   background: var(--color-lime);
   color: var(--color-base);
+}
+
+/* Hide native cursor when the custom cursor is active */
+html.has-custom-cursor,
+html.has-custom-cursor * {
+  cursor: none !important;
 }
 
 /* Slim dark scrollbar */
@@ -92,10 +147,23 @@ body {
   );
 }
 
+/* Hollow outline display type */
+@utility text-stroke {
+  -webkit-text-stroke: 1px rgb(250 250 249 / 0.22);
+  color: transparent;
+}
+
+@utility text-stroke-lime {
+  -webkit-text-stroke: 1px rgb(200 243 29 / 0.45);
+  color: transparent;
+}
+
+/* Film grain overlay */
+@utility bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
   *,
   *::before,
   *::after {

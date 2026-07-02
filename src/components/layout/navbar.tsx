@@ -14,11 +14,19 @@ const links = [
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 12);
+      // Hide when scrolling down past the fold, reveal on any scroll up
+      setHidden(y > 500 && y > lastY);
+      lastY = y;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -31,7 +39,9 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+        hidden && !open ? "-translate-y-full" : "translate-y-0"
+      } ${
         scrolled || open
           ? "border-b border-edge bg-base/80 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"

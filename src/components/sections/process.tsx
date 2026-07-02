@@ -1,3 +1,7 @@
+"use client";
+
+import { useRef } from "react";
+import { motion, useScroll, useReducedMotion } from "motion/react";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
 
@@ -29,25 +33,66 @@ const steps = [
 ];
 
 export function Process() {
+  const lineRef = useRef<HTMLDivElement>(null);
+  const reduce = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: lineRef,
+    offset: ["start 0.75", "end 0.6"],
+  });
+
   return (
     <section className="border-y border-edge bg-surface">
-      <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+      <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-36">
         <SectionHeading
           number="03"
           label="Process"
           title="How we take you from idea to launch"
           description="A process built on visibility — you always know what's happening and what comes next."
         />
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step, i) => (
-            <Reveal key={step.number} delay={i * 0.1}>
-              <div className="relative h-full rounded-2xl border border-edge bg-base p-7">
-                <p className="font-mono text-sm text-lime">{step.number}</p>
-                <h3 className="mt-4 font-display text-xl font-bold text-fg">{step.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">{step.description}</p>
-              </div>
-            </Reveal>
-          ))}
+        <div ref={lineRef} className="relative">
+          {/* Scroll-drawn spine */}
+          <div className="absolute bottom-0 left-[7px] top-2 w-px bg-edge-strong md:left-1/2" aria-hidden>
+            <motion.div
+              className="h-full w-full origin-top bg-lime"
+              style={{ scaleY: reduce ? 1 : scrollYProgress }}
+            />
+          </div>
+
+          <div className="space-y-16 md:space-y-24">
+            {steps.map((step, i) => {
+              const left = i % 2 === 0;
+              return (
+                <Reveal key={step.number}>
+                  <div
+                    className={`relative grid gap-6 pl-10 md:grid-cols-2 md:gap-20 md:pl-0 ${
+                      left ? "" : ""
+                    }`}
+                  >
+                    {/* Node */}
+                    <span
+                      className="absolute left-0 top-2 size-[15px] rounded-full border-2 border-lime bg-base md:left-1/2 md:-translate-x-1/2"
+                      aria-hidden
+                    />
+                    <div
+                      className={`${
+                        left ? "md:pr-14 md:text-right" : "md:col-start-2 md:pl-14"
+                      }`}
+                    >
+                      <p className="font-display text-6xl font-bold text-stroke-lime md:text-8xl">
+                        {step.number}
+                      </p>
+                      <h3 className="mt-4 font-display text-2xl font-bold text-fg md:text-3xl">
+                        {step.title}
+                      </h3>
+                      <p className="mt-3 max-w-md text-sm leading-relaxed text-muted md:ml-auto md:text-base">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

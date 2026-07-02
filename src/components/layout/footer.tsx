@@ -120,7 +120,17 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-edge pt-8 md:flex-row md:items-center">
+        {/* Mega wordmark */}
+        <Link href="/" aria-label="Granyyte — home" className="mt-16 block overflow-hidden md:mt-24">
+          <span
+            className="block select-none whitespace-nowrap text-center font-display text-[17.5vw] font-bold leading-[0.85] tracking-tight text-stroke transition-colors duration-500 hover:text-lime hover:[-webkit-text-stroke:0px]"
+            aria-hidden
+          >
+            GRANYYTE
+          </span>
+        </Link>
+
+        <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-edge pt-8 md:flex-row md:items-center">
           <p className="text-xs text-faint">
             © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>

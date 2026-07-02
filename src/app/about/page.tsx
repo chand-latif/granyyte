@@ -56,12 +56,8 @@ export default function AboutPage() {
       <JsonLd data={personJsonLd} />
       <PageHeader
         label="About us"
-        title={
-          <>
-            The agency that treats your product like{" "}
-            <span className="text-lime">its own</span>
-          </>
-        }
+        title="The agency that treats your product like"
+        accent="its own."
         description="Granyyte exists because too many good ideas die between agencies that overpromise and freelancers who disappear. We're the third option: senior execution, agency reliability, founder-level care."
       />
 

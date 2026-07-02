@@ -1,23 +1,26 @@
 import { featuredProjects } from "@/content/projects";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { WorkGrid } from "./work-grid";
+import { StackCards } from "./stack-cards";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
+import { Magnetic } from "@/components/fx/magnetic";
 
 export function FeaturedWork() {
   return (
-    <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+    <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-36">
       <SectionHeading
         number="02"
         label="Selected Work"
         title="Products we've shipped"
         description="Marketplaces, B2B tools, wellness apps, CRMs — built for clients across Europe, the Middle East, and beyond."
       />
-      <WorkGrid projects={featuredProjects.slice(0, 4)} />
-      <Reveal className="mt-12 text-center">
-        <Button href="/work" variant="outline" size="lg" showArrow>
-          View all case studies
-        </Button>
+      <StackCards projects={featuredProjects.slice(0, 4)} />
+      <Reveal className="text-center">
+        <Magnetic>
+          <Button href="/work" variant="outline" size="lg" showArrow>
+            View all case studies
+          </Button>
+        </Magnetic>
       </Reveal>
     </section>
   );

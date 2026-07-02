@@ -19,11 +19,8 @@ export default function ServicesPage() {
     <>
       <PageHeader
         label="Services"
-        title={
-          <>
-            One team for the <span className="text-lime">whole journey</span>
-          </>
-        }
+        title="One team for the"
+        accent="whole journey."
         description="Design, development, deployment, and beyond. Pick a discipline — or bring us an idea and we'll tell you exactly what it needs."
       />
 

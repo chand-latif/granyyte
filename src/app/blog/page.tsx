@@ -25,11 +25,8 @@ export default function BlogPage() {
     <>
       <PageHeader
         label="Blog"
-        title={
-          <>
-            Notes from the <span className="text-lime">build floor</span>
-          </>
-        }
+        title="Notes from the"
+        accent="build floor."
         description="No fluff, no recycled listicles — practical answers to the questions founders actually ask us."
       />
       <section className="mx-auto max-w-4xl px-5 py-24 md:px-8 md:py-32">

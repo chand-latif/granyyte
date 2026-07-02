@@ -16,11 +16,8 @@ export default function WorkPage() {
     <>
       <PageHeader
         label="Our work"
-        title={
-          <>
-            Shipped products, <span className="text-lime">real outcomes</span>
-          </>
-        }
+        title="Shipped products,"
+        accent="real outcomes."
         description="Every project here started as an idea in someone's head. Here's how we turned them into products people use every day."
       />
       <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
