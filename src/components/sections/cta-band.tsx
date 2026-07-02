@@ -32,7 +32,7 @@ export function CtaBand() {
             <Magnetic strength={0.45}>
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-3 rounded-full bg-lime px-10 py-5 font-display text-lg font-bold text-base shadow-[0_0_48px_rgb(200_243_29/0.3)] transition-all duration-300 hover:shadow-[0_0_72px_rgb(200_243_29/0.5)]"
+                className="group inline-flex items-center gap-3 rounded-full bg-lime px-10 py-5 font-display text-lg font-bold text-ink shadow-[0_0_48px_rgb(200_243_29/0.3)] transition-all duration-300 hover:shadow-[0_0_72px_rgb(200_243_29/0.5)]"
               >
                 Start a project
                 <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1.5" />

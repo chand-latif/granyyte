@@ -13,7 +13,7 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    "bg-lime text-base hover:bg-lime-dim shadow-[0_0_24px_rgb(200_243_29/0.25)] hover:shadow-[0_0_36px_rgb(200_243_29/0.4)]",
+    "bg-lime text-ink hover:bg-lime-dim shadow-[0_0_24px_rgb(200_243_29/0.25)] hover:shadow-[0_0_36px_rgb(200_243_29/0.4)]",
   outline:
     "border border-edge-strong text-fg hover:border-lime hover:text-lime bg-transparent",
   ghost: "text-muted hover:text-lime bg-transparent",

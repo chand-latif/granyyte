@@ -12,6 +12,8 @@
   --color-faint: #6b6b70;
   --color-lime: #c8f31d;
   --color-lime-dim: #a5c918;
+  /* Dark text/foreground for use on lime surfaces ("text-base" collides with the font-size utility) */
+  --color-ink: #0a0a0b;
 
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
+import { ScrambleText } from "@/components/fx/scramble-text";
 
 const links = [
   { href: "/services", label: "Services" },
@@ -61,11 +62,11 @@ export function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`text-sm transition-colors hover:text-lime ${
+                className={`font-mono text-sm uppercase tracking-wider transition-colors hover:text-lime ${
                   pathname.startsWith(link.href) ? "text-lime" : "text-muted"
                 }`}
               >
-                {link.label}
+                <ScrambleText text={link.label} />
               </Link>
             </li>
           ))}
@@ -74,7 +75,7 @@ export function Navbar() {
         <div className="hidden md:block">
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-lime px-5 py-2 text-sm font-medium text-base transition-all duration-300 hover:bg-lime-dim hover:shadow-[0_0_24px_rgb(200_243_29/0.35)]"
+            className="group inline-flex items-center gap-2 rounded-full bg-lime px-5 py-2 text-sm font-medium text-ink transition-all duration-300 hover:bg-lime-dim hover:shadow-[0_0_24px_rgb(200_243_29/0.35)]"
           >
             Start a project
             <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -110,7 +111,7 @@ export function Navbar() {
             <li className="pt-3">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-lime px-5 py-2.5 text-sm font-medium text-base"
+                className="inline-flex items-center gap-2 rounded-full bg-lime px-5 py-2.5 text-sm font-medium text-ink"
               >
                 Start a project
                 <ArrowRight className="size-4" />

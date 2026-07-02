@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, MessageCircle, Phone, MapPin } from "lucide-react";
+import { LocalTime } from "@/components/fx/local-time";
 
 function LinkedInIcon({ className }: { className?: string }) {
   return (
@@ -118,6 +119,18 @@ export function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* Live status strip */}
+        <div className="mt-14 grid gap-4 border-y border-edge py-5 font-mono text-[11px] uppercase tracking-widest text-faint sm:grid-cols-3">
+          <span className="inline-flex items-center gap-2.5">
+            <span className="size-1.5 rounded-full bg-lime animate-pulse-dot" />
+            Currently accepting projects
+          </span>
+          <span className="sm:text-center">
+            Local time — Sialkot <span className="text-muted"><LocalTime /></span> PKT
+          </span>
+          <span className="sm:text-right">Working worldwide ↗</span>
         </div>
 
         {/* Mega wordmark */}

@@ -64,7 +64,7 @@ export function Cursor() {
         <motion.div
           className={`flex items-center justify-center rounded-full border transition-colors duration-200 ${
             label
-              ? "border-lime bg-lime font-mono text-xs font-medium text-base"
+              ? "border-lime bg-lime font-mono text-xs font-medium text-ink"
               : "border-lime/50 bg-transparent"
           }`}
           animate={{

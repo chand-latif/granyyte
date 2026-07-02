@@ -1,33 +1,71 @@
+"use client";
+
+import { useRef } from "react";
+import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { AvailableBadge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 import { AnimatedText } from "@/components/fx/animated-text";
 import { FlipWords } from "@/components/fx/flip-words";
 import { Magnetic } from "@/components/fx/magnetic";
+import { ParticleField } from "@/components/fx/particle-field";
+
+function ScrollBadge() {
+  return (
+    <div className="relative size-24" aria-hidden>
+      <svg viewBox="0 0 100 100" className="size-full animate-[spin_14s_linear_infinite]">
+        <defs>
+          <path id="circlePath" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" />
+        </defs>
+        <text className="fill-faint font-mono text-[9.5px] uppercase tracking-[0.28em]">
+          <textPath href="#circlePath">scroll to explore — scroll to explore —</textPath>
+        </text>
+      </svg>
+      <span className="absolute inset-0 flex items-center justify-center">
+        <span className="size-1.5 rounded-full bg-lime animate-pulse-dot" />
+      </span>
+    </div>
+  );
+}
 
 export function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const reduce = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [0, 180]);
+  const opacity = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
+
   return (
-    <section className="relative flex min-h-svh items-center overflow-hidden bg-dot-grid">
-      {/* Drifting glow orbs */}
+    <section ref={sectionRef} className="relative flex min-h-svh items-center overflow-hidden">
+      {/* Interactive particle wave field */}
+      <ParticleField className="absolute inset-0 h-full w-full" />
+      {/* Fade particles into the next section */}
       <div
-        className="absolute -left-32 top-1/4 size-[480px] rounded-full bg-lime/10 blur-[140px] animate-orb-a"
-        aria-hidden
-      />
-      <div
-        className="absolute -right-40 top-1/2 size-[420px] rounded-full bg-lime/[0.07] blur-[130px] animate-orb-b"
-        aria-hidden
-      />
-      <div
-        className="absolute bottom-0 left-1/3 size-[360px] rounded-full bg-fg/[0.04] blur-[120px] animate-orb-c"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-base to-transparent"
         aria-hidden
       />
 
-      <div className="relative mx-auto w-full max-w-6xl px-5 pb-24 pt-32 md:px-8 md:pt-40">
+      <motion.div
+        style={reduce ? undefined : { y, opacity }}
+        className="relative mx-auto w-full max-w-6xl px-5 pb-24 pt-32 md:px-8 md:pt-40"
+      >
         <Reveal>
-          <AvailableBadge />
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <AvailableBadge />
+            <div className="hidden items-center gap-6 font-mono text-[11px] uppercase tracking-widest text-faint md:flex">
+              <span>Est. 2026</span>
+              <span className="size-1 rounded-full bg-edge-strong" aria-hidden />
+              <span>Sialkot → Worldwide</span>
+              <span className="size-1 rounded-full bg-edge-strong" aria-hidden />
+              <span className="text-lime">FlutterFlow Certified</span>
+            </div>
+          </div>
         </Reveal>
 
-        <h1 className="mt-10 font-display text-[13vw] font-bold leading-[0.98] tracking-tight text-fg sm:text-7xl md:text-8xl lg:text-[7.5rem]">
+        <h1 className="mt-12 font-display text-[13vw] font-bold leading-[0.98] tracking-tight text-fg sm:text-7xl md:text-8xl lg:text-[7.5rem]">
           <AnimatedText text="We build" delay={0.15} />
           <br />
           <span className="font-serif italic tracking-normal text-lime">
@@ -62,14 +100,17 @@ export function Hero() {
             </div>
           </Reveal>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Scroll cue */}
+      {/* Scroll cue + rotating badge */}
       <div
         className="absolute bottom-8 left-1/2 hidden h-14 w-px -translate-x-1/2 overflow-hidden bg-edge-strong md:block"
         aria-hidden
       >
         <div className="h-full w-full bg-lime animate-scroll-cue" />
+      </div>
+      <div className="absolute bottom-8 right-8 hidden lg:block">
+        <ScrollBadge />
       </div>
     </section>
   );

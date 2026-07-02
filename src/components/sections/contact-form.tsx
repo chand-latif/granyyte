@@ -119,7 +119,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={pending}
-        className="group inline-flex items-center gap-2 rounded-full bg-lime px-7 py-3.5 text-base font-medium text-base transition-all duration-300 hover:bg-lime-dim hover:shadow-[0_0_36px_rgb(200_243_29/0.4)] disabled:cursor-not-allowed disabled:opacity-60"
+        className="group inline-flex items-center gap-2 rounded-full bg-lime px-7 py-3.5 text-base font-medium text-ink transition-all duration-300 hover:bg-lime-dim hover:shadow-[0_0_36px_rgb(200_243_29/0.4)] disabled:cursor-not-allowed disabled:opacity-60"
       >
         {pending ? (
           <>
