@@ -15,10 +15,15 @@ export default function WorkPage() {
   return (
     <>
       <PageHeader
-        label="Our work"
+        label="Work"
         title="Shipped products,"
         accent="real outcomes."
         description="Every project here started as an idea in someone's head. Here's how we turned them into products people use every day."
+        specs={[
+          { label: "Projects", value: "7 shipped" },
+          { label: "Platforms", value: "iOS · Android · Web" },
+          { label: "Regions", value: "Europe · MENA · Asia" },
+        ]}
       />
       <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
         <WorkGrid projects={[...projects]} />

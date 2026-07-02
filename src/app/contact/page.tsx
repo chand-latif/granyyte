@@ -59,6 +59,11 @@ export default function ContactPage() {
         title="Let's build something"
         accent="worth shipping."
         description="Tell us what you're working on. We reply within 24 hours — with honest feedback, not a sales script."
+        specs={[
+          { label: "Response", value: "Within 24 hours" },
+          { label: "Channels", value: "Email · WhatsApp" },
+          { label: "Based in", value: "Sialkot, PK" },
+        ]}
       />
 
       <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">

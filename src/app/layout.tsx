@@ -8,6 +8,7 @@ import { SmoothScroll } from "@/components/fx/smooth-scroll";
 import { Cursor } from "@/components/fx/cursor";
 import { Preloader } from "@/components/fx/preloader";
 import { AmbientBackground } from "@/components/fx/ambient-background";
+import { SideRails } from "@/components/fx/side-rails";
 import { site } from "@/config/site";
 
 const inter = Inter({
@@ -110,6 +111,7 @@ export default function RootLayout({
         <Preloader />
         <Cursor />
         <AmbientBackground />
+        <SideRails />
         {/* Film grain over everything */}
         <div
           className="pointer-events-none fixed inset-0 z-[150] bg-grain opacity-[0.05] mix-blend-overlay"

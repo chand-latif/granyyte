@@ -28,6 +28,11 @@ export default function BlogPage() {
         title="Notes from the"
         accent="build floor."
         description="No fluff, no recycled listicles — practical answers to the questions founders actually ask us."
+        specs={[
+          { label: "Topics", value: "Apps · Web · Software" },
+          { label: "Articles", value: `${posts.length} and counting` },
+          { label: "Written by", value: "The build team" },
+        ]}
       />
       <section className="mx-auto max-w-4xl px-5 py-24 md:px-8 md:py-32">
         <div className="space-y-6">

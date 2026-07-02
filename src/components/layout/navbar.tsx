@@ -7,11 +7,15 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import { ScrambleText } from "@/components/fx/scramble-text";
 
 const links = [
+  { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/work", label: "Work" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
 ];
+
+const isActive = (href: string, pathname: string) =>
+  href === "/" ? pathname === "/" : pathname.startsWith(href);
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -57,13 +61,13 @@ export function Navbar() {
           Granyyte<span className="text-lime">.</span>
         </Link>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-7 md:flex">
           {links.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
                 className={`font-mono text-sm uppercase tracking-wider transition-colors hover:text-lime ${
-                  pathname.startsWith(link.href) ? "text-lime" : "text-muted"
+                  isActive(link.href, pathname) ? "text-lime" : "text-muted"
                 }`}
               >
                 <ScrambleText text={link.label} />
@@ -101,7 +105,7 @@ export function Navbar() {
                 <Link
                   href={link.href}
                   className={`block py-3 text-base ${
-                    pathname.startsWith(link.href) ? "text-lime" : "text-fg"
+                    isActive(link.href, pathname) ? "text-lime" : "text-fg"
                   }`}
                 >
                   {link.label}

@@ -22,6 +22,11 @@ export default function ServicesPage() {
         title="One team for the"
         accent="whole journey."
         description="Design, development, deployment, and beyond. Pick a discipline — or bring us an idea and we'll tell you exactly what it needs."
+        specs={[
+          { label: "Disciplines", value: "Mobile · Web · Software" },
+          { label: "Pricing", value: "Fixed & scoped" },
+          { label: "Proposal", value: "~1 week" },
+        ]}
       />
 
       <section className="mx-auto max-w-6xl space-y-6 px-5 py-24 md:px-8 md:py-32">
