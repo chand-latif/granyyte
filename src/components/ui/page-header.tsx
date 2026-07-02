@@ -39,14 +39,14 @@ export function PageHeader({
       />
       {/* Giant ghost watermark of the section label */}
       <span
-        className="pointer-events-none absolute -right-4 bottom-16 hidden select-none font-display text-[12rem] font-bold uppercase leading-none text-stroke opacity-40 lg:block"
+        className="pointer-events-none absolute -right-4 bottom-14 hidden select-none font-display text-[11rem] font-bold uppercase leading-none text-stroke opacity-25 lg:block"
         aria-hidden
       >
         {label}
       </span>
 
       <div className="relative mx-auto max-w-6xl px-5 pt-32 md:px-8 md:pt-48">
-        <div className="pb-16 md:pb-24">
+        <div className="pb-10 md:pb-14">
           <Reveal>
             <p className="mb-5 font-mono text-sm text-lime">
               <span aria-hidden>// </span>
@@ -73,25 +73,19 @@ export function PageHeader({
           )}
         </div>
 
-        {/* Spec strip */}
+        {/* Compact meta line */}
         <Reveal delay={0.6}>
-          <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-t-2xl border-x border-t border-edge bg-edge md:grid-cols-4">
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-2.5 border-t border-edge pb-8 pt-5 font-mono text-xs">
             {specs.map((spec) => (
-              <div key={spec.label} className="bg-surface/70 px-5 py-5 backdrop-blur-sm">
-                <dt className="font-mono text-[11px] uppercase tracking-widest text-faint">
-                  {spec.label}
-                </dt>
-                <dd className="mt-1.5 font-display text-sm font-medium text-fg md:text-base">
-                  {spec.value}
-                </dd>
+              <div key={spec.label} className="flex items-center gap-2">
+                <span className="text-lime" aria-hidden>
+                  ◇
+                </span>
+                <span className="uppercase tracking-widest text-faint">{spec.label}</span>
+                <span className="text-fg">{spec.value}</span>
               </div>
             ))}
-            <div className="hidden items-center justify-end bg-lime px-5 py-5 md:flex">
-              <span className="font-mono text-[11px] uppercase tracking-widest text-ink">
-                Scroll ↓
-              </span>
-            </div>
-          </dl>
+          </div>
         </Reveal>
       </div>
     </section>
