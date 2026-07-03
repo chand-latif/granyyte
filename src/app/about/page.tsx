@@ -78,12 +78,7 @@ export default function AboutPage() {
                 fill
                 sizes="(max-width: 768px) 100vw, 400px"
                 priority
-                className="object-cover object-top grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-[1.03]"
-              />
-              {/* Lime duotone tint that clears on hover */}
-              <div
-                className="pointer-events-none absolute inset-0 bg-lime/10 mix-blend-color transition-opacity duration-700 group-hover:opacity-0"
-                aria-hidden
+                className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
               />
               {/* Readability gradient for the name plate */}
               <div
