@@ -101,6 +101,7 @@ html {
   /* clip (not hidden) contains stray horizontal overflow from fixed/bleeding
      elements without creating a scroll container that would break sticky */
   overflow-x: clip;
+  scroll-behavior: smooth;
 }
 
 body {

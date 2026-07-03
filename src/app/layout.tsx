@@ -4,7 +4,6 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { JsonLd } from "@/components/ui/json-ld";
-import { SmoothScroll } from "@/components/fx/smooth-scroll";
 import { Cursor } from "@/components/fx/cursor";
 import { Preloader } from "@/components/fx/preloader";
 import { AmbientBackground } from "@/components/fx/ambient-background";
@@ -117,11 +116,9 @@ export default function RootLayout({
           className="pointer-events-none fixed inset-0 z-[150] bg-grain opacity-[0.05] mix-blend-overlay"
           aria-hidden
         />
-        <SmoothScroll>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </SmoothScroll>
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );
