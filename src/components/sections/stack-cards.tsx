@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
@@ -12,23 +12,29 @@ function StackCard({
   index,
   total,
   progress,
+  animate,
 }: {
   project: Project;
   index: number;
   total: number;
   progress: ReturnType<typeof useScroll>["scrollYProgress"];
+  /** Only apply the sticky scale/offset transforms on desktop (non-reduced-motion) */
+  animate: boolean;
 }) {
-  const reduce = useReducedMotion();
-  // Each card shrinks slightly as the next one slides over it
-  const targetScale = 1 - (total - 1 - index) * 0.045;
+  // Each already-stacked card shrinks slightly as the next slides over it
+  const targetScale = 1 - (total - 1 - index) * 0.05;
   const scale = useTransform(progress, [index / total, 1], [1, targetScale]);
 
   return (
-    <div
-      className="sticky"
-      style={{ top: `calc(12vh + ${index * 26}px)` }}
-    >
-      <motion.div style={{ scale: reduce ? 1 : scale }} className="origin-top">
+    <div className="md:sticky md:top-0 md:flex md:h-screen md:items-center md:justify-center">
+      <motion.div
+        style={
+          animate
+            ? { scale, top: `calc(6vh + ${index * 24}px)` }
+            : undefined
+        }
+        className="relative mb-8 w-full origin-top md:mb-0"
+      >
         <Link
           href={`/work/${project.slug}`}
           data-cursor="view"
@@ -63,7 +69,7 @@ function StackCard({
           </div>
           {/* Cover art — swap for real screenshots when available */}
           <div
-            className={`relative flex min-h-64 items-center justify-center overflow-hidden bg-gradient-to-br ${project.cover} bg-surface md:min-h-[28rem]`}
+            className={`relative flex min-h-56 items-center justify-center overflow-hidden bg-gradient-to-br ${project.cover} bg-surface md:min-h-[26rem]`}
           >
             <div className="absolute inset-0 bg-dot-grid" aria-hidden />
             <span className="relative font-display text-8xl font-bold text-fg/10 transition-transform duration-700 group-hover:scale-125 md:text-9xl">
@@ -78,13 +84,24 @@ function StackCard({
 
 export function StackCards({ projects }: { projects: Project[] }) {
   const container = useRef<HTMLDivElement>(null);
+  const reduce = useReducedMotion();
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const update = () => setIsDesktop(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end end"],
   });
 
   return (
-    <div ref={container} className="space-y-[16vh] pb-[10vh]">
+    <div ref={container} className="relative">
       {projects.map((project, i) => (
         <StackCard
           key={project.slug}
@@ -92,6 +109,7 @@ export function StackCards({ projects }: { projects: Project[] }) {
           index={i}
           total={projects.length}
           progress={scrollYProgress}
+          animate={isDesktop && !reduce}
         />
       ))}
     </div>
