@@ -12,7 +12,7 @@ export const site = {
     certification: "FlutterFlow Retail Expert 2025",
   },
   contact: {
-    email: "chandlatif47@gmail.com", // TODO: switch to hello@granyyte.com once mailbox exists
+    email: "chandlatif.dev@gmail.com", // TODO: switch to hello@granyyte.com once mailbox exists
     phone: "+92 309 173 9135",
     phoneHref: "tel:+923091739135",
     whatsapp: "https://wa.me/923091739135",

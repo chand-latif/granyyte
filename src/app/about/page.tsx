@@ -10,7 +10,7 @@ import { JsonLd } from "@/components/ui/json-ld";
 
 export const metadata: Metadata = {
   title: "About Us — The Team Behind Granyyte",
-  description: `Granyyte is a software development agency founded by ${site.founder.name}, a certified FlutterFlow expert. Learn how we build mobile apps, web platforms, and custom software that ships.`,
+  description: `Granyyte is a software development agency founded by ${site.founder.name}, a senior software engineer. Learn how we build mobile apps, web platforms, and custom software that ships.`,
   alternates: { canonical: "/about" },
 };
 
@@ -63,7 +63,7 @@ export default function AboutPage() {
         specs={[
           { label: "Founded", value: "2026" },
           { label: "Led by", value: "Chand Latif" },
-          { label: "Certified", value: "FlutterFlow Expert" },
+          { label: "Role", value: "Senior Software Engineer" },
         ]}
       />
 
@@ -103,31 +103,21 @@ export default function AboutPage() {
           <Reveal delay={0.1}>
             <p className="font-mono text-sm text-lime">01 — The founder</p>
             <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-fg md:text-4xl">
-              From certified expert to agency founder
+              From senior engineer to agency founder
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-muted">
               <p>
-                Granyyte was founded by {site.founder.name}, a certified FlutterFlow developer and
-                full-stack engineer who spent years shipping apps for clients across Europe, the
+                Granyyte was founded by {site.founder.name}, a senior software engineer and
+                full-stack developer who spent years shipping apps for clients across Europe, the
                 Middle East, and North America — marketplaces, wellness platforms, B2B tools, and
                 CRMs.
-              </p>
-              <p>
-                The pattern he kept seeing: clients burned by agencies that hand projects to
-                juniors, or by freelancers who vanish mid-build. Granyyte was built as the
-                antidote — an agency where the standard of work is set by the person whose name is
-                on the door.
-              </p>
-              <p>
-                Today the team designs, builds, and launches software end to end: UI/UX, frontend,
-                backend, integrations, and deployment across iOS, Android, and the web.
               </p>
             </div>
             <div className="mt-8 inline-flex items-center gap-3 rounded-xl border border-edge bg-surface px-5 py-4">
               <Award className="size-6 shrink-0 text-lime" />
               <div>
-                <p className="font-medium text-fg">{site.founder.certification}</p>
-                <p className="text-xs text-muted">Official FlutterFlow certification</p>
+                <p className="font-medium text-fg">Senior Software Engineer</p>
+                <p className="text-xs text-muted">Full-stack — mobile, web &amp; custom software</p>
               </div>
             </div>
           </Reveal>

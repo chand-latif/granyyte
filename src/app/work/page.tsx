@@ -20,7 +20,7 @@ export default function WorkPage() {
         accent="real outcomes."
         description="Every project here started as an idea in someone's head. Here's how we turned them into products people use every day."
         specs={[
-          { label: "Projects", value: "7 shipped" },
+          { label: "Projects", value: "15 shipped" },
           { label: "Platforms", value: "iOS · Android · Web" },
           { label: "Regions", value: "Europe · MENA · Asia" },
         ]}

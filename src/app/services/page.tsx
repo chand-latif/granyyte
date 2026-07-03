@@ -25,7 +25,6 @@ export default function ServicesPage() {
         specs={[
           { label: "Disciplines", value: "Mobile · Web · Software" },
           { label: "Pricing", value: "Fixed & scoped" },
-          { label: "Proposal", value: "~1 week" },
         ]}
       />
 

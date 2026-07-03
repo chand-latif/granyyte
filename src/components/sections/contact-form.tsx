@@ -6,7 +6,7 @@ import { submitContactForm, type ContactFormState } from "@/app/actions/contact"
 
 const initialState: ContactFormState = { status: "idle", message: "" };
 
-const budgets = ["Under $5k", "$5k – $15k", "$15k – $40k", "$40k+", "Not sure yet"];
+const budgets = ["Under $500", "$500 – $1.5k", "$1.5k – $4k", "$5k+", "Not sure yet"];
 
 const inputClasses =
   "w-full rounded-xl border border-edge bg-surface px-4 py-3 text-sm text-fg placeholder:text-faint outline-none transition-colors focus:border-lime/60";

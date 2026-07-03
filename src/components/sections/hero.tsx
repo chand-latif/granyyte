@@ -58,9 +58,7 @@ export function Hero() {
             <div className="hidden items-center gap-6 font-mono text-[11px] uppercase tracking-widest text-faint md:flex">
               <span>Est. 2026</span>
               <span className="size-1 rounded-full bg-edge-strong" aria-hidden />
-              <span>Sialkot → Worldwide</span>
-              <span className="size-1 rounded-full bg-edge-strong" aria-hidden />
-              <span className="text-lime">FlutterFlow Certified</span>
+              <span className="text-lime">Sialkot → Worldwide</span>
             </div>
           </div>
         </Reveal>

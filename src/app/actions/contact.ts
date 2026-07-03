@@ -45,13 +45,17 @@ export async function submitContactForm(
     };
   }
 
+  // Resend's shared onboarding sender works with no domain setup, but in that mode
+  // it can ONLY deliver to the email that owns the Resend account. Once granyyte.com
+  // is verified in Resend, set RESEND_FROM to e.g. "Granyyte <hello@granyyte.com>".
+  const from = process.env.RESEND_FROM || "Granyyte Website <onboarding@resend.dev>";
+  const to = process.env.CONTACT_TO || site.contact.email;
+
   try {
     const resend = new Resend(apiKey);
-    const { error } = await resend.emails.send({
-      // Resend's shared onboarding sender works without domain setup;
-      // TODO: switch to noreply@granyyte.com after verifying the domain in Resend
-      from: "Granyyte Website <onboarding@resend.dev>",
-      to: [site.contact.email],
+    const { data, error } = await resend.emails.send({
+      from,
+      to: [to],
       replyTo: email,
       subject: `New project inquiry from ${name}`,
       text: [
@@ -68,11 +72,18 @@ export async function submitContactForm(
     });
 
     if (error) {
-      throw new Error(error.message);
+      // Surfaces the real reason in server logs (bad key, unverified sender, etc.)
+      console.error("[contact] Resend error:", error);
+      return {
+        status: "error",
+        message: `We couldn't send your message (${error.message}). Please email us directly at ${site.contact.email}.`,
+      };
     }
 
+    console.log("[contact] sent:", data?.id);
     return { status: "success", message: "Thanks! We'll get back to you within 24 hours." };
-  } catch {
+  } catch (err) {
+    console.error("[contact] Unexpected error:", err);
     return {
       status: "error",
       message: `Something went wrong sending your message. Please email us directly at ${site.contact.email}.`,
