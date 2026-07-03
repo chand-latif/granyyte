@@ -98,10 +98,10 @@
 
 html {
   background: var(--color-base);
-  /* clip (not hidden) contains stray horizontal overflow from fixed/bleeding
-     elements without creating a scroll container that would break sticky */
+  /* Contain stray horizontal overflow on the scroll root only. Keep this OFF
+     <body> — an overflow value on body makes it the containing block for
+     position:sticky descendants and breaks the stacking-cards scroll. */
   overflow-x: clip;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -110,7 +110,6 @@ body {
   color: var(--color-fg);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  overflow-x: clip;
 }
 
 ::selection {

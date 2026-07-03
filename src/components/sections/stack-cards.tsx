@@ -18,22 +18,18 @@ function StackCard({
   index: number;
   total: number;
   progress: ReturnType<typeof useScroll>["scrollYProgress"];
-  /** Only apply the sticky scale/offset transforms on desktop (non-reduced-motion) */
+  /** Apply sticky scale/offset only on desktop (non-reduced-motion) */
   animate: boolean;
 }) {
-  // Each already-stacked card shrinks slightly as the next slides over it
-  const targetScale = 1 - (total - 1 - index) * 0.05;
+  // Already-stacked cards shrink slightly as later ones slide over them
+  const targetScale = 1 - (total - index) * 0.04;
   const scale = useTransform(progress, [index / total, 1], [1, targetScale]);
 
   return (
     <div className="md:sticky md:top-0 md:flex md:h-screen md:items-center md:justify-center">
       <motion.div
-        style={
-          animate
-            ? { scale, top: `calc(6vh + ${index * 24}px)` }
-            : undefined
-        }
-        className="relative mb-8 w-full origin-top md:mb-0"
+        style={animate ? { scale, top: `calc(-4vh + ${index * 22}px)` } : undefined}
+        className="relative mb-6 w-full origin-top md:mb-0"
       >
         <Link
           href={`/work/${project.slug}`}
