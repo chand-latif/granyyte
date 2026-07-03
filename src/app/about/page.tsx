@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Award, Eye, Handshake, Rocket } from "lucide-react";
 import { site } from "@/config/site";
 import { PageHeader } from "@/components/ui/page-header";
@@ -70,15 +71,37 @@ export default function AboutPage() {
       <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
         <div className="grid items-center gap-12 md:grid-cols-[2fr_3fr] md:gap-16">
           <Reveal>
-            {/* TODO: replace placeholder with real founder photo (next/image) when provided */}
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl border border-edge bg-gradient-to-br from-lime/15 via-surface to-base">
-              <div className="absolute inset-0 bg-dot-grid" aria-hidden />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-display text-8xl font-bold text-fg/10">CL</span>
-              </div>
-              <div className="absolute inset-x-4 bottom-4 rounded-xl border border-edge bg-base/80 p-4 backdrop-blur">
-                <p className="font-display text-lg font-bold text-fg">{site.founder.name}</p>
-                <p className="font-mono text-xs text-lime">{site.founder.role}</p>
+            <div className="group relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl border border-edge bg-surface">
+              <Image
+                src="/founder.jpg"
+                alt={`${site.founder.name}, ${site.founder.role} of ${site.name}`}
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                priority
+                className="object-cover object-top grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-[1.03]"
+              />
+              {/* Lime duotone tint that clears on hover */}
+              <div
+                className="pointer-events-none absolute inset-0 bg-lime/10 mix-blend-color transition-opacity duration-700 group-hover:opacity-0"
+                aria-hidden
+              />
+              {/* Readability gradient for the name plate */}
+              <div
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-base via-base/60 to-transparent"
+                aria-hidden
+              />
+              {/* Corner ticks */}
+              <span className="absolute left-3 top-3 size-5 border-l-2 border-t-2 border-lime/70" aria-hidden />
+              <span className="absolute right-3 top-3 size-5 border-r-2 border-t-2 border-lime/70" aria-hidden />
+              <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3">
+                <div>
+                  <p className="font-display text-lg font-bold text-fg">{site.founder.name}</p>
+                  <p className="font-mono text-xs text-lime">{site.founder.role}</p>
+                </div>
+                <span className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-edge bg-base/70 px-2.5 py-1 font-mono text-[10px] text-muted backdrop-blur">
+                  <span className="size-1.5 rounded-full bg-lime animate-pulse-dot" />
+                  Founder
+                </span>
               </div>
             </div>
           </Reveal>
