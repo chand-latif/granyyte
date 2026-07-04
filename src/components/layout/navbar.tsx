@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { ScrambleText } from "@/components/fx/scramble-text";
+import { LogoMark } from "@/components/ui/logo";
 
 const links = [
   { href: "/", label: "Home" },
@@ -55,10 +56,13 @@ export function Navbar() {
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:h-18 md:px-8">
         <Link
           href="/"
-          className="font-display text-xl font-bold tracking-tight text-fg"
+          className="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-fg"
           aria-label="Granyyte — home"
         >
-          Granyyte<span className="text-lime">.</span>
+          <LogoMark className="size-7 text-lime" />
+          <span>
+            Granyyte<span className="text-lime">.</span>
+          </span>
         </Link>
 
         <ul className="hidden items-center gap-7 md:flex">

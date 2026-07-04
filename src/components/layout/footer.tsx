@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, MessageCircle, Phone, MapPin } from "lucide-react";
+import { LogoMark } from "@/components/ui/logo";
 
 function LinkedInIcon({ className }: { className?: string }) {
   return (
@@ -36,8 +37,14 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1.2fr]">
           <div>
-            <Link href="/" className="font-display text-2xl font-bold tracking-tight text-fg">
-              Granyyte<span className="text-lime">.</span>
+            <Link
+              href="/"
+              className="flex items-center gap-2.5 font-display text-2xl font-bold tracking-tight text-fg"
+            >
+              <LogoMark className="size-8 text-lime" />
+              <span>
+                Granyyte<span className="text-lime">.</span>
+              </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
               {site.tagline} Mobile apps, web platforms, and custom software — from concept to
