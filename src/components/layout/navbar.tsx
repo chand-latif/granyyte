@@ -56,10 +56,10 @@ export function Navbar() {
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:h-18 md:px-8">
         <Link
           href="/"
-          className="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-fg"
+          className="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-fg md:gap-2.5 md:text-2xl"
           aria-label="Granyyte — home"
         >
-          <LogoMark className="size-7 text-lime" />
+          <LogoMark className="size-8 text-lime md:size-11" />
           <span>
             Granyyte<span className="text-lime">.</span>
           </span>

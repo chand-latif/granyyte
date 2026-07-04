@@ -41,7 +41,7 @@ export function Footer() {
               href="/"
               className="flex items-center gap-2.5 font-display text-2xl font-bold tracking-tight text-fg"
             >
-              <LogoMark className="size-8 text-lime" />
+              <LogoMark className="size-9 text-lime md:size-11" />
               <span>
                 Granyyte<span className="text-lime">.</span>
               </span>

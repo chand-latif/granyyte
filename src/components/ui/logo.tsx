@@ -2,7 +2,7 @@
 export function LogoMark({ className = "" }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 200 200"
+      viewBox="50 40 120 120"
       className={className}
       fill="none"
       role="img"
