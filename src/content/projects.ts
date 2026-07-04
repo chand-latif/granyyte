@@ -9,8 +9,12 @@ export type Project = {
   cover: string;
   /** Big initial(s) shown when there's no app icon */
   mark: string;
-  /** Real app icon shown on the cover (public path) */
+  /** Real app icon shown on the cover (public path) — for apps */
   icon?: string;
+  /** Full-bleed website screenshot cover (public path) — for web projects */
+  screenshot?: string;
+  /** Optional logo overlaid on the screenshot cover */
+  logo?: string;
   /** Live store / product links */
   links?: {
     appStore?: string;
@@ -24,6 +28,29 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    slug: "space-maintenance",
+    name: "Space Maintenance",
+    tagline:
+      "A conversion-focused website for a surveyor-led building repairs & maintenance firm",
+    category: "Corporate Website",
+    platforms: ["Web"],
+    tech: ["JavaScript", "HTML5 / CSS3", "SEO", "Responsive"],
+    cover: "from-red-500/25 via-rose-600/10 to-transparent",
+    mark: "SM",
+    screenshot: "/projects/space-maintenance.jpg",
+    logo: "/projects/space-logo.png",
+    links: {
+      web: "https://spacebmr.co.uk",
+    },
+    featured: true,
+    problem:
+      "Space Maintenance had a professional, surveyor-led delivery model — but no digital presence to match. They needed a site that could convince national insurers, loss adjusters, managing agents and housing providers that they were a structured delivery partner, not just another contractor.",
+    solution:
+      "We designed and built a fast, SEO-first corporate website that sells the process, not just the labour: clear service breakdowns, a step-by-step delivery model, project case studies, client testimonials, and a dedicated supply-chain recruitment funnel — all wrapped in a credible B2B brand with conversion-focused CTAs.",
+    outcome:
+      "A polished, conversion-ready web presence that lets a B2B building-services firm pitch to national clients with confidence — live across London and the South West at spacebmr.co.uk.",
+  },
   {
     slug: "poland-portal",
     name: "Poland Portal",

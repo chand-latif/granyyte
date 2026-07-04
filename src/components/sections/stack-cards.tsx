@@ -2,11 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import type { Project } from "@/content/projects";
 import { Tag } from "@/components/ui/badge";
+import { ProjectCover } from "./project-cover";
 
 function StackCard({
   project,
@@ -69,19 +69,7 @@ function StackCard({
             className={`relative flex min-h-56 items-center justify-center overflow-hidden bg-gradient-to-br ${project.cover} bg-surface md:min-h-[26rem]`}
           >
             <div className="absolute inset-0 bg-dot-grid" aria-hidden />
-            {project.icon ? (
-              <Image
-                src={project.icon}
-                alt={`${project.name} app icon`}
-                width={180}
-                height={180}
-                className="relative size-28 rounded-[22%] shadow-2xl ring-1 ring-white/10 transition-transform duration-500 group-hover:scale-105 md:size-40"
-              />
-            ) : (
-              <span className="relative font-display text-8xl font-bold text-fg/10 transition-transform duration-700 group-hover:scale-125 md:text-9xl">
-                {project.mark}
-              </span>
-            )}
+            <ProjectCover project={project} size="stack" />
           </div>
         </Link>
       </motion.div>
