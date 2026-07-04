@@ -5,10 +5,18 @@ export type Project = {
   category: string;
   platforms: ("iOS" | "Android" | "Web")[];
   tech: string[];
-  /** Tailwind gradient classes for the placeholder cover art */
+  /** Tailwind gradient classes for the cover backdrop */
   cover: string;
-  /** Big initial(s) shown on the placeholder cover */
+  /** Big initial(s) shown when there's no app icon */
   mark: string;
+  /** Real app icon shown on the cover (public path) */
+  icon?: string;
+  /** Live store / product links */
+  links?: {
+    appStore?: string;
+    playStore?: string;
+    web?: string;
+  };
   featured: boolean;
   problem: string;
   solution: string;
@@ -25,6 +33,11 @@ export const projects: Project[] = [
     tech: ["Flutter", "Firebase", "REST APIs"],
     cover: "from-rose-500/25 via-red-500/10 to-transparent",
     mark: "PP",
+    icon: "/projects/poland-portal.avif",
+    links: {
+      appStore: "https://apps.apple.com/us/app/poland-portal/id6745757845",
+      playStore: "https://play.google.com/store/apps/details?id=com.mycompany.gurbette",
+    },
     featured: true,
     problem:
       "Expats and tourists arriving in Poland had information scattered across dozens of websites, Facebook groups, and outdated blogs — no single trusted place for city guides, local news, listings, and deals.",
@@ -42,6 +55,11 @@ export const projects: Project[] = [
     tech: ["Flutter", "Firebase", "Custom APIs"],
     cover: "from-sky-500/25 via-blue-500/10 to-transparent",
     mark: "MX",
+    icon: "/projects/mainxpert.avif",
+    links: {
+      appStore: "https://apps.apple.com/pk/app/mainxpert/id6737765201",
+      playStore: "https://play.google.com/store/apps/details?id=com.mycompany.mainxpert",
+    },
     featured: true,
     problem:
       "Automotive professionals were documenting vehicle condition with ad-hoc photos and paper forms — inconsistent, slow, and impossible to standardize across teams and locations.",
@@ -59,6 +77,12 @@ export const projects: Project[] = [
     tech: ["Flutter", "Firebase", "Audio Engine"],
     cover: "from-violet-500/25 via-purple-500/10 to-transparent",
     mark: "MM",
+    icon: "/projects/mindful-mantra.webp",
+    links: {
+      appStore: "https://apps.apple.com/us/app/mindful-mantra/id6698892936",
+      playStore:
+        "https://play.google.com/store/apps/details?id=com.mindfulmantrastudio.meditation",
+    },
     featured: true,
     problem:
       "Meditation apps are either rigid guided programs or basic sound loops — users wanting to layer Solfeggio frequencies, binaural waves, and ambient soundscapes into their own practice had no good option.",
@@ -76,6 +100,11 @@ export const projects: Project[] = [
     tech: ["Flutter", "Firebase", "Real-time Chat"],
     cover: "from-lime-400/25 via-green-500/10 to-transparent",
     mark: "ZW",
+    icon: "/projects/zwipe.webp",
+    links: {
+      appStore: "https://apps.apple.com/pk/app/zwipe-marketplace/id6743154752",
+      playStore: "https://play.google.com/store/apps/details?id=com.mycompany.zwipe",
+    },
     featured: true,
     problem:
       "Car buyers in the UAE faced cluttered classified sites full of stale listings and slow email-based contact — while sellers struggled to reach serious buyers quickly.",
@@ -93,6 +122,10 @@ export const projects: Project[] = [
     tech: ["Flutter", "Firebase", "Realtime DB"],
     cover: "from-amber-500/25 via-orange-500/10 to-transparent",
     mark: "TH",
+    icon: "/projects/thafath.jpg",
+    links: {
+      playStore: "https://play.google.com/store/apps/details?id=com.mythafath.datingapplication3",
+    },
     featured: false,
     problem:
       "The Algerian Berber (Amazigh) community had no dedicated matchmaking platform respecting their cultural and religious values — mainstream dating apps were a poor fit for people seeking serious, marriage-focused relationships.",
@@ -110,6 +143,11 @@ export const projects: Project[] = [
     tech: ["Flutter", "Firebase", "Speech-to-Text"],
     cover: "from-indigo-500/25 via-blue-600/10 to-transparent",
     mark: "SD",
+    icon: "/projects/sacred-diary.png",
+    links: {
+      appStore: "https://apps.apple.com/pk/app/sacred-diary/id6756674238",
+      playStore: "https://play.google.com/store/apps/details?id=com.flutterflow.sacrednetworkapp",
+    },
     featured: false,
     problem:
       "People practicing spiritual journaling — recording dreams, meditations, and insights — were forced into generic note apps with no support for transcription, sharing, or the natural cycles their practice follows.",
@@ -127,6 +165,9 @@ export const projects: Project[] = [
     tech: ["React", "Node.js", "PostgreSQL", "Automation"],
     cover: "from-teal-500/25 via-cyan-500/10 to-transparent",
     mark: "AR",
+    links: {
+      web: "https://alligned-rei.flutterflow.app/",
+    },
     featured: true,
     problem:
       "Growing teams were juggling leads in spreadsheets, appointments in calendars, and follow-ups in memory — losing deals in the gaps between disconnected tools.",

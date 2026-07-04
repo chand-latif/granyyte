@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Target, Lightbulb, TrendingUp } from "lucide-react";
 import { projects, getProject } from "@/content/projects";
 import { site } from "@/config/site";
 import { Reveal } from "@/components/ui/reveal";
 import { Tag } from "@/components/ui/badge";
+import { StoreButtons } from "@/components/ui/store-buttons";
 import { JsonLd } from "@/components/ui/json-ld";
 import { CtaBand } from "@/components/sections/cta-band";
 import { WorkGrid } from "@/components/sections/work-grid";
@@ -89,19 +91,31 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
                 <Tag key={t}>{t}</Tag>
               ))}
             </div>
+            <StoreButtons links={project.links} className="mt-8" />
           </Reveal>
         </div>
       </section>
 
-      {/* Cover placeholder — swap for real screenshots when provided */}
+      {/* Cover — real app icon on the branded gradient */}
       <section className="mx-auto max-w-6xl px-5 pt-16 md:px-8 md:pt-24">
         <Reveal>
           <div
-            className={`relative flex aspect-[16/8] items-center justify-center overflow-hidden rounded-2xl border border-edge bg-gradient-to-br ${project.cover} bg-raised`}
+            className={`relative flex aspect-[16/9] items-center justify-center overflow-hidden rounded-2xl border border-edge bg-gradient-to-br ${project.cover} bg-raised md:aspect-[16/7]`}
           >
-            <span className="font-display text-8xl font-bold text-fg/15 md:text-9xl">
-              {project.mark}
-            </span>
+            <div className="absolute inset-0 bg-dot-grid" aria-hidden />
+            {project.icon ? (
+              <Image
+                src={project.icon}
+                alt={`${project.name} app icon`}
+                width={240}
+                height={240}
+                className="relative size-36 rounded-[22%] shadow-2xl ring-1 ring-white/10 md:size-48"
+              />
+            ) : (
+              <span className="relative font-display text-8xl font-bold text-fg/15 md:text-9xl">
+                {project.mark}
+              </span>
+            )}
           </div>
         </Reveal>
       </section>

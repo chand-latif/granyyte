@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import type { Project } from "@/content/projects";
 import { Reveal } from "@/components/ui/reveal";
@@ -18,9 +19,19 @@ export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: 
             className={`relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gradient-to-br ${project.cover} bg-raised`}
           >
             <div className="absolute inset-0 bg-dot-grid" aria-hidden />
-            <span className="relative font-display text-6xl font-bold text-fg/15 transition-transform duration-700 group-hover:scale-125 md:text-7xl">
-              {project.mark}
-            </span>
+            {project.icon ? (
+              <Image
+                src={project.icon}
+                alt={`${project.name} app icon`}
+                width={112}
+                height={112}
+                className="relative size-24 rounded-[22%] shadow-2xl ring-1 ring-white/10 transition-transform duration-500 group-hover:scale-105 md:size-28"
+              />
+            ) : (
+              <span className="relative font-display text-6xl font-bold text-fg/15 transition-transform duration-700 group-hover:scale-125 md:text-7xl">
+                {project.mark}
+              </span>
+            )}
             <div className="absolute left-4 top-4 flex gap-2">
               {project.platforms.map((platform) => (
                 <span
