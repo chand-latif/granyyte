@@ -112,9 +112,9 @@ export default function RootLayout({
         <Cursor />
         <AmbientBackground />
         <SideRails />
-        {/* Film grain over everything */}
+        {/* Film grain over everything (desktop only — blend modes are costly on mobile) */}
         <div
-          className="pointer-events-none fixed inset-0 z-[150] bg-grain opacity-[0.05] mix-blend-overlay"
+          className="film-grain pointer-events-none fixed inset-0 z-[150] bg-grain opacity-[0.05] mix-blend-overlay"
           aria-hidden
         />
         <SmoothScroll>

@@ -29,8 +29,8 @@ export function PageHeader({
   specs = defaultSpecs,
 }: PageHeaderProps) {
   return (
-    <section className="relative overflow-hidden border-b border-edge">
-      {/* Interactive particle wave field */}
+    <section className="relative overflow-hidden border-b border-edge bg-dot-grid">
+      {/* Interactive particle wave field (desktop only) */}
       <ParticleField className="absolute inset-0 h-full w-full" />
       <div className="absolute inset-0 bg-lime-glow" aria-hidden />
       <div

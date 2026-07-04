@@ -39,7 +39,10 @@ export function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
 
   return (
-    <section ref={sectionRef} className="relative flex min-h-svh items-center overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="relative flex min-h-svh items-center overflow-hidden bg-dot-grid"
+    >
       {/* Interactive particle wave field */}
       <ParticleField className="absolute inset-0 h-full w-full" />
       {/* Fade particles into the next section */}

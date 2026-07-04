@@ -22,6 +22,11 @@ export function ParticleField({ className = "" }: { className?: string }) {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    // The field is a cursor-driven effect with no touch interaction. On phones/
+    // tablets (and small screens) it only burns GPU (heat, jank) and can glitch on
+    // iOS Safari, so we skip all canvas work there and leave a blank, transparent canvas.
+    if (window.matchMedia("(pointer: coarse), (max-width: 767px)").matches) return;
+
     const SPACING = 26;
     const MOUSE_R = 150;
     let width = 0;
