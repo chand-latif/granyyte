@@ -102,7 +102,7 @@ export const services: Service[] = [
           "A high-end marketing site typically starts around $2–5k; full web applications scope from $8k upward depending on complexity. We quote a fixed price after a short discovery call.",
       },
     ],
-    relatedProjects: ["alligned-rei", "poland-portal"],
+    relatedProjects: ["poland-portal", "zwipe"],
   },
   {
     slug: "custom-software",
@@ -146,7 +146,7 @@ export const services: Service[] = [
           "We start with a discovery call to map your workflows, then deliver a scoped proposal with fixed pricing and a delivery timeline — usually within a week.",
       },
     ],
-    relatedProjects: ["alligned-rei", "mainxpert"],
+    relatedProjects: ["mainxpert", "poland-portal"],
   },
 ];
 

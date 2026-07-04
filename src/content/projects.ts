@@ -156,26 +156,6 @@ export const projects: Project[] = [
     outcome:
       "A niche journaling app with features no general-purpose competitor offers, live on both iOS and Android.",
   },
-  {
-    slug: "alligned-rei",
-    name: "Alligned REI",
-    tagline: "A full CRM and business management platform for any industry",
-    category: "Custom CRM / SaaS",
-    platforms: ["Web"],
-    tech: ["React", "Node.js", "PostgreSQL", "Automation"],
-    cover: "from-teal-500/25 via-cyan-500/10 to-transparent",
-    mark: "AR",
-    links: {
-      web: "https://alligned-rei.flutterflow.app/",
-    },
-    featured: true,
-    problem:
-      "Growing teams were juggling leads in spreadsheets, appointments in calendars, and follow-ups in memory — losing deals in the gaps between disconnected tools.",
-    solution:
-      "We built a versatile web-based CRM covering the full pipeline: lead management, team coordination, appointment scheduling, pipeline tracking, and automated follow-ups — adaptable to any industry's sales process.",
-    outcome:
-      "One system replacing a patchwork of tools — automated follow-ups alone recover deals that previously slipped through the cracks.",
-  },
 ];
 
 export function getProject(slug: string) {

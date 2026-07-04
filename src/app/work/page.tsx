@@ -21,7 +21,7 @@ export default function WorkPage() {
         description="Every project here started as an idea in someone's head. Here's how we turned them into products people use every day."
         specs={[
           { label: "Projects", value: "15 shipped" },
-          { label: "Platforms", value: "iOS · Android · Web" },
+          { label: "Platforms", value: "iOS · Android" },
           { label: "Regions", value: "Europe · MENA · Asia" },
         ]}
       />
