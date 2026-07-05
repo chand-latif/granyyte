@@ -103,9 +103,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${instrumentSerif.variable} h-full antialiased`}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${instrumentSerif.variable} antialiased`}
     >
-      <body className="flex min-h-full flex-col text-fg">
+      <body className="flex min-h-dvh flex-col text-fg">
         <JsonLd data={organizationJsonLd} />
         <JsonLd data={websiteJsonLd} />
         <Preloader />
