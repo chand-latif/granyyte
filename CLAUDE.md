@@ -63,11 +63,16 @@ JetBrains Mono (labels) / Instrument Serif. Utilities: `bg-dot-grid`, `bg-lime-g
 cropped to `"50 40 120 120"`; color follows `currentColor`, use `text-lime`). Sits before the
 "Granyyte." wordmark in navbar + footer, sized larger than the word, responsive-smaller on mobile.
 
-### Critical CSS gotcha
+### Critical CSS gotchas (both cause "scroll gets stuck halfway")
 
-`overflow-x: clip` must live on `html` **only, never `body`** — putting it on body makes body the
-sticky containing block and breaks the `stack-cards.tsx` scroll-stacking effect (this caused several
-"scroll gets stuck" bugs). The stacking-cards scroll effect is intentional and wanted — keep it.
+1. `overflow-x: clip` must live on `html` **only, never `body`** — on body it makes body the sticky
+   containing block and breaks the `stack-cards.tsx` scroll-stacking effect. The stacking-cards
+   effect is intentional and wanted — keep it.
+2. **Never set a fixed height (`h-full` / `height: 100%`) on `<html>` or `<body>`.** Lenis watches
+   the html element with a ResizeObserver to recompute its scroll limit; a pinned html height means
+   that observer never fires as content grows, so Lenis keeps a stale short limit and scroll jams
+   halfway. For the sticky-footer layout use `min-h-dvh` on `body` (viewport-based) — not
+   `h-full` on html + `min-h-full` on body.
 
 ## FX / performance (`src/components/fx/`)
 
