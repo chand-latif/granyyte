@@ -94,6 +94,14 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href={`mailto:${site.contact.emailDirect}`}
+                  className="inline-flex items-center gap-2 transition-colors hover:text-lime"
+                >
+                  <Mail className="size-4" /> {site.contact.emailDirect}
+                </a>
+              </li>
+              <li>
+                <a
                   href={site.contact.phoneHref}
                   className="inline-flex items-center gap-2 transition-colors hover:text-lime"
                 >

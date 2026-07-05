@@ -12,8 +12,8 @@ export const site = {
     certification: "FlutterFlow Retail Expert 2025",
   },
   contact: {
-    email: "chandlatif@granyyte.com", // Cloudflare routing address → forwards to chandlatif.dev@gmail.com
-    emailPersonal: "chandlatif.dev@gmail.com", // underlying inbox the branded address forwards to
+    email: "chandlatif@granyyte.com", // company address (Cloudflare routing → forwards to the Gmail below)
+    emailDirect: "chandlatif.dev@gmail.com", // direct line to the founder
     phone: "+92 309 173 9135",
     phoneHref: "tel:+923091739135",
     whatsapp: "https://wa.me/923091739135",

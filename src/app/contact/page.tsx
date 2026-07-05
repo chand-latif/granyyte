@@ -32,9 +32,15 @@ const professionalServiceJsonLd = {
 const channels = [
   {
     icon: Mail,
-    label: "Email",
+    label: "Company email",
     value: site.contact.email,
     href: `mailto:${site.contact.email}`,
+  },
+  {
+    icon: Mail,
+    label: "Direct to the founder",
+    value: site.contact.emailDirect,
+    href: `mailto:${site.contact.emailDirect}`,
   },
   {
     icon: MessageCircle,
