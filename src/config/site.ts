@@ -7,7 +7,7 @@ export const site = {
     "Granyyte is a software development agency building high-quality mobile apps, web platforms, and custom software. From concept to launch — design, development, and deployment handled end to end.",
   founder: {
     name: "Chand Latif",
-    role: "Founder & CEO",
+    role: "Senior Software Engineer",
     linkedin: "https://www.linkedin.com/in/chand-latif",
     certification: "FlutterFlow Retail Expert 2025",
   },

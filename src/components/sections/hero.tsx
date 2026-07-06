@@ -132,15 +132,9 @@ export function Hero() {
               <span className="absolute left-3 top-3 size-5 border-l-2 border-t-2 border-lime/70" aria-hidden />
               <span className="absolute right-3 top-3 size-5 border-r-2 border-t-2 border-lime/70" aria-hidden />
               {/* Name plate */}
-              <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3">
-                <div>
-                  <p className="font-display text-lg font-bold text-fg">{site.founder.name}</p>
-                  <p className="font-mono text-xs text-lime">{site.founder.role}</p>
-                </div>
-                <span className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-edge bg-base/70 px-2.5 py-1 font-mono text-[10px] text-muted backdrop-blur">
-                  <span className="size-1.5 rounded-full bg-lime animate-pulse-dot" />
-                  Founder
-                </span>
+              <div className="absolute inset-x-4 bottom-4">
+                <p className="font-display text-lg font-bold text-fg">{site.founder.name}</p>
+                <p className="font-mono text-xs text-lime">{site.founder.role}</p>
               </div>
             </div>
           </div>
