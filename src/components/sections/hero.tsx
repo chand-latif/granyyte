@@ -84,10 +84,11 @@ export function Hero() {
 
           <Reveal delay={0.6}>
             <p className="mt-10 max-w-md text-base leading-relaxed text-muted md:text-lg">
-              I design, build, and launch digital products end to end — the engineer founders call
+idea.compile().ship() — iOS, Android, web.
+              {/* I design, build, and launch digital products end to end — the engineer founders call
               when they want it{" "}
               <span className="text-fg">shipped, not just talked about</span>. iOS, Android, and
-              web, from first sketch to app-store release.
+              web, from first sketch to app-store release. */}
             </p>
           </Reveal>
           <Reveal delay={0.7}>
