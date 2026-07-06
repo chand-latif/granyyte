@@ -93,15 +93,15 @@ export default function AboutPage() {
                   <p className="font-display text-lg font-bold text-fg">{site.founder.name}</p>
                   <p className="font-mono text-xs text-lime">{site.founder.role}</p>
                 </div>
-                <span className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-edge bg-base/70 px-2.5 py-1 font-mono text-[10px] text-muted backdrop-blur">
+                {/* <span className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-edge bg-base/70 px-2.5 py-1 font-mono text-[10px] text-muted backdrop-blur">
                   <span className="size-1.5 rounded-full bg-lime animate-pulse-dot" />
                   Founder
-                </span>
+                </span> */}
               </div>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="font-mono text-sm text-lime">01 — The founder</p>
+            {/* <p className="font-mono text-sm text-lime">01 — The founder</p> */}
             <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-fg md:text-4xl">
               Hi, I&apos;m {site.founder.name}
             </h2>
