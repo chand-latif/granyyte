@@ -9,8 +9,8 @@ import { Stats } from "@/components/sections/stats";
 import { JsonLd } from "@/components/ui/json-ld";
 
 export const metadata: Metadata = {
-  title: "About Us — The Team Behind Granyyte",
-  description: `Granyyte is a software development agency founded by ${site.founder.name}, a senior software engineer. Learn how we build mobile apps, web platforms, and custom software that ships.`,
+  title: `About — ${site.founder.name}, Founder of Granyyte`,
+  description: `${site.founder.name} is a senior software engineer building mobile apps, web platforms, and custom software under the Granyyte name. Learn how I take products from idea to launch.`,
   alternates: { canonical: "/about" },
 };
 
@@ -19,7 +19,7 @@ const values = [
     icon: Rocket,
     title: "Ship, don't stall",
     description:
-      "Ideas are cheap; launched products are not. We optimize everything around getting real software into real users' hands.",
+      "Ideas are cheap; launched products are not. I optimize everything around getting real software into real users' hands.",
   },
   {
     icon: Eye,
@@ -31,7 +31,7 @@ const values = [
     icon: Handshake,
     title: "Partners, not vendors",
     description:
-      "Most of our clients stay for years. We win when your product wins — so we build like it's our own.",
+      "Most of my clients stay for years. I win when your product wins — so I build like it's my own.",
   },
   {
     icon: Award,
@@ -57,9 +57,9 @@ export default function AboutPage() {
       <JsonLd data={personJsonLd} />
       <PageHeader
         label="About"
-        title="The agency that treats your product like"
+        title="The developer who treats your product like"
         accent="its own."
-        description="Granyyte exists because too many good ideas die between agencies that overpromise and freelancers who disappear. We're the third option: senior execution, agency reliability, founder-level care."
+        description="I started Granyyte because too many good ideas die between agencies that overpromise and freelancers who disappear. I'm the third option: senior execution, real reliability, and founder-level care on every build."
         specs={[
           { label: "Founded", value: "2026" },
           { label: "Led by", value: "Chand Latif" },
@@ -103,14 +103,14 @@ export default function AboutPage() {
           <Reveal delay={0.1}>
             <p className="font-mono text-sm text-lime">01 — The founder</p>
             <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-fg md:text-4xl">
-              From senior engineer to agency founder
+              Hi, I&apos;m {site.founder.name}
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-muted">
               <p>
-                Granyyte was founded by {site.founder.name}, a senior software engineer and
-                full-stack developer who spent years shipping apps for clients across Europe, the
-                Middle East, and North America — marketplaces, wellness platforms, B2B tools, and
-                CRMs.
+                I&apos;m a senior software engineer and full-stack developer who has spent years
+                shipping apps for clients across Europe, the Middle East, and North America —
+                marketplaces, wellness platforms, B2B tools, and CRMs. Granyyte is the name I
+                design, build, and launch under.
               </p>
             </div>
             <div className="mt-8 inline-flex items-center gap-3 rounded-xl border border-edge bg-surface px-5 py-4">
@@ -130,7 +130,7 @@ export default function AboutPage() {
       <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
         <Reveal>
           <div className="mb-12 max-w-2xl md:mb-16">
-            <p className="mb-4 font-mono text-sm text-lime">02 — What we stand for</p>
+            <p className="mb-4 font-mono text-sm text-lime">02 — What I stand for</p>
             <h2 className="font-display text-3xl font-bold tracking-tight text-fg md:text-5xl">
               The principles behind every build
             </h2>

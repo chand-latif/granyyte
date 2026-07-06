@@ -26,7 +26,7 @@ export const services: Service[] = [
     metaDescription:
       "Mobile app development services for iOS and Android. Granyyte builds native-quality Flutter apps — UI/UX, backend, and App Store deployment handled end to end.",
     intro:
-      "Your users live on their phones — your product should too. We design, build, and launch mobile apps that feel native on both iOS and Android from a single codebase, cutting time-to-market roughly in half without cutting corners. From marketplaces and social platforms to meditation apps and field tools, we've shipped across nearly every category.",
+      "Your users live on their phones — your product should too. I design, build, and launch mobile apps that feel native on both iOS and Android from a single codebase, cutting time-to-market roughly in half without cutting corners. From marketplaces and social platforms to meditation apps and field tools, I've shipped across nearly every category.",
     deliverables: [
       "iOS & Android apps from one Flutter codebase",
       "UI/UX design tailored to platform conventions",
@@ -40,22 +40,22 @@ export const services: Service[] = [
       {
         question: "How long does it take to build a mobile app?",
         answer:
-          "A focused MVP typically ships in 6–10 weeks. Larger products with custom backends run 3–5 months. We scope precisely before we start, so you get a real timeline — not a moving target.",
+          "A focused MVP typically ships in 6–10 weeks. Larger products with custom backends run 3–5 months. I scope precisely before I start, so you get a real timeline — not a moving target.",
       },
       {
         question: "Do you build for both iOS and Android?",
         answer:
-          "Yes — every app we build runs on both platforms from a single Flutter codebase, which means faster delivery and one consistent experience without doubling the budget.",
+          "Yes — every app I build runs on both platforms from a single Flutter codebase, which means faster delivery and one consistent experience without doubling the budget.",
       },
       {
         question: "Do you handle App Store and Google Play publishing?",
         answer:
-          "Completely. We manage store listings, screenshots, review requirements, and submissions — and resolve any review feedback until your app is live.",
+          "Completely. I manage store listings, screenshots, review requirements, and submissions — and resolve any review feedback until your app is live.",
       },
       {
         question: "What happens after launch?",
         answer:
-          "We offer ongoing maintenance plans covering OS updates, bug fixes, and new features. Most of our clients keep working with us long after v1 ships.",
+          "I offer ongoing maintenance plans covering OS updates, bug fixes, and new features. Most of my clients keep working with me long after v1 ships.",
       },
     ],
     relatedProjects: ["poland-portal", "zwipe", "mindful-mantra"],
@@ -70,7 +70,7 @@ export const services: Service[] = [
     metaDescription:
       "Web development services by Granyyte. SEO-first websites, web apps, and platforms built with React and Next.js — designed to rank on Google and convert visitors.",
     intro:
-      "A slow, invisible website is a liability. We build web platforms that load instantly, rank on Google, and turn visitors into customers — from marketing sites and dashboards to full SaaS products. Server-rendered, performance-budgeted, and built on the same stack powering the fastest sites on the web.",
+      "A slow, invisible website is a liability. I build web platforms that load instantly, rank on Google, and turn visitors into customers — from marketing sites and dashboards to full SaaS products. Server-rendered, performance-budgeted, and built on the same stack powering the fastest sites on the web.",
     deliverables: [
       "Marketing sites, dashboards, and full web applications",
       "SEO-first architecture: server rendering, structured data, Core Web Vitals",
@@ -84,22 +84,22 @@ export const services: Service[] = [
       {
         question: "Will my website rank on Google?",
         answer:
-          "We build every site SEO-first: server-rendered HTML, structured data, fast Core Web Vitals, and clean semantic markup. Rankings also depend on content and competition, but technically your site will be ahead of most of the market on day one.",
+          "I build every site SEO-first: server-rendered HTML, structured data, fast Core Web Vitals, and clean semantic markup. Rankings also depend on content and competition, but technically your site will be ahead of most of the market on day one.",
       },
       {
         question: "Can you redesign or migrate my existing website?",
         answer:
-          "Yes. We regularly migrate sites from WordPress, Wix, and page builders to modern stacks — preserving your SEO with proper redirects while dramatically improving speed.",
+          "Yes. I regularly migrate sites from WordPress, Wix, and page builders to modern stacks — preserving your SEO with proper redirects while dramatically improving speed.",
       },
       {
         question: "Do you build web apps, or just websites?",
         answer:
-          "Both. Beyond marketing sites we build full products — dashboards, portals, booking systems, and SaaS applications with authentication, payments, and real-time features.",
+          "Both. Beyond marketing sites I build full products — dashboards, portals, booking systems, and SaaS applications with authentication, payments, and real-time features.",
       },
       {
         question: "How much does a website cost?",
         answer:
-          "A high-end marketing site typically starts around $2–5k; full web applications scope from $8k upward depending on complexity. We quote a fixed price after a short discovery call.",
+          "A high-end marketing site typically starts around $2–5k; full web applications scope from $8k upward depending on complexity. I quote a fixed price after a short discovery call.",
       },
     ],
     relatedProjects: ["poland-portal", "zwipe"],
@@ -114,7 +114,7 @@ export const services: Service[] = [
     metaDescription:
       "Custom software development by Granyyte. CRMs, internal tools, automation, and business systems designed around your workflows — built to scale with your company.",
     intro:
-      "Off-the-shelf software forces your business into someone else's mold. We build custom systems — CRMs, operations tools, automation pipelines, and client portals — shaped precisely around your workflows. The result: less manual work, fewer subscriptions, and software that becomes a competitive advantage instead of a monthly expense.",
+      "Off-the-shelf software forces your business into someone else's mold. I build custom systems — CRMs, operations tools, automation pipelines, and client portals — shaped precisely around your workflows. The result: less manual work, fewer subscriptions, and software that becomes a competitive advantage instead of a monthly expense.",
     deliverables: [
       "Custom CRMs and lead-management systems",
       "Internal tools and admin dashboards",
@@ -133,7 +133,7 @@ export const services: Service[] = [
       {
         question: "Can you integrate with the tools we already use?",
         answer:
-          "Yes. We routinely integrate with payment processors, email platforms, calendars, accounting tools, and any service with an API — your new system works with your existing stack, not against it.",
+          "Yes. I routinely integrate with payment processors, email platforms, calendars, accounting tools, and any service with an API — your new system works with your existing stack, not against it.",
       },
       {
         question: "Who owns the code?",
@@ -143,7 +143,7 @@ export const services: Service[] = [
       {
         question: "How do we get started?",
         answer:
-          "We start with a discovery call to map your workflows, then deliver a scoped proposal with fixed pricing and a delivery timeline — usually within a week.",
+          "I start with a discovery call to map your workflows, then deliver a scoped proposal with fixed pricing and a delivery timeline — usually within a week.",
       },
     ],
     relatedProjects: ["mainxpert", "poland-portal"],

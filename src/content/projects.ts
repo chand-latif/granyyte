@@ -47,7 +47,7 @@ export const projects: Project[] = [
     problem:
       "Space Maintenance had a professional, surveyor-led delivery model — but no digital presence to match. They needed a site that could convince national insurers, loss adjusters, managing agents and housing providers that they were a structured delivery partner, not just another contractor.",
     solution:
-      "We designed and built a fast, SEO-first corporate website that sells the process, not just the labour: clear service breakdowns, a step-by-step delivery model, project case studies, client testimonials, and a dedicated supply-chain recruitment funnel — all wrapped in a credible B2B brand with conversion-focused CTAs.",
+      "I designed and built a fast, SEO-first corporate website that sells the process, not just the labour: clear service breakdowns, a step-by-step delivery model, project case studies, client testimonials, and a dedicated supply-chain recruitment funnel — all wrapped in a credible B2B brand with conversion-focused CTAs.",
     outcome:
       "A polished, conversion-ready web presence that lets a B2B building-services firm pitch to national clients with confidence — live across London and the South West at spacebmr.co.uk.",
   },
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     problem:
       "Expats and tourists arriving in Poland had information scattered across dozens of websites, Facebook groups, and outdated blogs — no single trusted place for city guides, local news, listings, and deals.",
     solution:
-      "We built a unified lifestyle platform bringing city guides, curated news, local listings, and exclusive discounts into one polished app — with content management tooling so the team can publish updates in minutes.",
+      "I built a unified lifestyle platform bringing city guides, curated news, local listings, and exclusive discounts into one polished app — with content management tooling so the team can publish updates in minutes.",
     outcome:
       "A single go-to companion app for the expat community in Poland, live on both the App Store and Google Play with a growing user base across major Polish cities.",
   },
@@ -91,7 +91,7 @@ export const projects: Project[] = [
     problem:
       "Automotive professionals were documenting vehicle condition with ad-hoc photos and paper forms — inconsistent, slow, and impossible to standardize across teams and locations.",
     solution:
-      "We built a guided photography workflow that walks inspectors through every required angle, then compiles standardized valuation and damage reports into a centralized system accessible to the whole organization.",
+      "I built a guided photography workflow that walks inspectors through every required angle, then compiles standardized valuation and damage reports into a centralized system accessible to the whole organization.",
     outcome:
       "Consistent, professional vehicle reports produced in a fraction of the time, with centralized records replacing scattered photo folders and paperwork.",
   },
@@ -114,7 +114,7 @@ export const projects: Project[] = [
     problem:
       "Meditation apps are either rigid guided programs or basic sound loops — users wanting to layer Solfeggio frequencies, binaural waves, and ambient soundscapes into their own practice had no good option.",
     solution:
-      "We engineered a customizable audio mixing experience where users blend frequencies, binaural beats, and soundscapes into personal sessions — with a precise audio engine that keeps every layer in sync.",
+      "I engineered a customizable audio mixing experience where users blend frequencies, binaural beats, and soundscapes into personal sessions — with a precise audio engine that keeps every layer in sync.",
     outcome:
       "A meditation app that stands apart in a crowded category, live on both platforms with deeply personalized relaxation sessions as its signature feature.",
   },
@@ -136,7 +136,7 @@ export const projects: Project[] = [
     problem:
       "Car buyers in the UAE faced cluttered classified sites full of stale listings and slow email-based contact — while sellers struggled to reach serious buyers quickly.",
     solution:
-      "We built a fast, swipe-friendly marketplace: browse quickly, save what you like, and chat with sellers instantly through built-in real-time messaging. Listing creation is streamlined so sellers go live in minutes.",
+      "I built a fast, swipe-friendly marketplace: browse quickly, save what you like, and chat with sellers instantly through built-in real-time messaging. Listing creation is streamlined so sellers go live in minutes.",
     outcome:
       "A modern car marketplace live in the UAE on both iOS and Android, turning a frustrating multi-day process into same-session conversations between buyers and sellers.",
   },
@@ -157,7 +157,7 @@ export const projects: Project[] = [
     problem:
       "The Algerian Berber (Amazigh) community had no dedicated matchmaking platform respecting their cultural and religious values — mainstream dating apps were a poor fit for people seeking serious, marriage-focused relationships.",
     solution:
-      "We built a halal matchmaking app designed around the community's values: intentional profiles, respectful communication flows, and features built for serious relationships and marriage rather than casual swiping.",
+      "I built a halal matchmaking app designed around the community's values: intentional profiles, respectful communication flows, and features built for serious relationships and marriage rather than casual swiping.",
     outcome:
       "A culturally authentic platform serving a community overlooked by mainstream apps, live on Google Play.",
   },
@@ -179,7 +179,7 @@ export const projects: Project[] = [
     problem:
       "People practicing spiritual journaling — recording dreams, meditations, and insights — were forced into generic note apps with no support for transcription, sharing, or the natural cycles their practice follows.",
     solution:
-      "We built a dedicated spiritual journal with voice transcription for capturing insights the moment they arrive, lunar phase tracking woven through the experience, and private sharing for trusted circles.",
+      "I built a dedicated spiritual journal with voice transcription for capturing insights the moment they arrive, lunar phase tracking woven through the experience, and private sharing for trusted circles.",
     outcome:
       "A niche journaling app with features no general-purpose competitor offers, live on both iOS and Android.",
   },

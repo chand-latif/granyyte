@@ -28,14 +28,14 @@ export async function generateMetadata({
   if (!project) return {};
   return {
     title: `${project.name} — Case Study`,
-    description: `${project.tagline}. How Granyyte designed, built, and shipped ${project.name} for ${project.platforms.join(" & ")}.`,
+    description: `${project.tagline}. How I designed, built, and shipped ${project.name} for ${project.platforms.join(" & ")}.`,
     alternates: { canonical: `/work/${project.slug}` },
   };
 }
 
 const sections = [
   { key: "problem", label: "The problem", icon: Target },
-  { key: "solution", label: "What we built", icon: Lightbulb },
+  { key: "solution", label: "What I built", icon: Lightbulb },
   { key: "outcome", label: "The outcome", icon: TrendingUp },
 ] as const;
 

@@ -5,7 +5,7 @@ import { WorkGrid } from "@/components/sections/work-grid";
 import { CtaBand } from "@/components/sections/cta-band";
 
 export const metadata: Metadata = {
-  title: "Our Work — Case Studies & Shipped Products",
+  title: "Work — Case Studies & Shipped Products",
   description:
     "Explore Granyyte's portfolio: marketplaces, B2B tools, wellness apps, and CRMs shipped for clients across Europe, the Middle East, and beyond.",
   alternates: { canonical: "/work" },
@@ -18,7 +18,7 @@ export default function WorkPage() {
         label="Work"
         title="Shipped products,"
         accent="real outcomes."
-        description="Every project here started as an idea in someone's head. Here's how we turned them into products people use every day."
+        description="Every project here started as an idea in someone's head. Here's how I turned them into products people use every day."
         specs={[
           { label: "Projects", value: "15 shipped" },
           { label: "Platforms", value: "iOS · Android · Web" },

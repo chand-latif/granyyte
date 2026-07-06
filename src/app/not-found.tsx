@@ -18,7 +18,7 @@ export default function NotFound() {
             Back to home
           </Button>
           <Button href="/work" size="lg" variant="outline">
-            See our work
+            See my work
           </Button>
         </div>
       </div>

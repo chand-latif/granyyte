@@ -10,7 +10,7 @@ import { CtaBand } from "@/components/sections/cta-band";
 export const metadata: Metadata = {
   title: "Blog — Insights on Apps, Web & Custom Software",
   description:
-    "Practical guides on mobile app development, FlutterFlow, web platforms, and custom software — written by the team that ships them.",
+    "Practical guides on mobile app development, FlutterFlow, web platforms, and custom software — written by the engineer who ships them.",
   alternates: { canonical: "/blog" },
 };
 
@@ -27,11 +27,11 @@ export default function BlogPage() {
         label="Blog"
         title="Notes from the"
         accent="build floor."
-        description="No fluff, no recycled listicles — practical answers to the questions founders actually ask us."
+        description="No fluff, no recycled listicles — practical answers to the questions founders actually ask me."
         specs={[
           { label: "Topics", value: "Apps · Web · Software" },
           { label: "Articles", value: `${posts.length} and counting` },
-          { label: "Written by", value: "The build team" },
+          { label: "Written by", value: "Chand Latif" },
         ]}
       />
       <section className="mx-auto max-w-4xl px-5 py-24 md:px-8 md:py-32">

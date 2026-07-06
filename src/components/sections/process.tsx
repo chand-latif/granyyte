@@ -28,7 +28,7 @@ const steps = [
     number: "04",
     title: "Launch & grow",
     description:
-      "App-store submission, deployment, and monitoring handled. Then we iterate — most clients keep shipping with us long after v1.",
+      "App-store submission, deployment, and monitoring handled. Then I iterate — most clients keep shipping with me long after v1.",
   },
 ];
 
@@ -46,7 +46,7 @@ export function Process() {
         <SectionHeading
           number="03"
           label="Process"
-          title="How we take you from idea to launch"
+          title="How I take you from idea to launch"
           description="A process built on visibility — you always know what's happening and what comes next."
         />
         <div ref={lineRef} className="relative">

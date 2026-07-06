@@ -23,7 +23,7 @@ export function CtaBand() {
         </h2>
         <Reveal delay={0.4}>
           <p className="mx-auto mt-8 max-w-xl text-base text-muted md:text-lg">
-            Tell us what you&apos;re building. We&apos;ll reply within 24 hours with honest
+            Tell me what you&apos;re building. I&apos;ll reply within 24 hours with honest
             feedback and a clear path to launch.
           </p>
         </Reveal>

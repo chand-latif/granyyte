@@ -104,7 +104,7 @@ export function ContactForm() {
           name="message"
           required
           rows={5}
-          placeholder="What are you building? Platforms, timeline, anything that helps us understand."
+          placeholder="What are you building? Platforms, timeline, anything that helps me understand."
           className={`${inputClasses} resize-y`}
         />
       </div>

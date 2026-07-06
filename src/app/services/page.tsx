@@ -19,9 +19,9 @@ export default function ServicesPage() {
     <>
       <PageHeader
         label="Services"
-        title="One team for the"
+        title="One engineer for the"
         accent="whole journey."
-        description="Design, development, deployment, and beyond. Pick a discipline — or bring us an idea and we'll tell you exactly what it needs."
+        description="Design, development, deployment, and beyond. Pick a discipline — or bring me an idea and I'll tell you exactly what it needs."
         specs={[
           { label: "Disciplines", value: "Mobile · Web · Software" },
           { label: "Pricing", value: "Fixed & scoped" },

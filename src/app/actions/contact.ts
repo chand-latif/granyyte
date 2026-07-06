@@ -20,7 +20,7 @@ export async function submitContactForm(
 
   // Honeypot — bots fill every field; humans never see this one
   if (formData.get("website")) {
-    return { status: "success", message: "Thanks! We'll get back to you within 24 hours." };
+    return { status: "success", message: "Thanks! I'll get back to you within 24 hours." };
   }
 
   if (!name || name.length < 2) {
@@ -32,7 +32,7 @@ export async function submitContactForm(
   if (!message || message.length < 10) {
     return {
       status: "error",
-      message: "Please tell us a bit more about your project (at least a sentence).",
+      message: "Please tell me a bit more about your project (at least a sentence).",
     };
   }
 
@@ -41,7 +41,7 @@ export async function submitContactForm(
     // Graceful fallback while the Resend key isn't configured yet
     return {
       status: "error",
-      message: `Our form is temporarily offline — please email us directly at ${site.contact.email} or reach out on WhatsApp.`,
+      message: `The form is temporarily offline — please email me directly at ${site.contact.email} or reach out on WhatsApp.`,
     };
   }
 
@@ -76,17 +76,17 @@ export async function submitContactForm(
       console.error("[contact] Resend error:", error);
       return {
         status: "error",
-        message: `We couldn't send your message (${error.message}). Please email us directly at ${site.contact.email}.`,
+        message: `I couldn't send your message (${error.message}). Please email me directly at ${site.contact.email}.`,
       };
     }
 
     console.log("[contact] sent:", data?.id);
-    return { status: "success", message: "Thanks! We'll get back to you within 24 hours." };
+    return { status: "success", message: "Thanks! I'll get back to you within 24 hours." };
   } catch (err) {
     console.error("[contact] Unexpected error:", err);
     return {
       status: "error",
-      message: `Something went wrong sending your message. Please email us directly at ${site.contact.email}.`,
+      message: `Something went wrong sending your message. Please email me directly at ${site.contact.email}.`,
     };
   }
 }

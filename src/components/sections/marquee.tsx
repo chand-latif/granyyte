@@ -6,7 +6,7 @@ export function TechMarquee() {
   return (
     <section
       className="overflow-hidden border-y border-edge bg-base py-6"
-      aria-label="Technologies we work with"
+      aria-label="Technologies I work with"
     >
       <div className="flex w-max animate-marquee gap-0">
         {[0, 1].map((copy) => (

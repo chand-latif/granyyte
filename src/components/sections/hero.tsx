@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { AvailableBadge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,7 @@ import { AnimatedText } from "@/components/fx/animated-text";
 import { FlipWords } from "@/components/fx/flip-words";
 import { Magnetic } from "@/components/fx/magnetic";
 import { ParticleField } from "@/components/fx/particle-field";
+import { site } from "@/config/site";
 
 function ScrollBadge() {
   return (
@@ -53,41 +55,43 @@ export function Hero() {
 
       <motion.div
         style={reduce ? undefined : { y, opacity }}
-        className="relative mx-auto w-full max-w-6xl px-5 pb-24 pt-32 md:px-8 md:pt-40"
+        className="relative mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 px-5 pb-24 pt-32 md:px-8 md:pt-40 lg:grid-cols-[1.5fr_0.85fr] lg:gap-14"
       >
-        <Reveal>
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <AvailableBadge />
-            <div className="hidden items-center gap-6 font-mono text-[11px] uppercase tracking-widest text-faint md:flex">
-              <span>Est. 2026</span>
-              <span className="size-1 rounded-full bg-edge-strong" aria-hidden />
-              <span className="text-lime">Sialkot → Worldwide</span>
+        {/* Left — copy */}
+        <div>
+          <Reveal>
+            <div className="flex flex-wrap items-center gap-4">
+              <AvailableBadge />
+              <div className="hidden items-center gap-6 font-mono text-[11px] uppercase tracking-widest text-faint md:flex">
+                <span>Est. 2026</span>
+                <span className="size-1 rounded-full bg-edge-strong" aria-hidden />
+                <span className="text-lime">Sialkot → Worldwide</span>
+              </div>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
 
-        <h1 className="mt-12 font-display text-[13vw] font-bold leading-[0.98] tracking-tight text-fg sm:text-7xl md:text-8xl lg:text-[7.5rem]">
-          <AnimatedText text="We build" delay={0.15} />
-          <br />
-          <span className="font-serif italic tracking-normal text-lime">
-            <FlipWords
-              words={["mobile apps", "web platforms", "custom software", "SaaS MVPs"]}
-            />
-          </span>
-          <br />
-          <AnimatedText text="that ship." delay={0.4} />
-        </h1>
+          <h1 className="mt-10 font-display text-[13vw] font-bold leading-[0.98] tracking-tight text-fg sm:text-7xl md:text-8xl lg:text-[5.75rem]">
+            <AnimatedText text="I build" delay={0.15} trigger="mount" />
+            <br />
+            <span className="font-serif italic tracking-normal text-lime">
+              <FlipWords
+                words={["mobile apps", "web platforms", "custom software", "SaaS MVPs"]}
+              />
+            </span>
+            <br />
+            <AnimatedText text="that ship." delay={0.4} trigger="mount" />
+          </h1>
 
-        <div className="mt-12 flex flex-col justify-between gap-10 md:flex-row md:items-end">
           <Reveal delay={0.6}>
-            <p className="max-w-md text-base leading-relaxed text-muted md:text-lg">
-              Granyyte is the development agency founders call when they want it{" "}
-              <span className="text-fg">designed, built, and launched</span> — not just talked
-              about. iOS, Android, and web. From first sketch to app-store release.
+            <p className="mt-10 max-w-md text-base leading-relaxed text-muted md:text-lg">
+              I design, build, and launch digital products end to end — the engineer founders call
+              when they want it{" "}
+              <span className="text-fg">shipped, not just talked about</span>. iOS, Android, and
+              web, from first sketch to app-store release.
             </p>
           </Reveal>
           <Reveal delay={0.7}>
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="mt-9 flex flex-wrap items-center gap-4">
               <Magnetic>
                 <Button href="/contact" size="lg" showArrow>
                   Start a project
@@ -95,12 +99,52 @@ export function Hero() {
               </Magnetic>
               <Magnetic>
                 <Button href="/work" size="lg" variant="outline">
-                  See our work
+                  See my work
                 </Button>
               </Magnetic>
             </div>
           </Reveal>
         </div>
+
+        {/* Right — founder portrait (portfolio identity) */}
+        <Reveal delay={0.35} className="mx-auto w-full max-w-[280px] lg:max-w-none">
+          <div className="relative">
+            {/* Soft lime glow behind the frame */}
+            <div
+              className="absolute -inset-4 -z-10 rounded-[2rem] bg-lime/10 blur-2xl"
+              aria-hidden
+            />
+            <div className="group relative aspect-[4/5] overflow-hidden rounded-3xl border border-edge bg-surface">
+              <Image
+                src="/founder.jpg"
+                alt={`${site.founder.name}, ${site.founder.role} of ${site.name}`}
+                fill
+                sizes="(max-width: 1024px) 280px, 360px"
+                priority
+                className="object-cover object-top"
+              />
+              {/* Readability gradient */}
+              <div
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-base via-base/50 to-transparent"
+                aria-hidden
+              />
+              {/* Corner ticks */}
+              <span className="absolute left-3 top-3 size-5 border-l-2 border-t-2 border-lime/70" aria-hidden />
+              <span className="absolute right-3 top-3 size-5 border-r-2 border-t-2 border-lime/70" aria-hidden />
+              {/* Name plate */}
+              <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3">
+                <div>
+                  <p className="font-display text-lg font-bold text-fg">{site.founder.name}</p>
+                  <p className="font-mono text-xs text-lime">{site.founder.role}</p>
+                </div>
+                <span className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-edge bg-base/70 px-2.5 py-1 font-mono text-[10px] text-muted backdrop-blur">
+                  <span className="size-1.5 rounded-full bg-lime animate-pulse-dot" />
+                  Founder
+                </span>
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </motion.div>
 
       {/* Scroll cue + rotating badge */}

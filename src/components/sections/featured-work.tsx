@@ -11,7 +11,7 @@ export function FeaturedWork() {
       <SectionHeading
         number="02"
         label="Selected Work"
-        title="Products we've shipped"
+        title="Products I've shipped"
         description="Marketplaces, B2B tools, wellness apps, CRMs — built for clients across Europe, the Middle East, and beyond."
       />
       <StackCards projects={featuredProjects.slice(0, 4)} />

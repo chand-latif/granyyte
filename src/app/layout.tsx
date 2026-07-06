@@ -53,12 +53,12 @@ export const metadata: Metadata = {
     type: "website",
     siteName: site.name,
     url: site.url,
-    title: `${site.name} — We build software that ships.`,
+    title: `${site.name} — I build software that ships.`,
     description: site.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — We build software that ships.`,
+    title: `${site.name} — I build software that ships.`,
     description: site.description,
   },
   robots: {

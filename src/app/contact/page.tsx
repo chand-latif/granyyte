@@ -7,9 +7,9 @@ import { JsonLd } from "@/components/ui/json-ld";
 import { ContactForm } from "@/components/sections/contact-form";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Start Your Project",
+  title: "Contact — Start Your Project",
   description:
-    "Tell Granyyte about your project. We reply within 24 hours with honest feedback and a clear path to launch — email, WhatsApp, or the form below.",
+    "Tell me about your project. I reply within 24 hours with honest feedback and a clear path to launch — email, WhatsApp, or the form below.",
   alternates: { canonical: "/contact" },
 };
 
@@ -45,7 +45,7 @@ const channels = [
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: "Chat with us directly",
+    value: "Chat with me directly",
     href: site.contact.whatsapp,
   },
   {
@@ -64,7 +64,7 @@ export default function ContactPage() {
         label="Contact"
         title="Let's build something"
         accent="worth shipping."
-        description="Tell us what you're working on. We reply within 24 hours — with honest feedback, not a sales script."
+        description="Tell me what you're working on. I reply within 24 hours — with honest feedback, not a sales script."
         specs={[
           { label: "Response", value: "Within 24 hours" },
           { label: "Channels", value: "Email · WhatsApp" },
@@ -127,9 +127,9 @@ export default function ContactPage() {
 
           <Reveal delay={0.1}>
             <div className="rounded-2xl border border-edge bg-surface/50 p-7 md:p-10">
-              <h2 className="font-display text-2xl font-bold text-fg">Tell us about your project</h2>
+              <h2 className="font-display text-2xl font-bold text-fg">Tell me about your project</h2>
               <p className="mt-2 text-sm text-muted">
-                A few sentences are enough — we&apos;ll take it from there.
+                A few sentences are enough — I&apos;ll take it from there.
               </p>
               <div className="mt-8">
                 <ContactForm />

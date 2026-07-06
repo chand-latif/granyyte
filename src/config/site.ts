@@ -2,7 +2,7 @@ export const site = {
   name: "Granyyte",
   legalName: "Granyyte",
   url: "https://granyyte.com",
-  tagline: "We build software that ships.",
+  tagline: "I build software that ships.",
   description:
     "Granyyte is a software development agency building high-quality mobile apps, web platforms, and custom software. From concept to launch — design, development, and deployment handled end to end.",
   founder: {

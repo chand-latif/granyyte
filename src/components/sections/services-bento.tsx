@@ -12,7 +12,7 @@ export function ServicesBento() {
         number="01"
         label="Services"
         title="Everything you need to go from idea to launch"
-        description="Three core disciplines, one team owning the whole journey — design, build, ship, iterate."
+        description="Three core disciplines, one engineer owning the whole journey — design, build, ship, iterate."
       />
       <div className="grid gap-5 md:grid-cols-3">
         {services.map((service, i) => {
