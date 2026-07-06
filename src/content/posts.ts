@@ -7,7 +7,13 @@ export type Post = {
   tags: string[];
 };
 
-export const posts: Post[] = [
+// Blog is "Coming soon" for now. To bring it back, move the archived entries
+// below into this array — the index page, post pages, and sitemap all read
+// from here, so restoring is a one-step edit. The MDX files remain in
+// src/content/posts/.
+export const posts: Post[] = [];
+
+/* ARCHIVED — restore by moving these back into the array above:
   {
     slug: "flutterflow-vs-native-development",
     title: "FlutterFlow vs. Native Development: What to Choose in 2026",
@@ -35,7 +41,7 @@ export const posts: Post[] = [
     readingTime: "6 min read",
     tags: ["Custom Software", "Business", "Strategy"],
   },
-];
+*/
 
 export function getPost(slug: string) {
   return posts.find((p) => p.slug === slug);
