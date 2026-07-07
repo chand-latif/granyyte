@@ -136,6 +136,10 @@ idea.compile().ship() — iOS, Android, web.
               <div className="absolute inset-x-4 bottom-4">
                 <p className="font-display text-lg font-bold text-fg">{site.founder.name}</p>
                 <p className="font-mono text-xs text-lime">{site.founder.role}</p>
+                <span className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-lime/25 bg-base/50 px-2.5 py-1 font-mono text-[10px] text-muted backdrop-blur">
+                  <span className="size-1.5 rounded-full bg-lime" aria-hidden />
+                  {site.founder.certification}
+                </span>
               </div>
             </div>
           </div>

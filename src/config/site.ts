@@ -9,7 +9,9 @@ export const site = {
     name: "Chand Latif",
     role: "Senior Software Engineer",
     linkedin: "https://www.linkedin.com/in/chand-latif",
-    certification: "FlutterFlow Retail Expert 2025",
+    certification: "Certified FlutterFlow Expert",
+    certificationUrl:
+      "https://university.flutterflow.io/share/gamification/badges/external/7c115f5d-5aa5-425d-bda2-bab2cc91665f?lang=en",
   },
   contact: {
     email: "chandlatif@granyyte.com", // company address (Cloudflare routing → forwards to the Gmail below)

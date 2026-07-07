@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Award, Eye, Handshake, Rocket } from "lucide-react";
+import { Award, Eye, Handshake, Rocket, BadgeCheck, ArrowUpRight } from "lucide-react";
 import { site } from "@/config/site";
 import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
@@ -124,13 +124,48 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Certification */}
+      <section className="mx-auto max-w-6xl px-5 pb-8 md:px-8">
+        <Reveal>
+          <div className="relative overflow-hidden rounded-2xl border border-lime/20 bg-surface p-8 md:p-10">
+            <div className="absolute inset-0 bg-lime-glow opacity-70" aria-hidden />
+            <div className="relative flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+              <div className="flex items-start gap-5">
+                <span className="flex size-14 shrink-0 items-center justify-center rounded-xl border border-lime/30 bg-raised text-lime">
+                  <BadgeCheck className="size-7" />
+                </span>
+                <div>
+                  <p className="font-mono text-sm text-lime">02 — Certification</p>
+                  <h2 className="mt-2 font-display text-2xl font-bold text-fg md:text-3xl">
+                    {site.founder.certification}
+                  </h2>
+                  <p className="mt-2 max-w-md text-sm leading-relaxed text-muted">
+                    Officially certified by FlutterFlow University — validated skills in designing
+                    and shipping production-grade Flutter apps with FlutterFlow.
+                  </p>
+                </div>
+              </div>
+              <a
+                href={site.founder.certificationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex shrink-0 items-center gap-2 self-start rounded-full border border-edge-strong px-6 py-3 font-medium text-fg transition-all duration-300 hover:border-lime hover:text-lime md:self-auto"
+              >
+                View credential
+                <ArrowUpRight className="size-4" />
+              </a>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
       <Stats />
 
       {/* Values */}
       <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
         <Reveal>
           <div className="mb-12 max-w-2xl md:mb-16">
-            <p className="mb-4 font-mono text-sm text-lime">02 — What I stand for</p>
+            <p className="mb-4 font-mono text-sm text-lime">03 — What I stand for</p>
             <h2 className="font-display text-3xl font-bold tracking-tight text-fg md:text-5xl">
               The principles behind every build
             </h2>
