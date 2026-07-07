@@ -88,15 +88,13 @@ export default function AboutPage() {
               {/* Corner ticks */}
               <span className="absolute left-3 top-3 size-5 border-l-2 border-t-2 border-lime/70" aria-hidden />
               <span className="absolute right-3 top-3 size-5 border-r-2 border-t-2 border-lime/70" aria-hidden />
-              <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3">
-                <div>
-                  <p className="font-display text-lg font-bold text-fg">{site.founder.name}</p>
-                  <p className="font-mono text-xs text-lime">{site.founder.role}</p>
-                </div>
-                {/* <span className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-edge bg-base/70 px-2.5 py-1 font-mono text-[10px] text-muted backdrop-blur">
-                  <span className="size-1.5 rounded-full bg-lime animate-pulse-dot" />
-                  Founder
-                </span> */}
+              <div className="absolute inset-x-4 bottom-4">
+                <p className="font-display text-lg font-bold text-fg">{site.founder.name}</p>
+                <p className="font-mono text-xs text-lime">{site.founder.role}</p>
+                <span className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-lime/25 bg-base/50 px-2.5 py-1 font-mono text-[10px] text-muted backdrop-blur">
+                  <span className="size-1.5 rounded-full bg-lime" aria-hidden />
+                  {site.founder.certification}
+                </span>
               </div>
             </div>
           </Reveal>
@@ -113,12 +111,28 @@ export default function AboutPage() {
                 design, build, and launch under.
               </p>
             </div>
-            <div className="mt-8 inline-flex items-center gap-3 rounded-xl border border-edge bg-surface px-5 py-4">
-              <Award className="size-6 shrink-0 text-lime" />
-              <div>
-                <p className="font-medium text-fg">Senior Software Engineer</p>
-                <p className="text-xs text-muted">Full-stack — mobile, web &amp; custom software</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <div className="inline-flex items-center gap-3 rounded-xl border border-edge bg-surface px-5 py-4">
+                <Award className="size-6 shrink-0 text-lime" />
+                <div>
+                  <p className="font-medium text-fg">Senior Software Engineer</p>
+                  <p className="text-xs text-muted">Full-stack — mobile, web &amp; custom software</p>
+                </div>
               </div>
+              <a
+                href={site.founder.certificationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 rounded-xl border border-edge bg-surface px-5 py-4 transition-colors hover:border-lime/40"
+              >
+                <BadgeCheck className="size-6 shrink-0 text-lime" />
+                <div>
+                  <p className="font-medium text-fg transition-colors group-hover:text-lime">
+                    {site.founder.certification}
+                  </p>
+                  <p className="text-xs text-muted">FlutterFlow University certified</p>
+                </div>
+              </a>
             </div>
           </Reveal>
         </div>
