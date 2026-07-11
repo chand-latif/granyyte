@@ -115,7 +115,11 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
               <ul className="mt-4 space-y-3 text-sm text-muted">
                 <li className="flex justify-between border-b border-edge pb-3">
                   <span>Proposal turnaround</span>
-                  <span className="text-fg">~1 week</span>
+                  <span className="text-fg">1–2 days</span>
+                </li>
+                <li className="flex justify-between border-b border-edge pb-3">
+                  <span>Typical delivery</span>
+                  <span className="text-fg">2–4 weeks</span>
                 </li>
                 <li className="flex justify-between border-b border-edge pb-3">
                   <span>Pricing</span>

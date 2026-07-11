@@ -10,7 +10,7 @@ const steps = [
     number: "01",
     title: "Discover",
     description:
-      "A short call to map your goals, users, and constraints. You get a fixed-price proposal with a real timeline — usually within a week.",
+      "A short call to map your goals, users, and constraints. You get a fixed-price proposal with a real timeline — usually within 1–2 days.",
   },
   {
     number: "02",

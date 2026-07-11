@@ -130,7 +130,7 @@ export default function AboutPage() {
                   <p className="font-medium text-fg transition-colors group-hover:text-lime">
                     {site.founder.certification}
                   </p>
-                  <p className="text-xs text-muted">FlutterFlow University certified</p>
+                  <p className="text-xs text-muted">FlutterFlow Certified</p>
                 </div>
               </a>
             </div>

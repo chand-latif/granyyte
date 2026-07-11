@@ -40,7 +40,7 @@ export const services: Service[] = [
       {
         question: "How long does it take to build a mobile app?",
         answer:
-          "A focused MVP typically ships in 6–10 weeks. Larger products with custom backends run 3–5 months. I scope precisely before I start, so you get a real timeline — not a moving target.",
+          "Most apps ship in 2–4 weeks, whether it's mobile, web, or custom software. Larger products with heavier custom backends can extend beyond that. I scope precisely before I start, so you get a real timeline — not a moving target.",
       },
       {
         question: "Do you build for both iOS and Android?",
@@ -97,9 +97,9 @@ export const services: Service[] = [
           "Both. Beyond marketing sites I build full products — dashboards, portals, booking systems, and SaaS applications with authentication, payments, and real-time features.",
       },
       {
-        question: "How much does a website cost?",
+        question: "How much does a website cost — and how fast can you deliver?",
         answer:
-          "A high-end marketing site typically starts around $2–5k; full web applications scope from $8k upward depending on complexity. I quote a fixed price after a short discovery call.",
+          "A high-end marketing site typically starts around $2–5k; full web applications scope from $8k upward depending on complexity. I quote a fixed price after a short discovery call, usually within 1–2 days, and most sites ship in 2–4 weeks — larger platforms can extend beyond that.",
       },
     ],
     relatedProjects: ["poland-portal", "zwipe"],
@@ -143,7 +143,7 @@ export const services: Service[] = [
       {
         question: "How do we get started?",
         answer:
-          "I start with a discovery call to map your workflows, then deliver a scoped proposal with fixed pricing and a delivery timeline — usually within a week.",
+          "I start with a discovery call to map your workflows, then deliver a scoped proposal with fixed pricing and a delivery timeline — usually within 1–2 days. Most builds ship in 2–4 weeks, extending only for larger, more complex systems.",
       },
     ],
     relatedProjects: ["mainxpert", "poland-portal"],
