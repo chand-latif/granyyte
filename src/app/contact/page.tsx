@@ -16,17 +16,21 @@ export const metadata: Metadata = {
 const professionalServiceJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": `${site.url}/#organization`,
   name: site.name,
   url: site.url,
   email: site.contact.email,
   telephone: site.contact.phone,
+  image: `${site.url}/logo.png`,
+  priceRange: "$$",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Sialkot",
+    addressRegion: "Punjab",
     addressCountry: "PK",
   },
   areaServed: "Worldwide",
-  sameAs: [site.socials.linkedin],
+  sameAs: [site.socials.linkedin, site.socials.facebook].filter(Boolean),
 };
 
 const channels = [

@@ -61,9 +61,32 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
     ],
   };
 
+  // Apps → SoftwareApplication (richer result); web projects → CreativeWork.
+  const isApp = project.platforms.some((p) => p === "iOS" || p === "Android");
+  const coverImage = project.icon ?? project.screenshot ?? project.logo;
+  const projectJsonLd = {
+    "@context": "https://schema.org",
+    "@type": isApp ? "SoftwareApplication" : "CreativeWork",
+    name: project.name,
+    description: project.tagline,
+    url: `${site.url}/work/${project.slug}`,
+    ...(coverImage ? { image: `${site.url}${coverImage}` } : {}),
+    creator: { "@id": `${site.url}/#organization` },
+    ...(isApp
+      ? {
+          applicationCategory: "MobileApplication",
+          operatingSystem: project.platforms
+            .filter((p) => p !== "Web")
+            .join(", "),
+        }
+      : {}),
+    ...(project.links?.web ? { sameAs: project.links.web } : {}),
+  };
+
   return (
     <>
       <JsonLd data={breadcrumbJsonLd} />
+      <JsonLd data={projectJsonLd} />
 
       {/* Case study hero */}
       <section className="relative overflow-hidden border-b border-edge bg-dot-grid">

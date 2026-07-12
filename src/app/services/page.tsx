@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
 import { services } from "@/content/services";
+import { site } from "@/config/site";
 import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
+import { JsonLd } from "@/components/ui/json-ld";
 import { CtaBand } from "@/components/sections/cta-band";
 import { TechMarquee } from "@/components/sections/marquee";
 
@@ -14,9 +16,38 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services" },
 };
 
+const collectionJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Services — Granyyte",
+  url: `${site.url}/services`,
+  isPartOf: { "@id": `${site.url}/#website` },
+  about: { "@id": `${site.url}/#organization` },
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: services.map((s, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: s.title,
+      url: `${site.url}/services/${s.slug}`,
+    })),
+  },
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+    { "@type": "ListItem", position: 2, name: "Services", item: `${site.url}/services` },
+  ],
+};
+
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd data={collectionJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <PageHeader
         label="Services"
         title="One engineer for the"

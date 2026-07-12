@@ -99,7 +99,7 @@ export const services: Service[] = [
       {
         question: "How much does a website cost — and how fast can you deliver?",
         answer:
-          "A high-end marketing site typically starts around $2–5k; full web applications scope from $8k upward depending on complexity. I quote a fixed price after a short discovery call, usually within 1–2 days, and most sites ship in 2–4 weeks — larger platforms can extend beyond that.",
+          "Websites start from a few hundred dollars and scale with scope — a focused marketing site is the low end, while full web applications with auth, payments, and dashboards cost more depending on complexity. I quote a fixed price after a short discovery call, usually within 1–2 days, and most sites ship in 2–4 weeks — larger platforms can extend beyond that.",
       },
     ],
     relatedProjects: ["poland-portal", "zwipe"],

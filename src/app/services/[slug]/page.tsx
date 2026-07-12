@@ -43,8 +43,14 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
     "@context": "https://schema.org",
     "@type": "Service",
     name: service.title,
+    serviceType: service.title,
     description: service.metaDescription,
-    provider: { "@type": "Organization", name: site.name, url: site.url },
+    provider: {
+      "@type": "Organization",
+      "@id": `${site.url}/#organization`,
+      name: site.name,
+      url: site.url,
+    },
     areaServed: "Worldwide",
     url: `${site.url}/services/${service.slug}`,
   };

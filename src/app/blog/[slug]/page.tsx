@@ -52,21 +52,24 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
 
   const articleJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
     datePublished: post.date,
+    dateModified: post.date,
+    image: `${site.url}/opengraph-image`,
     author: {
-      "@type": "Organization",
-      name: site.name,
-      url: site.url,
+      "@type": "Person",
+      "@id": `${site.url}/#chand-latif`,
+      name: site.founder.name,
+      url: `${site.url}/about`,
     },
-    publisher: {
-      "@type": "Organization",
-      name: site.name,
-      url: site.url,
+    publisher: { "@id": `${site.url}/#organization` },
+    keywords: post.tags.join(", "),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${site.url}/blog/${post.slug}`,
     },
-    mainEntityOfPage: `${site.url}/blog/${post.slug}`,
   };
 
   return (

@@ -64,18 +64,44 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
+  verification: site.verification.google
+    ? { google: site.verification.google }
+    : undefined,
 };
+
+// Only include profiles that are actually filled in (empty strings would be
+// invalid sameAs entries).
+const sameAs = [site.socials.linkedin, site.socials.facebook].filter(Boolean);
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${site.url}/#organization`,
   name: site.name,
+  legalName: site.legalName,
   url: site.url,
+  description: site.description,
   email: site.contact.email,
   telephone: site.contact.phone,
+  foundingDate: "2026",
+  logo: {
+    "@type": "ImageObject",
+    url: `${site.url}/logo.png`,
+    width: 512,
+    height: 512,
+  },
+  image: `${site.url}/logo.png`,
   founder: {
     "@type": "Person",
+    "@id": `${site.url}/#chand-latif`,
     name: site.founder.name,
     jobTitle: site.founder.role,
     sameAs: site.founder.linkedin,
@@ -83,16 +109,30 @@ const organizationJsonLd = {
   address: {
     "@type": "PostalAddress",
     addressLocality: "Sialkot",
+    addressRegion: "Punjab",
     addressCountry: "PK",
   },
-  sameAs: [site.socials.linkedin],
+  areaServed: "Worldwide",
+  knowsAbout: site.knowsAbout,
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "sales",
+    email: site.contact.email,
+    telephone: site.contact.phone,
+    areaServed: "Worldwide",
+    availableLanguage: ["English", "Urdu"],
+  },
+  sameAs,
 };
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${site.url}/#website`,
   name: site.name,
   url: site.url,
+  inLanguage: "en",
+  publisher: { "@id": `${site.url}/#organization` },
 };
 
 export default function RootLayout({

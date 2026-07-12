@@ -1,7 +1,7 @@
 export const site = {
   name: "Granyyte",
   legalName: "Granyyte",
-  url: "https://granyyte.com",
+  url: "https://www.granyyte.com",
   tagline: "I build software that ships.",
   description:
     "Granyyte is a software development agency building high-quality mobile apps, web platforms, and custom software. From concept to launch — design, development, and deployment handled end to end.",
@@ -23,8 +23,24 @@ export const site = {
   },
   socials: {
     linkedin: "https://www.linkedin.com/in/chand-latif",
+    facebook: "", // TODO: paste the Granyyte/Chand Facebook profile URL — used in schema sameAs
     // TODO: add GitHub / X / Upwork profiles when provided
   },
+  // Search-engine verification tokens. Paste the value only (not the full meta tag).
+  verification: {
+    google: "", // TODO: google-site-verification token from Google Search Console
+  },
+  // Topics the brand is an authority on — feeds Organization "knowsAbout" (entity SEO).
+  knowsAbout: [
+    "Mobile App Development",
+    "Web Development",
+    "Custom Software Development",
+    "Flutter",
+    "FlutterFlow",
+    "iOS App Development",
+    "Android App Development",
+    "SaaS Development",
+  ],
   // TODO: replace with real numbers from Chand
   stats: [
     { value: "15+", label: "Projects shipped" },

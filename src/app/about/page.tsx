@@ -44,11 +44,14 @@ const values = [
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": `${site.url}/#chand-latif`,
   name: site.founder.name,
   jobTitle: site.founder.role,
-  worksFor: { "@type": "Organization", name: site.name, url: site.url },
-  sameAs: site.founder.linkedin,
+  worksFor: { "@id": `${site.url}/#organization` },
+  knowsAbout: site.knowsAbout,
+  sameAs: [site.founder.linkedin],
   url: `${site.url}/about`,
+  image: `${site.url}/founder.jpg`,
 };
 
 export default function AboutPage() {

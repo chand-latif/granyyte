@@ -27,10 +27,10 @@ export default function BlogPage() {
         label="Blog"
         title="Notes from the"
         accent="build floor."
-        description="Practical guides on apps, web, and custom software — in the works."
+        description="Practical, no-fluff guides on mobile apps, web platforms, and custom software — written by the engineer who ships them."
         specs={[
           { label: "Topics", value: "Apps · Web · Software" },
-          { label: "Status", value: "Coming soon" },
+          { label: "Articles", value: String(posts.length) },
           { label: "Written by", value: "Chand Latif" },
         ]}
       />
