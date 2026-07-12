@@ -1,7 +1,7 @@
 export const site = {
   name: "Granyyte",
   legalName: "Granyyte",
-  url: "https://www.granyyte.com",
+  url: "https://granyyte.com",
   tagline: "I build software that ships.",
   description:
     "Granyyte is a software development agency building high-quality mobile apps, web platforms, and custom software. From concept to launch — design, development, and deployment handled end to end.",
@@ -23,7 +23,7 @@ export const site = {
   },
   socials: {
     linkedin: "https://www.linkedin.com/in/chand-latif",
-    facebook: "", // TODO: paste the Granyyte/Chand Facebook profile URL — used in schema sameAs
+    facebook: "https://www.facebook.com/chand.latif.1238/", // used in schema sameAs
     // TODO: add GitHub / X / Upwork profiles when provided
   },
   // Search-engine verification tokens. Paste the value only (not the full meta tag).
