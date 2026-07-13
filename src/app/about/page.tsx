@@ -108,10 +108,10 @@ export default function AboutPage() {
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-muted">
               <p>
-                I&apos;m a senior software engineer and full-stack developer who has spent years
-                shipping apps for clients across Europe, the Middle East, and North America —
-                marketplaces, wellness platforms, B2B tools, and CRMs. Granyyte is the name I
-                design, build, and launch under.
+                I&apos;m a senior software engineer and full-stack developer based in Sialkot,
+                Pakistan, and I&apos;ve spent years shipping apps for clients across Europe, the
+                Middle East, and North America — marketplaces, wellness platforms, B2B tools, and
+                CRMs. Granyyte is the name I design, build, and launch under.
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">

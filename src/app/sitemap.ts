@@ -3,6 +3,7 @@ import { site } from "@/config/site";
 import { services } from "@/content/services";
 import { projects } from "@/content/projects";
 import { posts } from "@/content/posts";
+import { seoPages } from "@/content/seo-pages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -23,6 +24,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  // Location + affordability landing pages (root-level URLs)
+  const landingPages: MetadataRoute.Sitemap = seoPages.map((p) => ({
+    url: `${site.url}/${p.slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.9,
+  }));
+
   const workPages: MetadataRoute.Sitemap = projects.map((p) => ({
     url: `${site.url}/work/${p.slug}`,
     lastModified,
@@ -37,5 +46,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...servicePages, ...workPages, ...blogPages];
+  return [...staticPages, ...servicePages, ...landingPages, ...workPages, ...blogPages];
 }

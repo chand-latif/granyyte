@@ -24,7 +24,7 @@ export const services: Service[] = [
     excerpt:
       "Native-quality iOS and Android apps built with Flutter and FlutterFlow — one codebase, every platform, shipped fast.",
     metaDescription:
-      "Mobile app development services for iOS and Android. Granyyte builds native-quality Flutter apps — UI/UX, backend, and App Store deployment handled end to end.",
+      "Affordable mobile app development for iOS and Android from Pakistan. Granyyte builds native-quality Flutter apps — UI/UX, backend, and App Store deployment handled end to end.",
     intro:
       "Your users live on their phones — your product should too. I design, build, and launch mobile apps that feel native on both iOS and Android from a single codebase, cutting time-to-market roughly in half without cutting corners. From marketplaces and social platforms to meditation apps and field tools, I've shipped across nearly every category.",
     deliverables: [
@@ -57,6 +57,16 @@ export const services: Service[] = [
         answer:
           "I offer ongoing maintenance plans covering OS updates, bug fixes, and new features. Most of my clients keep working with me long after v1 ships.",
       },
+      {
+        question: "How much does it cost to build a mobile app?",
+        answer:
+          "Complete apps start around $500, standard products with backend and payments land between $1,000 and $2,000, and complex platforms scope beyond that. Smaller work — prototypes, fixes, single features — starts from $100. Every quote is fixed against a written scope.",
+      },
+      {
+        question: "Where are you based — and does it matter?",
+        answer:
+          "I build from Sialkot, Pakistan, for clients across Europe, the Middle East, and North America. It matters in one way only: my rates are a fraction of western agencies for the same stack and standards. Timezone overlap, weekly demo builds, and direct communication keep distance irrelevant.",
+      },
     ],
     relatedProjects: ["poland-portal", "zwipe", "mindful-mantra"],
   },
@@ -68,7 +78,7 @@ export const services: Service[] = [
     excerpt:
       "Fast, SEO-ready websites and web apps built with React and Next.js — engineered to rank, convert, and scale.",
     metaDescription:
-      "Web development services by Granyyte. SEO-first websites, web apps, and platforms built with React and Next.js — designed to rank on Google and convert visitors.",
+      "Affordable web development from Pakistan. SEO-first websites, web apps, and platforms built with React and Next.js — designed to rank on Google and convert visitors.",
     intro:
       "A slow, invisible website is a liability. I build web platforms that load instantly, rank on Google, and turn visitors into customers — from marketing sites and dashboards to full SaaS products. Server-rendered, performance-budgeted, and built on the same stack powering the fastest sites on the web.",
     deliverables: [
@@ -101,6 +111,11 @@ export const services: Service[] = [
         answer:
           "Websites start from a few hundred dollars and scale with scope — a focused marketing site is the low end, while full web applications with auth, payments, and dashboards cost more depending on complexity. I quote a fixed price after a short discovery call, usually within 1–2 days, and most sites ship in 2–4 weeks — larger platforms can extend beyond that.",
       },
+      {
+        question: "Why is web development from Pakistan so much cheaper?",
+        answer:
+          "Because the overhead is Pakistani while the stack and standards aren't. I build with the same React/Next.js tooling top western studios use — the price difference is structural cost of living, not corners being cut. My own site is the live sample: test its speed and search presence.",
+      },
     ],
     relatedProjects: ["poland-portal", "zwipe"],
   },
@@ -112,7 +127,7 @@ export const services: Service[] = [
     excerpt:
       "CRMs, internal tools, and business automation built around how your company actually works — not the other way around.",
     metaDescription:
-      "Custom software development by Granyyte. CRMs, internal tools, automation, and business systems designed around your workflows — built to scale with your company.",
+      "Custom software and CRM development from Pakistan. Internal tools, automation, and business systems designed around your workflows — built to scale with your company.",
     intro:
       "Off-the-shelf software forces your business into someone else's mold. I build custom systems — CRMs, operations tools, automation pipelines, and client portals — shaped precisely around your workflows. The result: less manual work, fewer subscriptions, and software that becomes a competitive advantage instead of a monthly expense.",
     deliverables: [
@@ -144,6 +159,11 @@ export const services: Service[] = [
         question: "How do we get started?",
         answer:
           "I start with a discovery call to map your workflows, then deliver a scoped proposal with fixed pricing and a delivery timeline — usually within 1–2 days. Most builds ship in 2–4 weeks, extending only for larger, more complex systems.",
+      },
+      {
+        question: "How much does a custom CRM cost?",
+        answer:
+          "A CRM built around one core workflow typically runs $1,000–$2,500 with me; multi-role systems with portals and reporting go $2,500–$5,000+. Automation scripts and integrations start from $100. Building from Pakistan is what makes those numbers possible — comparable US consulting engagements start around $30k.",
       },
     ],
     relatedProjects: ["mainxpert", "poland-portal"],

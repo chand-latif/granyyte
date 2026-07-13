@@ -1,10 +1,12 @@
 export const site = {
   name: "Granyyte",
   legalName: "Granyyte",
-  url: "https://granyyte.com",
+  // ⚠️ Keep the www — the host serves www.granyyte.com (non-www 308-redirects to it).
+  // Every canonical, sitemap URL, and schema @id derives from this value.
+  url: "https://www.granyyte.com",
   tagline: "I build software that ships.",
   description:
-    "Granyyte is a software development agency building high-quality mobile apps, web platforms, and custom software. From concept to launch — design, development, and deployment handled end to end.",
+    "Granyyte is a software development agency based in Sialkot, Pakistan, building high-quality, affordable mobile apps, web platforms, and custom software for clients worldwide. From concept to launch — design, development, and deployment handled end to end.",
   founder: {
     name: "Chand Latif",
     role: "Senior Software Engineer",
@@ -35,11 +37,14 @@ export const site = {
     "Mobile App Development",
     "Web Development",
     "Custom Software Development",
+    "CRM Development",
     "Flutter",
     "FlutterFlow",
     "iOS App Development",
     "Android App Development",
     "SaaS Development",
+    "App Development in Pakistan",
+    "Affordable App Development",
   ],
   // TODO: replace with real numbers from Chand
   stats: [

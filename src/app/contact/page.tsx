@@ -22,7 +22,7 @@ const professionalServiceJsonLd = {
   email: site.contact.email,
   telephone: site.contact.phone,
   image: `${site.url}/logo.png`,
-  priceRange: "$$",
+  priceRange: "$",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Sialkot",

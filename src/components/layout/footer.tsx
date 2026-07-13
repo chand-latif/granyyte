@@ -31,6 +31,16 @@ const serviceLinks = [
   { href: "/services/custom-software", label: "Custom Software" },
 ];
 
+// Location/affordability SEO landing pages — site-wide internal links help
+// Google discover and weight them.
+const hireLinks = [
+  { href: "/mobile-app-development-pakistan", label: "App Development in Pakistan" },
+  { href: "/flutterflow-developer-pakistan", label: "FlutterFlow Developer in Pakistan" },
+  { href: "/web-development-pakistan", label: "Web Development in Pakistan" },
+  { href: "/crm-development-pakistan", label: "CRM Development in Pakistan" },
+  { href: "/affordable-app-development", label: "Affordable App Development" },
+];
+
 export function Footer() {
   return (
     <footer className="border-t border-edge bg-surface/70">
@@ -72,6 +82,18 @@ export function Footer() {
             <h3 className="font-mono text-xs uppercase tracking-widest text-faint">Services</h3>
             <ul className="mt-4 space-y-3">
               {serviceLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm text-muted transition-colors hover:text-lime">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mt-8 font-mono text-xs uppercase tracking-widest text-faint">
+              Hire from Pakistan
+            </h3>
+            <ul className="mt-4 space-y-3">
+              {hireLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-muted transition-colors hover:text-lime">
                     {link.label}

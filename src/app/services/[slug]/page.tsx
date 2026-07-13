@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Check } from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 import { services, getService } from "@/content/services";
 import { projects } from "@/content/projects";
 import { site } from "@/config/site";
@@ -12,6 +13,20 @@ import { WorkGrid } from "@/components/sections/work-grid";
 import { CtaBand } from "@/components/sections/cta-band";
 
 type Params = { slug: string };
+
+// Each service's location/affordability landing-page twins (internal SEO links)
+const landingTwins: Record<string, { href: string; label: string }[]> = {
+  "mobile-app-development": [
+    { href: "/mobile-app-development-pakistan", label: "Mobile app development from Pakistan" },
+    { href: "/affordable-app-development", label: "Affordable app development — pricing tiers" },
+  ],
+  "web-development": [
+    { href: "/web-development-pakistan", label: "Website development from Pakistan" },
+  ],
+  "custom-software": [
+    { href: "/crm-development-pakistan", label: "CRM development from Pakistan" },
+  ],
+};
 
 export function generateStaticParams(): Params[] {
   return services.map((s) => ({ slug: s.slug }));
@@ -136,6 +151,26 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
                   <span className="text-fg">100% yours</span>
                 </li>
               </ul>
+              {landingTwins[service.slug]?.length > 0 && (
+                <>
+                  <p className="mt-8 font-mono text-xs uppercase tracking-widest text-faint">
+                    Deep dives
+                  </p>
+                  <ul className="mt-4 space-y-3 text-sm">
+                    {landingTwins[service.slug].map((twin) => (
+                      <li key={twin.href}>
+                        <Link
+                          href={twin.href}
+                          className="inline-flex items-center gap-1.5 text-muted transition-colors hover:text-lime"
+                        >
+                          {twin.label}
+                          <ArrowUpRight className="size-3.5 shrink-0" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
             </div>
           </Reveal>
         </div>
