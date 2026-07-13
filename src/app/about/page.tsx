@@ -157,8 +157,8 @@ export default function AboutPage() {
                     {site.founder.certification}
                   </h2>
                   <p className="mt-2 max-w-md text-sm leading-relaxed text-muted">
-                    Officially certified by FlutterFlow University — validated skills in designing
-                    and shipping production-grade Flutter apps with FlutterFlow.
+                    Officially certified by FlutterFlow — validated skills in designing
+                    and shipping production-grade Mobile Applications
                   </p>
                 </div>
               </div>

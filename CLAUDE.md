@@ -39,9 +39,10 @@ Edit these first — most content changes are one-file edits:
   - `contact.emailDirect` = `chandlatif.dev@gmail.com`, the founder's direct line. Both emails are
     shown on the footer + contact page so visitors choose company vs. personal.
 - `src/content/projects.ts` — portfolio. `Project` type has `icon?`, `screenshot?`, `logo?`,
-  `links?: {appStore?, playStore?, web?}`. Order: space-maintenance (featured, web), poland-portal,
-  mainxpert, mindful-mantra, zwipe, thafath (Android only), sacred-diary. Real store links + real
-  images in `public/projects/`. (Alligned REI was removed per request.)
+  `links?: {appStore?, playStore?, web?}`. Order: space-maintenance (featured, web), bilge-ai
+  (multi-model AI, iOS+Android), poland-portal, mainxpert, mindful-mantra, zwipe, thafath (Android
+  only), sacred-diary. Real store links + real images in `public/projects/`. (Alligned REI was
+  removed per request.)
 - `src/content/services.ts` — 3 services (mobile / web / custom software), each drives an SEO
   subpage + FAQ schema.
 - `src/content/testimonials.ts` — **LinkedIn video embeds** (iframe `urn:li:ugcPost` URLs), not text.
