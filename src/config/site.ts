@@ -16,9 +16,9 @@ export const site = {
   contact: {
     email: "chandlatif@granyyte.com", // company address (Cloudflare routing → forwards to the Gmail below)
     emailDirect: "chandlatif.dev@gmail.com", // direct line to the founder
-    phone: "+92 309 173 9135",
-    phoneHref: "tel:+923091739135",
-    whatsapp: "https://wa.me/923091739135",
+    phone: "+92 318 728 9616",
+    phoneHref: "tel:+923187289616",
+    whatsapp: "https://wa.me/923187289616",
     location: "Sialkot, Pakistan",
   },
   socials: {
