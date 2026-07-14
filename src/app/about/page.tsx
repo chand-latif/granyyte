@@ -64,8 +64,8 @@ export default function AboutPage() {
         accent="its own."
         description="I started Granyyte because too many good ideas die between agencies that overpromise and freelancers who disappear. I'm the third option: senior execution, real reliability, and founder-level care on every build."
         specs={[
-          { label: "Founded", value: "2026" },
-          { label: "Led by", value: "Chand Latif" },
+          { label: "Building since", value: "2021" },
+          { label: "Granyyte est.", value: "2026" },
           { label: "Role", value: "Senior Software Engineer" },
         ]}
       />

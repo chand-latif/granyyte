@@ -29,6 +29,28 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "bilge-ai",
+    name: "Bilge AI",
+    tagline: "Every major AI model — Claude, GPT, Gemini & Grok — in one Turkish-first app",
+    category: "AI Assistant",
+    platforms: ["iOS", "Android"],
+    tech: ["Flutter", "Anthropic Claude", "OpenAI", "Google Gemini", "xAI Grok"],
+    cover: "from-indigo-500/25 via-violet-500/10 to-transparent",
+    mark: "BA",
+    icon: "/projects/bilge-ai.jpg",
+    links: {
+      appStore: "https://apps.apple.com/ae/app/bilge-ai-t%C3%BCrk-yapay-zeka/id6751204067",
+      playStore: "https://play.google.com/store/apps/details?id=com.bilge.ai",
+    },
+    featured: true,
+    problem:
+      "Turkish users wanting the best of AI had to juggle several separate apps and subscriptions — ChatGPT, Claude, Gemini, Grok — each English-first and none truly fluent in Turkish language and cultural context. Great models, but a fragmented, foreign-feeling experience.",
+    solution:
+      "I built a single, Turkish-first AI app that puts every frontier model behind one native interface — integrating the OpenAI, Anthropic Claude, Google Gemini, and xAI Grok APIs so users get official-app-quality access to all of them in one place. It's tuned for Turkish language and culture, answers fast, and keeps every conversation encrypted.",
+    outcome:
+      "A multi-model AI assistant built specifically for Turkey — live on the App Store and Google Play, giving 15,000+ users access to every major AI model in one app, with no subscription-juggling or app-switching.",
+  },
+  {
     slug: "space-maintenance",
     name: "Space Maintenance",
     tagline:
@@ -50,28 +72,6 @@ export const projects: Project[] = [
       "I designed and built a fast, SEO-first corporate website that sells the process, not just the labour: clear service breakdowns, a step-by-step delivery model, project case studies, client testimonials, and a dedicated supply-chain recruitment funnel — all wrapped in a credible B2B brand with conversion-focused CTAs.",
     outcome:
       "A polished, conversion-ready web presence that lets a B2B building-services firm pitch to national clients with confidence — live across London and the South West at spacebmr.co.uk.",
-  },
-  {
-    slug: "bilge-ai",
-    name: "Bilge AI",
-    tagline: "Every major AI model — Claude, GPT, Gemini & Grok — in one Turkish-first app",
-    category: "AI Assistant",
-    platforms: ["iOS", "Android"],
-    tech: ["Flutter", "Anthropic Claude", "OpenAI", "Google Gemini", "xAI Grok"],
-    cover: "from-indigo-500/25 via-violet-500/10 to-transparent",
-    mark: "BA",
-    icon: "/projects/bilge-ai.jpg",
-    links: {
-      appStore: "https://apps.apple.com/ae/app/bilge-ai-t%C3%BCrk-yapay-zeka/id6751204067",
-      playStore: "https://play.google.com/store/apps/details?id=com.bilge.ai",
-    },
-    featured: true,
-    problem:
-      "Turkish users wanting the best of AI had to juggle several separate apps and subscriptions — ChatGPT, Claude, Gemini, Grok — each English-first and none truly fluent in Turkish language and cultural context. Great models, but a fragmented, foreign-feeling experience.",
-    solution:
-      "I built a single, Turkish-first AI app that puts every frontier model behind one native interface — integrating the OpenAI, Anthropic Claude, Google Gemini, and xAI Grok APIs so users get official-app-quality access to all of them in one place. It's tuned for Turkish language and culture, answers fast, and keeps every conversation encrypted.",
-    outcome:
-      "A multi-model AI assistant built specifically for Turkey — live on the App Store and Google Play, giving 15,000+ users access to every major AI model in one app, with no subscription-juggling or app-switching.",
   },
   {
     slug: "poland-portal",

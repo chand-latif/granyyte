@@ -6,7 +6,7 @@ export const site = {
   url: "https://www.granyyte.com",
   tagline: "I build software that ships.",
   description:
-    "Granyyte is a software development agency based in Sialkot, Pakistan, building high-quality, affordable mobile apps, web platforms, and custom software for clients worldwide. From concept to launch — design, development, and deployment handled end to end.",
+    "Granyyte is the software studio of Chand Latif — a senior software engineer in Sialkot, Pakistan, building affordable, high-quality mobile apps, web platforms, and custom software for clients worldwide. One engineer owning the whole journey, from concept to launch.",
   founder: {
     name: "Chand Latif",
     role: "Senior Software Engineer",
