@@ -1,6 +1,7 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CalendarDays } from "lucide-react";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/reveal";
+import { CalendlyButton } from "@/components/ui/calendly-button";
 import { AnimatedText } from "@/components/fx/animated-text";
 import { Magnetic } from "@/components/fx/magnetic";
 import { site } from "@/config/site";
@@ -37,6 +38,12 @@ export function CtaBand() {
                 Start a project
                 <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1.5" />
               </Link>
+            </Magnetic>
+            <Magnetic>
+              <CalendlyButton className="inline-flex items-center gap-2 rounded-full border border-lime/50 px-8 py-4 text-base font-medium text-lime transition-all duration-300 hover:bg-lime/10 hover:shadow-[0_0_28px_rgb(200_243_29/0.2)]">
+                <CalendarDays className="size-5" />
+                Book a free 30-min call
+              </CalendlyButton>
             </Magnetic>
             <Magnetic>
               <a

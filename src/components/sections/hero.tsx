@@ -3,8 +3,10 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
+import { CalendarDays } from "lucide-react";
 import { AvailableBadge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { CalendlyButton } from "@/components/ui/calendly-button";
 import { Reveal } from "@/components/ui/reveal";
 import { AnimatedText } from "@/components/fx/animated-text";
 import { FlipWords } from "@/components/fx/flip-words";
@@ -97,6 +99,12 @@ idea.compile().ship() — iOS, Android, web.
                 <Button href="/contact" size="lg" showArrow>
                   Start a project
                 </Button>
+              </Magnetic>
+              <Magnetic>
+                <CalendlyButton className="inline-flex items-center gap-2 rounded-full border border-lime/50 px-7 py-3.5 text-base font-medium text-lime transition-all duration-300 hover:bg-lime/10 hover:shadow-[0_0_24px_rgb(200_243_29/0.2)]">
+                  <CalendarDays className="size-4" />
+                  Free 30-min consultation
+                </CalendlyButton>
               </Magnetic>
               <Magnetic>
                 <Button href="/work" size="lg" variant="outline">

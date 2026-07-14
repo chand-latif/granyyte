@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Mail, MessageCircle, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, MessageCircle, Phone, MapPin, Clock, CalendarDays } from "lucide-react";
 import { site } from "@/config/site";
 import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
 import { JsonLd } from "@/components/ui/json-ld";
+import { CalendlyButton } from "@/components/ui/calendly-button";
 import { ContactForm } from "@/components/sections/contact-form";
 
 export const metadata: Metadata = {
@@ -71,7 +72,7 @@ export default function ContactPage() {
         description="Tell me what you're working on. I reply within 24 hours — with honest feedback, not a sales script."
         specs={[
           { label: "Response", value: "Within 24 hours" },
-          { label: "Channels", value: "Email · WhatsApp" },
+          { label: "Channels", value: "Email · WhatsApp · Call" },
           { label: "Based in", value: "Sialkot, PK" },
         ]}
       />
@@ -80,6 +81,18 @@ export default function ContactPage() {
         <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
           <Reveal>
             <div className="space-y-4">
+              <CalendlyButton className="group flex w-full items-center gap-4 rounded-2xl border border-lime/30 bg-lime/5 p-5 text-left transition-all duration-300 hover:border-lime/60 hover:bg-lime/10">
+                <span className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-lime/30 bg-raised text-lime">
+                  <CalendarDays className="size-5" />
+                </span>
+                <span>
+                  <span className="block font-mono text-xs text-lime">Free consultation</span>
+                  <span className="mt-0.5 block text-sm font-medium text-fg transition-colors group-hover:text-lime">
+                    Book a 30-minute call — pick any slot
+                  </span>
+                </span>
+              </CalendlyButton>
+
               {channels.map((channel) => {
                 const Icon = channel.icon;
                 const external = channel.href.startsWith("http");

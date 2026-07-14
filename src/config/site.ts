@@ -21,6 +21,7 @@ export const site = {
     phone: "+92 318 728 9616",
     phoneHref: "tel:+923187289616",
     whatsapp: "https://wa.me/923187289616",
+    calendly: "https://calendly.com/chandlatif-dev/30min", // free 30-min consultation booking
     location: "Sialkot, Pakistan",
   },
   socials: {
