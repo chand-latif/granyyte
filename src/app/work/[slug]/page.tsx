@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Target, Lightbulb, TrendingUp } from "lucide-react";
+import { ArrowLeft, Check, Lock, Target, Lightbulb, TrendingUp } from "lucide-react";
 import { projects, getProject } from "@/content/projects";
 import { site } from "@/config/site";
 import { Reveal } from "@/components/ui/reveal";
@@ -115,6 +115,12 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
               ))}
             </div>
             <StoreButtons links={project.links} className="mt-8" />
+            {project.private && (
+              <p className="mt-8 inline-flex items-center gap-2.5 rounded-full border border-edge bg-surface px-4 py-2 font-mono text-xs text-muted">
+                <Lock className="size-3.5 text-lime" />
+                Private — internal tool, built for the client&apos;s team
+              </p>
+            )}
           </Reveal>
         </div>
       </section>
@@ -150,6 +156,59 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
           })}
         </div>
       </section>
+
+      {/* Deep dive — features checklist (long-form case studies only) */}
+      {project.features && project.features.length > 0 && (
+        <section className="border-y border-edge bg-surface/60">
+          <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+            <Reveal>
+              <div className="mb-10 max-w-2xl">
+                <p className="mb-4 font-mono text-sm text-lime">Inside the system</p>
+                <h2 className="font-display text-3xl font-bold tracking-tight text-fg md:text-4xl">
+                  What it does
+                </h2>
+              </div>
+            </Reveal>
+            <ul className="grid gap-4 md:grid-cols-2">
+              {project.features.map((feature, i) => (
+                <Reveal key={feature} delay={(i % 2) * 0.08}>
+                  <li className="flex items-start gap-3 rounded-2xl border border-edge bg-base p-5 text-sm leading-relaxed text-muted">
+                    <Check className="mt-0.5 size-5 shrink-0 text-lime" />
+                    {feature}
+                  </li>
+                </Reveal>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* Deep dive — workflow steps */}
+      {project.workflow && project.workflow.length > 0 && (
+        <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+          <Reveal>
+            <div className="mb-12 max-w-2xl">
+              <p className="mb-4 font-mono text-sm text-lime">End to end</p>
+              <h2 className="font-display text-3xl font-bold tracking-tight text-fg md:text-4xl">
+                How a job flows
+              </h2>
+            </div>
+          </Reveal>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {project.workflow.map((item, i) => (
+              <Reveal key={item.step} delay={(i % 3) * 0.08}>
+                <div className="h-full rounded-2xl border border-edge bg-surface p-7">
+                  <p className="font-mono text-sm text-lime">
+                    {String(i + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-3 font-display text-lg font-bold text-fg">{item.step}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* More work */}
       <section className="mx-auto max-w-6xl px-5 pb-24 md:px-8 md:pb-32">

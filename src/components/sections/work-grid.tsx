@@ -29,6 +29,11 @@ export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: 
                   {platform}
                 </span>
               ))}
+              {project.private && (
+                <span className="rounded-full border border-lime/30 bg-base/70 px-2.5 py-0.5 font-mono text-[10px] text-lime backdrop-blur">
+                  Private
+                </span>
+              )}
             </div>
           </div>
           <div className="p-6">

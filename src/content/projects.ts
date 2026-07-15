@@ -21,10 +21,16 @@ export type Project = {
     playStore?: string;
     web?: string;
   };
+  /** Internal/confidential tool — case study shows a "Private" pill instead of store links */
+  private?: boolean;
   featured: boolean;
   problem: string;
   solution: string;
   outcome: string;
+  /** Optional long-form case study: "What the system does" checklist */
+  features?: string[];
+  /** Optional long-form case study: "How a job flows" numbered steps */
+  workflow?: { step: string; description: string }[];
 };
 
 export const projects: Project[] = [
@@ -49,6 +55,69 @@ export const projects: Project[] = [
       "I built a single, Turkish-first AI app that puts every frontier model behind one native interface — integrating the OpenAI, Anthropic Claude, Google Gemini, and xAI Grok APIs so users get official-app-quality access to all of them in one place. It's tuned for Turkish language and culture, answers fast, and keeps every conversation encrypted.",
     outcome:
       "A multi-model AI assistant built specifically for Turkey — live on the App Store and Google Play, giving 15,000+ users access to every major AI model in one app, with no subscription-juggling or app-switching.",
+  },
+  {
+    slug: "surveyor-job-management-system",
+    name: "Space Maintenance Ops Platform",
+    tagline:
+      "The internal job-management system running a surveyor-led reinstatement firm — from claim to sign-off",
+    category: "Surveyor Job Management",
+    platforms: ["Web"],
+    tech: ["Supabase", "PostgreSQL", "Brevo", "WhatsApp + Email Automation"],
+    cover: "from-teal-500/25 via-cyan-600/10 to-transparent",
+    mark: "OS",
+    private: true,
+    featured: true,
+    problem:
+      "Space Maintenance — a surveyor-led insurance reinstatement firm working across London and the South West — was running jobs the way most surveying businesses do: WhatsApp threads, email chains, paper RAMS, and photo folders scattered across phones. Getting quotes meant chasing contractors one by one. Compliance rules like \"No RAMS, no work — no photos, no payment\" existed on paper but couldn't be enforced. And when a claim was questioned months later, assembling the evidence trail meant archaeology.",
+    solution:
+      "I built them a single operations platform that owns the entire job lifecycle. Surveyors create jobs with the claim essentials; clients and contractors live in the system as full profiles — trades, coverage areas, insurance and accreditation documents included. The moment a job is ready, contractors receive the job link by WhatsApp and email simultaneously (via Brevo) and can quote instantly from their phone. Client accepts, admin schedules, and the contractor gets a unique visit link: a six-step on-site form — RAMS, before photos, progress, after photos, customer sign-off, completion — that saves as you go. Close it mid-job today, reopen it tomorrow, everything is exactly where it was left. On completion it locks read-only: a tamper-proof record. An incident-reporting module with escalation logic and RIDDOR screening handles the days when things go wrong.",
+    outcome:
+      "Quoting now starts the minute a job is created — notifications land on WhatsApp and email instantly, for every role: surveyor, client, and contractor. Compliance is enforced by the software instead of chased by the admin: no RAMS means the visit can't proceed, no photos means no completion. Every job carries its own complete evidence trail. And because it runs on Supabase with no per-seat pricing, the firm scales its job volume and team without the software bill scaling with it. This is the system Space Maintenance runs its daily operations on.",
+    features: [
+      "Job creation by surveyors — client, address, claim reference, priority, and job type in one record",
+      "Client & contractor profiles with full supplier onboarding: trades, coverage areas, insurance and accreditation documents",
+      "Job links pushed to contractors by WhatsApp + email (Brevo) the moment a job is ready",
+      "Contractors quote directly from the link; clients review and accept in the same system",
+      "Unique per-visit links for on-site execution — one link, one visit, full audit trail",
+      "Six-step visit form: RAMS → before photos → progress → after photos → customer sign-off → completion",
+      "Save-as-you-go state: a half-completed visit reopens exactly where it was left, even days later",
+      "Completed visits lock read-only — tamper-proof job records for insurers and disputes",
+      "Incident reporting with escalation logic and RIDDOR screening",
+      "Instant WhatsApp + email notifications to surveyors, clients, and contractors at every stage",
+    ],
+    workflow: [
+      {
+        step: "Survey & job creation",
+        description:
+          "The surveyor logs the job with claim reference, property, client, priority, and job type — the master record everything else attaches to.",
+      },
+      {
+        step: "Instant quote requests",
+        description:
+          "Approved contractors matching the trade receive the job link by WhatsApp and email at the same moment — no ring-arounds, no waiting.",
+      },
+      {
+        step: "Quote & client approval",
+        description:
+          "Contractors submit quotes from the link; the client reviews and accepts in the system, with every decision recorded.",
+      },
+      {
+        step: "Scheduled visit link",
+        description:
+          "On confirmation, the contractor gets a unique visit link — scope, address, access notes, and the six-step form in one mobile-first page.",
+      },
+      {
+        step: "On-site execution",
+        description:
+          "RAMS before work starts, photos before/during/after, customer sign-off at the end — saved step by step, resumable across days, locked when complete.",
+      },
+      {
+        step: "Review & records",
+        description:
+          "The completed record lands with the admin for review — compliance evidence, photos, and sign-off attached to the job forever.",
+      },
+    ],
   },
   {
     slug: "space-maintenance",
