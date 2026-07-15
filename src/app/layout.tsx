@@ -153,7 +153,11 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${instrumentSerif.variable} antialiased`}
     >
-      <body className="flex min-h-dvh flex-col text-fg">
+      {/* suppressHydrationWarning: browser extensions (e.g. ColorZilla's
+          cz-shortcut-listen) inject attributes into <body> before React
+          hydrates, causing false-positive hydration warnings. This only
+          suppresses attribute mismatches on the body element itself. */}
+      <body className="flex min-h-dvh flex-col text-fg" suppressHydrationWarning>
         <JsonLd data={organizationJsonLd} />
         <JsonLd data={websiteJsonLd} />
         <Preloader />
