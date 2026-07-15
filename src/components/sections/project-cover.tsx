@@ -10,6 +10,7 @@ const iconSize: Record<Size, string> = {
 };
 const iconDim: Record<Size, number> = { card: 160, stack: 200, hero: 240 };
 const logoW: Record<Size, number> = { card: 160, stack: 220, hero: 260 };
+const standaloneLogoW: Record<Size, number> = { card: 250, stack: 320, hero: 400 };
 const markSize: Record<Size, string> = {
   card: "text-6xl md:text-7xl",
   stack: "text-8xl md:text-9xl",
@@ -42,6 +43,21 @@ export function ProjectCover({ project, size = "card" }: { project: Project; siz
           />
         )}
       </>
+    );
+  }
+
+  // Standalone brand logo (no screenshot) — e.g. private internal tools where
+  // the client's wordmark is the cover art. Rendered free-form, not as an
+  // app-icon square.
+  if (project.logo) {
+    return (
+      <Image
+        src={project.logo}
+        alt={`${project.name} logo`}
+        width={standaloneLogoW[size]}
+        height={Math.round(standaloneLogoW[size] / 2.42)}
+        className="relative drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
+      />
     );
   }
 

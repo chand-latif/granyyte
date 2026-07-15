@@ -66,6 +66,7 @@ export const projects: Project[] = [
     tech: ["Supabase", "PostgreSQL", "Brevo", "WhatsApp + Email Automation"],
     cover: "from-teal-500/25 via-cyan-600/10 to-transparent",
     mark: "OS",
+    logo: "/projects/space-logo.png",
     private: true,
     featured: true,
     problem:
