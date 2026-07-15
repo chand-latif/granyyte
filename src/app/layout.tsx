@@ -56,6 +56,8 @@ export const metadata: Metadata = {
     "affordable app development",
     "affordable development services",
     "app development from $500",
+    "surveyor job management software",
+    "internal tools for surveying companies",
   ],
   openGraph: {
     type: "website",

@@ -27,8 +27,10 @@ export async function generateMetadata({
   const project = getProject(slug);
   if (!project) return {};
   return {
-    title: `${project.name} — Case Study`,
-    description: `${project.tagline}. How I designed, built, and shipped ${project.name} for ${project.platforms.join(" & ")}.`,
+    title: project.metaTitle ?? `${project.name} — Case Study`,
+    description:
+      project.metaDescription ??
+      `${project.tagline}. How I designed, built, and shipped ${project.name} for ${project.platforms.join(" & ")}.`,
     alternates: { canonical: `/work/${project.slug}` },
   };
 }

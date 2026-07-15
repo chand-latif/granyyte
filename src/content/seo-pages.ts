@@ -438,6 +438,91 @@ export const seoPages: SeoPage[] = [
     relatedService: "mobile-app-development",
     relatedProjects: ["bilge-ai", "mindful-mantra", "zwipe"],
   },
+  {
+    slug: "surveyor-management-software",
+    metaTitle: "Surveyor Job Management Software — Custom Internal Tools for Surveying Firms",
+    metaDescription:
+      "Custom job management software for surveyor-led firms: job creation, instant WhatsApp + email quote requests, RAMS-enforced site visits, and tamper-proof records. Proven in a live case study — built in 2–4 weeks.",
+    label: "Surveyors · Software",
+    title: "Job management software",
+    accent: "for surveyor-led firms.",
+    headerDescription:
+      "Custom internal tools that run a surveying company's whole operation — jobs, contractors, quotes, RAMS, site visits, and evidence trails. Already running a real reinstatement firm's daily operations.",
+    specs: [
+      { label: "Built for", value: "Surveyor-led firms" },
+      { label: "Delivery", value: "2–4 weeks" },
+      { label: "Proof", value: "Live case study" },
+    ],
+    intro: [
+      "Most surveyor-led firms run on WhatsApp threads, email chains, paper RAMS, and photo folders scattered across phones. Off-the-shelf job management software almost fits — but never quite matches how a surveying company actually works: survey → scope → quotes → client approval → scheduled visits → compliance evidence → sign-off.",
+      "I build custom job management software shaped around exactly that lifecycle. Not a template — a system where your surveyors create jobs with claim references, your approved contractors get job links on WhatsApp and email the moment work is ready, quotes come back the same day, and every site visit runs through a structured, RAMS-first form that locks into a tamper-proof record.",
+      "This isn't theory: I designed and built the internal operations platform that Space Maintenance — a surveyor-led insurance reinstatement firm covering London and the South West — runs its daily business on. The full breakdown is public in the case study, and the same system can be shaped to your firm's workflow.",
+    ],
+    whyTitle: "What custom software fixes for a surveying firm",
+    whyPoints: [
+      {
+        title: "Quote-chasing becomes instant",
+        description:
+          "Contractors receive the job link by WhatsApp + email the moment a job is created and quote directly from their phone — no ring-arounds, no waiting days.",
+      },
+      {
+        title: "Compliance enforced by software",
+        description:
+          "\"No RAMS, no work — no photos, no payment\" stops being a rule you chase and becomes one the system physically enforces before a visit can proceed.",
+      },
+      {
+        title: "A tamper-proof evidence trail",
+        description:
+          "Every visit stores RAMS, before/during/after photos, and customer sign-off — then locks read-only. When an insurer questions a claim, the record is one click away.",
+      },
+      {
+        title: "You own it — no per-seat pricing",
+        description:
+          "Built on Supabase/PostgreSQL and handed over completely. Add surveyors, contractors, and jobs without the software bill scaling against you.",
+      },
+    ],
+    pricing: [
+      { range: "$100–$1,000", deliverable: "Single module — quote requests, visit forms, or contractor onboarding" },
+      { range: "$1,000–$2,500", deliverable: "Core job-management system around your main workflow" },
+      { range: "$2,500–$5,000+", deliverable: "Full operations platform — jobs, quotes, visits, incidents, notifications" },
+    ],
+    pricingNote:
+      "Fixed-price proposal within 1–2 days of a workflow call. Most systems ship in 2–4 weeks.",
+    faqs: [
+      {
+        question: "What should job management software for a surveying company include?",
+        answer:
+          "The full job lifecycle: job creation with claim references, client and contractor profiles with insurance/accreditation documents, quote requests and approvals, scheduled site visits with RAMS and photo evidence, customer sign-off, incident reporting, and automatic notifications. That's exactly the scope of the system in my case study — running live at a surveyor-led reinstatement firm.",
+      },
+      {
+        question: "How much does custom surveyor management software cost?",
+        answer:
+          "With me, a core job-management system built around your main workflow typically runs $1,000–$2,500; a full operations platform with quoting, visit forms, incident reporting, and WhatsApp/email automation lands $2,500–$5,000+. That's often less than a year of the per-seat SaaS subscriptions it replaces — and you own it outright.",
+      },
+      {
+        question: "Can it enforce RAMS and photo compliance on site?",
+        answer:
+          "Yes — that's the core of the visit-link system I build: a structured on-site form where RAMS must be completed before work starts, photos are captured before/during/after, and the customer signs off at the end. Half-finished visits reopen exactly where they were left; completed visits lock read-only.",
+      },
+      {
+        question: "We already use Joblogic — can custom software work alongside it?",
+        answer:
+          "Yes. The system in my case study was designed to sit alongside Joblogic: scheduling stays where your team already works, while the custom layer owns what off-the-shelf tools can't — RAMS enforcement, evidence capture, quote automation, and WhatsApp notifications.",
+      },
+      {
+        question: "Can contractors really get job links on WhatsApp?",
+        answer:
+          "Yes — via Brevo integration, job and visit links go out on WhatsApp and email simultaneously, and every role (surveyor, client, contractor) gets stage-by-stage notifications on both channels. Contractors quote and complete visit forms straight from their phone.",
+      },
+      {
+        question: "How long does it take to build?",
+        answer:
+          "A focused system ships in 2–4 weeks; a full operations platform is built module by module so your team starts using the first pieces within weeks, not months. Fixed timeline and price in the proposal — usually within 1–2 days of our first call.",
+      },
+    ],
+    relatedService: "custom-software",
+    relatedProjects: ["surveyor-job-management-system", "space-maintenance"],
+  },
 ];
 
 export function getSeoPage(slug: string) {

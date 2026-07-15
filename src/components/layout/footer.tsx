@@ -29,6 +29,7 @@ const serviceLinks = [
   { href: "/services/mobile-app-development", label: "Mobile App Development" },
   { href: "/services/web-development", label: "Web Development" },
   { href: "/services/custom-software", label: "Custom Software" },
+  { href: "/surveyor-management-software", label: "Surveyor Management Software" },
 ];
 
 // Location/affordability SEO landing pages — site-wide internal links help

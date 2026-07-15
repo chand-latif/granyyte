@@ -23,6 +23,9 @@ export type Project = {
   };
   /** Internal/confidential tool — case study shows a "Private" pill instead of store links */
   private?: boolean;
+  /** Optional SEO overrides for the case-study page (defaults derive from name/tagline) */
+  metaTitle?: string;
+  metaDescription?: string;
   featured: boolean;
   problem: string;
   solution: string;
@@ -59,6 +62,9 @@ export const projects: Project[] = [
   {
     slug: "surveyor-job-management-system",
     name: "Space Maintenance Ops Platform",
+    metaTitle: "Surveyor Job Management Software — Case Study",
+    metaDescription:
+      "Case study: custom job management software for a surveyor-led firm. Job creation, instant WhatsApp + email quote requests, six-step site visits with RAMS and sign-off, incident reporting — the internal tool running Space Maintenance's operations.",
     tagline:
       "The internal job-management system running a surveyor-led reinstatement firm — from claim to sign-off",
     category: "Surveyor Job Management",
