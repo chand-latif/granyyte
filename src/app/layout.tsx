@@ -10,6 +10,7 @@ import { Preloader } from "@/components/fx/preloader";
 import { AmbientBackground } from "@/components/fx/ambient-background";
 import { SideRails } from "@/components/fx/side-rails";
 import { site } from "@/config/site";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -166,10 +167,6 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${instrumentSerif.variable} antialiased`}
     >
-      {/* suppressHydrationWarning: browser extensions (e.g. ColorZilla's
-          cz-shortcut-listen) inject attributes into <body> before React
-          hydrates, causing false-positive hydration warnings. This only
-          suppresses attribute mismatches on the body element itself. */}
       <body className="flex min-h-dvh flex-col text-fg" suppressHydrationWarning>
         <JsonLd data={organizationJsonLd} />
         <JsonLd data={websiteJsonLd} />
@@ -177,7 +174,6 @@ export default function RootLayout({
         <Cursor />
         <AmbientBackground />
         <SideRails />
-        {/* Film grain over everything (desktop only — blend modes are costly on mobile) */}
         <div
           className="film-grain pointer-events-none fixed inset-0 z-[150] bg-grain opacity-[0.05] mix-blend-overlay"
           aria-hidden
@@ -187,6 +183,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
