@@ -47,11 +47,15 @@ Edit these first — most content changes are one-file edits:
   links + real images in `public/projects/`. (Alligned REI was removed per request.)
 - `src/content/services.ts` — 3 services (mobile / web / custom software), each drives an SEO
   subpage + FAQ schema.
-- `src/content/seo-pages.ts` — 5 long-tail SEO landing pages rendered by `src/app/[slug]/page.tsx`
-  at root URLs (4× "… from Pakistan" + `affordable-app-development`). Target location + price
+- `src/content/seo-pages.ts` — 9 long-tail SEO landing pages rendered by `src/app/[slug]/page.tsx`
+  at root URLs: 4× "… from Pakistan", `affordable-app-development`, `surveyor-management-software`,
+  and 3× "… in Sialkot" (`mobile-app-development-sialkot`, `web-development-sialkot`,
+  `software-development-sialkot` — local-market cluster covering app/web/import-export/inventory/
+  school/attendance queries; keywords go verbatim into FAQ questions). Target location + price
   queries ($100–$2000 tiers; **honest**: full apps from $500, small deliverables from $100 — never
-  claim a full app under $500). Linked site-wide from the footer "Hire from Pakistan" column and
-  from each service page's "Deep dives" box. `dynamicParams = false` — unknown root slugs 404.
+  claim a full app under $500). Linked site-wide from the footer "Hire from Pakistan" + "In Sialkot"
+  columns and from each service page's "Deep dives" box. `dynamicParams = false` — unknown root
+  slugs 404.
 - `src/content/testimonials.ts` — **LinkedIn video embeds** (iframe `urn:li:ugcPost` URLs), not text.
 - `src/content/posts.ts` + `src/content/posts/*.mdx` — 3 starter blog posts.
 

@@ -42,6 +42,13 @@ const hireLinks = [
   { href: "/affordable-app-development", label: "Affordable App Development" },
 ];
 
+// Local Sialkot landing pages — the local-market SEO cluster.
+const sialkotLinks = [
+  { href: "/mobile-app-development-sialkot", label: "App Developer in Sialkot" },
+  { href: "/web-development-sialkot", label: "Website Developer in Sialkot" },
+  { href: "/software-development-sialkot", label: "Software Development in Sialkot" },
+];
+
 export function Footer() {
   return (
     <footer className="border-t border-edge bg-surface/70">
@@ -70,6 +77,18 @@ export function Footer() {
             <h3 className="font-mono text-xs uppercase tracking-widest text-faint">Pages</h3>
             <ul className="mt-4 space-y-3">
               {nav.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm text-muted transition-colors hover:text-lime">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mt-8 font-mono text-xs uppercase tracking-widest text-faint">
+              In Sialkot
+            </h3>
+            <ul className="mt-4 space-y-3">
+              {sialkotLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-muted transition-colors hover:text-lime">
                     {link.label}

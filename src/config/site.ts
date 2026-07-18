@@ -47,6 +47,10 @@ export const site = {
     "App Development in Pakistan",
     "Affordable App Development",
     "Surveyor Job Management Software",
+    "Software Development in Sialkot",
+    "Inventory Management Systems",
+    "School Management Systems",
+    "Import Export Website Development",
   ],
   // TODO: replace with real numbers from Chand
   stats: [

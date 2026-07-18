@@ -1,9 +1,11 @@
 /**
- * SEO landing pages — long-tail location ("… from Pakistan") and affordability
- * ("mobile app within $500") queries. Rendered by src/app/[slug]/page.tsx at
- * root-level URLs for maximum keyword strength. Each page must stay unique and
- * honest: full apps start ~$500, smaller deliverables from $100, delivery 2–4
- * weeks. Don't copy-paste copy between pages — Google devalues near-duplicates.
+ * SEO landing pages — long-tail location ("… from Pakistan", "… in Sialkot")
+ * and affordability ("mobile app within $500") queries. Rendered by
+ * src/app/[slug]/page.tsx at root-level URLs for maximum keyword strength.
+ * Each page must stay unique and honest: full apps start ~$500, smaller
+ * deliverables from $100, delivery 2–4 weeks. Don't copy-paste copy between
+ * pages — Google devalues near-duplicates. Target search queries verbatim in
+ * FAQ questions — that's what has been ranking.
  */
 
 export type SeoPage = {
@@ -51,7 +53,7 @@ export const seoPages: SeoPage[] = [
     ],
     intro: [
       "If you're looking for app development from Pakistan, you've probably noticed the range: everything from $5 gig sellers to full agencies quoting like they're in London. Granyyte sits deliberately in the middle of that gap — one senior software engineer in Pakistan delivering the quality of a western agency at a fraction of the price.",
-      "I design, build, and launch complete mobile apps for iOS and Android from a single Flutter codebase — marketplaces, booking systems, wellness apps, AI assistants, and B2B tools, all live on the App Store and Google Play. Every project gets a fixed price, a real timeline, and weekly demo builds you can tap through on your own phone.",
+      "My specialty is Flutter mobile app development: complete apps for iOS and Android designed, built, and launched from a single Flutter codebase — marketplaces, booking systems, wellness apps, AI assistants, and B2B tools, all live on the App Store and Google Play. Every project gets a fixed price, a real timeline, and weekly demo builds you can tap through on your own phone.",
       "Being based in Pakistan is precisely why the pricing works: my costs are local, but my standards, tooling, and communication are not. You get the same stack the best studios use — Flutter, FlutterFlow, Firebase, Supabase — without the western overhead baked into the invoice.",
     ],
     whyTitle: "Why hire an app developer from Pakistan",
@@ -111,6 +113,11 @@ export const seoPages: SeoPage[] = [
         answer:
           "Pakistan's timezone overlaps European working hours and US mornings/evenings. You get weekly demo builds, direct WhatsApp/email access to me, and no account-manager layer between you and the person writing your code.",
       },
+      {
+        question: "Are you a mobile app development agency or a freelancer?",
+        answer:
+          "A one-engineer studio — deliberately. You get the accountability and process of a mobile app development agency in Pakistan (contracts, fixed scope, store publishing, handover documentation) with the directness of working with the actual senior engineer. No project managers relaying messages, no junior bench doing the real work.",
+      },
     ],
     relatedService: "mobile-app-development",
     relatedProjects: ["bilge-ai", "poland-portal", "zwipe"],
@@ -131,7 +138,7 @@ export const seoPages: SeoPage[] = [
       { label: "Full apps from", value: "$500" },
     ],
     intro: [
-      "FlutterFlow development from Pakistan is one of the best value propositions in software right now — and hiring a certified FlutterFlow developer makes the difference between a demo that impresses and a product that ships. I'm Chand Latif, an officially certified FlutterFlow expert building production apps from Sialkot, Pakistan for clients across Europe, the Middle East, and North America.",
+      "FlutterFlow mobile app development from Pakistan is one of the best value propositions in software right now — and hiring a certified FlutterFlow developer makes the difference between a demo that impresses and a product that ships. I'm Chand Latif, an officially certified FlutterFlow expert building production apps from Sialkot, Pakistan for clients across Europe, the Middle East, and North America.",
       "FlutterFlow isn't a toy builder: it generates real Flutter code you fully own, which means your app runs natively on both iOS and Android and can be extended with hand-written code whenever you outgrow visual development. In my hands it cuts delivery to 2–4 weeks — roughly 3× less time and money than native development for the same product.",
       "Combine that speed with Pakistani rates and you get complete, store-published apps starting around $500 — the kind of budget that barely buys a discovery call at a western agency.",
     ],
@@ -189,6 +196,11 @@ export const seoPages: SeoPage[] = [
         question: "How fast can you deliver a FlutterFlow app from Pakistan?",
         answer:
           "Most FlutterFlow builds ship in 2–4 weeks including store submission. FlutterFlow eliminates most boilerplate, and one codebase covers both platforms — that's where the speed comes from.",
+      },
+      {
+        question: "Are you a FlutterFlow mobile app development agency?",
+        answer:
+          "Granyyte works like a FlutterFlow app development agency — fixed-price contracts, written scopes, store publishing, and full handover — but it's one certified senior engineer doing the work, not a bench of juniors behind a sales team. For most FlutterFlow projects that's strictly better: agency process, direct-line communication, Pakistani pricing.",
       },
     ],
     relatedService: "mobile-app-development",
@@ -522,6 +534,252 @@ export const seoPages: SeoPage[] = [
     ],
     relatedService: "custom-software",
     relatedProjects: ["surveyor-job-management-system", "space-maintenance"],
+  },
+  {
+    slug: "mobile-app-development-sialkot",
+    metaTitle: "Mobile App Development in Sialkot — Certified App Developer",
+    metaDescription:
+      "Hire a mobile app developer in Sialkot: certified Flutter & FlutterFlow engineer with apps live on the App Store and Google Play worldwide. Full apps from $500, delivered in 2–4 weeks.",
+    label: "Sialkot · Mobile Apps",
+    title: "Mobile app developer",
+    accent: "in Sialkot.",
+    headerDescription:
+      "A certified Flutter & FlutterFlow engineer based right here in Sialkot — with apps live on the App Store and Google Play for clients on three continents. International-standard work, and you can meet the developer in person.",
+    specs: [
+      { label: "Based in", value: "Sialkot, Pakistan" },
+      { label: "Delivery", value: "2–4 weeks" },
+      { label: "Full apps from", value: "$500" },
+    ],
+    intro: [
+      "Search for mobile app development in Sialkot and you mostly find two things: students building side projects, and Lahore or Karachi agencies that treat Sialkot as a remote lead. Granyyte is the third option — a senior, certified mobile application developer in Sialkot itself, running an international studio from this city with apps live on the App Store and Google Play for clients in Turkey, Poland, the UAE, and the UK.",
+      "I do Flutter mobile app development: one codebase that runs natively on both iOS and Android, so your budget buys both platforms at once. As an officially certified FlutterFlow expert I cut delivery to 2–4 weeks — marketplaces, booking systems, AI assistants, and business apps, each with a fixed price and weekly demo builds you tap through on your own phone.",
+      "Hiring locally has real advantages the big-city agencies can't match: we can scope your app face to face in Sialkot, you can be invoiced in PKR, and the engineer who built your app stays in your city for support — not behind a ticket system three hundred kilometres away.",
+    ],
+    whyTitle: "Why hire an app developer in Sialkot",
+    whyPoints: [
+      {
+        title: "International portfolio, local address",
+        description:
+          "Apps shipped for clients in Turkey, Poland, and the Gulf — all verifiable on the stores — built by an engineer you can sit across a table from in Sialkot.",
+      },
+      {
+        title: "Certified, not a side-gig",
+        description:
+          "Officially certified FlutterFlow expert with years of production Flutter work. You're hiring examined, store-proven skill — not a student's weekend project.",
+      },
+      {
+        title: "One codebase, both platforms",
+        description:
+          "Flutter mobile app development means iOS and Android from a single codebase — roughly 3× less time and money than building two native apps.",
+      },
+      {
+        title: "Face-to-face scoping and support",
+        description:
+          "Requirements over a sit-down meeting, weekly demo builds on your phone, and ongoing support from the same city and timezone as your business.",
+      },
+    ],
+    pricing: [
+      { range: "$100–$500", deliverable: "App prototype, MVP design, bug fixes, or a single-feature build" },
+      { range: "$500–$1,000", deliverable: "Complete simple app — one core flow, clean UI, iOS + Android" },
+      { range: "$1,000–$1,500", deliverable: "Standard app with backend, accounts, and integrations" },
+      { range: "$1,500–$2,000+", deliverable: "Full product — payments, chat, admin panel, store deployment" },
+    ],
+    pricingNote:
+      "Fixed-price proposal within 1–2 days. Sialkot clients can scope in person and be invoiced in PKR.",
+    faqs: [
+      {
+        question: "How much does mobile app development cost in Sialkot?",
+        answer:
+          "The same honest tiers I quote worldwide: complete apps start around $500 (invoiced in PKR if you prefer), standard apps with a backend land between $1,000 and $2,000, and smaller deliverables like prototypes or fixes start from $100. Being local doesn't change the price — it just adds face-to-face meetings and same-city support.",
+      },
+      {
+        question: "Are there professional mobile application developers in Sialkot?",
+        answer:
+          "Fewer than you'd hope — most serious engineers leave for Lahore, Islamabad, or remote-only work, which is why local businesses end up with students or distant agencies. I run Granyyte from Sialkot deliberately: an international client base, apps live on both stores you can verify right now, and an office address in this city.",
+      },
+      {
+        question: "Can we meet in person to discuss the app?",
+        answer:
+          "Yes — that's half the point of hiring an app developer in Sialkot instead of a remote agency. We can map your requirements across a table, and you'll keep getting weekly demo builds on your own phone as the app takes shape.",
+      },
+      {
+        question: "Do you build apps for Sialkot's exporters and manufacturers?",
+        answer:
+          "Yes. Sports goods, surgical instruments, leather — Sialkot's exporters increasingly need order-tracking apps, B2B buyer catalogs, and internal tools for production and dispatch. I build those as mobile apps, web systems, or both connected to one backend.",
+      },
+      {
+        question: "Will my app be built with Flutter or native code?",
+        answer:
+          "Flutter — which compiles to real native code for both iOS and Android from one codebase. You get native performance and both platforms for roughly a third of the cost and time of writing two separate native apps. Where it speeds things up further, I use FlutterFlow, where I'm officially certified.",
+      },
+    ],
+    relatedService: "mobile-app-development",
+    relatedProjects: ["bilge-ai", "mindful-mantra", "zwipe"],
+  },
+  {
+    slug: "web-development-sialkot",
+    metaTitle: "Website Development in Sialkot — Web Developer for Exporters & Local Business",
+    metaDescription:
+      "Hire a website developer in Sialkot: SEO-first business and import/export websites built with Next.js — engineered to rank on Google and win international buyers. Delivered in 2–4 weeks.",
+    label: "Sialkot · Web",
+    title: "Website developer",
+    accent: "in Sialkot.",
+    headerDescription:
+      "SEO-first websites for Sialkot's businesses and exporters — engineered with React and Next.js to rank on Google, load instantly, and turn international buyers into inquiries.",
+    specs: [
+      { label: "Based in", value: "Sialkot, Pakistan" },
+      { label: "Delivery", value: "2–4 weeks" },
+      { label: "Sites from", value: "$100s" },
+    ],
+    intro: [
+      "Sialkot is an export city — sports goods, surgical instruments, leather. Your next buyer in Germany, the UK, or the US will Google your company before they ever reply to an email, and most Sialkot business websites fail that moment: slow WordPress templates that never rank and look a decade old on a phone. Website development in Sialkot deserves better engineering than that.",
+      "I build websites the way modern software companies do: React, Next.js, TypeScript, server-rendered and SEO-first — no page builders, no plugin stacks. Company sites, export catalogs, booking portals, and full web applications, each engineered to load instantly and rank for the searches your customers actually type. The site you're reading is my own work; check its speed and its Google presence as the live sample.",
+      "Import export website development is a specialty: product catalogs organized the way B2B buyers browse, certifications and factory credentials presented for trust, and inquiry/RFQ forms that land directly on your WhatsApp and email so a buyer in another timezone never waits for a reply.",
+    ],
+    whyTitle: "Why hire a web developer in Sialkot",
+    whyPoints: [
+      {
+        title: "Built to win international buyers",
+        description:
+          "Export-focused sites: B2B product catalogs, certification and audit trust signals, and RFQ forms wired straight to your WhatsApp and email.",
+      },
+      {
+        title: "SEO built in, not bolted on",
+        description:
+          "Server rendering, structured data, and fast Core Web Vitals mean your site starts technically ahead of nearly every competing Sialkot business site.",
+      },
+      {
+        title: "Real code, no template traps",
+        description:
+          "No rented WordPress themes or page-builder lock-in — your website is real engineering, handed over completely, hosted where you control it.",
+      },
+      {
+        title: "A developer you can sit with",
+        description:
+          "Scope the site face to face in Sialkot, get it maintained from the same city, and reach the person who built it directly — no agency layers.",
+      },
+    ],
+    pricing: [
+      { range: "$100–$500", deliverable: "Landing page or small business site, SEO-ready" },
+      { range: "$500–$1,000", deliverable: "Multi-page company or export-catalog site with inquiry forms" },
+      { range: "$1,000–$2,000+", deliverable: "Web application — portals, dashboards, booking, e-commerce" },
+    ],
+    pricingNote:
+      "Fixed quote within 1–2 days. Sialkot clients can be invoiced in PKR and meet in person.",
+    faqs: [
+      {
+        question: "How much does website development cost in Sialkot?",
+        answer:
+          "Landing pages and small business sites start from a few hundred dollars (PKR invoicing available), multi-page company and export-catalog sites run $500–$1,000, and full web applications scope from around $1,000. Every quote is fixed against a written scope, delivered within 1–2 days.",
+      },
+      {
+        question: "Do you build import export websites in Sialkot?",
+        answer:
+          "Yes — it's one of the main things Sialkot businesses need. An import export website developer has to think like a B2B buyer: clear product catalogs, certifications and factory credibility up front, fast loading on any connection, and inquiry forms that reach you instantly on WhatsApp and email. That's exactly how I build them.",
+      },
+      {
+        question: "Will my website rank on Google in my buyers' countries?",
+        answer:
+          "Technically, your site will launch ahead of most competitors: server-rendered HTML, structured data, clean semantics, and fast Core Web Vitals — the factors Google rewards everywhere. Actual rankings also depend on your content and competition, and I'll tell you honestly what it takes for your product keywords.",
+      },
+      {
+        question: "Can you redesign our existing company website?",
+        answer:
+          "Yes. I regularly move Sialkot businesses off old WordPress and Wix sites onto a modern stack — preserving existing Google rankings with proper redirects while transforming speed and design.",
+      },
+      {
+        question: "Do you handle domain, hosting, and maintenance?",
+        answer:
+          "End to end: domain setup, hosting and deployment, analytics, Search Console, and ongoing maintenance — from the same city as your business, so support is a call or a visit away, not a ticket queue.",
+      },
+    ],
+    relatedService: "web-development",
+    relatedProjects: ["space-maintenance", "poland-portal"],
+  },
+  {
+    slug: "software-development-sialkot",
+    metaTitle: "Custom Software Development in Sialkot — Inventory, School & Attendance Systems",
+    metaDescription:
+      "Custom software development in Sialkot by a senior software engineer: inventory management systems, school management software, attendance systems, and export-order tools. You own the code — no monthly per-seat fees.",
+    label: "Sialkot · Software",
+    title: "Software development",
+    accent: "in Sialkot.",
+    headerDescription:
+      "A senior software engineer in Sialkot building the systems local businesses actually run on — inventory, school management, attendance, POS, and export-order tracking — owned outright, with no per-seat monthly bills.",
+    specs: [
+      { label: "Based in", value: "Sialkot, Pakistan" },
+      { label: "Delivery", value: "2–4 weeks" },
+      { label: "Systems from", value: "$500" },
+    ],
+    intro: [
+      "Most factories, exporters, and schools in Sialkot still run on registers, Excel sheets, and WhatsApp groups — and when they search for custom software development in Sialkot, they mostly find resellers pushing rigid off-the-shelf packages. I'm a software engineer in Sialkot who builds systems from scratch, shaped around how your business actually operates — the same way I built the operations platform a UK surveying firm runs its daily business on (the full case study is public on this site).",
+      "The systems Sialkot businesses ask for most: inventory management software for manufacturers and traders — stock, purchases, sales, and low-stock alerts across godowns; school management systems for schools and academies — admissions, fee tracking, attendance, results, and parent notifications on WhatsApp; attendance management systems for staff with leave tracking and payroll-ready reports; and order-tracking tools that follow an export order from inquiry to shipment.",
+      "The economics favor custom heavily here: built once, the software is yours — full source code, your own database, no per-user monthly fees that punish you for growing. And unlike a Lahore software house, the engineer who built it works in your city: scoping happens face to face, support doesn't cross a timezone, and invoicing can be in PKR.",
+    ],
+    whyTitle: "Systems I build for Sialkot businesses",
+    whyPoints: [
+      {
+        title: "Inventory management systems",
+        description:
+          "Stock, purchases, sales, and transfers across godowns and shops — with barcoding, low-stock alerts, and the reports your accountant actually asks for.",
+      },
+      {
+        title: "School management software",
+        description:
+          "Admissions, fee vouchers and tracking, class attendance, results, and automatic parent notifications on WhatsApp — one system for the whole school or academy.",
+      },
+      {
+        title: "Attendance & HR systems",
+        description:
+          "Staff check-in/out, shifts, leave management, and payroll-ready monthly exports — for offices, factories, and multi-branch teams.",
+      },
+      {
+        title: "Export order tracking & CRMs",
+        description:
+          "Follow every order from buyer inquiry through production, QC, and shipment — with statuses your team updates in seconds and your buyers can be notified about automatically.",
+      },
+    ],
+    pricing: [
+      { range: "$100–$500", deliverable: "Single-module tool — attendance register, stock ledger, or one automation" },
+      { range: "$500–$1,500", deliverable: "Complete system around one workflow — inventory or school management core" },
+      { range: "$1,500–$5,000+", deliverable: "Multi-role platform — portals, reporting, WhatsApp/email notifications" },
+    ],
+    pricingNote:
+      "Fixed-price proposal within 1–2 days of mapping your workflow. PKR invoicing available for Sialkot clients.",
+    faqs: [
+      {
+        question: "How much does an inventory management system cost in Sialkot?",
+        answer:
+          "A focused inventory system built around your stock workflow typically runs $500–$1,500 (invoiced in PKR if you prefer); multi-branch platforms with purchasing, reporting, and user roles go to $1,500–$5,000. Crucially, that's a one-time cost — no per-user monthly subscription, and the software is yours outright.",
+      },
+      {
+        question: "Do you build school management software in Sialkot?",
+        answer:
+          "Yes — school management systems are one of the most requested builds: admissions, fee vouchers and payment tracking, class-wise attendance, exam results, and automatic parent notifications on WhatsApp and SMS/email. Sized for a single academy or a multi-campus school, and priced as a one-time build you own.",
+      },
+      {
+        question: "Can you build an attendance management system for our staff?",
+        answer:
+          "Yes. Staff attendance systems — check-in/out, shift schedules, leave requests, and monthly payroll-ready reports — are quick builds, usually in the $500–$1,500 tier and delivered within 2–4 weeks. They can also plug into a larger HR or payroll workflow later.",
+      },
+      {
+        question: "Which industries in Sialkot do you build software for?",
+        answer:
+          "Any business with a workflow: sports goods and surgical instrument manufacturers, leather exporters, trading houses, schools and academies, clinics, retail shops, and service businesses. The system is shaped around your process — that's the entire point of custom software over a ready-made package.",
+      },
+      {
+        question: "Is custom software better than buying ready-made software?",
+        answer:
+          "Not always — and I'll tell you honestly in the first meeting. If an off-the-shelf package fits 90% of your process, buy it. Custom wins when your workflow doesn't fit the template, when per-user monthly fees keep climbing, or when you need Urdu-speaking staff, WhatsApp notifications, and your own reports — things packaged software rarely does well here.",
+      },
+      {
+        question: "Are you a software house in Sialkot?",
+        answer:
+          "Granyyte is a one-engineer software studio in Sialkot — deliberately. You deal directly with the senior engineer who writes every line, not a sales layer over a junior bench. The portfolio on this site, including apps live on both stores and a UK firm's operations platform, is all the same person's work.",
+      },
+    ],
+    relatedService: "custom-software",
+    relatedProjects: ["surveyor-job-management-system", "mainxpert"],
   },
 ];
 

@@ -19,12 +19,16 @@ const landingTwins: Record<string, { href: string; label: string }[]> = {
   "mobile-app-development": [
     { href: "/mobile-app-development-pakistan", label: "Mobile app development from Pakistan" },
     { href: "/affordable-app-development", label: "Affordable app development — pricing tiers" },
+    { href: "/mobile-app-development-sialkot", label: "Mobile app development in Sialkot" },
   ],
   "web-development": [
     { href: "/web-development-pakistan", label: "Website development from Pakistan" },
+    { href: "/web-development-sialkot", label: "Website development in Sialkot" },
   ],
   "custom-software": [
     { href: "/crm-development-pakistan", label: "CRM development from Pakistan" },
+    { href: "/surveyor-management-software", label: "Job management software for surveyors" },
+    { href: "/software-development-sialkot", label: "Custom software development in Sialkot" },
   ],
 };
 
