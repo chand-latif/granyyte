@@ -132,6 +132,16 @@ idea.compile().ship() — iOS, Android, web.
                 priority
                 className="object-cover object-top"
               />
+              {/* Corner vignette — keeps the white studio backdrop right behind
+                  him, fades it toward the corners instead of cutting it out */}
+              <div
+                className="pointer-events-none absolute inset-0"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(ellipse 68% 58% at 50% 32%, transparent 0%, transparent 52%, rgba(10,10,11,.45) 82%, var(--color-base) 100%)",
+                }}
+                aria-hidden
+              />
               {/* Readability gradient */}
               <div
                 className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-base via-base/50 to-transparent"
