@@ -33,7 +33,30 @@ export type SeoPage = {
   relatedService: string;
   /** projects.ts slugs to showcase */
   relatedProjects: string[];
+  /**
+   * Marks the Sialkot local-SEO cluster. Adds an invisible LocalBusiness/
+   * ProfessionalService + geo JSON-LD block (schema only, no visible copy —
+   * Chand doesn't want the site reading as Sialkot-focused to international
+   * visitors) and a small cross-link to the other Sialkot pages.
+   */
+  localBusiness?: boolean;
 };
+
+/** Sialkot city-center coordinates — used for the local-SEO geo schema. */
+export const sialkotGeo = { latitude: 32.4945, longitude: 74.5229 };
+
+/**
+ * Query phrasings Chand wants to rank for in Sialkot ("… company", "IT
+ * company") that we deliberately do NOT write into visible FAQ copy — they
+ * go into JSON-LD `knowsAbout` only, invisible to page visitors.
+ */
+export const sialkotKnowsAbout = [
+  "Software Development Company Sialkot",
+  "IT Company Sialkot",
+  "Web Design Company Sialkot",
+  "App Development Company Sialkot",
+  "Software House Sialkot",
+];
 
 export const seoPages: SeoPage[] = [
   {
@@ -615,6 +638,7 @@ export const seoPages: SeoPage[] = [
     ],
     relatedService: "mobile-app-development",
     relatedProjects: ["bilge-ai", "mindful-mantra", "zwipe"],
+    localBusiness: true,
   },
   {
     slug: "web-development-sialkot",
@@ -695,6 +719,7 @@ export const seoPages: SeoPage[] = [
     ],
     relatedService: "web-development",
     relatedProjects: ["space-maintenance", "poland-portal"],
+    localBusiness: true,
   },
   {
     slug: "software-development-sialkot",
@@ -780,6 +805,7 @@ export const seoPages: SeoPage[] = [
     ],
     relatedService: "custom-software",
     relatedProjects: ["surveyor-job-management-system", "mainxpert"],
+    localBusiness: true,
   },
 ];
 

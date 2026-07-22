@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowUpRight, Check } from "lucide-react";
-import { seoPages, getSeoPage } from "@/content/seo-pages";
+import { seoPages, getSeoPage, sialkotGeo, sialkotKnowsAbout } from "@/content/seo-pages";
 import { getService } from "@/content/services";
 import { projects } from "@/content/projects";
 import { site } from "@/config/site";
@@ -43,6 +43,9 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
 
   const service = getService(page.relatedService);
   const related = projects.filter((p) => page.relatedProjects.includes(p.slug));
+  const otherSialkotPages = page.localBusiness
+    ? seoPages.filter((p) => p.localBusiness && p.slug !== page.slug)
+    : [];
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -84,11 +87,41 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
     ],
   };
 
+  // Sialkot cluster only — invisible local-ranking signal (JSON-LD is never
+  // rendered as page copy), so it doesn't affect the site's international feel.
+  const localBusinessJsonLd = page.localBusiness
+    ? {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": `${site.url}/${page.slug}#local`,
+        name: site.name,
+        url: `${site.url}/${page.slug}`,
+        image: `${site.url}/logo.png`,
+        telephone: site.contact.phone,
+        priceRange: "$",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Sialkot",
+          addressRegion: "Punjab",
+          addressCountry: "PK",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: sialkotGeo.latitude,
+          longitude: sialkotGeo.longitude,
+        },
+        areaServed: { "@type": "City", name: "Sialkot" },
+        knowsAbout: sialkotKnowsAbout,
+        sameAs: [site.socials.linkedin, site.socials.facebook].filter(Boolean),
+      }
+    : null;
+
   return (
     <>
       <JsonLd data={serviceJsonLd} />
       <JsonLd data={faqJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
+      {localBusinessJsonLd && <JsonLd data={localBusinessJsonLd} />}
 
       <PageHeader
         label={page.label}
@@ -214,6 +247,23 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
             <WorkGrid projects={related} />
           </div>
         </section>
+      )}
+
+      {/* Sialkot cluster cross-link — minimal, contained to these 3 pages only */}
+      {otherSialkotPages.length > 0 && (
+        <div className="mx-auto max-w-6xl px-5 pb-12 md:px-8">
+          <p className="font-mono text-xs text-faint">
+            Also in Sialkot:{" "}
+            {otherSialkotPages.map((p, i) => (
+              <span key={p.slug}>
+                <Link href={`/${p.slug}`} className="text-muted transition-colors hover:text-lime">
+                  {p.label}
+                </Link>
+                {i < otherSialkotPages.length - 1 ? " · " : ""}
+              </span>
+            ))}
+          </p>
+        </div>
       )}
 
       <CtaBand />

@@ -55,7 +55,12 @@ Edit these first — most content changes are one-file edits:
   queries ($100–$2000 tiers; **honest**: full apps from $500, small deliverables from $100 — never
   claim a full app under $500). Linked site-wide from the footer "Hire from Pakistan" + "In Sialkot"
   columns and from each service page's "Deep dives" box. `dynamicParams = false` — unknown root
-  slugs 404.
+  slugs 404. The 3 Sialkot pages carry `localBusiness: true`, which adds an **invisible**
+  `ProfessionalService`+`geo` JSON-LD block (`src/app/[slug]/page.tsx`) plus a minimal cross-link
+  line between the 3 pages — deliberately no new visible prose/blog content, since Chand doesn't
+  want the site reading as Sialkot-focused to his international clients. "Company"/"IT company"
+  query variants are captured via JSON-LD `knowsAbout` (`sialkotKnowsAbout` in `seo-pages.ts`),
+  not FAQ copy.
 - `src/content/testimonials.ts` — **LinkedIn video embeds** (iframe `urn:li:ugcPost` URLs), not text.
 - `src/content/posts.ts` + `src/content/posts/*.mdx` — 3 starter blog posts.
 
