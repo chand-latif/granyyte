@@ -81,7 +81,7 @@ export function Hero() {
               />
             </span>
             <br />
-            <AnimatedText text="that ship." delay={0.4} trigger="mount" />
+            <AnimatedText text="zero downtime, no cap." delay={0.4} trigger="mount" className="text-6xl" />
           </h1>
 
           <Reveal delay={0.6}>
