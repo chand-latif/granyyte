@@ -254,7 +254,7 @@ export function Hero() {
           </Reveal>
 
           <h1 className="mt-10 font-display text-[13vw] font-bold leading-[0.98] tracking-tight text-fg sm:text-7xl md:text-8xl lg:text-[5.75rem]">
-            <AnimatedText text="I build" delay={0.15} trigger="mount" />
+            <AnimatedText text="we build" delay={0.15} trigger="mount" />
             <br />
             <span className="font-serif italic tracking-normal text-lime">
               <FlipWords
