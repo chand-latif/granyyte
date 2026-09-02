@@ -5,7 +5,7 @@ export default function NotFound() {
     <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-dot-grid">
       <div className="absolute inset-0 bg-lime-glow" aria-hidden />
       <div className="relative mx-auto max-w-6xl px-5 py-32 text-center md:px-8">
-        <p className="font-mono text-sm text-lime">404 — Page not found</p>
+        <p className="font-mono text-sm text-lime">404 / Page not found</p>
         <h1 className="mt-5 font-display text-5xl font-bold tracking-tight text-fg md:text-7xl">
           This page didn&apos;t <span className="text-lime">ship</span>.
         </h1>
@@ -18,7 +18,7 @@ export default function NotFound() {
             Back to home
           </Button>
           <Button href="/work" size="lg" variant="outline">
-            See my work
+            See our work
           </Button>
         </div>
       </div>

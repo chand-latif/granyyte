@@ -135,7 +135,7 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
       <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr] md:gap-16">
           <Reveal>
-            <p className="mb-4 font-mono text-sm text-lime">01 — Overview</p>
+            <p className="mb-4 font-mono text-sm text-lime">01 / Overview</p>
             <div className="space-y-5 text-base leading-relaxed text-muted">
               {page.intro.map((paragraph) => (
                 <p key={paragraph.slice(0, 40)}>{paragraph}</p>
@@ -186,7 +186,7 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
         <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
           <Reveal>
             <div className="mb-12 max-w-2xl">
-              <p className="mb-4 font-mono text-sm text-lime">02 — Why Granyyte</p>
+              <p className="mb-4 font-mono text-sm text-lime">02 / Why Granyyte</p>
               <h2 className="font-display text-3xl font-bold tracking-tight text-fg md:text-4xl">
                 {page.whyTitle}
               </h2>
@@ -214,7 +214,7 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
       <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
         <Reveal>
           <div className="mb-12 max-w-2xl">
-            <p className="mb-4 font-mono text-sm text-lime">03 — FAQ</p>
+            <p className="mb-4 font-mono text-sm text-lime">03 / FAQ</p>
             <h2 className="font-display text-3xl font-bold tracking-tight text-fg md:text-4xl">
               Straight answers
             </h2>
@@ -238,7 +238,7 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
           <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
             <Reveal>
               <div className="mb-12 max-w-2xl">
-                <p className="mb-4 font-mono text-sm text-lime">04 — Proof of work</p>
+                <p className="mb-4 font-mono text-sm text-lime">04 / Proof of work</p>
                 <h2 className="font-display text-3xl font-bold tracking-tight text-fg md:text-4xl">
                   Shipped from Pakistan, live worldwide
                 </h2>

@@ -8,9 +8,9 @@ import { CalendlyButton } from "@/components/ui/calendly-button";
 import { ContactForm } from "@/components/sections/contact-form";
 
 export const metadata: Metadata = {
-  title: "Contact — Start Your Project",
+  title: "Contact: Start Your Project",
   description:
-    "Tell me about your project. I reply within 24 hours with honest feedback and a clear path to launch — email, WhatsApp, or the form below.",
+    "Tell us about your project. We reply within 24 hours with honest feedback and a clear path to launch. Reach us by email, WhatsApp, or the form below.",
   alternates: { canonical: "/contact" },
 };
 
@@ -50,7 +50,7 @@ const channels = [
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: "Chat with me directly",
+    value: "Chat with Chand directly",
     href: site.contact.whatsapp,
   },
   {
@@ -69,7 +69,7 @@ export default function ContactPage() {
         label="Contact"
         title="Let's build something"
         accent="worth shipping."
-        description="Tell me what you're working on. I reply within 24 hours — with honest feedback, not a sales script."
+        description="Tell us what you're working on. We reply within 24 hours with honest feedback, not a sales script."
         specs={[
           { label: "Response", value: "Within 24 hours" },
           { label: "Channels", value: "Email · WhatsApp · Call" },
@@ -88,7 +88,7 @@ export default function ContactPage() {
                 <span>
                   <span className="block font-mono text-xs text-lime">Free consultation</span>
                   <span className="mt-0.5 block text-sm font-medium text-fg transition-colors group-hover:text-lime">
-                    Book a 30-minute call — pick any slot
+                    Book a 30-minute call, pick any slot
                   </span>
                 </span>
               </CalendlyButton>
@@ -123,7 +123,7 @@ export default function ContactPage() {
                 <span>
                   <span className="block font-mono text-xs text-faint">Location</span>
                   <span className="mt-0.5 block text-sm font-medium text-fg">
-                    {site.contact.location} — working worldwide
+                    {site.contact.location}, working worldwide
                   </span>
                 </span>
               </div>
@@ -144,9 +144,9 @@ export default function ContactPage() {
 
           <Reveal delay={0.1}>
             <div className="rounded-2xl border border-edge bg-surface/50 p-7 md:p-10">
-              <h2 className="font-display text-2xl font-bold text-fg">Tell me about your project</h2>
+              <h2 className="font-display text-2xl font-bold text-fg">Tell us about your project</h2>
               <p className="mt-2 text-sm text-muted">
-                A few sentences are enough — I&apos;ll take it from there.
+                A few sentences are enough. We&apos;ll take it from there.
               </p>
               <div className="mt-8">
                 <ContactForm />

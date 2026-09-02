@@ -40,7 +40,7 @@ export const projects: Project[] = [
   {
     slug: "bilge-ai",
     name: "Bilge AI",
-    tagline: "Every major AI model — Claude, GPT, Gemini & Grok — in one Turkish-first app",
+    tagline: "Every major AI model (Claude, GPT, Gemini & Grok) in one Turkish-first app",
     category: "AI Assistant",
     platforms: ["iOS", "Android"],
     tech: ["Flutter", "Anthropic Claude", "OpenAI", "Google Gemini", "xAI Grok"],
@@ -53,20 +53,20 @@ export const projects: Project[] = [
     },
     featured: true,
     problem:
-      "Turkish users wanting the best of AI had to juggle several separate apps and subscriptions — ChatGPT, Claude, Gemini, Grok — each English-first and none truly fluent in Turkish language and cultural context. Great models, but a fragmented, foreign-feeling experience.",
+      "Turkish users wanting the best of AI had to juggle several separate apps and subscriptions. ChatGPT, Claude, Gemini, and Grok were all English-first, and none of them were truly fluent in Turkish language or cultural context. Great models, but a fragmented, foreign-feeling experience.",
     solution:
-      "I built a single, Turkish-first AI app that puts every frontier model behind one native interface — integrating the OpenAI, Anthropic Claude, Google Gemini, and xAI Grok APIs so users get official-app-quality access to all of them in one place. It's tuned for Turkish language and culture, answers fast, and keeps every conversation encrypted.",
+      "We built a single, Turkish-first AI app that puts every frontier model behind one native interface. It integrates the OpenAI, Anthropic Claude, Google Gemini, and xAI Grok APIs so users get official-app-quality access to all of them in one place. It's tuned for Turkish language and culture, answers fast, and keeps every conversation encrypted.",
     outcome:
-      "A multi-model AI assistant built specifically for Turkey — live on the App Store and Google Play, giving 15,000+ users access to every major AI model in one app, with no subscription-juggling or app-switching.",
+      "A multi-model AI assistant built specifically for Turkey. It's live on the App Store and Google Play, giving 15,000+ users access to every major AI model in one app, with no subscription-juggling or app-switching.",
   },
   {
     slug: "surveyor-job-management-system",
     name: "Space Maintenance Ops Platform",
-    metaTitle: "Surveyor Job Management Software — Case Study",
+    metaTitle: "Surveyor Job Management Software: Case Study",
     metaDescription:
-      "Case study: custom job management software for a surveyor-led firm. Job creation, instant WhatsApp + email quote requests, six-step site visits with RAMS and sign-off, incident reporting — the internal tool running Space Maintenance's operations.",
+      "Case study: custom job management software for a surveyor-led firm. Job creation, instant WhatsApp and email quote requests, six-step site visits with RAMS and sign-off, plus incident reporting. This is the internal tool running Space Maintenance's operations.",
     tagline:
-      "The internal job-management system running a surveyor-led reinstatement firm — from claim to sign-off",
+      "The internal job-management system running a surveyor-led reinstatement firm, from claim to sign-off",
     category: "Surveyor Job Management",
     platforms: ["Web"],
     tech: ["Supabase", "PostgreSQL", "Brevo", "WhatsApp + Email Automation"],
@@ -76,20 +76,20 @@ export const projects: Project[] = [
     private: true,
     featured: true,
     problem:
-      "Space Maintenance — a surveyor-led insurance reinstatement firm working across London and the South West — was running jobs the way most surveying businesses do: WhatsApp threads, email chains, paper RAMS, and photo folders scattered across phones. Getting quotes meant chasing contractors one by one. Compliance rules like \"No RAMS, no work — no photos, no payment\" existed on paper but couldn't be enforced. And when a claim was questioned months later, assembling the evidence trail meant archaeology.",
+      "Space Maintenance, a surveyor-led insurance reinstatement firm working across London and the South West, was running jobs the way most surveying businesses do: WhatsApp threads, email chains, paper RAMS, and photo folders scattered across phones. Getting quotes meant chasing contractors one by one. Compliance rules like \"No RAMS, no work. No photos, no payment\" existed on paper but couldn't be enforced. And when a claim was questioned months later, assembling the evidence trail meant archaeology.",
     solution:
-      "I built them a single operations platform that owns the entire job lifecycle. Surveyors create jobs with the claim essentials; clients and contractors live in the system as full profiles — trades, coverage areas, insurance and accreditation documents included. The moment a job is ready, contractors receive the job link by WhatsApp and email simultaneously (via Brevo) and can quote instantly from their phone. Client accepts, admin schedules, and the contractor gets a unique visit link: a six-step on-site form — RAMS, before photos, progress, after photos, customer sign-off, completion — that saves as you go. Close it mid-job today, reopen it tomorrow, everything is exactly where it was left. On completion it locks read-only: a tamper-proof record. An incident-reporting module with escalation logic and RIDDOR screening handles the days when things go wrong.",
+      "We built them a single operations platform that owns the entire job lifecycle. Surveyors create jobs with the claim essentials, and clients and contractors live in the system as full profiles, with trades, coverage areas, insurance and accreditation documents included. The moment a job is ready, contractors receive the job link by WhatsApp and email simultaneously (via Brevo) and can quote instantly from their phone. The client accepts, the admin schedules, and the contractor gets a unique visit link with a six-step on-site form covering RAMS, before photos, progress, after photos, customer sign-off, and completion, saving as you go. Close it mid-job today, reopen it tomorrow, and everything is exactly where it was left. On completion it locks read-only as a tamper-proof record. An incident-reporting module with escalation logic and RIDDOR screening handles the days when things go wrong.",
     outcome:
-      "Quoting now starts the minute a job is created — notifications land on WhatsApp and email instantly, for every role: surveyor, client, and contractor. Compliance is enforced by the software instead of chased by the admin: no RAMS means the visit can't proceed, no photos means no completion. Every job carries its own complete evidence trail. And because it runs on Supabase with no per-seat pricing, the firm scales its job volume and team without the software bill scaling with it. This is the system Space Maintenance runs its daily operations on.",
+      "Quoting now starts the minute a job is created, with notifications landing on WhatsApp and email instantly for every role: surveyor, client, and contractor. Compliance is enforced by the software instead of chased by the admin, so no RAMS means the visit can't proceed and no photos means no completion. Every job carries its own complete evidence trail. And because it runs on Supabase with no per-seat pricing, the firm scales its job volume and team without the software bill scaling with it. This is the system Space Maintenance runs its daily operations on.",
     features: [
-      "Job creation by surveyors — client, address, claim reference, priority, and job type in one record",
+      "Job creation by surveyors, with client, address, claim reference, priority, and job type in one record",
       "Client & contractor profiles with full supplier onboarding: trades, coverage areas, insurance and accreditation documents",
       "Job links pushed to contractors by WhatsApp + email (Brevo) the moment a job is ready",
       "Contractors quote directly from the link; clients review and accept in the same system",
-      "Unique per-visit links for on-site execution — one link, one visit, full audit trail",
+      "Unique per-visit links for on-site execution: one link, one visit, full audit trail",
       "Six-step visit form: RAMS → before photos → progress → after photos → customer sign-off → completion",
       "Save-as-you-go state: a half-completed visit reopens exactly where it was left, even days later",
-      "Completed visits lock read-only — tamper-proof job records for insurers and disputes",
+      "Completed visits lock read-only, giving tamper-proof job records for insurers and disputes",
       "Incident reporting with escalation logic and RIDDOR screening",
       "Instant WhatsApp + email notifications to surveyors, clients, and contractors at every stage",
     ],
@@ -97,12 +97,12 @@ export const projects: Project[] = [
       {
         step: "Survey & job creation",
         description:
-          "The surveyor logs the job with claim reference, property, client, priority, and job type — the master record everything else attaches to.",
+          "The surveyor logs the job with claim reference, property, client, priority, and job type. This becomes the master record everything else attaches to.",
       },
       {
         step: "Instant quote requests",
         description:
-          "Approved contractors matching the trade receive the job link by WhatsApp and email at the same moment — no ring-arounds, no waiting.",
+          "Approved contractors matching the trade receive the job link by WhatsApp and email at the same moment. No ring-arounds, no waiting.",
       },
       {
         step: "Quote & client approval",
@@ -112,17 +112,17 @@ export const projects: Project[] = [
       {
         step: "Scheduled visit link",
         description:
-          "On confirmation, the contractor gets a unique visit link — scope, address, access notes, and the six-step form in one mobile-first page.",
+          "On confirmation, the contractor gets a unique visit link with scope, address, access notes, and the six-step form in one mobile-first page.",
       },
       {
         step: "On-site execution",
         description:
-          "RAMS before work starts, photos before/during/after, customer sign-off at the end — saved step by step, resumable across days, locked when complete.",
+          "RAMS before work starts, photos before, during, and after, then customer sign-off at the end. Everything saves step by step, stays resumable across days, and locks when complete.",
       },
       {
         step: "Review & records",
         description:
-          "The completed record lands with the admin for review — compliance evidence, photos, and sign-off attached to the job forever.",
+          "The completed record lands with the admin for review, with compliance evidence, photos, and sign-off attached to the job forever.",
       },
     ],
   },
@@ -143,11 +143,11 @@ export const projects: Project[] = [
     },
     featured: true,
     problem:
-      "Space Maintenance had a professional, surveyor-led delivery model — but no digital presence to match. They needed a site that could convince national insurers, loss adjusters, managing agents and housing providers that they were a structured delivery partner, not just another contractor.",
+      "Space Maintenance had a professional, surveyor-led delivery model but no digital presence to match. They needed a site that could convince national insurers, loss adjusters, managing agents, and housing providers that they were a structured delivery partner rather than just another contractor.",
     solution:
-      "I designed and built a fast, SEO-first corporate website that sells the process, not just the labour: clear service breakdowns, a step-by-step delivery model, project case studies, client testimonials, and a dedicated supply-chain recruitment funnel — all wrapped in a credible B2B brand with conversion-focused CTAs.",
+      "We designed and built a fast, SEO-first corporate website that sells the process rather than just the labour. It covers clear service breakdowns, a step-by-step delivery model, project case studies, client testimonials, and a dedicated supply-chain recruitment funnel, all wrapped in a credible B2B brand with conversion-focused CTAs.",
     outcome:
-      "A polished, conversion-ready web presence that lets a B2B building-services firm pitch to national clients with confidence — live across London and the South West at spacebmr.co.uk.",
+      "A polished, conversion-ready web presence that lets a B2B building-services firm pitch to national clients with confidence. It's live across London and the South West at spacebmr.co.uk.",
   },
   {
     slug: "poland-portal",
@@ -165,9 +165,9 @@ export const projects: Project[] = [
     },
     featured: true,
     problem:
-      "Expats and tourists arriving in Poland had information scattered across dozens of websites, Facebook groups, and outdated blogs — no single trusted place for city guides, local news, listings, and deals.",
+      "Expats and tourists arriving in Poland had information scattered across dozens of websites, Facebook groups, and outdated blogs. There was no single trusted place for city guides, local news, listings, and deals.",
     solution:
-      "I built a unified lifestyle platform bringing city guides, curated news, local listings, and exclusive discounts into one polished app — with content management tooling so the team can publish updates in minutes.",
+      "We built a unified lifestyle platform bringing city guides, curated news, local listings, and exclusive discounts into one polished app, with content management tooling so the team can publish updates in minutes.",
     outcome:
       "A single go-to companion app for the expat community in Poland, live on both the App Store and Google Play with a growing user base across major Polish cities.",
   },
@@ -187,9 +187,9 @@ export const projects: Project[] = [
     },
     featured: true,
     problem:
-      "Automotive professionals were documenting vehicle condition with ad-hoc photos and paper forms — inconsistent, slow, and impossible to standardize across teams and locations.",
+      "Automotive professionals were documenting vehicle condition with ad-hoc photos and paper forms. The process was inconsistent, slow, and impossible to standardize across teams and locations.",
     solution:
-      "I built a guided photography workflow that walks inspectors through every required angle, then compiles standardized valuation and damage reports into a centralized system accessible to the whole organization.",
+      "We built a guided photography workflow that walks inspectors through every required angle, then compiles standardized valuation and damage reports into a centralized system accessible to the whole organization.",
     outcome:
       "Consistent, professional vehicle reports produced in a fraction of the time, with centralized records replacing scattered photo folders and paperwork.",
   },
@@ -210,9 +210,9 @@ export const projects: Project[] = [
     },
     featured: true,
     problem:
-      "Meditation apps are either rigid guided programs or basic sound loops — users wanting to layer Solfeggio frequencies, binaural waves, and ambient soundscapes into their own practice had no good option.",
+      "Meditation apps are either rigid guided programs or basic sound loops. Users who wanted to layer Solfeggio frequencies, binaural waves, and ambient soundscapes into their own practice had no good option.",
     solution:
-      "I engineered a customizable audio mixing experience where users blend frequencies, binaural beats, and soundscapes into personal sessions — with a precise audio engine that keeps every layer in sync.",
+      "We engineered a customizable audio mixing experience where users blend frequencies, binaural beats, and soundscapes into personal sessions, backed by a precise audio engine that keeps every layer in sync.",
     outcome:
       "A meditation app that stands apart in a crowded category, live on both platforms with deeply personalized relaxation sessions as its signature feature.",
   },
@@ -232,9 +232,9 @@ export const projects: Project[] = [
     },
     featured: true,
     problem:
-      "Car buyers in the UAE faced cluttered classified sites full of stale listings and slow email-based contact — while sellers struggled to reach serious buyers quickly.",
+      "Car buyers in the UAE faced cluttered classified sites full of stale listings and slow email-based contact, while sellers struggled to reach serious buyers quickly.",
     solution:
-      "I built a fast, swipe-friendly marketplace: browse quickly, save what you like, and chat with sellers instantly through built-in real-time messaging. Listing creation is streamlined so sellers go live in minutes.",
+      "We built a fast, swipe-friendly marketplace: browse quickly, save what you like, and chat with sellers instantly through built-in real-time messaging. Listing creation is streamlined so sellers go live in minutes.",
     outcome:
       "A modern car marketplace live in the UAE on both iOS and Android, turning a frustrating multi-day process into same-session conversations between buyers and sellers.",
   },
@@ -253,9 +253,9 @@ export const projects: Project[] = [
     },
     featured: false,
     problem:
-      "The Algerian Berber (Amazigh) community had no dedicated matchmaking platform respecting their cultural and religious values — mainstream dating apps were a poor fit for people seeking serious, marriage-focused relationships.",
+      "The Algerian Berber (Amazigh) community had no dedicated matchmaking platform that respected their cultural and religious values. Mainstream dating apps were a poor fit for people seeking serious, marriage-focused relationships.",
     solution:
-      "I built a halal matchmaking app designed around the community's values: intentional profiles, respectful communication flows, and features built for serious relationships and marriage rather than casual swiping.",
+      "We built a halal matchmaking app designed around the community's values: intentional profiles, respectful communication flows, and features built for serious relationships and marriage rather than casual swiping.",
     outcome:
       "A culturally authentic platform serving a community overlooked by mainstream apps, live on Google Play.",
   },
@@ -275,9 +275,9 @@ export const projects: Project[] = [
     },
     featured: false,
     problem:
-      "People practicing spiritual journaling — recording dreams, meditations, and insights — were forced into generic note apps with no support for transcription, sharing, or the natural cycles their practice follows.",
+      "People practicing spiritual journaling, recording dreams, meditations, and insights, were forced into generic note apps with no support for transcription, sharing, or the natural cycles their practice follows.",
     solution:
-      "I built a dedicated spiritual journal with voice transcription for capturing insights the moment they arrive, lunar phase tracking woven through the experience, and private sharing for trusted circles.",
+      "We built a dedicated spiritual journal with voice transcription for capturing insights the moment they arrive, lunar phase tracking woven through the experience, and private sharing for trusted circles.",
     outcome:
       "A niche journaling app with features no general-purpose competitor offers, live on both iOS and Android.",
   },

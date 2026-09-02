@@ -9,8 +9,8 @@ import { Stats } from "@/components/sections/stats";
 import { JsonLd } from "@/components/ui/json-ld";
 
 export const metadata: Metadata = {
-  title: `About — ${site.founder.name}, Founder of Granyyte`,
-  description: `${site.founder.name} is a senior software engineer building mobile apps, web platforms, and custom software under the Granyyte name. Learn how I take products from idea to launch.`,
+  title: `About ${site.founder.name}, Founder of Granyyte`,
+  description: `Granyyte is a software development agency founded by ${site.founder.name}. We build mobile apps, web platforms, and custom software. Learn how we take products from idea to launch.`,
   alternates: { canonical: "/about" },
 };
 
@@ -19,7 +19,7 @@ const values = [
     icon: Rocket,
     title: "Ship, don't stall",
     description:
-      "Ideas are cheap; launched products are not. I optimize everything around getting real software into real users' hands.",
+      "Ideas are cheap; launched products are not. We optimize everything around getting real software into real users' hands.",
   },
   {
     icon: Eye,
@@ -31,7 +31,7 @@ const values = [
     icon: Handshake,
     title: "Partners, not vendors",
     description:
-      "Most of my clients stay for years. I win when your product wins — so I build like it's my own.",
+      "Most of our clients stay for years. We win when your product wins, so we build like it's our own.",
   },
   {
     icon: Award,
@@ -60,9 +60,9 @@ export default function AboutPage() {
       <JsonLd data={personJsonLd} />
       <PageHeader
         label="About"
-        title="The developer who treats your product like"
+        title="The agency that treats your product like"
         accent="its own."
-        description="I started Granyyte because too many good ideas die between agencies that overpromise and freelancers who disappear. I'm the third option: senior execution, real reliability, and founder-level care on every build."
+        description="We started Granyyte because too many good ideas die between agencies that overpromise and freelancers who disappear. We're the third option: senior execution, real reliability, and founder-level care on every build."
         specs={[
           { label: "Building since", value: "2021" },
           { label: "Granyyte est.", value: "2026" },
@@ -110,7 +110,7 @@ export default function AboutPage() {
               <p>
                 I&apos;m a senior software engineer and full-stack developer based in Sialkot,
                 Pakistan, and I&apos;ve spent years shipping apps for clients across Europe, the
-                Middle East, and North America — marketplaces, wellness platforms, B2B tools, and
+                Middle East, and North America: marketplaces, wellness platforms, B2B tools, and
                 CRMs. Granyyte is the name I design, build, and launch under.
               </p>
             </div>
@@ -119,7 +119,7 @@ export default function AboutPage() {
                 <Award className="size-6 shrink-0 text-lime" />
                 <div>
                   <p className="font-medium text-fg">Senior Software Engineer</p>
-                  <p className="text-xs text-muted">Full-stack — mobile, web &amp; custom software</p>
+                  <p className="text-xs text-muted">Full-stack: mobile, web &amp; custom software</p>
                 </div>
               </div>
               <a
@@ -152,13 +152,13 @@ export default function AboutPage() {
                   <BadgeCheck className="size-7" />
                 </span>
                 <div>
-                  <p className="font-mono text-sm text-lime">02 — Certification</p>
+                  <p className="font-mono text-sm text-lime">02 / Certification</p>
                   <h2 className="mt-2 font-display text-2xl font-bold text-fg md:text-3xl">
                     {site.founder.certification}
                   </h2>
                   <p className="mt-2 max-w-md text-sm leading-relaxed text-muted">
-                    Officially certified by FlutterFlow — validated skills in designing
-                    and shipping production-grade Mobile Applications
+                    Officially certified by FlutterFlow, with validated skills in designing
+                    and shipping production-grade mobile applications.
                   </p>
                 </div>
               </div>
@@ -182,7 +182,7 @@ export default function AboutPage() {
       <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
         <Reveal>
           <div className="mb-12 max-w-2xl md:mb-16">
-            <p className="mb-4 font-mono text-sm text-lime">03 — What I stand for</p>
+            <p className="mb-4 font-mono text-sm text-lime">03 / What we stand for</p>
             <h2 className="font-display text-3xl font-bold tracking-tight text-fg md:text-5xl">
               The principles behind every build
             </h2>

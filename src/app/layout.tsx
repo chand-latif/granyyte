@@ -37,7 +37,7 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Mobile App, Web & Custom Software Development`,
+    default: `${site.name} | Mobile App, Web & Custom Software Development`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -75,12 +75,12 @@ export const metadata: Metadata = {
     type: "website",
     siteName: site.name,
     url: site.url,
-    title: `${site.name} — I build software that ships.`,
+    title: `${site.name} | We build software that ships.`,
     description: site.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — I build software that ships.`,
+    title: `${site.name} | We build software that ships.`,
     description: site.description,
   },
   robots: {

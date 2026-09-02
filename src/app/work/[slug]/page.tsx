@@ -27,17 +27,17 @@ export async function generateMetadata({
   const project = getProject(slug);
   if (!project) return {};
   return {
-    title: project.metaTitle ?? `${project.name} — Case Study`,
+    title: project.metaTitle ?? `${project.name}: Case Study`,
     description:
       project.metaDescription ??
-      `${project.tagline}. How I designed, built, and shipped ${project.name} for ${project.platforms.join(" & ")}.`,
+      `${project.tagline}. How we designed, built, and shipped ${project.name} for ${project.platforms.join(" & ")}.`,
     alternates: { canonical: `/work/${project.slug}` },
   };
 }
 
 const sections = [
   { key: "problem", label: "The problem", icon: Target },
-  { key: "solution", label: "What I built", icon: Lightbulb },
+  { key: "solution", label: "What we built", icon: Lightbulb },
   { key: "outcome", label: "The outcome", icon: TrendingUp },
 ] as const;
 
@@ -120,7 +120,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
             {project.private && (
               <p className="mt-8 inline-flex items-center gap-2.5 rounded-full border border-edge bg-surface px-4 py-2 font-mono text-xs text-muted">
                 <Lock className="size-3.5 text-lime" />
-                Private — internal tool, built for the client&apos;s team
+                Private internal tool, built for the client&apos;s team
               </p>
             )}
           </Reveal>

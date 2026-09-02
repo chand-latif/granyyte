@@ -57,7 +57,7 @@ export function Navbar() {
         <Link
           href="/"
           className="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-fg md:gap-2.5 md:text-2xl"
-          aria-label="Granyyte — home"
+          aria-label="Granyyte home"
         >
           <LogoMark className="size-8 text-lime md:size-11" />
           <span>

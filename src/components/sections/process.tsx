@@ -10,7 +10,7 @@ const steps = [
     number: "01",
     title: "Discover",
     description:
-      "A short call to map your goals, users, and constraints. You get a fixed-price proposal with a real timeline — usually within 1–2 days.",
+      "A short call to map your goals, users, and constraints. You get a fixed-price proposal with a real timeline, usually within a day or two.",
   },
   {
     number: "02",
@@ -28,7 +28,7 @@ const steps = [
     number: "04",
     title: "Launch & grow",
     description:
-      "App-store submission, deployment, and monitoring handled. Then I iterate — most clients keep shipping with me long after v1.",
+      "App-store submission, deployment, and monitoring handled. Then we iterate. Most clients keep shipping with us long after v1.",
   },
 ];
 
@@ -46,8 +46,8 @@ export function Process() {
         <SectionHeading
           number="03"
           label="Process"
-          title="How I take you from idea to launch"
-          description="A process built on visibility — you always know what's happening and what comes next."
+          title="How we take you from idea to launch"
+          description="A process built on visibility, so you always know what's happening and what comes next."
         />
         <div ref={lineRef} className="relative">
           {/* Scroll-drawn spine */}

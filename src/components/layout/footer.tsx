@@ -65,8 +65,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
-              {site.tagline} Mobile apps, web platforms, and custom software — from concept to
-              launch.
+              {site.tagline} Mobile apps, web platforms, and custom software, handled from
+              concept to launch.
             </p>
             <div className="mt-6">
               <AvailableBadge />
@@ -187,7 +187,7 @@ export function Footer() {
         </div>
 
         {/* Mega wordmark */}
-        <Link href="/" aria-label="Granyyte — home" className="mt-16 block overflow-hidden md:mt-24">
+        <Link href="/" aria-label="Granyyte home" className="mt-16 block overflow-hidden md:mt-24">
           <span
             className="block select-none whitespace-nowrap text-center font-display text-[17.5vw] font-bold leading-[0.85] tracking-tight text-stroke transition-colors duration-500 hover:text-lime hover:[-webkit-text-stroke:0px]"
             aria-hidden

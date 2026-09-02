@@ -22,11 +22,11 @@ export const services: Service[] = [
     shortTitle: "Mobile Apps",
     icon: Smartphone,
     excerpt:
-      "Native-quality iOS and Android apps built with Flutter and FlutterFlow — one codebase, every platform, shipped fast.",
+      "Native-quality iOS and Android apps built with Flutter and FlutterFlow. One codebase, every platform, shipped fast.",
     metaDescription:
-      "Affordable mobile app development for iOS and Android from Pakistan. Granyyte builds native-quality Flutter apps — UI/UX, backend, and App Store deployment handled end to end.",
+      "Affordable mobile app development for iOS and Android from Pakistan. Granyyte builds native-quality Flutter apps and handles UI/UX, backend, and App Store deployment end to end.",
     intro:
-      "Your users live on their phones — your product should too. I design, build, and launch mobile apps that feel native on both iOS and Android from a single codebase, cutting time-to-market roughly in half without cutting corners. From marketplaces and social platforms to meditation apps and field tools, I've shipped across nearly every category.",
+      "Your users live on their phones, so your product should too. We design, build, and launch mobile apps that feel native on both iOS and Android from a single codebase, which cuts time-to-market roughly in half without cutting corners. We've shipped across nearly every category, from marketplaces and social platforms to meditation apps and field tools.",
     deliverables: [
       "iOS & Android apps from one Flutter codebase",
       "UI/UX design tailored to platform conventions",
@@ -40,32 +40,32 @@ export const services: Service[] = [
       {
         question: "How long does it take to build a mobile app?",
         answer:
-          "Most apps ship in 2–4 weeks, whether it's mobile, web, or custom software. Larger products with heavier custom backends can extend beyond that. I scope precisely before I start, so you get a real timeline — not a moving target.",
+          "Most apps ship in 2-4 weeks, whether it's mobile, web, or custom software. Larger products with heavier custom backends can take longer. We scope precisely before we start, so you get a real timeline instead of a moving target.",
       },
       {
         question: "Do you build for both iOS and Android?",
         answer:
-          "Yes — every app I build runs on both platforms from a single Flutter codebase, which means faster delivery and one consistent experience without doubling the budget.",
+          "Yes. Every app we build runs on both platforms from a single Flutter codebase, which means faster delivery and one consistent experience without doubling the budget.",
       },
       {
         question: "Do you handle App Store and Google Play publishing?",
         answer:
-          "Completely. I manage store listings, screenshots, review requirements, and submissions — and resolve any review feedback until your app is live.",
+          "Completely. We manage store listings, screenshots, review requirements, and submissions, then resolve any review feedback until your app is live.",
       },
       {
         question: "What happens after launch?",
         answer:
-          "I offer ongoing maintenance plans covering OS updates, bug fixes, and new features. Most of my clients keep working with me long after v1 ships.",
+          "We offer ongoing maintenance plans covering OS updates, bug fixes, and new features. Most of our clients keep working with us long after v1 ships.",
       },
       {
         question: "How much does it cost to build a mobile app?",
         answer:
-          "Complete apps start around $500, standard products with backend and payments land between $1,000 and $2,000, and complex platforms scope beyond that. Smaller work — prototypes, fixes, single features — starts from $100. Every quote is fixed against a written scope.",
+          "Complete apps start around $500. Standard products with backend and payments land between $1,000 and $2,000, and complex platforms scope beyond that. Smaller work like prototypes, fixes, and single features starts from $100. Every quote is fixed against a written scope.",
       },
       {
-        question: "Where are you based — and does it matter?",
+        question: "Where are you based, and does it matter?",
         answer:
-          "I build from Sialkot, Pakistan, for clients across Europe, the Middle East, and North America. It matters in one way only: my rates are a fraction of western agencies for the same stack and standards. Timezone overlap, weekly demo builds, and direct communication keep distance irrelevant.",
+          "We build from Sialkot, Pakistan, for clients across Europe, the Middle East, and North America. It matters in one way only: our rates are a fraction of western agencies for the same stack and standards. Timezone overlap, weekly demo builds, and direct communication keep the distance irrelevant.",
       },
     ],
     relatedProjects: ["poland-portal", "zwipe", "mindful-mantra"],
@@ -76,11 +76,11 @@ export const services: Service[] = [
     shortTitle: "Web Platforms",
     icon: Globe,
     excerpt:
-      "Fast, SEO-ready websites and web apps built with React and Next.js — engineered to rank, convert, and scale.",
+      "Fast, SEO-ready websites and web apps built with React and Next.js, engineered to rank, convert, and scale.",
     metaDescription:
-      "Affordable web development from Pakistan. SEO-first websites, web apps, and platforms built with React and Next.js — designed to rank on Google and convert visitors.",
+      "Affordable web development from Pakistan. SEO-first websites, web apps, and platforms built with React and Next.js, designed to rank on Google and convert visitors.",
     intro:
-      "A slow, invisible website is a liability. I build web platforms that load instantly, rank on Google, and turn visitors into customers — from marketing sites and dashboards to full SaaS products. Server-rendered, performance-budgeted, and built on the same stack powering the fastest sites on the web.",
+      "A slow, invisible website is a liability. We build web platforms that load instantly, rank on Google, and turn visitors into customers, from marketing sites and dashboards through to full SaaS products. Everything is server-rendered, performance-budgeted, and built on the same stack powering the fastest sites on the web.",
     deliverables: [
       "Marketing sites, dashboards, and full web applications",
       "SEO-first architecture: server rendering, structured data, Core Web Vitals",
@@ -94,27 +94,27 @@ export const services: Service[] = [
       {
         question: "Will my website rank on Google?",
         answer:
-          "I build every site SEO-first: server-rendered HTML, structured data, fast Core Web Vitals, and clean semantic markup. Rankings also depend on content and competition, but technically your site will be ahead of most of the market on day one.",
+          "We build every site SEO-first: server-rendered HTML, structured data, fast Core Web Vitals, and clean semantic markup. Rankings also depend on content and competition, but technically your site will be ahead of most of the market on day one.",
       },
       {
         question: "Can you redesign or migrate my existing website?",
         answer:
-          "Yes. I regularly migrate sites from WordPress, Wix, and page builders to modern stacks — preserving your SEO with proper redirects while dramatically improving speed.",
+          "Yes. We regularly migrate sites from WordPress, Wix, and page builders to modern stacks, preserving your SEO with proper redirects while dramatically improving speed.",
       },
       {
         question: "Do you build web apps, or just websites?",
         answer:
-          "Both. Beyond marketing sites I build full products — dashboards, portals, booking systems, and SaaS applications with authentication, payments, and real-time features.",
+          "Both. Beyond marketing sites we build full products: dashboards, portals, booking systems, and SaaS applications with authentication, payments, and real-time features.",
       },
       {
-        question: "How much does a website cost — and how fast can you deliver?",
+        question: "How much does a website cost, and how fast can you deliver?",
         answer:
-          "Websites start from a few hundred dollars and scale with scope — a focused marketing site is the low end, while full web applications with auth, payments, and dashboards cost more depending on complexity. I quote a fixed price after a short discovery call, usually within 1–2 days, and most sites ship in 2–4 weeks — larger platforms can extend beyond that.",
+          "Websites start from a few hundred dollars and scale with scope. A focused marketing site sits at the low end, while full web applications with auth, payments, and dashboards cost more depending on complexity. We quote a fixed price after a short discovery call, usually within a day or two, and most sites ship in 2-4 weeks. Larger platforms can take longer.",
       },
       {
         question: "Why is web development from Pakistan so much cheaper?",
         answer:
-          "Because the overhead is Pakistani while the stack and standards aren't. I build with the same React/Next.js tooling top western studios use — the price difference is structural cost of living, not corners being cut. My own site is the live sample: test its speed and search presence.",
+          "Because the overhead is Pakistani while the stack and standards aren't. We build with the same React and Next.js tooling top western agencies use, so the price difference comes from cost of living, not corners being cut. Our own site is the live sample, so test its speed and search presence.",
       },
     ],
     relatedProjects: ["poland-portal", "zwipe"],
@@ -125,11 +125,11 @@ export const services: Service[] = [
     shortTitle: "Custom Software",
     icon: Cog,
     excerpt:
-      "CRMs, internal tools, and business automation built around how your company actually works — not the other way around.",
+      "CRMs, internal tools, and business automation built around how your company actually works, not the other way around.",
     metaDescription:
-      "Custom software and CRM development from Pakistan. Internal tools, automation, and business systems designed around your workflows — built to scale with your company.",
+      "Custom software and CRM development from Pakistan. Internal tools, automation, and business systems designed around your workflows and built to scale with your company.",
     intro:
-      "Off-the-shelf software forces your business into someone else's mold. I build custom systems — CRMs, operations tools, automation pipelines, and client portals — shaped precisely around your workflows. The result: less manual work, fewer subscriptions, and software that becomes a competitive advantage instead of a monthly expense.",
+      "Off-the-shelf software forces your business into someone else's mold. We build custom systems shaped precisely around your workflows, including CRMs, operations tools, automation pipelines, and client portals. You end up with less manual work, fewer subscriptions, and software that becomes a competitive advantage instead of a monthly expense.",
     deliverables: [
       "Custom CRMs and lead-management systems",
       "Internal tools and admin dashboards",
@@ -143,12 +143,12 @@ export const services: Service[] = [
       {
         question: "Why build custom instead of using off-the-shelf software?",
         answer:
-          "When your team spends hours working around a tool's limitations — or you're paying for five subscriptions that almost do the job — custom software pays for itself. You own it, it fits exactly, and it scales with you.",
+          "When your team spends hours working around a tool's limitations, or you're paying for five subscriptions that almost do the job, custom software pays for itself. You own it, it fits exactly, and it scales with you.",
       },
       {
         question: "Can you integrate with the tools we already use?",
         answer:
-          "Yes. I routinely integrate with payment processors, email platforms, calendars, accounting tools, and any service with an API — your new system works with your existing stack, not against it.",
+          "Yes. We routinely integrate with payment processors, email platforms, calendars, accounting tools, and any service with an API, so your new system works with your existing stack rather than against it.",
       },
       {
         question: "Who owns the code?",
@@ -158,12 +158,12 @@ export const services: Service[] = [
       {
         question: "How do we get started?",
         answer:
-          "I start with a discovery call to map your workflows, then deliver a scoped proposal with fixed pricing and a delivery timeline — usually within 1–2 days. Most builds ship in 2–4 weeks, extending only for larger, more complex systems.",
+          "We start with a discovery call to map your workflows, then deliver a scoped proposal with fixed pricing and a delivery timeline, usually within a day or two. Most builds ship in 2-4 weeks, and only larger, more complex systems take longer.",
       },
       {
         question: "How much does a custom CRM cost?",
         answer:
-          "A CRM built around one core workflow typically runs $1,000–$2,500 with me; multi-role systems with portals and reporting go $2,500–$5,000+. Automation scripts and integrations start from $100. Building from Pakistan is what makes those numbers possible — comparable US consulting engagements start around $30k.",
+          "A CRM built around one core workflow typically runs $1,000 to $2,500 with us, while multi-role systems with portals and reporting go from $2,500 to $5,000 and up. Automation scripts and integrations start from $100. Building from Pakistan is what makes those numbers possible, since comparable US consulting engagements start around $30k.",
       },
     ],
     relatedProjects: ["mainxpert", "poland-portal"],

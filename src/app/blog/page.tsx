@@ -8,9 +8,9 @@ import { Tag } from "@/components/ui/badge";
 import { CtaBand } from "@/components/sections/cta-band";
 
 export const metadata: Metadata = {
-  title: "Blog — Insights on Apps, Web & Custom Software",
+  title: "Blog: Insights on Apps, Web & Custom Software",
   description:
-    "Practical guides on mobile app development, FlutterFlow, web platforms, and custom software — written by the engineer who ships them.",
+    "Practical guides on mobile app development, FlutterFlow, web platforms, and custom software, written by the people who ship them.",
   alternates: { canonical: "/blog" },
 };
 
@@ -27,7 +27,7 @@ export default function BlogPage() {
         label="Blog"
         title="Notes from the"
         accent="build floor."
-        description="Practical, no-fluff guides on mobile apps, web platforms, and custom software — written by the engineer who ships them."
+        description="Practical, no-fluff guides on mobile apps, web platforms, and custom software, written by the people who ship them."
         specs={[
           { label: "Topics", value: "Apps · Web · Software" },
           { label: "Articles", value: String(posts.length) },
@@ -46,9 +46,9 @@ export default function BlogPage() {
               Coming <span className="text-lime">soon</span>.
             </h2>
             <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-muted">
-              I&apos;m writing practical, no-fluff guides on mobile apps, web platforms, and custom
-              software. Check back shortly — or reach out if there&apos;s something you&apos;d like
-              me to cover.
+              We&apos;re writing practical, no-fluff guides on mobile apps, web platforms, and custom
+              software. Check back shortly, or reach out if there&apos;s something you&apos;d like
+              us to cover.
             </p>
           </Reveal>
         </section>

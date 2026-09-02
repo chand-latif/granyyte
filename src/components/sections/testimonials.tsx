@@ -17,7 +17,7 @@ export function Testimonials() {
         number="04"
         label="Testimonials"
         title="What clients say"
-        description="Real words from real clients — straight from LinkedIn, unedited."
+        description="Real words from real clients, straight from LinkedIn and unedited."
       />
       <div className="grid gap-6 md:grid-cols-2">
         {testimonials.map((t, i) => (

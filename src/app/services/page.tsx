@@ -10,7 +10,7 @@ import { CtaBand } from "@/components/sections/cta-band";
 import { TechMarquee } from "@/components/sections/marquee";
 
 export const metadata: Metadata = {
-  title: "Services — Mobile Apps, Web Development & Custom Software",
+  title: "Services: Mobile Apps, Web Development & Custom Software",
   description:
     "Granyyte's services: mobile app development (iOS & Android), SEO-first web development, and custom software built around your workflows. Fixed pricing, real timelines.",
   alternates: { canonical: "/services" },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const collectionJsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "Services — Granyyte",
+  name: "Services | Granyyte",
   url: `${site.url}/services`,
   isPartOf: { "@id": `${site.url}/#website` },
   about: { "@id": `${site.url}/#organization` },
@@ -50,9 +50,9 @@ export default function ServicesPage() {
       <JsonLd data={breadcrumbJsonLd} />
       <PageHeader
         label="Services"
-        title="One engineer for the"
+        title="End-to-end for the"
         accent="whole journey."
-        description="Design, development, deployment, and beyond. Pick a discipline — or bring me an idea and I'll tell you exactly what it needs."
+        description="Design, development, deployment, and beyond. Pick a discipline, or bring us an idea and we'll tell you exactly what it needs."
         specs={[
           { label: "Disciplines", value: "Mobile · Web · Software" },
           { label: "Pricing", value: "Fixed & scoped" },

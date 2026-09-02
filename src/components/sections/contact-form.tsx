@@ -6,7 +6,7 @@ import { submitContactForm, type ContactFormState } from "@/app/actions/contact"
 
 const initialState: ContactFormState = { status: "idle", message: "" };
 
-const budgets = ["Under $500", "$500 – $1.5k", "$1.5k – $4k", "$5k+", "Not sure yet"];
+const budgets = ["Under $500", "$500 - $1.5k", "$1.5k - $4k", "$5k+", "Not sure yet"];
 
 const inputClasses =
   "w-full rounded-xl border border-edge bg-surface px-4 py-3 text-sm text-fg placeholder:text-faint outline-none transition-colors focus:border-lime/60";
@@ -104,7 +104,7 @@ export function ContactForm() {
           name="message"
           required
           rows={5}
-          placeholder="What are you building? Platforms, timeline, anything that helps me understand."
+          placeholder="What are you building? Platforms, timeline, anything that helps us understand."
           className={`${inputClasses} resize-y`}
         />
       </div>

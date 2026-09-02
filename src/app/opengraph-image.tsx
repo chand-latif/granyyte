@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { site } from "@/config/site";
 
-export const alt = `${site.name} — I build software that ships.`;
+export const alt = `${site.name} | We build software that ships.`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -35,7 +35,7 @@ export default function OgImage() {
               letterSpacing: -3,
             }}
           >
-            I build software
+            We build software
           </span>
           <span
             style={{
@@ -51,7 +51,7 @@ export default function OgImage() {
           </span>
         </div>
         <div style={{ display: "flex", fontSize: 28, color: "#9f9fa3" }}>
-          Mobile apps · Web platforms · Custom software — granyyte.com
+          Mobile apps · Web platforms · Custom software · granyyte.com
         </div>
       </div>
     ),

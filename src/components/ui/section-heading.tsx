@@ -12,7 +12,7 @@ export function SectionHeading({ number, label, title, description }: SectionHea
     <Reveal>
       <div className="mb-12 max-w-2xl md:mb-16">
         <p className="mb-4 font-mono text-sm text-lime">
-          {number} — {label}
+          {number} / {label}
         </p>
         <h2 className="font-display text-3xl font-bold tracking-tight text-fg md:text-5xl">
           {title}

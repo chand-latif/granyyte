@@ -18,7 +18,7 @@ type Params = { slug: string };
 const landingTwins: Record<string, { href: string; label: string }[]> = {
   "mobile-app-development": [
     { href: "/mobile-app-development-pakistan", label: "Mobile app development from Pakistan" },
-    { href: "/affordable-app-development", label: "Affordable app development — pricing tiers" },
+    { href: "/affordable-app-development", label: "Affordable app development pricing tiers" },
     { href: "/mobile-app-development-sialkot", label: "Mobile app development in Sialkot" },
   ],
   "web-development": [
@@ -111,7 +111,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
       <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr] md:gap-16">
           <Reveal>
-            <p className="mb-4 font-mono text-sm text-lime">01 — What you get</p>
+            <p className="mb-4 font-mono text-sm text-lime">01 / What you get</p>
             <h2 className="font-display text-3xl font-bold tracking-tight text-fg md:text-4xl">
               Everything included
             </h2>
@@ -140,11 +140,11 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
               <ul className="mt-4 space-y-3 text-sm text-muted">
                 <li className="flex justify-between border-b border-edge pb-3">
                   <span>Proposal turnaround</span>
-                  <span className="text-fg">1–2 days</span>
+                  <span className="text-fg">1-2 days</span>
                 </li>
                 <li className="flex justify-between border-b border-edge pb-3">
                   <span>Typical delivery</span>
-                  <span className="text-fg">2–4 weeks</span>
+                  <span className="text-fg">2-4 weeks</span>
                 </li>
                 <li className="flex justify-between border-b border-edge pb-3">
                   <span>Pricing</span>
@@ -185,7 +185,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
         <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
           <Reveal>
             <div className="mb-12 max-w-2xl">
-              <p className="mb-4 font-mono text-sm text-lime">02 — FAQ</p>
+              <p className="mb-4 font-mono text-sm text-lime">02 / FAQ</p>
               <h2 className="font-display text-3xl font-bold tracking-tight text-fg md:text-4xl">
                 Common questions
               </h2>
@@ -209,7 +209,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
         <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
           <Reveal>
             <div className="mb-12 max-w-2xl">
-              <p className="mb-4 font-mono text-sm text-lime">03 — Related work</p>
+              <p className="mb-4 font-mono text-sm text-lime">03 / Related work</p>
               <h2 className="font-display text-3xl font-bold tracking-tight text-fg md:text-4xl">
                 Built with this expertise
               </h2>

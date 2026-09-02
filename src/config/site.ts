@@ -4,9 +4,9 @@ export const site = {
   // ⚠️ Keep the www — the host serves www.granyyte.com (non-www 308-redirects to it).
   // Every canonical, sitemap URL, and schema @id derives from this value.
   url: "https://www.granyyte.com",
-  tagline: "I build software that ships.",
+  tagline: "We build software that ships.",
   description:
-    "Granyyte is the software studio of Chand Latif — a senior software engineer in Sialkot, Pakistan, building affordable, high-quality mobile apps, web platforms, and custom software for clients worldwide. One engineer owning the whole journey, from concept to launch.",
+    "Granyyte is a software development agency founded by Chand Latif in Sialkot, Pakistan. We build affordable, high-quality mobile apps, web platforms, and custom software for clients worldwide, and we handle the whole journey from concept to launch.",
   founder: {
     name: "Chand Latif",
     role: "Senior Software Engineer",

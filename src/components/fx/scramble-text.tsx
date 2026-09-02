@@ -2,7 +2,7 @@
 
 import { useRef, useCallback, type ReactNode } from "react";
 
-const CHARS = "!<>-_\\/[]{}—=+*^?#$&%";
+const CHARS = "!<>-_\\/[]{}=+*^?#$&%";
 
 /**
  * Wraps text that decodes through random glyphs on hover (matrix-style).

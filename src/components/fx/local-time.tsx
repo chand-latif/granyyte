@@ -10,7 +10,7 @@ const fmt = new Intl.DateTimeFormat("en-GB", {
   hour12: false,
 });
 
-/** Live studio clock (Sialkot, PKT). */
+/** Live agency clock (Sialkot, PKT). */
 export function LocalTime() {
   const [time, setTime] = useState("--:--:--");
 

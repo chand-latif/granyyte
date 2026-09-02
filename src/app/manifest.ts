@@ -3,7 +3,7 @@ import { site } from "@/config/site";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${site.name} — Mobile App, Web & Custom Software Development`,
+    name: `${site.name} | Mobile App, Web & Custom Software Development`,
     short_name: site.name,
     description: site.description,
     start_url: "/",
