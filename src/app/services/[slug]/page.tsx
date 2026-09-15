@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowUpRight, Check } from "lucide-react";
 import { services, getService } from "@/content/services";
 import { projects } from "@/content/projects";
+import { getPostsForService } from "@/lib/content/posts";
 import { site } from "@/config/site";
 import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
@@ -18,7 +19,7 @@ type Params = { slug: string };
 const landingTwins: Record<string, { href: string; label: string }[]> = {
   "mobile-app-development": [
     { href: "/mobile-app-development-pakistan", label: "Mobile app development from Pakistan" },
-    { href: "/affordable-app-development", label: "Affordable app development pricing tiers" },
+    { href: "/affordable-app-development", label: "Affordable app development" },
     { href: "/mobile-app-development-sialkot", label: "Mobile app development in Sialkot" },
   ],
   "web-development": [
@@ -57,6 +58,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
   if (!service) notFound();
 
   const related = projects.filter((p) => service.relatedProjects.includes(p.slug));
+  const relatedPosts = getPostsForService(`/services/${service.slug}`);
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -169,6 +171,26 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
                         >
                           {twin.label}
                           <ArrowUpRight className="size-3.5 shrink-0" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              {relatedPosts.length > 0 && (
+                <>
+                  <p className="mt-8 font-mono text-xs uppercase tracking-widest text-faint">
+                    Further reading
+                  </p>
+                  <ul className="mt-4 space-y-3 text-sm">
+                    {relatedPosts.map((post) => (
+                      <li key={post.slug}>
+                        <Link
+                          href={`/blog/${post.slug}`}
+                          className="inline-flex items-start gap-1.5 text-muted transition-colors hover:text-lime"
+                        >
+                          {post.title}
+                          <ArrowUpRight className="mt-0.5 size-3.5 shrink-0" />
                         </Link>
                       </li>
                     ))}

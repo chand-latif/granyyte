@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "posts:build": "node scripts/build-posts-manifest.mjs",
+    "predev": "npm run posts:build",
     "dev": "next dev",
+    "prebuild": "npm run posts:build",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -20,6 +23,7 @@
     "next": "16.2.10",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.1",
     "resend": "^6.16.0"
   },
@@ -30,6 +34,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
+    "gray-matter": "^4.0.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

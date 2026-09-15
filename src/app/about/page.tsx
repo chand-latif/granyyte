@@ -46,7 +46,7 @@ const personJsonLd = {
   "@type": "Person",
   "@id": `${site.url}/#chand-latif`,
   name: site.founder.name,
-  jobTitle: site.founder.role,
+  jobTitle: [...site.founder.jobTitles],
   worksFor: { "@id": `${site.url}/#organization` },
   knowsAbout: site.knowsAbout,
   sameAs: [site.founder.linkedin],
@@ -66,7 +66,7 @@ export default function AboutPage() {
         specs={[
           { label: "Building since", value: "2021" },
           { label: "Granyyte est.", value: "2026" },
-          { label: "Role", value: "Senior Software Engineer" },
+          { label: "Role", value: site.founder.role },
         ]}
       />
 
@@ -77,7 +77,7 @@ export default function AboutPage() {
             <div className="group relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl border border-edge bg-surface">
               <Image
                 src="/founder.jpg"
-                alt={`${site.founder.name}, ${site.founder.role} of ${site.name}`}
+                alt={`${site.founder.name}, ${site.founder.jobTitles[0]} of ${site.name}`}
                 fill
                 sizes="(max-width: 768px) 100vw, 400px"
                 priority

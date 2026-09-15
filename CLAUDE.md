@@ -7,6 +7,62 @@ platforms, custom software) owned by **Chand Latif** (Founder & CEO). Live domai
 Built as an SEO-first, static site so it ranks organically. Content originated from Chand's old
 Lovable portfolio (chandlatif.lovable.app), rewritten in an agency "we" voice.
 
+## ✍️ Writing rules (READ BEFORE TOUCHING ANY COPY)
+
+All visitor-facing copy must read like Chand wrote it, not like a model generated it. This applies
+to every rendered string: `src/content/*.ts`, `src/content/posts/*.mdx`, JSX text, page metadata,
+form labels, error messages, and FAQ answers. Code comments are exempt (that is where the existing
+em dashes live, and why the check below filters them out).
+
+### Hard bans
+
+1. **No em dashes (`—`) or en dashes (`–`) in copy. Ever.** This is the single biggest AI tell.
+   Use a comma, a full stop, a colon, or brackets. Recast the sentence if none of those fit.
+   Currently the rendered copy contains **zero** of either. Keep it that way.
+2. **No banned vocabulary:** delve, leverage (as a verb), robust, seamless, elevate, unlock,
+   empower, landscape (figurative), realm, testament, tapestry, game-changer, cutting-edge,
+   best-in-class, bespoke, curated, meticulous, navigate (figurative), foster, harness, embark.
+3. **No stock AI sentence shapes:**
+   - "In today's fast-paced world…", "In the world of…", "When it comes to…"
+   - "It's not just X, it's Y" (and the "isn't merely… it's" variant)
+   - "Whether you're X or Y…" as an opener
+   - "Not only… but also"
+   - "Let's dive in", "Look no further", "Rest assured", "It's worth noting"
+   - Moreover / Furthermore / Additionally as paragraph openers
+   - A closing paragraph that restates the whole page ("In conclusion…")
+4. **No relentless rule-of-three.** "Fast, reliable, and scalable" three times on one page is a
+   tell. Use two items, or four, or an uneven list.
+5. **No emoji in body copy** and no emoji bullets. (Lime accents and icons do that job.)
+
+### What good copy looks like here
+
+- **Contractions**, always: "you'll", "we're", "won't", "doesn't".
+- **Uneven rhythm.** A long explanatory sentence, then a short one. Fragments are fine when they
+  land. Uniform 20-word sentences are the giveaway.
+- **Concrete over abstract.** "Live on the App Store for a client in Turkey" beats "proven track
+  record". Pull real specifics from the 9 case studies in `src/content/projects.ts` and the
+  FlutterFlow certification. Named details are the thing a content farm cannot fake.
+- **Admit a tradeoff.** Copy that says when *not* to hire us, or when native beats Flutter, reads
+  human and builds more trust than uniform enthusiasm.
+- **Say the plain thing.** "We'll tell you honestly which one you need" beats "we pride ourselves
+  on transparent consultation".
+- **Sentence case for headings**, not Title Case On Every Word.
+
+### Check before finishing
+
+```bash
+# Dashes inside rendered strings (must return nothing; the second grep drops code comments)
+grep -rn '"[^"]*[—–][^"]*"' src/content/ src/components/ src/app/ --include=*.ts --include=*.tsx \
+  | grep -vE ':[0-9]+: *(//|\*|/\*)'
+grep -rn '[—–]' src/content/posts/*.mdx
+
+# Banned vocabulary in copy
+grep -rniE "delve|leverage|robust|seamless|elevate|unlock|empower|tapestry|cutting-edge|in today's|fast-paced|dive in|moreover|furthermore" src/content/
+```
+
+See also: **Pricing is confidential** below, and the agency "we" voice (never "I", except the
+About-page founder bio and the blog byline).
+
 ## Commit convention
 
 Plain, conventional-commit messages (`feat:`, `fix:`, `perf:`, `style:`). **Do NOT** add a
@@ -51,9 +107,9 @@ Edit these first — most content changes are one-file edits:
   at root URLs: 4× "… from Pakistan", `affordable-app-development`, `surveyor-management-software`,
   and 3× "… in Sialkot" (`mobile-app-development-sialkot`, `web-development-sialkot`,
   `software-development-sialkot` — local-market cluster covering app/web/import-export/inventory/
-  school/attendance queries; keywords go verbatim into FAQ questions). Target location + price
-  queries ($100–$2000 tiers; **honest**: full apps from $500, small deliverables from $100 — never
-  claim a full app under $500). Linked site-wide from the footer "Hire from Pakistan" + "In Sialkot"
+  school/attendance queries; keywords go verbatim into FAQ questions). Target location queries.
+  ⚠️ **No prices anywhere on this site** — see "Pricing is confidential" below. Linked site-wide
+  from the footer "Hire from Pakistan" + "In Sialkot"
   columns and from each service page's "Deep dives" box. `dynamicParams = false` — unknown root
   slugs 404. The 3 Sialkot pages carry `localBusiness: true`, which adds an **invisible**
   `ProfessionalService`+`geo` JSON-LD block (`src/app/[slug]/page.tsx`) plus a minimal cross-link
@@ -62,14 +118,67 @@ Edit these first — most content changes are one-file edits:
   query variants are captured via JSON-LD `knowsAbout` (`sialkotKnowsAbout` in `seo-pages.ts`),
   not FAQ copy.
 - `src/content/testimonials.ts` — **LinkedIn video embeds** (iframe `urn:li:ugcPost` URLs), not text.
-- `src/content/posts.ts` + `src/content/posts/*.mdx` — 3 starter blog posts.
+- `src/content/posts/*.mdx` — blog posts. **One file per post**: YAML frontmatter is the only
+  metadata source (`title`, `description`, `date`, optional `updated`, `tags`, `hub`,
+  `targetKeyword`, optional `relatedService` + `relatedServiceLabel`). There is no hand-maintained manifest — the
+  `prebuild`/`predev` script `scripts/build-posts-manifest.mjs` generates
+  `src/content/posts.generated.ts` (never edit it), deriving `readingTime` from word count. That
+  script is also the guard rail: it **fails the build** on a missing field, an unknown `hub`, or
+  two posts sharing a `targetKeyword` (self-cannibalisation). Run it alone with `npm run posts:build`.
+  `software-house-in-sialkot.mdx` is a deliberate, visible Sialkot post (2026-09-15, Chand's call);
+  it targets house/company/agency queries and funnels to `/software-development-sialkot`.
+- `src/content/topics.ts` — the 5 blog topic hubs rendered at `/blog/topic/<slug>`. Each carries
+  its own intro copy and points at a money page, so a hub isn't a thin list-of-links page. A post's
+  `hub` must match a slug here, and a hub with no posts doesn't generate.
+
+## Blog content layer
+
+`src/lib/content/posts.ts` is the **only** module that knows where posts come from. Pages, the
+sitemap, `feed.xml`, and every JSON-LD block import from it and must never read
+`src/content/posts/` directly. Swapping the source later (a git-backed CMS, say) means rewriting
+those functions and nothing else.
+
+The one exception is the post *body*: ``import(`@/content/posts/${slug}.mdx`)`` in
+`blog/[slug]/page.tsx`. That template literal makes the bundler compile **every** MDX file into the
+route, which is what keeps the route fully static. Past a few hundred posts this is the first thing
+to change — compile the body at request time, then prerender only a subset via
+`generateStaticParams` + ISR (Next's documented "Subset of paths at build time"). Measured
+baseline: **123 posts → 176 pages in ~35s**. Don't use `experimental.mdxRs`; the bundled docs mark
+it not production-ready.
+
+Internal linking is derived, not hand-listed: a post declares `relatedService`, and
+`getPostsForService()` gives service/landing pages their "Further reading" links back. The 3
+Sialkot `localBusiness` pages are deliberately excluded (no extra visible prose there).
+
+## Pricing is confidential
+
+**Never put a Granyyte rate, price, tier, or "from $X" anywhere on this site** (2026-09-11 decision).
+Rates are discussed only once a lead makes contact. This covers visible copy, `metaTitle` /
+`metaDescription`, FAQ **questions** as well as answers, spec rows, and JSON-LD. The `SeoPage`
+type's old `pricing` tier table is gone; the optional `quoteNote` that replaced it describes the
+**process** only ("fixed price against a written scope, proposal within 1-2 days").
+
+What is still allowed, and is used deliberately: **third-party market figures** — what a US/UK
+agency charges ($15-40k), US consulting engagements ($30k), SaaS subscription costs ($36k/yr),
+the "$99 template" scam reference. Those aren't our rates and they carry the value argument.
+
+Timelines (**2-4 weeks**, proposal in **1-2 days**) are unaffected and stay. "Affordable",
+"fixed-price", and "a fraction of western rates" as positioning language are fine — just never a
+number of ours. `priceRange: "$"` remains in the `ProfessionalService` JSON-LD (a coarse Google
+band, not a rate); remove it if Chand wants even that gone.
 
 ## Routes (`src/app/`)
 
-`/` home · `/about` · `/services` + `/services/[slug]` · `/work` + `/work/[slug]` · `/blog` +
-`/blog/[slug]` · `/contact`. Plus conventions: `sitemap.ts`, `robots.ts`, `opengraph-image.tsx`,
-`not-found.tsx`, `template.tsx` (page-transition wipe overlay). `actions/contact.ts` = Resend server
-action.
+`/` home · `/about` · `/services` + `/services/[slug]` · `/work` + `/work/[slug]` · `/contact`.
+Blog: `/blog` (page 1) · `/blog/page/[n]` (2..n, 12 per page, each **self-canonical** — never point
+page 2 at `/blog`) · `/blog/topic/[slug]` (hubs) · `/blog/[slug]`. Plus conventions: `sitemap.ts`,
+`robots.ts`, `opengraph-image.tsx`, `blog/[slug]/opengraph-image.tsx` (per-post share card),
+`feed.xml/route.ts` (RSS), `not-found.tsx`, `template.tsx` (page-transition wipe overlay).
+`actions/contact.ts` = Resend server action.
+
+⚠️ `sitemap.ts` deliberately uses a `CONTENT_UPDATED` constant, **not `new Date()`** — a lastmod
+that is always "today" is one search engines learn to ignore. Bump it on material content edits.
+Blog URLs derive their own dates from frontmatter via `getLatestModified()`.
 
 ## Design system
 

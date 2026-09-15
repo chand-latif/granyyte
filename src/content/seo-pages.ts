@@ -1,9 +1,12 @@
 /**
  * SEO landing pages — long-tail location ("… from Pakistan", "… in Sialkot")
- * and affordability ("mobile app within $500") queries. Rendered by
+ * and affordability ("affordable app development") queries. Rendered by
  * src/app/[slug]/page.tsx at root-level URLs for maximum keyword strength.
- * Each page must stay unique and honest: full apps start ~$500, smaller
- * deliverables from $100, delivery 2-4 weeks. Don't copy-paste copy between
+ * ⚠️ NO PRICES ANYWHERE. Rates are confidential and discussed only once a lead
+ * gets in touch — never reintroduce a figure, tier, or "from $X" into any
+ * field, including metaTitle/metaDescription and FAQ questions. Third-party
+ * market figures (what a US agency charges) are fine; ours are not.
+ * Delivery stays 2-4 weeks. Don't copy-paste copy between
  * pages — Google devalues near-duplicates. Target search queries verbatim in
  * FAQ questions — that's what has been ranking.
  */
@@ -25,9 +28,12 @@ export type SeoPage = {
   intro: string[];
   whyTitle: string;
   whyPoints: { title: string; description: string }[];
-  /** Optional pricing tier table */
-  pricing?: { range: string; deliverable: string }[];
-  pricingNote?: string;
+  /**
+   * How we quote — process only, never a rate or a figure. Prices are
+   * deliberately absent from this site and are discussed once someone gets in
+   * touch, so don't reintroduce a tier table here.
+   */
+  quoteNote?: string;
   faqs: { question: string; answer: string }[];
   /** services.ts slug this page deepens */
   relatedService: string;
@@ -63,16 +69,16 @@ export const seoPages: SeoPage[] = [
     slug: "mobile-app-development-pakistan",
     metaTitle: "Mobile App Development in Pakistan | Hire an Expert App Developer",
     metaDescription:
-      "Hire an expert mobile app developer from Pakistan. Granyyte builds iOS & Android apps in 2-4 weeks, with full apps from $500 and western-agency quality at Pakistani rates.",
+      "Hire an expert mobile app developer from Pakistan. Granyyte builds iOS & Android apps in 2-4 weeks, delivering western-agency quality at Pakistani rates.",
     label: "Pakistan · Mobile Apps",
     title: "Mobile app development",
     accent: "from Pakistan.",
     headerDescription:
-      "iOS and Android apps engineered in Sialkot, Pakistan and shipped to clients across Europe, the Middle East, and North America. Senior quality, honest pricing, 2-4 week delivery.",
+      "iOS and Android apps engineered in Sialkot, Pakistan and shipped to clients across Europe, the Middle East, and North America. Senior quality, fixed-price quotes, 2-4 week delivery.",
     specs: [
       { label: "Based in", value: "Sialkot, Pakistan" },
       { label: "Delivery", value: "2-4 weeks" },
-      { label: "Full apps from", value: "$500" },
+      { label: "Quotes", value: "Fixed price" },
     ],
     intro: [
       "If you're looking for app development from Pakistan, you've probably noticed the range: everything from $5 gig sellers to full agencies quoting like they're in London. Granyyte sits deliberately in the middle of that gap. We're a senior software engineering agency in Pakistan, delivering the quality of a western agency at a fraction of the price.",
@@ -84,7 +90,7 @@ export const seoPages: SeoPage[] = [
       {
         title: "A fraction of western rates",
         description:
-          "The same app a US or UK agency quotes at $15-40k typically costs $500-$5,000 with us. Not because the work is lesser, but because our overhead is Pakistani, not Californian.",
+          "The same app a US or UK agency quotes at $15-40k costs a fraction of that with us. Not because the work is lesser, but because our overhead is Pakistani, not Californian.",
       },
       {
         title: "Certified, not anonymous",
@@ -102,19 +108,13 @@ export const seoPages: SeoPage[] = [
           "Apps shipped for clients in Poland, the UAE, Turkey, the UK, and North America. They're all live on the stores, and all built end to end from Pakistan.",
       },
     ],
-    pricing: [
-      { range: "$100-$500", deliverable: "App prototype, MVP design, bug fixes, or a single feature build" },
-      { range: "$500-$1,000", deliverable: "Complete simple app: one core flow, clean UI, iOS + Android" },
-      { range: "$1,000-$1,500", deliverable: "Standard app with backend, auth, and integrations" },
-      { range: "$1,500-$2,000+", deliverable: "Full product: payments, chat, admin panel, store deployment" },
-    ],
-    pricingNote:
+    quoteNote:
       "Every project is quoted as a fixed price against a written scope, with a proposal within 1-2 days.",
     faqs: [
       {
         question: "How much does mobile app development cost in Pakistan?",
         answer:
-          "With us, complete apps start around $500 and scale with requirements. A standard product with backend, auth, and payments typically lands between $1,000 and $2,000, while complex platforms go beyond that. Smaller deliverables like prototypes or single features start from $100. That's usually 5 to 20 times less than a western agency quotes for identical scope.",
+          "It depends on scope, and we quote honestly rather than publish a number that would be wrong for your project. What moves the price is screen count, whether you need a custom backend, third-party integrations, and whether payments or chat are involved. What we can tell you upfront: building one Flutter codebase for both platforms is the single biggest saving, and the total typically lands several times below what a western agency quotes for identical scope. Send us a short description and you get a fixed price against a written scope within 1-2 days, free.",
       },
       {
         question: "Is it safe to outsource app development to Pakistan?",
@@ -149,7 +149,7 @@ export const seoPages: SeoPage[] = [
     slug: "flutterflow-developer-pakistan",
     metaTitle: "Certified FlutterFlow Developer in Pakistan | FlutterFlow Development Services",
     metaDescription:
-      "Hire a certified FlutterFlow expert from Pakistan. FlutterFlow development services with full apps in 2-4 weeks from $500, and real exported Flutter code you own.",
+      "Hire a certified FlutterFlow expert from Pakistan. FlutterFlow development services with full apps in 2-4 weeks, and real exported Flutter code you own.",
     label: "Pakistan · FlutterFlow",
     title: "Certified FlutterFlow developer",
     accent: "from Pakistan.",
@@ -158,12 +158,12 @@ export const seoPages: SeoPage[] = [
     specs: [
       { label: "Certification", value: "FlutterFlow Expert" },
       { label: "Delivery", value: "2-4 weeks" },
-      { label: "Full apps from", value: "$500" },
+      { label: "Quotes", value: "Fixed price" },
     ],
     intro: [
       "FlutterFlow mobile app development from Pakistan is one of the best value propositions in software right now, and hiring a certified FlutterFlow developer makes the difference between a demo that impresses and a product that ships. Granyyte is founded by Chand Latif, an officially certified FlutterFlow expert building production apps from Sialkot, Pakistan for clients across Europe, the Middle East, and North America.",
       "FlutterFlow isn't a toy builder. It generates real Flutter code you fully own, which means your app runs natively on both iOS and Android and can be extended with hand-written code whenever you outgrow visual development. In our hands it cuts delivery to 2-4 weeks, roughly three times less time and money than native development for the same product.",
-      "Combine that speed with Pakistani rates and you get complete, store-published apps starting around $500. That's the kind of budget that barely buys a discovery call at a western agency.",
+      "Combine that speed with Pakistani rates and a complete, store-published app costs a fraction of what a western agency charges. Often less than what one of their discovery phases would bill.",
     ],
     whyTitle: "Why a certified FlutterFlow expert from Pakistan",
     whyPoints: [
@@ -188,17 +188,12 @@ export const seoPages: SeoPage[] = [
           "Half-finished FlutterFlow project from another freelancer? We audit, fix, and ship stalled builds regularly.",
       },
     ],
-    pricing: [
-      { range: "$100-$500", deliverable: "FlutterFlow prototype, audit of an existing project, or feature fixes" },
-      { range: "$500-$1,000", deliverable: "Complete simple FlutterFlow app, published to both stores" },
-      { range: "$1,000-$2,000+", deliverable: "Full product with backend, auth, payments, and custom code" },
-    ],
-    pricingNote: "Fixed-price proposal within 1-2 days of our first conversation.",
+    quoteNote: "Fixed-price proposal within 1-2 days of our first conversation.",
     faqs: [
       {
         question: "How much does a FlutterFlow developer from Pakistan cost?",
         answer:
-          "Complete FlutterFlow apps start around $500 with us, and standard products land between $1,000 and $2,000. That's several times less than US and EU FlutterFlow agencies charge for the same build. Smaller work like prototypes, audits, or fixes starts from $100.",
+          "Several times less than US and EU FlutterFlow agencies charge for the same build, because the engineering happens in Pakistan rather than California or Berlin. The exact figure depends on scope, so we quote per project rather than publish a rate card that would misprice most of them. Tell us what you are building and you get a fixed price against a written scope within 1-2 days.",
       },
       {
         question: "Are you actually certified in FlutterFlow?",
@@ -213,7 +208,7 @@ export const seoPages: SeoPage[] = [
       {
         question: "Can you take over my existing FlutterFlow project?",
         answer:
-          "Absolutely. Takeovers are a regular part of our work. We start with a quick audit (from $100), tell you honestly what state the project is in, then quote a fixed price to finish and ship it.",
+          "Absolutely. Takeovers are a regular part of our work. We start with a quick audit, tell you honestly what state the project is in, then quote a fixed price to finish and ship it.",
       },
       {
         question: "How fast can you deliver a FlutterFlow app from Pakistan?",
@@ -233,7 +228,7 @@ export const seoPages: SeoPage[] = [
     slug: "web-development-pakistan",
     metaTitle: "Website Development in Pakistan | Hire an Expert Web Developer",
     metaDescription:
-      "Website development from Pakistan: fast, SEO-first sites and web apps built with React & Next.js. Business sites from a few hundred dollars, delivered in 2-4 weeks.",
+      "Website development from Pakistan: fast, SEO-first sites and web apps built with React & Next.js. Fixed-price builds, delivered in 2-4 weeks.",
     label: "Pakistan · Web",
     title: "Website development",
     accent: "from Pakistan.",
@@ -242,12 +237,12 @@ export const seoPages: SeoPage[] = [
     specs: [
       { label: "Based in", value: "Sialkot, Pakistan" },
       { label: "Delivery", value: "2-4 weeks" },
-      { label: "Sites from", value: "$100s" },
+      { label: "Quotes", value: "Fixed price" },
     ],
     intro: [
       "Website development from Pakistan has a reputation problem: cheap templates, slow turnarounds, and sites that never rank. We built Granyyte to be the counter-example. This is modern web development from Sialkot, Pakistan, on the same stack the fastest sites on the internet use: React, Next.js, TypeScript, and server-rendered, SEO-first architecture.",
       "Whether you need a conversion-focused business website, a dashboard, a booking portal, or a full SaaS product, we engineer it to load instantly, rank on Google, and work on every screen. The site you're reading is our own work, so check its speed and search presence as a live sample.",
-      "Because we work from Pakistan, a high-end marketing site costs a few hundred dollars instead of a few thousand, and full web applications scope from around $1,000 instead of $10,000. Same code quality, radically different overhead.",
+      "Because we work from Pakistan, a high-end marketing site costs a fraction of a western agency invoice, and full web applications land well below the $10,000-plus those agencies quote. Same code quality, radically different overhead.",
     ],
     whyTitle: "Why hire a web developer from Pakistan",
     whyPoints: [
@@ -264,7 +259,7 @@ export const seoPages: SeoPage[] = [
       {
         title: "Prices that make sense",
         description:
-          "Business websites from a few hundred dollars; full web apps from around $1,000. The Pakistani cost base makes premium work affordable.",
+          "The Pakistani cost base makes premium work affordable, from marketing sites through to full web applications. Every project is quoted as a fixed price against a written scope.",
       },
       {
         title: "End to end, no handoffs",
@@ -272,17 +267,12 @@ export const seoPages: SeoPage[] = [
           "Design, build, deployment, analytics, and SEO all handled under one roof. No agency telephone game, no handoffs where quality dies.",
       },
     ],
-    pricing: [
-      { range: "$100-$500", deliverable: "Landing page or small business site, SEO-ready" },
-      { range: "$500-$1,000", deliverable: "Multi-page marketing site with CMS or booking" },
-      { range: "$1,000-$2,000+", deliverable: "Web application: dashboards, portals, auth, payments" },
-    ],
-    pricingNote: "Fixed quote after a short discovery call, usually within 1-2 days.",
+    quoteNote: "Fixed quote after a short discovery call, usually within 1-2 days.",
     faqs: [
       {
         question: "How much does website development cost in Pakistan?",
         answer:
-          "With us, landing pages and small business sites start from a few hundred dollars, multi-page marketing sites run $500 to $1,000, and full web applications scope from around $1,000 upward depending on complexity. Every quote is fixed-price against a written scope.",
+          "It scales with what you need: a landing page, a multi-page marketing site with a CMS, or a full web application with dashboards and payments are very different builds. Rather than publish a rate card that would misprice most projects, we scope yours and give you a fixed price against a written scope, usually within 1-2 days of a short call. Working from Pakistan is what keeps all of those tiers well below western agency quotes.",
       },
       {
         question: "Will my website actually rank on Google?",
@@ -312,7 +302,7 @@ export const seoPages: SeoPage[] = [
     slug: "crm-development-pakistan",
     metaTitle: "CRM & Custom Software Development in Pakistan | Built Around Your Workflow",
     metaDescription:
-      "CRM development from Pakistan: custom CRMs, internal tools, and business automation built around your workflows. Fixed pricing from $1,000, delivered in 2-4 weeks.",
+      "CRM development from Pakistan: custom CRMs, internal tools, and business automation built around your workflows. Fixed pricing, delivered in 2-4 weeks.",
     label: "Pakistan · CRM & Software",
     title: "CRM & custom software development",
     accent: "from Pakistan.",
@@ -321,12 +311,12 @@ export const seoPages: SeoPage[] = [
     specs: [
       { label: "Based in", value: "Sialkot, Pakistan" },
       { label: "Delivery", value: "2-4 weeks" },
-      { label: "Systems from", value: "$1,000" },
+      { label: "Quotes", value: "Fixed price" },
     ],
     intro: [
       "CRM development from Pakistan is how growing companies escape the subscription trap without western consulting prices. Instead of paying for five SaaS tools that each do 70% of the job, forever and per seat, you get one system shaped precisely around your pipeline, your fields, and your process. Built once, owned outright.",
       "We build custom CRMs, lead-management systems, admin dashboards, client portals, and workflow automation from Sialkot, Pakistan for businesses across Europe, the Gulf, and North America. Everything integrates through their APIs with the tools you already use, including payment processors, email platforms, calendars, and accounting software.",
-      "Because the engineering happens in Pakistan, a custom CRM that would be a $30-60k consulting engagement in the US typically lands between $1,000 and $5,000 with us. The handover standard stays the same: full source code, documentation, and infrastructure access.",
+      "Because the engineering happens in Pakistan, a custom CRM that would be a $30-60k consulting engagement in the US costs a small fraction of that with us. The handover standard stays the same: full source code, documentation, and infrastructure access.",
     ],
     whyTitle: "Why build your CRM with a Pakistani developer",
     whyPoints: [
@@ -351,17 +341,12 @@ export const seoPages: SeoPage[] = [
           "Stripe, email platforms, calendars, accounting tools, and any service with an API. Your new system works with your existing tools rather than against them.",
       },
     ],
-    pricing: [
-      { range: "$100-$1,000", deliverable: "Automation scripts, integrations, or a focused internal tool" },
-      { range: "$1,000-$2,500", deliverable: "Custom CRM or admin dashboard around one core workflow" },
-      { range: "$2,500-$5,000+", deliverable: "Multi-role business system with portals, reporting, and automation" },
-    ],
-    pricingNote: "Scoped proposal with fixed pricing within 1-2 days of mapping your workflow.",
+    quoteNote: "Scoped proposal with fixed pricing within 1-2 days of mapping your workflow.",
     faqs: [
       {
         question: "How much does CRM development cost in Pakistan?",
         answer:
-          "Custom CRMs with us typically run $1,000 to $2,500 for a system built around one core workflow, and $2,500 to $5,000 and up for multi-role platforms with portals and reporting. Smaller automation and integration work starts from $100. Comparable US and EU consulting engagements start around $30k.",
+          "It depends on whether you need a system around one core workflow or a multi-role platform with portals, reporting, and automation. We map your workflow first, then quote a fixed price against a written scope, because a published rate would be wrong for most of the systems we build. For context, comparable US and EU consulting engagements start around $30k, and building from Pakistan is what puts the same work within reach.",
       },
       {
         question: "Custom CRM vs. off-the-shelf: when is custom worth it?",
@@ -389,23 +374,23 @@ export const seoPages: SeoPage[] = [
   },
   {
     slug: "affordable-app-development",
-    metaTitle: "Affordable App Development | Full Apps from $500, Honest Tiers from $100",
+    metaTitle: "Affordable App Development | Senior Quality, Fixed-Price Builds",
     metaDescription:
-      "Affordable app development without the corner-cutting: complete mobile apps from $500, prototypes and fixes from $100, full products under $2,000. Fixed prices, 2-4 week delivery.",
+      "Affordable app development without the corner-cutting: complete iOS and Android apps built by certified senior engineers. Fixed prices against a written scope, 2-4 week delivery, code you own.",
     label: "Affordable Development",
     title: "Affordable app development",
     accent: "without the corner-cutting.",
     headerDescription:
-      "Complete mobile apps from $500. Prototypes, fixes, and landing pages from $100. Full products with payments and admin panels under $2,000, all with fixed prices, real timelines, and code you own.",
+      "Complete iOS and Android apps, prototypes, and full products with payments and admin panels, all with fixed prices, real timelines, and code you own. Built in Pakistan by certified senior engineers, without the western agency invoice.",
     specs: [
-      { label: "Small builds from", value: "$100" },
-      { label: "Full apps from", value: "$500" },
+      { label: "Quotes", value: "Fixed price" },
+      { label: "Code ownership", value: "100% yours" },
       { label: "Delivery", value: "2-4 weeks" },
     ],
     intro: [
-      "\"Affordable app development\" usually means one of two scams: a $99 template with your logo on it, or a lowball quote that triples once you're committed. This page is the third option, with real, honest tiers for what software actually costs when it's built in Pakistan by certified, senior engineers without western agency overhead.",
+      "\"Affordable app development\" usually means one of two scams: a $99 template with your logo on it, or a lowball quote that triples once you're committed. This page is the third option: real software, built in Pakistan by certified senior engineers, without the western agency overhead that inflates the invoice.",
       "The affordability isn't magic. Three structural advantages stack up: we build one Flutter codebase that runs on both iOS and Android instead of two native apps, we use FlutterFlow (where we're officially certified) to eliminate boilerplate, and our cost base is Sialkot, not San Francisco. Same product, roughly three times less time and money than native development, and 5 to 20 times less than a western agency invoice.",
-      "Every price below is a real offer, not bait. You get fixed quotes against written scope, a proposal within 1-2 days, weekly demo builds, and full code ownership on delivery, at every tier including the smallest.",
+      "We don't publish a rate card, because a number on a page is wrong for almost every project that reads it, and it invites exactly the lowball-then-inflate game we're trying to avoid. Instead you get a fixed quote against a written scope, a proposal within 1-2 days of a short call, weekly demo builds, and full code ownership on delivery, on every project including the smallest.",
     ],
     whyTitle: "What your budget actually buys",
     whyPoints: [
@@ -417,7 +402,7 @@ export const seoPages: SeoPage[] = [
       {
         title: "Cheap isn't disposable",
         description:
-          "Even a $500 app gets clean architecture, real testing, and store-ready polish. The most expensive app is the one you have to rebuild.",
+          "Our smallest builds get the same clean architecture, real testing, and store-ready polish as the largest. The most expensive app is the one you have to rebuild.",
       },
       {
         title: "One codebase, both platforms",
@@ -427,37 +412,31 @@ export const seoPages: SeoPage[] = [
       {
         title: "You own everything",
         description:
-          "Source code, stores, and infrastructure are handed over at every price tier. Affordability without lock-in.",
+          "Source code, stores, and infrastructure are handed over on every project, whatever its size. Affordability without lock-in.",
       },
     ],
-    pricing: [
-      { range: "$100-$500", deliverable: "Landing page, app prototype / MVP design, bug fixes, single-feature builds" },
-      { range: "$500-$1,000", deliverable: "Complete simple app: one core flow, clean UI, iOS + Android from one codebase" },
-      { range: "$1,000-$1,500", deliverable: "Standard app with backend, authentication, and a couple of integrations" },
-      { range: "$1,500-$2,000+", deliverable: "Full product: payments, chat, admin panel, store deployment handled" },
-    ],
-    pricingNote:
-      "Larger platforms (marketplaces, multi-role systems, custom algorithms) scope beyond $2,000, and that's still a fraction of agency pricing.",
+    quoteNote:
+      "Every project is a fixed price against a written scope, quoted after a short call and usually back with you within 1-2 days. No hourly billing, and no number that moves once you're committed.",
     faqs: [
       {
-        question: "Can I get a mobile app for $100?",
+        question: "How much does affordable app development cost?",
         answer:
-          "Not a complete app, and anyone promising that is selling a template. What $100 to $400 genuinely buys with us is a clickable app prototype, an MVP design, bug fixes on an existing app, a single-feature build, or a landing page for your idea. Complete apps start around $500, and we'll tell you honestly which one you need.",
+          "We quote per project rather than publish a price list, because scope is what decides the number and a figure on a page would be wrong for most people reading it. Tell us what you're building and you'll have a fixed price against a written scope within 1-2 days, at no cost and with no obligation.",
       },
       {
-        question: "Can I get a full app for $500?",
+        question: "What can I get on a small budget?",
         answer:
-          "Yes. You get a complete, store-published app with one core flow done excellently: clean UI, solid architecture, running on both iOS and Android from a single Flutter codebase. Think focused tools, content apps, booking flows, or a tight MVP. It won't have payments, chat, and an admin panel at that price, since those come in higher tiers.",
+          "More than you'd expect, as long as the scope is focused. A clickable prototype, an MVP design, a landing page, bug fixes on an existing app, or a single-feature build are all realistic starting points. If your budget genuinely doesn't cover what you're describing, we'll say so on the first call rather than take the work and cut corners.",
       },
       {
-        question: "What does a mobile app within $1,000 look like?",
+        question: "What does a complete app include?",
         answer:
-          "A simple-to-standard app with a real backend: user accounts, cloud data via Firebase or Supabase, push notifications, and a couple of integrations. This is the sweet spot for most first versions, with enough product to validate with real users, delivered in 2-4 weeks.",
+          "A store-published app with one core flow done excellently: clean UI, solid architecture, and both iOS and Android from a single Flutter codebase. Payments, real-time chat, and an admin panel are a step up in scope, and we'll tell you which of those your idea actually needs before quoting.",
       },
       {
-        question: "What can I build with $1,500 to $2,000?",
+        question: "Do you charge hourly or a fixed price?",
         answer:
-          "A full commercial product: authentication, payments, real-time features like chat, an admin panel to run it, analytics, and App Store + Google Play deployment handled for you. This tier covers most standard business apps end to end.",
+          "Fixed price, always, tied to a written scope agreed before work starts. Hourly billing against a vague scope is a blank check, and you'll never get one from us. If the scope changes mid-project we requote that change openly rather than quietly running up the clock.",
       },
       {
         question: "Why is your development so much cheaper than agencies?",
@@ -467,7 +446,7 @@ export const seoPages: SeoPage[] = [
       {
         question: "Are cheap apps lower quality?",
         answer:
-          "Cheap templates are. Efficiently-built custom apps aren't, because every tier here gets the same architecture standards, testing, and store-ready polish. Our portfolio apps, live on both stores with real users, were all built at these price levels.",
+          "Cheap templates are. Efficiently-built custom apps aren't, because every project gets the same architecture standards, testing, and store-ready polish regardless of size. Our portfolio apps, live on both stores with real users, were all built this way.",
       },
     ],
     relatedService: "mobile-app-development",
@@ -516,12 +495,7 @@ export const seoPages: SeoPage[] = [
           "Built on Supabase and PostgreSQL, then handed over completely. Add surveyors, contractors, and jobs without the software bill scaling against you.",
       },
     ],
-    pricing: [
-      { range: "$100-$1,000", deliverable: "Single module: quote requests, visit forms, or contractor onboarding" },
-      { range: "$1,000-$2,500", deliverable: "Core job-management system around your main workflow" },
-      { range: "$2,500-$5,000+", deliverable: "Full operations platform: jobs, quotes, visits, incidents, notifications" },
-    ],
-    pricingNote:
+    quoteNote:
       "Fixed-price proposal within 1-2 days of a workflow call. Most systems ship in 2-4 weeks.",
     faqs: [
       {
@@ -532,7 +506,7 @@ export const seoPages: SeoPage[] = [
       {
         question: "How much does custom surveyor management software cost?",
         answer:
-          "With us, a core job-management system built around your main workflow typically runs $1,000 to $2,500. A full operations platform with quoting, visit forms, incident reporting, and WhatsApp and email automation lands between $2,500 and $5,000 or more. That's often less than a year of the per-seat SaaS subscriptions it replaces, and you own it outright.",
+          "It depends on whether you need a system around one core workflow or a full operations platform with quoting, visit forms, incident reporting, and WhatsApp and email automation. We map your workflow on a short call and come back with a fixed price against a written scope. What we can say generally: it is usually a one-time cost comparable to what a year of the per-seat SaaS subscriptions it replaces would run you, and you own it outright afterwards.",
       },
       {
         question: "Can it enforce RAMS and photo compliance on site?",
@@ -562,7 +536,7 @@ export const seoPages: SeoPage[] = [
     slug: "mobile-app-development-sialkot",
     metaTitle: "Mobile App Development in Sialkot | Certified App Developer",
     metaDescription:
-      "Hire a mobile app developer in Sialkot: certified Flutter & FlutterFlow engineers with apps live on the App Store and Google Play worldwide. Full apps from $500, delivered in 2-4 weeks.",
+      "Hire a mobile app developer in Sialkot: certified Flutter & FlutterFlow engineers with apps live on the App Store and Google Play worldwide. Fixed-price builds delivered in 2-4 weeks.",
     label: "Sialkot · Mobile Apps",
     title: "Mobile app developer",
     accent: "in Sialkot.",
@@ -571,7 +545,7 @@ export const seoPages: SeoPage[] = [
     specs: [
       { label: "Based in", value: "Sialkot, Pakistan" },
       { label: "Delivery", value: "2-4 weeks" },
-      { label: "Full apps from", value: "$500" },
+      { label: "Quotes", value: "Fixed price" },
     ],
     intro: [
       "Search for mobile app development in Sialkot and you mostly find two things: students building side projects, and Lahore or Karachi agencies that treat Sialkot as a remote lead. Granyyte is the third option, a senior, certified mobile app development agency based in Sialkot itself, with apps live on the App Store and Google Play for clients in Turkey, Poland, the UAE, and the UK.",
@@ -601,19 +575,13 @@ export const seoPages: SeoPage[] = [
           "Requirements over a sit-down meeting, weekly demo builds on your phone, and ongoing support from the same city and timezone as your business.",
       },
     ],
-    pricing: [
-      { range: "$100-$500", deliverable: "App prototype, MVP design, bug fixes, or a single-feature build" },
-      { range: "$500-$1,000", deliverable: "Complete simple app: one core flow, clean UI, iOS + Android" },
-      { range: "$1,000-$1,500", deliverable: "Standard app with backend, accounts, and integrations" },
-      { range: "$1,500-$2,000+", deliverable: "Full product: payments, chat, admin panel, store deployment" },
-    ],
-    pricingNote:
+    quoteNote:
       "Fixed-price proposal within 1-2 days. Sialkot clients can scope in person and be invoiced in PKR.",
     faqs: [
       {
         question: "How much does mobile app development cost in Sialkot?",
         answer:
-          "The same honest tiers we quote worldwide: complete apps start around $500 (invoiced in PKR if you prefer), standard apps with a backend land between $1,000 and $2,000, and smaller deliverables like prototypes or fixes start from $100. Being local doesn't change the price. It just adds face-to-face meetings and same-city support.",
+          "The same way we quote worldwide: scope first, then a fixed price against a written scope, usually within 1-2 days of a short call. Being local doesn't change the price. It just adds face-to-face scoping, same-city support, and PKR invoicing if you prefer it.",
       },
       {
         question: "Are there professional mobile application developers in Sialkot?",
@@ -653,7 +621,7 @@ export const seoPages: SeoPage[] = [
     specs: [
       { label: "Based in", value: "Sialkot, Pakistan" },
       { label: "Delivery", value: "2-4 weeks" },
-      { label: "Sites from", value: "$100s" },
+      { label: "Quotes", value: "Fixed price" },
     ],
     intro: [
       "Sialkot is an export city built on sports goods, surgical instruments, and leather. Your next buyer in Germany, the UK, or the US will Google your company before they ever reply to an email, and most Sialkot business websites fail that moment with slow WordPress templates that never rank and look a decade old on a phone. Website development in Sialkot deserves better engineering than that.",
@@ -683,18 +651,13 @@ export const seoPages: SeoPage[] = [
           "Scope the site face to face in Sialkot, get it maintained from the same city, and reach the people who build it directly, with no layers in between.",
       },
     ],
-    pricing: [
-      { range: "$100-$500", deliverable: "Landing page or small business site, SEO-ready" },
-      { range: "$500-$1,000", deliverable: "Multi-page company or export-catalog site with inquiry forms" },
-      { range: "$1,000-$2,000+", deliverable: "Web application: portals, dashboards, booking, e-commerce" },
-    ],
-    pricingNote:
+    quoteNote:
       "Fixed quote within 1-2 days. Sialkot clients can be invoiced in PKR and meet in person.",
     faqs: [
       {
         question: "How much does website development cost in Sialkot?",
         answer:
-          "Landing pages and small business sites start from a few hundred dollars (PKR invoicing available), multi-page company and export-catalog sites run $500 to $1,000, and full web applications scope from around $1,000. Every quote is fixed against a written scope and delivered within 1-2 days.",
+          "A landing page, a multi-page company or export-catalog site, and a full web application are very different builds, so we scope yours rather than quote from a list. Every quote is fixed against a written scope and comes back within 1-2 days, with PKR invoicing available for Sialkot clients.",
       },
       {
         question: "Do you build import export websites in Sialkot?",
@@ -734,7 +697,7 @@ export const seoPages: SeoPage[] = [
     specs: [
       { label: "Based in", value: "Sialkot, Pakistan" },
       { label: "Delivery", value: "2-4 weeks" },
-      { label: "Systems from", value: "$500" },
+      { label: "Quotes", value: "Fixed price" },
     ],
     intro: [
       "Most factories, exporters, and schools in Sialkot still run on registers, Excel sheets, and WhatsApp groups. When they search for custom software development in Sialkot, they mostly find resellers pushing rigid off-the-shelf packages. We're a software engineering agency in Sialkot that builds systems from scratch, shaped around how your business actually operates, the same way we built the operations platform a UK surveying firm runs its daily business on (the full case study is public on this site).",
@@ -764,18 +727,13 @@ export const seoPages: SeoPage[] = [
           "Follow every order from buyer inquiry through production, QC, and shipment, with statuses your team updates in seconds and automatic notifications to your buyers.",
       },
     ],
-    pricing: [
-      { range: "$100-$500", deliverable: "Single-module tool: attendance register, stock ledger, or one automation" },
-      { range: "$500-$1,500", deliverable: "Complete system around one workflow: inventory or school management core" },
-      { range: "$1,500-$5,000+", deliverable: "Multi-role platform: portals, reporting, WhatsApp and email notifications" },
-    ],
-    pricingNote:
+    quoteNote:
       "Fixed-price proposal within 1-2 days of mapping your workflow. PKR invoicing available for Sialkot clients.",
     faqs: [
       {
         question: "How much does an inventory management system cost in Sialkot?",
         answer:
-          "A focused inventory system built around your stock workflow typically runs $500 to $1,500 (invoiced in PKR if you prefer), and multi-branch platforms with purchasing, reporting, and user roles go to $1,500 to $5,000. Crucially, that's a one-time cost. There's no per-user monthly subscription, and the software is yours outright.",
+          "It depends on whether you need a focused system around one stock workflow or a multi-branch platform with purchasing, reporting, and user roles. We scope it with you and quote a fixed price, invoiced in PKR if you prefer. Crucially, it's a one-time cost either way. There's no per-user monthly subscription, and the software is yours outright.",
       },
       {
         question: "Do you build school management software in Sialkot?",
@@ -785,7 +743,7 @@ export const seoPages: SeoPage[] = [
       {
         question: "Can you build an attendance management system for our staff?",
         answer:
-          "Yes. Staff attendance systems covering check-in and check-out, shift schedules, leave requests, and monthly payroll-ready reports are quick builds, usually in the $500 to $1,500 tier and delivered within 2-4 weeks. They can also plug into a larger HR or payroll workflow later.",
+          "Yes. Staff attendance systems covering check-in and check-out, shift schedules, leave requests, and monthly payroll-ready reports are among the quicker builds we do, usually delivered within 2-4 weeks. They can also plug into a larger HR or payroll workflow later.",
       },
       {
         question: "Which industries in Sialkot do you build software for?",

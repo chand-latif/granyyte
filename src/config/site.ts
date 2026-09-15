@@ -9,7 +9,10 @@ export const site = {
     "Granyyte is a software development agency founded by Chand Latif in Sialkot, Pakistan. We build affordable, high-quality mobile apps, web platforms, and custom software for clients worldwide, and we handle the whole journey from concept to launch.",
   founder: {
     name: "Chand Latif",
-    role: "Senior Software Engineer",
+    /** Display string for the UI. */
+    role: "Founder · Senior Software Engineer",
+    /** Same two titles as discrete values — schema.org jobTitle accepts an array. */
+    jobTitles: ["Founder", "Senior Software Engineer"],
     linkedin: "https://www.linkedin.com/in/chand-latif",
     certification: "Certified FlutterFlow Expert",
     certificationUrl:
@@ -54,9 +57,9 @@ export const site = {
   ],
   // TODO: replace with real numbers from Chand
   stats: [
-    { value: "15+", label: "Projects shipped" },
+    { value: "25+", label: "Projects shipped" },
     { value: "4+", label: "Years building" },
-    { value: "10+", label: "Happy clients" },
+    { value: "15+", label: "Happy clients" },
     { value: "3", label: "Continents served" },
   ],
   techStack: [

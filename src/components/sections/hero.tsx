@@ -115,10 +115,13 @@ export function Hero() {
           </Reveal>
         </div>
 
-        {/* Right — live deploy console */}
-        <Reveal delay={0.35}>
-          <BuildConsole />
-        </Reveal>
+        {/* Right — live deploy console. Desktop only: it exists to fill the
+            second grid column, which doesn't exist below lg. */}
+        <div className="hidden lg:block">
+          <Reveal delay={0.35}>
+            <BuildConsole />
+          </Reveal>
+        </div>
       </motion.div>
 
       {/* Scroll cue + rotating badge */}

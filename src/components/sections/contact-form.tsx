@@ -6,8 +6,6 @@ import { submitContactForm, type ContactFormState } from "@/app/actions/contact"
 
 const initialState: ContactFormState = { status: "idle", message: "" };
 
-const budgets = ["Under $500", "$500 - $1.5k", "$1.5k - $4k", "$5k+", "Not sure yet"];
-
 const inputClasses =
   "w-full rounded-xl border border-edge bg-surface px-4 py-3 text-sm text-fg placeholder:text-faint outline-none transition-colors focus:border-lime/60";
 
@@ -65,34 +63,17 @@ export function ContactForm() {
         </div>
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-2">
-        <div>
-          <label htmlFor="company" className="mb-2 block font-mono text-xs text-muted">
-            Company
-          </label>
-          <input
-            id="company"
-            name="company"
-            type="text"
-            placeholder="Optional"
-            className={inputClasses}
-          />
-        </div>
-        <div>
-          <label htmlFor="budget" className="mb-2 block font-mono text-xs text-muted">
-            Budget range
-          </label>
-          <select id="budget" name="budget" defaultValue="" className={inputClasses}>
-            <option value="" disabled>
-              Select a range
-            </option>
-            {budgets.map((b) => (
-              <option key={b} value={b}>
-                {b}
-              </option>
-            ))}
-          </select>
-        </div>
+      <div>
+        <label htmlFor="company" className="mb-2 block font-mono text-xs text-muted">
+          Company
+        </label>
+        <input
+          id="company"
+          name="company"
+          type="text"
+          placeholder="Optional"
+          className={inputClasses}
+        />
       </div>
 
       <div>

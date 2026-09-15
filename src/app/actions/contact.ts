@@ -15,7 +15,6 @@ export async function submitContactForm(
   const name = String(formData.get("name") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
   const company = String(formData.get("company") ?? "").trim();
-  const budget = String(formData.get("budget") ?? "").trim();
   const message = String(formData.get("message") ?? "").trim();
 
   // Honeypot — bots fill every field; humans never see this one
@@ -29,11 +28,9 @@ export async function submitContactForm(
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return { status: "error", message: "Please enter a valid email address." };
   }
-  if (!message || message.length < 10) {
-    return {
-      status: "error",
-      message: "Please tell us a bit more about your project (at least a sentence).",
-    };
+  // No minimum length — a one-word message is a valid lead.
+  if (!message) {
+    return { status: "error", message: "Please add a message." };
   }
 
   const apiKey = process.env.RESEND_API_KEY;
@@ -62,7 +59,6 @@ export async function submitContactForm(
         `Name: ${name}`,
         `Email: ${email}`,
         company && `Company: ${company}`,
-        budget && `Budget: ${budget}`,
         "",
         "Message:",
         message,

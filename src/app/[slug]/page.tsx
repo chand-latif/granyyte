@@ -5,6 +5,7 @@ import { ArrowUpRight, Check } from "lucide-react";
 import { seoPages, getSeoPage, sialkotGeo, sialkotKnowsAbout } from "@/content/seo-pages";
 import { getService } from "@/content/services";
 import { projects } from "@/content/projects";
+import { getPostsForService } from "@/lib/content/posts";
 import { site } from "@/config/site";
 import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
@@ -43,6 +44,8 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
 
   const service = getService(page.relatedService);
   const related = projects.filter((p) => page.relatedProjects.includes(p.slug));
+  // The Sialkot cluster stays free of extra visible prose (see seo-pages.ts).
+  const relatedPosts = page.localBusiness ? [] : getPostsForService(`/${page.slug}`);
   const otherSialkotPages = page.localBusiness
     ? seoPages.filter((p) => p.localBusiness && p.slug !== page.slug)
     : [];
@@ -151,30 +154,22 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
               </Link>
             )}
           </Reveal>
-          {page.pricing && (
+          {/* How we quote. Deliberately no figures — rates are discussed on
+              contact, so this box describes the process, not the price. */}
+          {page.quoteNote && (
             <Reveal delay={0.1}>
               <div className="rounded-2xl border border-edge bg-surface p-8">
                 <p className="font-mono text-xs uppercase tracking-widest text-faint">
-                  Honest pricing
+                  How we quote
                 </p>
-                <ul className="mt-5 space-y-4">
-                  {page.pricing.map((tier, i) => (
-                    <li
-                      key={tier.range}
-                      className={
-                        i < page.pricing!.length - 1 ? "border-b border-edge pb-4" : undefined
-                      }
-                    >
-                      <p className="font-mono text-sm font-medium text-lime">{tier.range}</p>
-                      <p className="mt-1 text-sm leading-relaxed text-muted">{tier.deliverable}</p>
-                    </li>
-                  ))}
-                </ul>
-                {page.pricingNote && (
-                  <p className="mt-6 border-t border-edge pt-5 text-xs leading-relaxed text-faint">
-                    {page.pricingNote}
-                  </p>
-                )}
+                <p className="mt-5 text-sm leading-relaxed text-muted">{page.quoteNote}</p>
+                <Link
+                  href="/contact"
+                  className="mt-6 inline-flex items-center gap-2 border-t border-edge pt-5 font-mono text-sm text-lime transition-colors hover:text-fg"
+                >
+                  Tell us what you need
+                  <ArrowUpRight className="size-4" />
+                </Link>
               </div>
             </Reveal>
           )}
@@ -246,6 +241,38 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
             </Reveal>
             <WorkGrid projects={related} />
           </div>
+        </section>
+      )}
+
+      {/* Further reading — links the commercial page into the blog. Skipped on
+          the Sialkot cluster, which deliberately carries no extra visible copy. */}
+      {relatedPosts.length > 0 && (
+        <section className="mx-auto max-w-6xl px-5 pb-24 md:px-8 md:pb-32">
+          <Reveal>
+            <div className="rounded-2xl border border-edge bg-surface p-8 md:p-10">
+              <p className="font-mono text-sm text-lime">
+                <span aria-hidden>{"// "}</span>Further reading
+              </p>
+              <ul className="mt-6 grid gap-4 md:grid-cols-3">
+                {relatedPosts.map((post) => (
+                  <li key={post.slug}>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="group flex h-full flex-col justify-between gap-4 rounded-xl border border-edge bg-raised p-5 transition-colors hover:border-lime/40"
+                    >
+                      <span className="font-display text-base font-bold text-fg transition-colors group-hover:text-lime">
+                        {post.title}
+                      </span>
+                      <span className="flex items-center gap-1.5 font-mono text-xs text-faint">
+                        {post.readingTime}
+                        <ArrowUpRight className="size-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
         </section>
       )}
 

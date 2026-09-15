@@ -60,7 +60,7 @@ export const services: Service[] = [
       {
         question: "How much does it cost to build a mobile app?",
         answer:
-          "Complete apps start around $500. Standard products with backend and payments land between $1,000 and $2,000, and complex platforms scope beyond that. Smaller work like prototypes, fixes, and single features starts from $100. Every quote is fixed against a written scope.",
+          "It depends on scope, so we quote per project rather than publish a price list that would be wrong for most of them. Screen count, whether you need a custom backend, integrations, and features like payments or chat are what move the number. Every quote is a fixed price against a written scope, back with you within 1-2 days of a short call.",
       },
       {
         question: "Where are you based, and does it matter?",
@@ -109,7 +109,7 @@ export const services: Service[] = [
       {
         question: "How much does a website cost, and how fast can you deliver?",
         answer:
-          "Websites start from a few hundred dollars and scale with scope. A focused marketing site sits at the low end, while full web applications with auth, payments, and dashboards cost more depending on complexity. We quote a fixed price after a short discovery call, usually within a day or two, and most sites ship in 2-4 weeks. Larger platforms can take longer.",
+          "It scales with scope. A focused marketing site sits at the low end, while full web applications with auth, payments, and dashboards cost more depending on complexity, so we quote per project rather than publish a figure that would misprice most of them. You get a fixed price after a short discovery call, usually within a day or two, and most sites ship in 2-4 weeks. Larger platforms can take longer.",
       },
       {
         question: "Why is web development from Pakistan so much cheaper?",
@@ -163,7 +163,7 @@ export const services: Service[] = [
       {
         question: "How much does a custom CRM cost?",
         answer:
-          "A CRM built around one core workflow typically runs $1,000 to $2,500 with us, while multi-role systems with portals and reporting go from $2,500 to $5,000 and up. Automation scripts and integrations start from $100. Building from Pakistan is what makes those numbers possible, since comparable US consulting engagements start around $30k.",
+          "A CRM built around one core workflow and a multi-role system with portals and reporting are very different builds, so we map your workflow first and then quote a fixed price against a written scope. For context, comparable US consulting engagements start around $30k, and building from Pakistan is what puts the same work within reach.",
       },
     ],
     relatedProjects: ["mainxpert", "poland-portal"],

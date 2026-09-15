@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     "CRM development Pakistan",
     "affordable app development",
     "affordable development services",
-    "app development from $500",
+    "fixed-price app development",
     "surveyor job management software",
     "internal tools for surveying companies",
     "mobile app development in Sialkot",
@@ -125,7 +125,7 @@ const organizationJsonLd = {
     "@type": "Person",
     "@id": `${site.url}/#chand-latif`,
     name: site.founder.name,
-    jobTitle: site.founder.role,
+    jobTitle: [...site.founder.jobTitles],
     sameAs: site.founder.linkedin,
   },
   address: {

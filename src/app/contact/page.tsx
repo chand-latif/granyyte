@@ -73,7 +73,6 @@ export default function ContactPage() {
         specs={[
           { label: "Response", value: "Within 24 hours" },
           { label: "Channels", value: "Email · WhatsApp · Call" },
-          { label: "Based in", value: "Sialkot, PK" },
         ]}
       />
 
