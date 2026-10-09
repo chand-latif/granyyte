@@ -150,6 +150,28 @@ export const projects: Project[] = [
       "A polished, conversion-ready web presence that lets a B2B building-services firm pitch to national clients with confidence. It's live across London and the South West at spacebmr.co.uk.",
   },
   {
+    slug: "avc-dealer",
+    name: "AVC Dealer",
+    tagline:
+      "Gate passes, condition reports and floor plan payments for dealers across a US auto auction network",
+    category: "Auto Auction Services",
+    platforms: ["iOS"],
+    tech: ["Flutter", "FlutterFlow", "Firebase"],
+    cover: "from-orange-600/25 via-red-500/10 to-transparent",
+    mark: "AVC",
+    icon: "/projects/avc-dealer.webp",
+    links: {
+      appStore: "https://apps.apple.com/pk/app/avc-dealer/id1351709612",
+    },
+    featured: true,
+    problem:
+      "A dealer buying at an auction two states away needs a condition report before the car runs, a gate pass to get it off the lot, floor plan payment arranged, and transport booked. All of that meant phone calls, one auction at a time, each with its own service desk and its own hold music. Sellers had the same problem in reverse when they wanted run numbers reserved for consignment.",
+    solution:
+      "We built the dealer-facing app that takes those calls off the phone. Every request type gets its own short form: reports, floor plan payments, gate passes, transportation, inspections, arbitration, and run numbers for consignment. A dealer picks the auction, submits, and the request lands with the right desk. The app also keeps the auction platforms and industry tools a dealer uses on sale day within reach, and live assistance is still a tap away when a request needs a person.",
+    outcome:
+      "It's live on the App Store as the service app for a support network covering more than 50 auction locations across 25 US states, from Phoenix to Boston. Dealers buying on simulcast or online spend less time on hold and more time bidding.",
+  },
+  {
     slug: "poland-portal",
     name: "Poland Portal",
     tagline: "The lifestyle companion for expats, locals, and tourists in Poland",
