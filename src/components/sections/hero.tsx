@@ -50,7 +50,7 @@ export function Hero() {
       <ParticleField className="absolute inset-0 h-full w-full" />
       {/* Fade particles into the next section */}
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-base to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-page to-transparent"
         aria-hidden
       />
 

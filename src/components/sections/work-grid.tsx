@@ -24,13 +24,13 @@ export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: 
               {project.platforms.map((platform) => (
                 <span
                   key={platform}
-                  className="rounded-full border border-edge bg-base/70 px-2.5 py-0.5 font-mono text-[10px] text-muted backdrop-blur"
+                  className="rounded-full border border-edge bg-page/70 px-2.5 py-0.5 font-mono text-[10px] text-muted backdrop-blur"
                 >
                   {platform}
                 </span>
               ))}
               {project.private && (
-                <span className="rounded-full border border-lime/30 bg-base/70 px-2.5 py-0.5 font-mono text-[10px] text-lime backdrop-blur">
+                <span className="rounded-full border border-lime/30 bg-page/70 px-2.5 py-0.5 font-mono text-[10px] text-lime backdrop-blur">
                   Private
                 </span>
               )}

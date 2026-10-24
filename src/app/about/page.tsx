@@ -85,7 +85,7 @@ export default function AboutPage() {
               />
               {/* Readability gradient for the name plate */}
               <div
-                className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-base via-base/60 to-transparent"
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-page via-page/60 to-transparent"
                 aria-hidden
               />
               {/* Corner ticks */}
@@ -94,7 +94,7 @@ export default function AboutPage() {
               <div className="absolute inset-x-4 bottom-4">
                 <p className="font-display text-lg font-bold text-fg">{site.founder.name}</p>
                 <p className="font-mono text-xs text-lime">{site.founder.role}</p>
-                <span className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-lime/25 bg-base/50 px-2.5 py-1 font-mono text-[10px] text-muted backdrop-blur">
+                <span className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-lime/25 bg-page/50 px-2.5 py-1 font-mono text-[10px] text-muted backdrop-blur">
                   <span className="size-1.5 rounded-full bg-lime" aria-hidden />
                   {site.founder.certification}
                 </span>

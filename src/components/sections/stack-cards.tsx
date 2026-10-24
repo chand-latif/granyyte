@@ -51,7 +51,7 @@ function StackCard({
               <p className="mt-2 font-serif text-lg italic text-muted md:text-xl">
                 {project.category}
               </p>
-              <p className="mt-5 max-w-md text-sm leading-relaxed text-muted md:text-base">
+              <p className="mt-5 max-w-md text-sm leading-relaxed text-soft md:text-base">
                 {project.tagline}
               </p>
             </div>

@@ -30,7 +30,7 @@ export function ProjectCover({ project, size = "card" }: { project: Project; siz
           className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
         />
         <div
-          className="absolute inset-0 bg-gradient-to-t from-base via-base/40 to-base/5"
+          className="absolute inset-0 bg-gradient-to-t from-page via-page/40 to-page/5"
           aria-hidden
         />
         {project.logo && (

@@ -26,7 +26,7 @@ export function Preloader() {
     <AnimatePresence>
       {!done && (
         <motion.div
-          className="fixed inset-0 z-[300] flex items-center justify-center bg-base"
+          className="fixed inset-0 z-[300] flex items-center justify-center bg-page"
           exit={{ y: "-100%" }}
           transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
           aria-hidden

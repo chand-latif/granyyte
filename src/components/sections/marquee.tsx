@@ -6,14 +6,14 @@ export function TechMarquee() {
   const items = [...site.techStack];
   return (
     <section
-      className="relative overflow-hidden border-y border-edge bg-base py-7"
+      className="relative overflow-hidden border-y border-edge bg-page py-7"
       aria-label="Technologies we work with"
     >
       <TechIconSprite />
 
       {/* Fade the strip into the page edges so it reads as continuous motion. */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-base to-transparent md:w-28" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-base to-transparent md:w-28" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-page to-transparent md:w-28" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-page to-transparent md:w-28" />
 
       <div className="flex w-max animate-marquee gap-0">
         {[0, 1].map((copy) => (

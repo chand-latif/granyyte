@@ -190,7 +190,7 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
           <div className="grid gap-5 md:grid-cols-2">
             {page.whyPoints.map((point, i) => (
               <Reveal key={point.title} delay={(i % 2) * 0.1}>
-                <div className="flex h-full gap-5 rounded-2xl border border-edge bg-base p-7">
+                <div className="flex h-full gap-5 rounded-2xl border border-edge bg-page p-7">
                   <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-edge bg-raised text-lime">
                     <Check className="size-5" />
                   </span>

@@ -70,7 +70,7 @@ export function Process() {
                   >
                     {/* Node */}
                     <span
-                      className="absolute left-0 top-2 size-[15px] rounded-full border-2 border-lime bg-base md:left-1/2 md:-translate-x-1/2"
+                      className="absolute left-0 top-2 size-[15px] rounded-full border-2 border-lime bg-page md:left-1/2 md:-translate-x-1/2"
                       aria-hidden
                     />
                     <div

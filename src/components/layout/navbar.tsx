@@ -49,7 +49,7 @@ export function Navbar() {
         hidden && !open ? "-translate-y-full" : "translate-y-0"
       } ${
         scrolled || open
-          ? "border-b border-edge bg-base/80 backdrop-blur-xl"
+          ? "border-b border-edge bg-page/80 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       }`}
     >
@@ -102,7 +102,7 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-edge bg-base/95 backdrop-blur-xl md:hidden">
+        <div className="border-t border-edge bg-page/95 backdrop-blur-xl md:hidden">
           <ul className="flex flex-col px-5 py-4">
             {links.map((link) => (
               <li key={link.href}>

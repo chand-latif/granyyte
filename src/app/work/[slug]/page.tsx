@@ -174,7 +174,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
             <ul className="grid gap-4 md:grid-cols-2">
               {project.features.map((feature, i) => (
                 <Reveal key={feature} delay={(i % 2) * 0.08}>
-                  <li className="flex items-start gap-3 rounded-2xl border border-edge bg-base p-5 text-sm leading-relaxed text-muted">
+                  <li className="flex items-start gap-3 rounded-2xl border border-edge bg-page p-5 text-sm leading-relaxed text-muted">
                     <Check className="mt-0.5 size-5 shrink-0 text-lime" />
                     {feature}
                   </li>

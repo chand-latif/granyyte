@@ -2,17 +2,21 @@
 
 @theme {
   /* Granyyte design tokens — dark + electric lime */
-  --color-base: #0a0a0b;
+  /* Page backdrop. NOT named `base`: a `--color-base` token makes Tailwind emit a
+     `text-base` COLOR utility that silently overrides the built-in font-size one. */
+  --color-page: #0a0a0b;
   --color-surface: #111113;
   --color-raised: #17171a;
   --color-edge: #1c1c1f;
   --color-edge-strong: #2a2a2e;
   --color-fg: #fafaf9;
   --color-muted: #9f9fa3;
+  /* Brighter secondary text, for body copy that must stay readable on raised cards */
+  --color-soft: #d4d4d6;
   --color-faint: #6b6b70;
   --color-lime: #c8f31d;
   --color-lime-dim: #a5c918;
-  /* Dark text/foreground for use on lime surfaces ("text-base" collides with the font-size utility) */
+  /* Dark text/foreground for use on lime surfaces */
   --color-ink: #0a0a0b;
 
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
@@ -97,7 +101,7 @@
 }
 
 html {
-  background: var(--color-base);
+  background: var(--color-page);
   /* Contain stray horizontal overflow on the scroll root only. Keep this OFF
      <body> — an overflow value on body makes it the containing block for
      position:sticky descendants and breaks the stacking-cards scroll. */
@@ -114,7 +118,7 @@ body {
 
 ::selection {
   background: var(--color-lime);
-  color: var(--color-base);
+  color: var(--color-page);
 }
 
 /* Hide native cursor when the custom cursor is active */
@@ -128,7 +132,7 @@ html.has-custom-cursor * {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-base);
+  background: var(--color-page);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--color-edge-strong);

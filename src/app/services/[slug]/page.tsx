@@ -216,7 +216,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
           <div className="grid gap-5 md:grid-cols-2">
             {service.faqs.map((faq, i) => (
               <Reveal key={faq.question} delay={(i % 2) * 0.1}>
-                <div className="h-full rounded-2xl border border-edge bg-base p-7">
+                <div className="h-full rounded-2xl border border-edge bg-page p-7">
                   <h3 className="font-display text-lg font-bold text-fg">{faq.question}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted">{faq.answer}</p>
                 </div>
