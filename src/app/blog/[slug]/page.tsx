@@ -14,6 +14,10 @@ import { Tag } from "@/components/ui/badge";
 import { JsonLd } from "@/components/ui/json-ld";
 import { RelatedPosts } from "@/components/sections/related-posts";
 import { CtaBand } from "@/components/sections/cta-band";
+import { mdxComponents } from "@/mdx-components";
+
+// Frontmatter FAQs reuse the MDX typography so they look like the rest of the post.
+const { h2: FaqHeading, h3: FaqQuestion, p: FaqAnswer } = mdxComponents;
 
 /** Every post is known at build time — unknown slugs 404 instead of trying an import. */
 export const dynamicParams = false;
@@ -117,10 +121,25 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
     ],
   };
 
+  // Built from the same frontmatter as the visible FAQ block, so the schema can
+  // never drift from what the reader sees.
+  const faqJsonLd = post.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: post.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
+      }
+    : null;
+
   return (
     <>
       <JsonLd data={articleJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
+      {faqJsonLd && <JsonLd data={faqJsonLd} />}
 
       <article className="mx-auto max-w-3xl px-5 pb-16 pt-32 md:px-8 md:pb-20 md:pt-44">
         <Reveal>
@@ -165,6 +184,17 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
 
           <div className="mt-4 border-t border-edge pt-4">
             <PostContent />
+            {post.faqs && post.faqs.length > 0 && (
+              <section aria-labelledby="post-faqs">
+                <FaqHeading id="post-faqs">A few things people ask us</FaqHeading>
+                {post.faqs.map((faq) => (
+                  <div key={faq.question}>
+                    <FaqQuestion>{faq.question}</FaqQuestion>
+                    <FaqAnswer>{faq.answer}</FaqAnswer>
+                  </div>
+                ))}
+              </section>
+            )}
           </div>
         </Reveal>
       </article>

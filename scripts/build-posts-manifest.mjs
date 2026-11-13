@@ -91,6 +91,31 @@ for (const file of files) {
   if (data.tags && (!Array.isArray(data.tags) || data.tags.length === 0)) {
     errors.push(`${where}: "tags" must be a non-empty array`);
   }
+  // faqs drive both visible copy and FAQPage JSON-LD, so a malformed entry
+  // would ship broken schema. Validate every item.
+  if (data.faqs !== undefined) {
+    const ok =
+      Array.isArray(data.faqs) &&
+      data.faqs.length > 0 &&
+      data.faqs.every(
+        (f) =>
+          f &&
+          typeof f.question === "string" &&
+          f.question.trim() &&
+          typeof f.answer === "string" &&
+          f.answer.trim()
+      );
+    if (!ok) {
+      errors.push(`${where}: "faqs" must be a non-empty list of { question, answer } strings`);
+    }
+  }
+  if (
+    data.secondaryKeywords !== undefined &&
+    (!Array.isArray(data.secondaryKeywords) ||
+      !data.secondaryKeywords.every((k) => typeof k === "string" && k.trim()))
+  ) {
+    errors.push(`${where}: "secondaryKeywords" must be a list of strings`);
+  }
 
   posts.push({
     slug,
@@ -104,6 +129,17 @@ for (const file of files) {
     targetKeyword: data.targetKeyword,
     ...(data.relatedService ? { relatedService: data.relatedService } : {}),
     ...(data.relatedServiceLabel ? { relatedServiceLabel: data.relatedServiceLabel } : {}),
+    ...(Array.isArray(data.faqs)
+      ? {
+          faqs: data.faqs.map((f) => ({
+            question: String(f?.question ?? "").trim(),
+            answer: String(f?.answer ?? "").trim(),
+          })),
+        }
+      : {}),
+    ...(Array.isArray(data.secondaryKeywords)
+      ? { secondaryKeywords: data.secondaryKeywords.map(String) }
+      : {}),
   });
 }
 

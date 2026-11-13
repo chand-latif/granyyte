@@ -103,20 +103,23 @@ Edit these first — most content changes are one-file edits:
   links + real images in `public/projects/`. (Alligned REI was removed per request.)
 - `src/content/services.ts` — 3 services (mobile / web / custom software), each drives an SEO
   subpage + FAQ schema.
-- `src/content/seo-pages.ts` — 9 long-tail SEO landing pages rendered by `src/app/[slug]/page.tsx`
+- `src/content/seo-pages.ts` — 11 long-tail SEO landing pages rendered by `src/app/[slug]/page.tsx`
   at root URLs: 4× "… from Pakistan", `affordable-app-development`, `surveyor-management-software`,
-  and 3× "… in Sialkot" (`mobile-app-development-sialkot`, `web-development-sialkot`,
-  `software-development-sialkot` — local-market cluster covering app/web/import-export/inventory/
-  school/attendance queries; keywords go verbatim into FAQ questions). Target location queries.
+  and 5× Sialkot (`mobile-app-development-sialkot`, `web-development-sialkot`,
+  `software-development-sialkot`, `software-house-sialkot`, `web-design-sialkot` — local-market
+  cluster; keywords go verbatim into FAQ questions). Target location queries.
   ⚠️ **No prices anywhere on this site** — see "Pricing is confidential" below. Linked site-wide
   from the footer "Hire from Pakistan" + "In Sialkot"
   columns and from each service page's "Deep dives" box. `dynamicParams = false` — unknown root
-  slugs 404. The 3 Sialkot pages carry `localBusiness: true`, which adds an **invisible**
-  `ProfessionalService`+`geo` JSON-LD block (`src/app/[slug]/page.tsx`) plus a minimal cross-link
-  line between the 3 pages — deliberately no new visible prose/blog content, since Chand doesn't
-  want the site reading as Sialkot-focused to his international clients. "Company"/"IT company"
-  query variants are captured via JSON-LD `knowsAbout` (`sialkotKnowsAbout` in `seo-pages.ts`),
-  not FAQ copy.
+  slugs 404. Sialkot pages carry `localBusiness: true`, which adds a `ProfessionalService`+`geo`
+  JSON-LD block plus a cross-link line between them. **Rule change 2026-11-13 (Chand):** Sialkot
+  pages and local blog posts may carry full visible local copy, but stay **off the homepage, main
+  nav and international pages** (reached via the footer "In Sialkot" column and local posts).
+  Local positioning: the "10-20k PKR reskinned WordPress template" contrast in
+  `seo/references/voice.md` (market prices, never ours). Pages with Search Console traffic are
+  protected, see `seo/protected.md` (add only, never reword slug/H1/metaTitle/existing FAQs).
+- `seo/` — SEO working files (GSC baseline, keyword map, calendar, voice guide). Playbook:
+  `SEO_PLAYBOOK.md`. Posts are drafted with the `/blog` project skill.
 - `src/content/testimonials.ts` — **LinkedIn video embeds** (iframe `urn:li:ugcPost` URLs), not text.
 - `src/content/posts/*.mdx` — blog posts. **One file per post**: YAML frontmatter is the only
   metadata source (`title`, `description`, `date`, optional `updated`, `tags`, `hub`,
@@ -125,8 +128,9 @@ Edit these first — most content changes are one-file edits:
   `src/content/posts.generated.ts` (never edit it), deriving `readingTime` from word count. That
   script is also the guard rail: it **fails the build** on a missing field, an unknown `hub`, or
   two posts sharing a `targetKeyword` (self-cannibalisation). Run it alone with `npm run posts:build`.
-  `software-house-in-sialkot.mdx` is a deliberate, visible Sialkot post (2026-09-15, Chand's call);
-  it targets house/company/agency queries and funnels to `/software-development-sialkot`.
+  `software-house-in-sialkot.mdx` is a visible Sialkot post (2026-09-15). Since 2026-11-13 it targets
+  the informational "how to choose a software house in sialkot"; `/software-house-sialkot` owns
+  the commercial query.
 - `src/content/topics.ts` — the 5 blog topic hubs rendered at `/blog/topic/<slug>`. Each carries
   its own intro copy and points at a money page, so a hub isn't a thin list-of-links page. A post's
   `hub` must match a slug here, and a hub with no posts doesn't generate.
@@ -147,8 +151,9 @@ baseline: **123 posts → 176 pages in ~35s**. Don't use `experimental.mdxRs`; t
 it not production-ready.
 
 Internal linking is derived, not hand-listed: a post declares `relatedService`, and
-`getPostsForService()` gives service/landing pages their "Further reading" links back. The 3
-Sialkot `localBusiness` pages are deliberately excluded (no extra visible prose there).
+`getPostsForService()` gives service/landing pages their "Further reading" links back (Sialkot
+pages included since 2026-11-13). Posts may also carry `faqs` (rendered after the body + emitted
+as `FAQPage` JSON-LD from the same data) and `secondaryKeywords` (tracking only, not rendered).
 
 ## Pricing is confidential
 

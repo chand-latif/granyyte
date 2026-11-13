@@ -1,9 +1,11 @@
 import type { MDXComponents } from "mdx/types";
 import Link from "next/link";
 
-/** Global typography styles for MDX blog content. */
-export function useMDXComponents(components: MDXComponents): MDXComponents {
-  return {
+/**
+ * Global typography styles for MDX blog content. Exported so non-MDX blocks on
+ * the post page (e.g. frontmatter FAQs) render with exactly the same styles.
+ */
+export const mdxComponents = {
     h2: (props) => (
       <h2
         className="mt-12 font-display text-2xl font-bold tracking-tight text-fg md:text-3xl"
@@ -51,6 +53,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <th className="border-b border-edge-strong px-4 py-3 font-display font-bold text-fg" {...props} />
     ),
     td: (props) => <td className="border-b border-edge px-4 py-3" {...props} />,
-    ...components,
-  };
+} satisfies MDXComponents;
+
+export function useMDXComponents(components: MDXComponents): MDXComponents {
+  return { ...mdxComponents, ...components };
 }

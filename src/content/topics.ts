@@ -122,6 +122,24 @@ export const topics: Topic[] = [
     relatedService: "/services/custom-software",
     relatedServiceLabel: "See our custom software service",
   },
+  {
+    slug: "sialkot-business",
+    name: "Software for Sialkot businesses",
+    metaTitle: "Websites & Software for Sialkot Businesses: Practical Guides",
+    metaDescription:
+      "Plain-spoken guides for Sialkot exporters, factories, schools and shops: websites that win buyers abroad, inventory and school systems, and how to hire a software house here.",
+    title: "Software for",
+    accent: "Sialkot businesses.",
+    headerDescription:
+      "Guides for exporters, factories, schools and shops in Sialkot, written by a software house that builds here and ships abroad.",
+    intro: [
+      "Sialkot sells footballs, surgical instruments and leather to half the planet, and a surprising amount of it still runs on registers, Excel sheets and a WhatsApp group called \"Orders 2\". That's not a criticism. It works, right up until the day it doesn't.",
+      "These guides are about that day. What a website has to do before a buyer in Germany replies to your email, what's actually inside a 15,000 rupee website, when inventory or school software is worth building and when a ready-made package is fine, and the questions to ask any software house in Sialkot before you pay a rupee.",
+      "We're based here and most of our clients are abroad, so we see both sides: what international buyers expect, and what local businesses are usually sold instead.",
+    ],
+    relatedService: "/software-house-sialkot",
+    relatedServiceLabel: "See our software house in Sialkot",
+  },
 ];
 
 export function getTopic(slug: string) {

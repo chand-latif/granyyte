@@ -1,0 +1,31 @@
+# Granyyte
+
+> Granyyte is a software development agency in Sialkot, Pakistan, founded by Chand Latif (senior software engineer, certified FlutterFlow expert). We build mobile apps (Flutter and FlutterFlow, iOS and Android), SEO-first websites and web apps (Next.js), and custom business software for clients in Turkey, the UAE, Poland, the UK, the US and Pakistan. Projects are quoted as a fixed price against a written scope, and most ship in 2-4 weeks. Clients own the full source code.
+
+## Services
+- [Mobile app development](https://www.granyyte.com/services/mobile-app-development): Flutter and FlutterFlow apps for iOS and Android from one codebase
+- [Web development](https://www.granyyte.com/services/web-development): fast, SEO-first websites and web applications
+- [Custom software](https://www.granyyte.com/services/custom-software): CRMs, internal tools, inventory, school and attendance systems
+- [Certified FlutterFlow developer in Pakistan](https://www.granyyte.com/flutterflow-developer-pakistan)
+- [Mobile app development in Pakistan](https://www.granyyte.com/mobile-app-development-pakistan)
+- [Website development in Pakistan](https://www.granyyte.com/web-development-pakistan)
+- [CRM development in Pakistan](https://www.granyyte.com/crm-development-pakistan)
+- [Affordable app development](https://www.granyyte.com/affordable-app-development)
+- [Surveyor job management software](https://www.granyyte.com/surveyor-management-software)
+
+## In Sialkot
+- [Software house in Sialkot](https://www.granyyte.com/software-house-sialkot)
+- [Web design company in Sialkot](https://www.granyyte.com/web-design-sialkot)
+- [Website development in Sialkot](https://www.granyyte.com/web-development-sialkot)
+- [Mobile app development in Sialkot](https://www.granyyte.com/mobile-app-development-sialkot)
+- [Custom software development in Sialkot](https://www.granyyte.com/software-development-sialkot)
+
+## Work
+- [Portfolio](https://www.granyyte.com/work): Bilge AI (multi-model AI app, 15,000+ users in Turkey), a surveyor job management platform for a UK repairs firm, AVC Dealer (US auto auction network), Zwipe (UAE car marketplace), Poland Portal, MainXpert, Mindful Mantra, THAFATH, Sacred Diary
+
+## Blog
+- [Blog](https://www.granyyte.com/blog): guides on Flutter and FlutterFlow, hiring offshore developers, custom software vs SaaS, industry software, and software for Sialkot businesses
+
+## Contact
+- [Contact](https://www.granyyte.com/contact): chandlatif@granyyte.com, WhatsApp +92 318 728 9616
+- [About the founder](https://www.granyyte.com/about)

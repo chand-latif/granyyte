@@ -44,8 +44,7 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
 
   const service = getService(page.relatedService);
   const related = projects.filter((p) => page.relatedProjects.includes(p.slug));
-  // The Sialkot cluster stays free of extra visible prose (see seo-pages.ts).
-  const relatedPosts = page.localBusiness ? [] : getPostsForService(`/${page.slug}`);
+  const relatedPosts = getPostsForService(`/${page.slug}`);
   const otherSialkotPages = page.localBusiness
     ? seoPages.filter((p) => p.localBusiness && p.slug !== page.slug)
     : [];
@@ -90,8 +89,8 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
     ],
   };
 
-  // Sialkot cluster only — invisible local-ranking signal (JSON-LD is never
-  // rendered as page copy), so it doesn't affect the site's international feel.
+  // Sialkot cluster only — local-ranking signal for the city pages. Keep the
+  // name/phone identical to the Google Business Profile (NAP consistency).
   const localBusinessJsonLd = page.localBusiness
     ? {
         "@context": "https://schema.org",
@@ -244,8 +243,7 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
         </section>
       )}
 
-      {/* Further reading — links the commercial page into the blog. Skipped on
-          the Sialkot cluster, which deliberately carries no extra visible copy. */}
+      {/* Further reading — links the commercial page into the blog. */}
       {relatedPosts.length > 0 && (
         <section className="mx-auto max-w-6xl px-5 pb-24 md:px-8 md:pb-32">
           <Reveal>
@@ -276,7 +274,7 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
         </section>
       )}
 
-      {/* Sialkot cluster cross-link — minimal, contained to these 3 pages only */}
+      {/* Sialkot cluster cross-link — contained to the Sialkot pages only */}
       {otherSialkotPages.length > 0 && (
         <div className="mx-auto max-w-6xl px-5 pb-12 md:px-8">
           <p className="font-mono text-xs text-faint">

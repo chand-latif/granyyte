@@ -9,6 +9,11 @@
  * Delivery stays 2-4 weeks. Don't copy-paste copy between
  * pages — Google devalues near-duplicates. Target search queries verbatim in
  * FAQ questions — that's what has been ranking.
+ *
+ * Pages with Search Console traffic are PROTECTED (see seo/protected.md): never
+ * reword slug, title/accent (H1), metaTitle or an existing FAQ question. Add only.
+ * Local copy voice + the "10-20k PKR template website" positioning live in
+ * seo/references/voice.md. Those PKR figures are market prices, never ours.
  */
 
 export type SeoPage = {
@@ -40,10 +45,12 @@ export type SeoPage = {
   /** projects.ts slugs to showcase */
   relatedProjects: string[];
   /**
-   * Marks the Sialkot local-SEO cluster. Adds an invisible LocalBusiness/
-   * ProfessionalService + geo JSON-LD block (schema only, no visible copy —
-   * Chand doesn't want the site reading as Sialkot-focused to international
-   * visitors) and a small cross-link to the other Sialkot pages.
+   * Marks the Sialkot local-SEO cluster. Adds a LocalBusiness/
+   * ProfessionalService + geo JSON-LD block and a cross-link to the other
+   * Sialkot pages. Since 2026-11-13 these pages may carry full visible local
+   * copy (Chand's call), but they stay off the homepage, main nav and the
+   * international pages: they're reached from the footer "In Sialkot" column
+   * and local blog posts.
    */
   localBusiness?: boolean;
 };
@@ -53,8 +60,9 @@ export const sialkotGeo = { latitude: 32.4945, longitude: 74.5229 };
 
 /**
  * Query phrasings Chand wants to rank for in Sialkot ("… company", "IT
- * company") that we deliberately do NOT write into visible FAQ copy — they
- * go into JSON-LD `knowsAbout` only, invisible to page visitors.
+ * company"). Emitted as JSON-LD `knowsAbout` on every Sialkot page. The
+ * strongest of them now also have their own visible pages
+ * (/software-house-sialkot, /web-design-sialkot).
  */
 export const sialkotKnowsAbout = [
   "Software Development Company Sialkot",
@@ -84,6 +92,7 @@ export const seoPages: SeoPage[] = [
       "If you're looking for app development from Pakistan, you've probably noticed the range: everything from $5 gig sellers to full agencies quoting like they're in London. Granyyte sits deliberately in the middle of that gap. We're a senior software engineering agency in Pakistan, delivering the quality of a western agency at a fraction of the price.",
       "Our specialty is Flutter mobile app development: complete apps for iOS and Android designed, built, and launched from a single Flutter codebase. That covers marketplaces, booking systems, wellness apps, AI assistants, and B2B tools, all live on the App Store and Google Play. Every project gets a fixed price, a real timeline, and weekly demo builds you can tap through on your own phone.",
       "Being based in Pakistan is precisely why the pricing works. Our costs are local, but our standards, tooling, and communication are not. You get the same stack the best agencies use, including Flutter, FlutterFlow, Firebase, and Supabase, without the western overhead baked into the invoice.",
+      "Here's the fastest test for app developers in Pakistan, and it works on us too. Ask for three apps that are live on the stores right now, then download one. It takes two minutes and quietly removes most of the market, because a Dribbble portfolio is a design portfolio, not an app. Ours include Bilge AI, used by more than 15,000 people in Turkey, the Zwipe car marketplace in the UAE, and AVC Dealer, the service app for an auction network across 25 US states.",
     ],
     whyTitle: "Why hire an app developer from Pakistan",
     whyPoints: [
@@ -140,6 +149,16 @@ export const seoPages: SeoPage[] = [
         question: "Are you a mobile app development agency or a freelancer?",
         answer:
           "A lean, senior-led agency, deliberately so. You get the accountability and process of a mobile app development agency in Pakistan (contracts, fixed scope, store publishing, handover documentation) with the directness of working straight with the people building your app. No project managers relaying messages, no junior bench quietly doing the real work.",
+      },
+      {
+        question: "How do I hire app developers in Pakistan without getting burned?",
+        answer:
+          "Check four things before you pay anything. Live apps you can download today, not screenshots. A named person who'll actually write your code. Full source code and store accounts handed to you at the end. And a fixed price against a written scope, because hourly billing on a loose brief is how a six-week app becomes a six-month one. Any mobile app developers in Pakistan worth hiring will pass all four without blinking.",
+      },
+      {
+        question: "What makes a good Flutter development company in Pakistan?",
+        answer:
+          "Shipped Flutter apps on both stores, ideally for clients outside Pakistan, since that's where review standards are strictest. Someone senior on your project rather than a sales lead who disappears after the deposit. And honesty about when Flutter isn't the right tool, which is rarer than it should be. We build almost everything in Flutter and FlutterFlow, and we'll still tell you if your app needs native code.",
       },
     ],
     relatedService: "mobile-app-development",
@@ -220,6 +239,11 @@ export const seoPages: SeoPage[] = [
         answer:
           "Yes. Granyyte runs like a FlutterFlow app development agency should, with fixed-price contracts, written scopes, store publishing, and full handover. The work is led by certified, senior FlutterFlow expertise rather than a bench of juniors behind a sales team. For most FlutterFlow projects that combination is strictly better: agency process, direct-line communication, and Pakistani pricing.",
       },
+      {
+        question: "When should you not use FlutterFlow?",
+        answer:
+          "When most of the app lives deep in the device: heavy Bluetooth hardware work, long-running background processing, or AR. You can still get there by writing custom Flutter code inside FlutterFlow, but at some point you're fighting the tool, and plain Flutter is the better call. We'll tell you which side of that line your app sits on in the first conversation. Being certified in something doesn't mean selling it for everything.",
+      },
     ],
     relatedService: "mobile-app-development",
     relatedProjects: ["mindful-mantra", "thafath", "sacred-diary"],
@@ -293,6 +317,16 @@ export const seoPages: SeoPage[] = [
         question: "Do you build e-commerce and web apps too, or just websites?",
         answer:
           "Both. Beyond marketing sites we build full products: dashboards, portals, booking systems, and SaaS applications with authentication, payments, and real-time features.",
+      },
+      {
+        question: "How do I choose a website developer in Pakistan?",
+        answer:
+          "Open their last three client sites on your phone. If they take ages to load, look identical apart from the logo, or have a WordPress login sitting at /wp-admin, you've learned what you're buying. A good website developer in Pakistan can show you fast, distinct sites, explain how they handle security updates, and tell you who owns the code once it's done. You should, always.",
+      },
+      {
+        question: "Do you work as offshore web developers for agencies and companies abroad?",
+        answer:
+          "Yes. A good share of our work is for clients in the UK, Europe, the Gulf, and the US, including the corporate site and operations platform for a UK surveyor-led repairs firm. You get offshore web developers in Pakistan whose working day overlaps yours, weekly previews, and everything handed over at the end. No white-label middleman taking a cut in between.",
       },
     ],
     relatedService: "web-development",
@@ -603,6 +637,16 @@ export const seoPages: SeoPage[] = [
         answer:
           "Flutter, which compiles to real native code for both iOS and Android from one codebase. You get native performance and both platforms for roughly a third of the cost and time of writing two separate native apps. Where it speeds things up further, we use FlutterFlow, where we're officially certified.",
       },
+      {
+        question: "How do I check if an app developer in Sialkot is any good?",
+        answer:
+          "Ask for App Store and Google Play links to apps they built that are live right now, then install one in front of them. A PDF of screenshots isn't an app, and \"we did it for a client, it's private\" five times in a row is a pattern. Ours are on the work page, from a 15,000-user AI app in Turkey to a car marketplace in the UAE. Go ahead and download them.",
+      },
+      {
+        question: "Can you finish an app another developer started and left?",
+        answer:
+          "Yes, and in this city it happens more than it should. We start with a short audit of the code and the store accounts, tell you plainly whether it's worth finishing or cheaper to rebuild, then quote a fixed price for whichever makes sense. Either way you end up owning the full source code, which is often the thing the last developer never handed over.",
+      },
     ],
     relatedService: "mobile-app-development",
     relatedProjects: ["bilge-ai", "mindful-mantra", "zwipe"],
@@ -627,6 +671,7 @@ export const seoPages: SeoPage[] = [
       "Sialkot is an export city built on sports goods, surgical instruments, and leather. Your next buyer in Germany, the UK, or the US will Google your company before they ever reply to an email, and most Sialkot business websites fail that moment with slow WordPress templates that never rank and look a decade old on a phone. Website development in Sialkot deserves better engineering than that.",
       "We build websites the way modern software companies do, with React, Next.js, TypeScript, server rendering, and an SEO-first approach. No page builders, no plugin stacks. We deliver company sites, export catalogs, booking portals, and full web applications, each engineered to load instantly and rank for the searches your customers actually type. The site you're reading is our own work, so check its speed and its Google presence as the live sample.",
       "Import export website development is a specialty. That means product catalogs organized the way B2B buyers browse, certifications and factory credentials presented for trust, and inquiry and RFQ forms that land directly on your WhatsApp and email so a buyer in another timezone never waits for a reply.",
+      "A word on price, because it's the first thing everyone here asks. You can get a website in Sialkot for 10,000 or 20,000 rupees, and plenty of people do. What usually arrives is a theme bought once and resold to forty businesses, your logo swapped in, the admin login left open at /wp-admin, and thirty plugins nobody will ever update. If you need three pages and none of that bothers you, honestly, go for it. If the site has to win a buyer in Germany and still be standing (and ranking) in two years, you need an engineer. That's us.",
     ],
     whyTitle: "Why hire a web developer in Sialkot",
     whyPoints: [
@@ -678,6 +723,21 @@ export const seoPages: SeoPage[] = [
         question: "Do you handle domain, hosting, and maintenance?",
         answer:
           "End to end: domain setup, hosting and deployment, analytics, Search Console, and ongoing maintenance. It all comes from the same city as your business, so support is a call or a visit away rather than a ticket queue.",
+      },
+      {
+        question: "What should a web developer in Sialkot actually deliver?",
+        answer:
+          "A site that's yours: the code, the domain and the hosting account in your name, not the developer's. Pages that open fast on a phone, a contact form that actually reaches someone, security updates handled, and the basics Google needs (proper titles, a sitemap, Search Console set up). If a quote doesn't mention any of that, ask. If the answer is \"don't worry about it\", worry about it.",
+      },
+      {
+        question: "Why not just buy a 15,000 rupee website?",
+        answer:
+          "If you need a few pages to show you exist, it can be fine, and we'll say so. The catch is what's usually inside: a reused template, plugins that go out of date within months, no real SEO, and nobody accountable when it gets hacked. For an exporter, a slow or broken site costs a lot more than it saved the first time a serious buyer looks you up.",
+      },
+      {
+        question: "Is there a website developer near me in Sialkot I can meet in person?",
+        answer:
+          "Yes, that's us. We're based in Sialkot, so we can scope your website across a table, show you live sites we've built on a laptop, and stay a short drive away when you need changes later. Most of our clients are abroad, which is exactly why the work holds up to international buyers.",
       },
     ],
     relatedService: "web-development",
@@ -760,9 +820,187 @@ export const seoPages: SeoPage[] = [
         answer:
           "Granyyte is a lean, senior-led software agency in Sialkot, deliberately so. You deal directly with the people building your software rather than a sales layer over a junior bench. The portfolio on this site, including apps live on both stores and a UK firm's operations platform, is all Granyyte's work.",
       },
+      {
+        question: "How do I find a good software developer in Sialkot?",
+        answer:
+          "Ignore the title on the business card and look at what's running. A good software developer in Sialkot can show you a system real people use every day, explain it without hiding behind jargon, and tell you who owns the code when it's done. Reselling a ready-made package with your logo on the login screen is installation, not development. Nothing wrong with it, as long as everyone calls it that.",
+      },
+      {
+        question: "Do you build POS and billing software for shops in Sialkot?",
+        answer:
+          "Yes. Point of sale and billing for retail shops, wholesalers and multi-branch traders, with stock that updates as you sell, daily closing reports, and Urdu-friendly receipts if your staff prefer them. It can grow into full inventory management later instead of being thrown away when you open a second branch.",
+      },
+      {
+        question: "Can you build a CRM for an export business in Sialkot?",
+        answer:
+          "Yes. An export CRM tracks every buyer, sample request, quote and order in one place, so nothing lives only in one salesman's WhatsApp. It's shaped around how your team actually follows up, with reminders for the buyers who went quiet and reports showing which markets are paying off.",
+      },
     ],
     relatedService: "custom-software",
     relatedProjects: ["surveyor-job-management-system", "mainxpert"],
+    localBusiness: true,
+  },
+  {
+    slug: "software-house-sialkot",
+    metaTitle: "Software House in Sialkot | Apps, Websites & Custom Software",
+    metaDescription:
+      "A software house in Sialkot with apps live in Turkey, the UAE, Poland and the US. Websites, mobile apps and custom business software, built by engineers you can meet.",
+    label: "Sialkot · Software House",
+    title: "Software house",
+    accent: "in Sialkot.",
+    headerDescription:
+      "Websites, mobile apps and custom business software, engineered here and shipped to clients in Turkey, the UAE, Poland, the UK and the US. Not a template shop. You'll notice the difference in about a week.",
+    specs: [
+      { label: "Based in", value: "Sialkot, Pakistan" },
+      { label: "Clients in", value: "TR · AE · PL · UK · US" },
+      { label: "Quotes", value: "Fixed price" },
+    ],
+    intro: [
+      "Search for a software house in Sialkot and you'll find dozens. A lot of them sell the same three things: a WordPress theme with your logo on it for 10,000 or 20,000 rupees, a ready-made package for everything else, and a business card that says \"expert\". Some of them are perfectly fine for what they are. Very few have ever shipped software for a client outside Pakistan.",
+      "Granyyte is a software house in Sialkot that does the other kind of work. We write the code ourselves, from scratch. An AI app used by more than 15,000 people in Turkey. A car marketplace in the UAE. The service app for an auction network spread across 25 US states. The operations platform a UK repairs firm runs every job through. Same engineers, same city as you.",
+      "The difference shows up in places you won't see on day one, like whether the site gets hacked in month four, or whether the next developer can read the code at all. If you need a few simple pages and none of that worries you, a cheaper shop will do, and we'll happily tell you so. If you want it engineered properly, that's us.",
+    ],
+    whyTitle: "What makes a software house in Sialkot worth hiring",
+    whyPoints: [
+      {
+        title: "Work you can download today",
+        description:
+          "Apps live on the App Store and Google Play for real clients abroad. Ask any software house in Sialkot to show you the same. It tends to be a short conversation.",
+      },
+      {
+        title: "Engineers, not resellers",
+        description:
+          "We build in Flutter, Next.js and Supabase. No reselling a package and calling it custom, and no theme with the demo text still sitting in the footer.",
+      },
+      {
+        title: "Security and SEO from the first commit",
+        description:
+          "No admin panel left open to the internet, dependencies kept up to date, pages Google can actually read, and a sitemap that exists. Boring things. They're the ones that matter.",
+      },
+      {
+        title: "Down the road, not across the world",
+        description:
+          "Scope it across a table in Sialkot, pay in PKR, and get support from the people who wrote the code instead of a ticket number.",
+      },
+    ],
+    quoteNote:
+      "Fixed price against a written scope, usually within 1-2 days of the first meeting. You can come to us, or we'll come to you.",
+    faqs: [
+      {
+        question: "Which is the best software house in Sialkot?",
+        answer:
+          "The one that can show you live work and lets you meet the person writing your code. We'd like that to be us, but test anyone, us included, with four questions. Can I see something live right now? Who writes the code? Do I own the source when it's done? Is the price fixed against a written scope? You'd be surprised how many fail the first one.",
+      },
+      {
+        question: "What do software companies in Sialkot actually build?",
+        answer:
+          "Mostly business websites, ready-made packages (accounting, POS, school software) that get resold and installed, and a smaller number of genuinely custom systems. We sit in that last group, plus mobile apps, which not many software companies in Sialkot ship to the App Store and Google Play at all.",
+      },
+      {
+        question: "Why are some software houses in Sialkot so cheap?",
+        answer:
+          "Because the same template gets sold again and again. Buy a theme once, change the logo and the phone number, deliver it forty times. That's how a 15,000 rupee website works, and for a tiny brochure site it can be enough. What you don't get is security upkeep, real SEO, or code anyone can extend later, so the cheap version often turns into the expensive one around the time you need it to grow.",
+      },
+      {
+        question: "Are you an IT company? Do you do networking and CCTV?",
+        answer:
+          "We're a software company, not an IT company in the cables and routers sense. If you need office networking, CCTV, or a printer that finally works, call a local IT vendor. If you need software built, whether that's a website, an app, or a system for your factory or school, call us.",
+      },
+      {
+        question: "How much does a software house in Sialkot charge?",
+        answer:
+          "Across the market, anything from 10,000 rupees for a template website to several lakh for a custom system. We don't publish a rate, because the right number depends on what you're building. You get a fixed quote against a written scope within a day or two, free, and with PKR invoicing.",
+      },
+      {
+        question: "Do you only work with businesses in Sialkot?",
+        answer:
+          "No. Most of our clients are abroad, in Turkey, Poland, the UAE, the UK and the US. Businesses in Sialkot simply get the extra option of meeting us in person, which honestly makes scoping a lot faster.",
+      },
+    ],
+    relatedService: "custom-software",
+    relatedProjects: ["bilge-ai", "surveyor-job-management-system", "avc-dealer"],
+    localBusiness: true,
+  },
+  {
+    slug: "web-design-sialkot",
+    metaTitle: "Web Design Company in Sialkot | Custom Websites, Not Templates",
+    metaDescription:
+      "A web design company in Sialkot that designs and codes every site from scratch. Fast, secure, SEO-ready websites for exporters and local businesses, delivered in 2-4 weeks.",
+    label: "Sialkot · Web Design",
+    title: "Web design company",
+    accent: "in Sialkot.",
+    headerDescription:
+      "Websites designed and coded from scratch for exporters, schools, clinics and shops. No reskinned theme, no plugin pile, and no Lorem ipsum still hiding in the footer.",
+    specs: [
+      { label: "Based in", value: "Sialkot, Pakistan" },
+      { label: "Built with", value: "Next.js, not templates" },
+      { label: "Delivery", value: "2-4 weeks" },
+    ],
+    intro: [
+      "Most web design in Sialkot isn't really design. It's picking a theme from a marketplace, swapping in the logo and the phone number, and calling the job done. That's how you get a website for 10,000 or 20,000 rupees, and it's why so many business sites in the city look like the same site wearing a different hat.",
+      "We're a web design company in Sialkot that starts from a blank page. We work out who has to trust you (an importer in Germany, a parent choosing a school, a patient choosing a clinic), design for that person, then code it by hand in Next.js so it loads fast on a phone and Google can read every page. The site you're on right now is the sample. Check how quickly it opened.",
+      "For exporters, design does more selling than people expect. A buyer abroad decides in seconds whether you're a real factory or a middleman with a stock photo. Clean product pages, visible certifications and an inquiry form that lands on your WhatsApp beat any image slider ever made.",
+      "The honest bit: if you need a three-page site for a small shop and you're happy never to touch it again, a cheap template is fine, and we'll tell you so. When the website has to earn money, have it engineered.",
+    ],
+    whyTitle: "Why hire a web designer in Sialkot who also writes the code",
+    whyPoints: [
+      {
+        title: "Designed for your buyer, not the theme",
+        description:
+          "Layout, copy order and calls to action built around the person who has to say yes, whether that's an importer comparing suppliers or a parent comparing schools.",
+      },
+      {
+        title: "Hand-coded, so it's fast",
+        description:
+          "No page builder and no 6 MB hero image. Pages open quickly on 4G in Sialkot and on broadband in Berlin, which is where your buyer probably is.",
+      },
+      {
+        title: "Secure by default",
+        description:
+          "No WordPress login waiting at /wp-admin and no thirty plugins begging for updates. Far fewer doors for a bot to rattle.",
+      },
+      {
+        title: "SEO designed in",
+        description:
+          "Proper headings, structured data, a real sitemap, and page titles that aren't all called \"Home\". Google notices, and so do your buyers.",
+      },
+    ],
+    quoteNote:
+      "Fixed quote within 1-2 days of a first chat. Sialkot clients can sit with us to review designs in person and pay in PKR.",
+    faqs: [
+      {
+        question: "Which is the best web design company in Sialkot?",
+        answer:
+          "Judge any web design company in Sialkot by its last three client sites, opened on your own phone. Are they fast? Do they look different from each other? Is the contact form working? Then ask who owns the code and hosting at the end. Our work, including sites for clients in the UK and apps live in four countries, is on the work page to check the same way.",
+      },
+      {
+        question: "Why is website design in Sialkot so cheap from some agencies?",
+        answer:
+          "Because it's mostly not designed. A template bought once gets reused for dozens of clients with new colours and a new logo. That's fine for a very small brochure site. It's a problem when you need the site to rank, stay secure, or impress a buyer who has seen that exact theme on three other suppliers' sites that week.",
+      },
+      {
+        question: "Do you design websites for export companies in Sialkot?",
+        answer:
+          "Yes, it's a big part of what we do. Sports goods, surgical instruments, leather and apparel exporters need product catalogues buyers can browse, certifications up front, and RFQ forms that reach the sales team instantly. We design those around how international buyers shortlist suppliers.",
+      },
+      {
+        question: "Can a web designer in Sialkot make my website rank on Google?",
+        answer:
+          "We can make sure nothing technical holds it back, with fast pages, clean structure, structured data and Search Console set up from day one. Where it ranks also depends on your content and competition, and we'll tell you honestly what your keywords will take. We won't promise first place by Friday. Nobody honest can.",
+      },
+      {
+        question: "What do I need to give you to get started?",
+        answer:
+          "Your logo if you have one, a rough list of products or services, and a few minutes on who your customers are. We'll handle the structure, the design and the build, and show you a working preview every week until it's live.",
+      },
+      {
+        question: "Can you redesign our old WordPress website without losing Google rankings?",
+        answer:
+          "Yes. We map every old URL to its new home with permanent redirects before launch, so the rankings you've earned carry over. Then the new site does what the old one couldn't: open quickly, look current, and stop asking you to update plugins every Tuesday.",
+      },
+    ],
+    relatedService: "web-development",
+    relatedProjects: ["space-maintenance", "poland-portal"],
     localBusiness: true,
   },
 ];

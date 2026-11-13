@@ -37,6 +37,10 @@ export type Post = {
   relatedService?: string;
   /** Card label for relatedService. Needed when it differs from the hub's page. */
   relatedServiceLabel?: string;
+  /** Rendered after the body and emitted as FAQPage JSON-LD from the same data. */
+  faqs?: { question: string; answer: string }[];
+  /** Tracking only (seo/keyword-map.csv). Never rendered. */
+  secondaryKeywords?: string[];
 };
 
 /** Newest first — the manifest is pre-sorted, but don't rely on that downstream. */

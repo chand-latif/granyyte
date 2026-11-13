@@ -189,7 +189,7 @@ export const projects: Project[] = [
     problem:
       "Expats and tourists arriving in Poland had information scattered across dozens of websites, Facebook groups, and outdated blogs. There was no single trusted place for city guides, local news, listings, and deals.",
     solution:
-      "We built a unified lifestyle platform bringing city guides, curated news, local listings, and exclusive discounts into one polished app, with content management tooling so the team can publish updates in minutes.",
+      "We built a unified lifestyle platform bringing city guides, hand-picked news, local listings, and exclusive discounts into one polished app, with content management tooling so the team can publish updates in minutes.",
     outcome:
       "A single go-to companion app for the expat community in Poland, live on both the App Store and Google Play with a growing user base across major Polish cities.",
   },

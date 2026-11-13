@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { getTopicForPost, type Post } from "@/lib/content/posts";
-import { topics } from "@/content/topics";
+import { getActiveTopics, getTopicForPost, type Post } from "@/lib/content/posts";
 import { Reveal } from "@/components/ui/reveal";
 import { Tag } from "@/components/ui/badge";
 
@@ -66,7 +65,8 @@ export function PostList({ posts }: { posts: Post[] }) {
 
 /** Topic row on /blog — the entry point into each hub. */
 export function TopicNav({ activeSlug }: { activeSlug?: string }) {
-  const live = topics.filter((t) => t.slug !== activeSlug);
+  // Only hubs with posts: an empty hub has no page, so linking it would 404.
+  const live = getActiveTopics().filter((t) => t.slug !== activeSlug);
   if (live.length === 0) return null;
 
   return (

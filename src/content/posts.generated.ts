@@ -10,16 +10,36 @@ export const generatedPosts: Post[] = [
     "title": "Software house in Sialkot: what working with Granyyte is like",
     "description": "Looking for a software company in Sialkot? Granyyte builds apps, websites and custom business systems for Sialkot businesses and clients abroad.",
     "date": "2026-09-15",
+    "updated": "2026-11-13",
     "readingTime": "5 min read",
     "tags": [
       "Sialkot",
       "Software House",
       "Custom Software"
     ],
-    "hub": "industry-software",
-    "targetKeyword": "software house in sialkot",
-    "relatedService": "/software-development-sialkot",
-    "relatedServiceLabel": "Custom software development in Sialkot"
+    "hub": "sialkot-business",
+    "targetKeyword": "how to choose a software house in sialkot",
+    "relatedService": "/software-house-sialkot",
+    "relatedServiceLabel": "Software house in Sialkot",
+    "faqs": [
+      {
+        "question": "Do you only work with businesses in Sialkot?",
+        "answer": "No. A lot of our work is for clients in Turkey, Poland, the UAE and the UK. Businesses in Sialkot just get the extra option of meeting us in person."
+      },
+      {
+        "question": "Can we meet before deciding anything?",
+        "answer": "Yes, and for local projects we'd honestly prefer it. Get in touch through the contact page and we'll set a time."
+      },
+      {
+        "question": "How much does it cost?",
+        "answer": "It depends entirely on what you're building, so we don't publish prices. Tell us what you need and you'll get a fixed quote against a written scope, with no cost and no obligation."
+      }
+    ],
+    "secondaryKeywords": [
+      "software company in sialkot",
+      "sialkot software house",
+      "it company sialkot"
+    ]
   },
   {
     "slug": "custom-software-vs-off-the-shelf",
@@ -41,6 +61,7 @@ export const generatedPosts: Post[] = [
     "title": "FlutterFlow vs. Native Development: What to Choose in 2026",
     "description": "Native means two separate codebases, more time, and more budget. With Flutter and FlutterFlow you ship the same product in roughly three times less time and money. Here's the honest breakdown from a certified FlutterFlow expert.",
     "date": "2026-07-02",
+    "updated": "2026-11-13",
     "readingTime": "4 min read",
     "tags": [
       "FlutterFlow",

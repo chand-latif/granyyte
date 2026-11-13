@@ -47,6 +47,8 @@ const sialkotLinks = [
   { href: "/mobile-app-development-sialkot", label: "App Developer in Sialkot" },
   { href: "/web-development-sialkot", label: "Website Developer in Sialkot" },
   { href: "/software-development-sialkot", label: "Software Development in Sialkot" },
+  { href: "/software-house-sialkot", label: "Software House in Sialkot" },
+  { href: "/web-design-sialkot", label: "Web Design Company in Sialkot" },
 ];
 
 export function Footer() {
