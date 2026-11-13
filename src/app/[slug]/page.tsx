@@ -282,7 +282,8 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
             {otherSialkotPages.map((p, i) => (
               <span key={p.slug}>
                 <Link href={`/${p.slug}`} className="text-muted transition-colors hover:text-lime">
-                  {p.label}
+                  {/* Labels read "Sialkot · Web"; the line already says Sialkot. */}
+                  {p.label.replace(/^Sialkot · /, "")}
                 </Link>
                 {i < otherSialkotPages.length - 1 ? " · " : ""}
               </span>
