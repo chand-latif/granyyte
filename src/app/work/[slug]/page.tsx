@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Check, Lock, Target, Lightbulb, TrendingUp } from "lucide-react";
+import { ArrowLeft, Check, FlaskConical, Lock, Target, Lightbulb, TrendingUp } from "lucide-react";
 import { projects, getProject } from "@/content/projects";
 import { site } from "@/config/site";
 import { Reveal } from "@/components/ui/reveal";
@@ -116,11 +116,21 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
                 <Tag key={t}>{t}</Tag>
               ))}
             </div>
-            <StoreButtons links={project.links} className="mt-8" />
+            <StoreButtons
+              links={project.links}
+              className="mt-8"
+              webLabel={project.concept ? "Live demo" : undefined}
+            />
             {project.private && (
               <p className="mt-8 inline-flex items-center gap-2.5 rounded-full border border-edge bg-surface px-4 py-2 font-mono text-xs text-muted">
                 <Lock className="size-3.5 text-lime" />
                 Private internal tool, built for the client&apos;s team
+              </p>
+            )}
+            {project.concept && (
+              <p className="mt-8 inline-flex items-center gap-2.5 rounded-full border border-edge bg-surface px-4 py-2 font-mono text-xs text-muted">
+                <FlaskConical className="size-3.5 text-lime" />
+                Concept build with sample products. Brand, catalogue and backend are wired per client
               </p>
             )}
           </Reveal>
@@ -192,7 +202,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
             <div className="mb-12 max-w-2xl">
               <p className="mb-4 font-mono text-sm text-lime">End to end</p>
               <h2 className="font-display text-3xl font-bold tracking-tight text-fg md:text-4xl">
-                How a job flows
+                {project.workflowTitle ?? "How a job flows"}
               </h2>
             </div>
           </Reveal>

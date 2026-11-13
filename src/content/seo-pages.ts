@@ -330,7 +330,7 @@ export const seoPages: SeoPage[] = [
       },
     ],
     relatedService: "web-development",
-    relatedProjects: ["space-maintenance", "poland-portal"],
+    relatedProjects: ["space-maintenance", "meridian-retail-wholesale-store", "poland-portal"],
   },
   {
     slug: "crm-development-pakistan",
@@ -741,7 +741,7 @@ export const seoPages: SeoPage[] = [
       },
     ],
     relatedService: "web-development",
-    relatedProjects: ["space-maintenance", "poland-portal"],
+    relatedProjects: ["space-maintenance", "meridian-retail-wholesale-store", "poland-portal"],
     localBusiness: true,
   },
   {
@@ -939,7 +939,7 @@ export const seoPages: SeoPage[] = [
     intro: [
       "Most web design in Sialkot isn't really design. It's picking a theme from a marketplace, swapping in the logo and the phone number, and calling the job done. That's how you get a website for 10,000 or 20,000 rupees, and it's why so many business sites in the city look like the same site wearing a different hat.",
       "We're a web design company in Sialkot that starts from a blank page. We work out who has to trust you (an importer in Germany, a parent choosing a school, a patient choosing a clinic), design for that person, then code it by hand in Next.js so it loads fast on a phone and Google can read every page. The site you're on right now is the sample. Check how quickly it opened.",
-      "For exporters, design does more selling than people expect. A buyer abroad decides in seconds whether you're a real factory or a middleman with a stock photo. Clean product pages, visible certifications and an inquiry form that lands on your WhatsApp beat any image slider ever made.",
+      "For exporters, design does more selling than people expect. A buyer abroad decides in seconds whether you're a real factory or a middleman with a stock photo. Clean product pages, visible certifications and an inquiry form that lands on your WhatsApp beat any image slider ever made. Our Meridian concept store shows the idea for apparel: one catalogue, a switch between retail and wholesale pricing, MOQs on every product, and a quote form built for importers.",
       "The honest bit: if you need a three-page site for a small shop and you're happy never to touch it again, a cheap template is fine, and we'll tell you so. When the website has to earn money, have it engineered.",
     ],
     whyTitle: "Why hire a web designer in Sialkot who also writes the code",
@@ -1000,7 +1000,7 @@ export const seoPages: SeoPage[] = [
       },
     ],
     relatedService: "web-development",
-    relatedProjects: ["space-maintenance", "poland-portal"],
+    relatedProjects: ["space-maintenance", "meridian-retail-wholesale-store", "poland-portal"],
     localBusiness: true,
   },
 ];

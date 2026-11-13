@@ -22,9 +22,12 @@ type Item = { href: string; Icon: React.ComponentType<{ className?: string }>; t
 export function StoreButtons({
   links,
   className = "",
+  webLabel = "Live site",
 }: {
   links: Project["links"];
   className?: string;
+  /** "Live demo" for concept builds. */
+  webLabel?: string;
 }) {
   if (!links) return null;
 
@@ -33,7 +36,7 @@ export function StoreButtons({
     items.push({ href: links.appStore, Icon: AppleIcon, top: "Download on the", label: "App Store" });
   if (links.playStore)
     items.push({ href: links.playStore, Icon: PlayIcon, top: "Get it on", label: "Google Play" });
-  if (links.web) items.push({ href: links.web, Icon: Globe, top: "Explore the", label: "Live site" });
+  if (links.web) items.push({ href: links.web, Icon: Globe, top: "Explore the", label: webLabel });
 
   if (items.length === 0) return null;
 

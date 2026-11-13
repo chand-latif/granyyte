@@ -117,7 +117,7 @@ export const services: Service[] = [
           "Because the overhead is Pakistani while the stack and standards aren't. We build with the same React and Next.js tooling top western agencies use, so the price difference comes from cost of living, not corners being cut. Our own site is the live sample, so test its speed and search presence.",
       },
     ],
-    relatedProjects: ["poland-portal", "zwipe"],
+    relatedProjects: ["meridian-retail-wholesale-store", "poland-portal", "zwipe"],
   },
   {
     slug: "custom-software",

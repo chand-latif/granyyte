@@ -23,6 +23,11 @@ export type Project = {
   };
   /** Internal/confidential tool — case study shows a "Private" pill instead of store links */
   private?: boolean;
+  /**
+   * Concept / demo build (no client). Shows a "Concept" pill and a "Live demo"
+   * button. Never attach client names, users or results to a concept.
+   */
+  concept?: boolean;
   /** Optional SEO overrides for the case-study page (defaults derive from name/tagline) */
   metaTitle?: string;
   metaDescription?: string;
@@ -34,6 +39,8 @@ export type Project = {
   features?: string[];
   /** Optional long-form case study: "How a job flows" numbered steps */
   workflow?: { step: string; description: string }[];
+  /** Heading for the workflow section. Defaults to "How a job flows". */
+  workflowTitle?: string;
 };
 
 export const projects: Project[] = [
@@ -148,6 +155,72 @@ export const projects: Project[] = [
       "We designed and built a fast, SEO-first corporate website that sells the process rather than just the labour. It covers clear service breakdowns, a step-by-step delivery model, project case studies, client testimonials, and a dedicated supply-chain recruitment funnel, all wrapped in a credible B2B brand with conversion-focused CTAs.",
     outcome:
       "A polished, conversion-ready web presence that lets a B2B building-services firm pitch to national clients with confidence. It's live across London and the South West at spacebmr.co.uk.",
+  },
+  {
+    slug: "meridian-retail-wholesale-store",
+    name: "Meridian",
+    metaTitle: "Retail & Wholesale Apparel Store: Export E-commerce Concept",
+    metaDescription:
+      "Concept build: one apparel and textile store that sells retail and wholesale from the same catalogue, with MOQ volume pricing, RFQ forms, private label requests and six currencies.",
+    tagline:
+      "One store for single pieces and full containers: retail and wholesale apparel from the same catalogue",
+    category: "Retail & Wholesale E-commerce",
+    platforms: ["Web"],
+    tech: ["Next.js", "React", "Tailwind CSS", "B2B Wholesale", "Multi-currency"],
+    cover: "from-orange-500/25 via-amber-600/10 to-transparent",
+    mark: "ME",
+    screenshot: "/projects/meridian.jpg",
+    links: {
+      web: "https://retail-wholesale-site.vercel.app/",
+    },
+    concept: true,
+    featured: true,
+    problem:
+      "Apparel and textile exporters usually run two half-websites. A retail shop for single orders, and for wholesale buyers a PDF catalogue, an email address and a lot of patience. The importer who wants 500 hoodies has to ask for prices, wait for a reply across a timezone, and then ask again about MOQ, fabric weight and shipping terms. Plenty of them simply move on to the next supplier.",
+    solution:
+      "We built Meridian as a concept store that treats both buyers as first-class. One catalogue, one switch in the header: Retail shows piece prices and a normal cart, Wholesale shows MOQs and tiered volume pricing on every product. Products carry the specs trade buyers actually filter by, like GSM and fabric blend. Wholesale buyers can request a quote with quantities and a private-label option, and pages for capabilities, QC and shipping terms answer the questions a buyer would otherwise email about. Prices switch between six currencies, from USD and EUR to AED and PKR.",
+    outcome:
+      "A working storefront concept with sample products, showing how an exporter can sell to a shopper and an importer from the same site without either one feeling like an afterthought. The brand, catalogue and backend (payments, order management, quote emails) are wired per client, and three switchable visual themes show how far one build can be restyled.",
+    features: [
+      "Retail / Wholesale switch in the header that reprices the entire catalogue instantly",
+      "Wholesale mode with MOQ and tiered volume pricing on every product (three quantity bands)",
+      "Six currencies: USD, EUR, GBP, AED, AUD and PKR",
+      "Shop by category (fitness, casual, streetwear, sportswear, workwear, fabrics and textiles)",
+      "Filters trade buyers use: size range, fabric weight in GSM bands, and price",
+      "Request-for-quotation form with estimated quantity and a private-label / custom branding option",
+      "Wholesale programme page covering private label, AQL 2.5 quality control, FOB / CIF incoterms and multi-currency",
+      "Capabilities and sustainability pages that answer buyer due-diligence questions up front",
+      "Cart that knows which mode you're in, plus wishlist, account and order screens",
+      "Three switchable visual themes from one codebase (Editorial Light, Noir Dark, Hybrid)",
+    ],
+    workflowTitle: "How a buyer orders",
+    workflow: [
+      {
+        step: "Pick a mode",
+        description:
+          "A shopper stays in Retail. A buyer for a store or brand flips to Wholesale, and every price on the site changes to volume pricing with the MOQ shown.",
+      },
+      {
+        step: "Browse like a buyer",
+        description:
+          "Categories and filters work the way trade buyers think: fabric weight, size range and price, with fabric specs on every product card.",
+      },
+      {
+        step: "Price in your currency",
+        description:
+          "Switch between USD, EUR, GBP, AED, AUD and PKR, so a buyer in Dubai and a buyer in Manchester both see numbers they can use.",
+      },
+      {
+        step: "Order or request a quote",
+        description:
+          "Retail buyers add pieces to the cart. Wholesale buyers build a volume order at trade prices, or send a quote request with quantities and private-label needs.",
+      },
+      {
+        step: "Due diligence, answered",
+        description:
+          "Capabilities, QC, incoterms and sustainability pages cover what an importer checks before trusting a new supplier.",
+      },
+    ],
   },
   {
     slug: "avc-dealer",

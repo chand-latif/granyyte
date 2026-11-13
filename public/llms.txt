@@ -21,7 +21,7 @@
 - [Custom software development in Sialkot](https://www.granyyte.com/software-development-sialkot)
 
 ## Work
-- [Portfolio](https://www.granyyte.com/work): Bilge AI (multi-model AI app, 15,000+ users in Turkey), a surveyor job management platform for a UK repairs firm, AVC Dealer (US auto auction network), Zwipe (UAE car marketplace), Poland Portal, MainXpert, Mindful Mantra, THAFATH, Sacred Diary
+- [Portfolio](https://www.granyyte.com/work): Bilge AI (multi-model AI app, 15,000+ users in Turkey), a surveyor job management platform for a UK repairs firm, Meridian (concept retail + wholesale apparel store with MOQ pricing, RFQ and six currencies), AVC Dealer (US auto auction network), Zwipe (UAE car marketplace), Poland Portal, MainXpert, Mindful Mantra, THAFATH, Sacred Diary
 
 ## Blog
 - [Blog](https://www.granyyte.com/blog): guides on Flutter and FlutterFlow, hiring offshore developers, custom software vs SaaS, industry software, and software for Sialkot businesses
