@@ -95,11 +95,13 @@ Edit these first — most content changes are one-file edits:
   - `contact.emailDirect` = `chandlatif.dev@gmail.com`, the founder's direct line. Both emails are
     shown on the footer + contact page so visitors choose company vs. personal.
 - `src/content/projects.ts` — portfolio. `Project` type has `icon?`, `screenshot?`, `logo?`,
-  `links?: {appStore?, playStore?, web?}`, plus optional `private?`, `features?`, `workflow?` for
-  long-form case studies (private = "Private" pill instead of store links). Order: bilge-ai
-  (multi-model AI, leads per positioning), surveyor-job-management-system (private internal ops
-  platform for Space Maintenance — surveyor-ICP case study), space-maintenance (web),
-  poland-portal, mainxpert, mindful-mantra, zwipe, thafath (Android only), sacred-diary. Real store
+  `links?: {appStore?, playStore?, web?, appStoreSoon?}`, plus optional `private?`, `concept?`,
+  `features?`, `workflow?` + `workflowTitle?`, `gallery?` (phone screens, hidden when empty) for
+  long-form case studies (private = "Private" pill instead of store links; concept = "Concept"
+  pill + "Live demo"). Order (array order = /work order; first 4 `featured` = homepage stack):
+  scamalicious (Chand's call 2026-11-13: leads), bilge-ai, surveyor-job-management-system,
+  space-maintenance, avc-dealer, meridian-retail-wholesale-store (concept), poland-portal,
+  mainxpert, mindful-mantra, zwipe, thafath (Android only), sacred-diary. Real store
   links + real images in `public/projects/`. (Alligned REI was removed per request.)
 - `src/content/services.ts` — 3 services (mobile / web / custom software), each drives an SEO
   subpage + FAQ schema.

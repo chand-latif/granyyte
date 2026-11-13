@@ -52,6 +52,81 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "scamalicious",
+    name: "SCAMalicious",
+    metaTitle: "SCAMalicious: Anti-Scam App Built in Flutter (Case Study)",
+    metaDescription:
+      "Case study: SCAMalicious, an anti-scam mobile app with an instant scam-risk check, an AI chat assistant on OpenAI and Grok, country-by-country scam reporting and RevenueCat subscriptions. 5,000+ downloads on Google Play.",
+    tagline: "A pocket scam detector: check a situation, learn the warning signs, and report fraud in your country",
+    category: "Scam Protection / Safety",
+    platforms: ["iOS", "Android"],
+    tech: [
+      "Flutter",
+      "FlutterFlow",
+      "Firebase",
+      "Cloud Functions",
+      "OpenAI",
+      "xAI Grok",
+      "RevenueCat",
+      "Custom APIs",
+    ],
+    cover: "from-blue-600/25 via-amber-500/10 to-transparent",
+    mark: "SC",
+    icon: "/projects/scamalicious.png",
+    links: {
+      playStore: "https://play.google.com/store/apps/details?id=com.TitanZenLimited.scammobileapp",
+      appStoreSoon: true,
+    },
+    featured: true,
+    problem:
+      "Scams change faster than people's instincts do. One week it's a fake delivery text, the next it's a voice call from \"the bank\" or a prize that needs a small fee first. Most people only learn the warning signs after they've been caught, and even then they rarely know which authority to report it to. The client wanted an app that helps people stop and check before they pay, click or reply.",
+    solution:
+      "We built SCAMalicious for iOS and Android in Flutter and FlutterFlow, on Firebase with Cloud Functions behind it. The core is a scam-risk check: pick the type of scam you're worried about, answer a few quick questions, and get an instant result, saved to your history so you can look back at past checks. Around it sit a learning centre and warning-signs guides, a community space where people share their own scam stories, and country-by-country reporting that points you to the right fraud authority. An in-app AI assistant, running on OpenAI and Grok models through custom APIs, answers questions in plain language, and RevenueCat handles in-app subscriptions on both stores.",
+    outcome:
+      "SCAMalicious is live on Google Play with more than 5,000 downloads, and the App Store version is in review. The app keeps receiving updates, and its mix of instant checks, learning content and reporting gives people something useful to do in the moment they suspect a scam, instead of after.",
+    features: [
+      "Scam-risk check: choose a scam type, answer a few questions, get an instant likelihood result",
+      "History of every check you've run, so you can revisit past results",
+      "Learning centre and warning-signs guides for common scam types",
+      "Report a scam: pick your country and get the right fraud authority contacts",
+      "Anti-scam community where people share their stories and lessons",
+      "AI chat assistant powered by OpenAI and Grok models, served through custom APIs",
+      "Server-side logic on Firebase Cloud Functions, plus custom APIs for the AI models",
+      "In-app subscriptions and purchases on both stores via RevenueCat",
+      "Accounts with sign-in, built on Firebase",
+      "One Flutter codebase for iOS and Android, built with FlutterFlow plus custom Flutter code",
+    ],
+    workflowTitle: "How a check works",
+    workflow: [
+      {
+        step: "Something feels off",
+        description:
+          "A suspicious text, call, listing or prize. The user opens the app and picks the type of scam it looks like.",
+      },
+      {
+        step: "Answer a few questions",
+        description:
+          "A short set of plain-language questions about what happened, with no jargon to decode.",
+      },
+      {
+        step: "Get an instant result",
+        description:
+          "The app gives a scam-risk result straight away and saves it to the user's history.",
+      },
+      {
+        step: "Learn or ask",
+        description:
+          "Read the warning signs for that scam type, or ask the AI assistant a follow-up question in plain language.",
+      },
+      {
+        step: "Report it",
+        description:
+          "If it is a scam, the user picks their country and gets the right authority to report it to.",
+      },
+    ],
+    gallery: [],
+  },
+  {
     slug: "bilge-ai",
     name: "Bilge AI",
     tagline: "Every major AI model (Claude, GPT, Gemini & Grok) in one Turkish-first app",
@@ -250,81 +325,6 @@ export const projects: Project[] = [
           "Capabilities, QC, incoterms and sustainability pages cover what an importer checks before trusting a new supplier.",
       },
     ],
-  },
-  {
-    slug: "scamalicious",
-    name: "SCAMalicious",
-    metaTitle: "SCAMalicious: Anti-Scam App Built in Flutter (Case Study)",
-    metaDescription:
-      "Case study: SCAMalicious, an anti-scam mobile app with an instant scam-risk check, an AI chat assistant on OpenAI and Grok, country-by-country scam reporting and RevenueCat subscriptions. 5,000+ downloads on Google Play.",
-    tagline: "A pocket scam detector: check a situation, learn the warning signs, and report fraud in your country",
-    category: "Scam Protection / Safety",
-    platforms: ["iOS", "Android"],
-    tech: [
-      "Flutter",
-      "FlutterFlow",
-      "Firebase",
-      "Cloud Functions",
-      "OpenAI",
-      "xAI Grok",
-      "RevenueCat",
-      "Custom APIs",
-    ],
-    cover: "from-blue-600/25 via-amber-500/10 to-transparent",
-    mark: "SC",
-    icon: "/projects/scamalicious.png",
-    links: {
-      playStore: "https://play.google.com/store/apps/details?id=com.TitanZenLimited.scammobileapp",
-      appStoreSoon: true,
-    },
-    featured: true,
-    problem:
-      "Scams change faster than people's instincts do. One week it's a fake delivery text, the next it's a voice call from \"the bank\" or a prize that needs a small fee first. Most people only learn the warning signs after they've been caught, and even then they rarely know which authority to report it to. The client wanted an app that helps people stop and check before they pay, click or reply.",
-    solution:
-      "We built SCAMalicious for iOS and Android in Flutter and FlutterFlow, on Firebase with Cloud Functions behind it. The core is a scam-risk check: pick the type of scam you're worried about, answer a few quick questions, and get an instant result, saved to your history so you can look back at past checks. Around it sit a learning centre and warning-signs guides, a community space where people share their own scam stories, and country-by-country reporting that points you to the right fraud authority. An in-app AI assistant, running on OpenAI and Grok models through custom APIs, answers questions in plain language, and RevenueCat handles in-app subscriptions on both stores.",
-    outcome:
-      "SCAMalicious is live on Google Play with more than 5,000 downloads, and the App Store version is in review. The app keeps receiving updates, and its mix of instant checks, learning content and reporting gives people something useful to do in the moment they suspect a scam, instead of after.",
-    features: [
-      "Scam-risk check: choose a scam type, answer a few questions, get an instant likelihood result",
-      "History of every check you've run, so you can revisit past results",
-      "Learning centre and warning-signs guides for common scam types",
-      "Report a scam: pick your country and get the right fraud authority contacts",
-      "Anti-scam community where people share their stories and lessons",
-      "AI chat assistant powered by OpenAI and Grok models, served through custom APIs",
-      "Server-side logic on Firebase Cloud Functions, plus custom APIs for the AI models",
-      "In-app subscriptions and purchases on both stores via RevenueCat",
-      "Accounts with sign-in, built on Firebase",
-      "One Flutter codebase for iOS and Android, built with FlutterFlow plus custom Flutter code",
-    ],
-    workflowTitle: "How a check works",
-    workflow: [
-      {
-        step: "Something feels off",
-        description:
-          "A suspicious text, call, listing or prize. The user opens the app and picks the type of scam it looks like.",
-      },
-      {
-        step: "Answer a few questions",
-        description:
-          "A short set of plain-language questions about what happened, with no jargon to decode.",
-      },
-      {
-        step: "Get an instant result",
-        description:
-          "The app gives a scam-risk result straight away and saves it to the user's history.",
-      },
-      {
-        step: "Learn or ask",
-        description:
-          "Read the warning signs for that scam type, or ask the AI assistant a follow-up question in plain language.",
-      },
-      {
-        step: "Report it",
-        description:
-          "If it is a scam, the user picks their country and gets the right authority to report it to.",
-      },
-    ],
-    gallery: [],
   },
   {
     slug: "poland-portal",
