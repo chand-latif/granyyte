@@ -1,0 +1,33 @@
+# Content calendar (12 weeks from 2026-11-16)
+
+Ramp: week 1 → 3 posts, week 2 → 5, week 3 → 6, weeks 4-12 → 7. About 60% international, 40% local this round, because 77% of current impressions are from Pakistan. Shift toward 70/30 once Semrush data for US/UK/UAE lands (`semrush-todo.md`).
+
+Quality bar: every post needs a real story from `references/stories.md`, an honest tradeoff, and a joke that earns its place. A post without those waits.
+
+| Wk | Title (working) | Target keyword | Hub | Funnels to | Mkt |
+|---|---|---|---|---|---|
+| 1 | How surveyor admin software scales with job volume | how does surveyor admin software scale with job volume | industry-software | /surveyor-management-software | intl ✅ drafted |
+| 1 | How to choose a Flutter development company in Pakistan | best flutter development companies in pakistan | offshore-hiring | /mobile-app-development-pakistan | pk+intl ✅ drafted |
+| 1 | The 15,000 rupee website: what you're actually buying | cheap website development in sialkot | sialkot-business | /web-design-sialkot | local ✅ drafted |
+| 2 | What a German buyer checks on your export website in 10 seconds | export company website design | sialkot-business | /web-development-sialkot | local |
+| 2 | How to scope an MVP in four weeks without building version one of everything | mvp scope | mvp-startups | /services/mobile-app-development | intl |
+| 2 | Hiring offshore developers: the 6 questions that save you a rebuild | hire offshore developers | offshore-hiring | /mobile-app-development-pakistan | intl |
+| 2 | Inventory software for a Sialkot godown: what it needs to get right | inventory management system sialkot | sialkot-business | /software-development-sialkot | local |
+| 2 | FlutterFlow limits: when we tell clients not to use it | flutterflow limitations | flutterflow | /flutterflow-developer-pakistan | intl |
+| 3 | School management software in Sialkot: fee vouchers, attendance and WhatsApp | school management software sialkot | sialkot-business | /software-development-sialkot | local |
+| 3 | Taking over a half-finished FlutterFlow project | flutterflow project takeover | flutterflow | /flutterflow-developer-pakistan | intl |
+| 3 | Custom CRM vs HubSpot for a 10-person team: the arithmetic | custom crm vs hubspot | custom-vs-saas | /crm-development-pakistan | intl |
+| 3 | WordPress vs Next.js for a business website | wordpress vs nextjs for business website | sialkot-business | /web-design-sialkot | local |
+| 3 | RAMS enforcement in software: "no RAMS, no work" | rams software for contractors | industry-software | /surveyor-management-software | intl |
+| 3 | What owning your source code actually means | source code ownership software development | offshore-hiring | /services/custom-software | intl |
+| 4 | Building an AI app with several models behind one interface (Bilge AI) | multi model ai app development | mvp-startups | /services/mobile-app-development | intl |
+| 4 | Attendance system for a factory: biometric, app, or both? | attendance management system pakistan | sialkot-business | /software-development-sialkot | local |
+| 4 | Fixed price vs hourly for app development | fixed price vs hourly app development | offshore-hiring | /affordable-app-development | intl |
+| 4 | How long does it take to build an app? Honest timelines | how long does it take to build an app | mvp-startups | /services/mobile-app-development | intl |
+| 4 | Export order tracking: from inquiry to QC to shipment | export order tracking software | sialkot-business | /software-development-sialkot | local |
+| 4 | Flutter app performance: where it beats native and where it doesn't | flutter app performance | flutterflow | /services/mobile-app-development | intl |
+| 4 | Is your website getting hacked? Signs on a cheap WordPress site | wordpress website security pakistan | sialkot-business | /web-development-pakistan | local |
+
+## Backlog for weeks 5-12 (re-rank with Semrush data)
+- Intl: app store rejection reasons and fixes; Supabase vs Firebase for an MVP; AI agents for small business ops; building a marketplace app (Zwipe); expat/city guide apps (Poland Portal); vehicle inspection apps (MainXpert); a dealer app for auctions (AVC Dealer); halal matchmaking app design (Thafath); meditation audio engines (Mindful Mantra); WhatsApp notifications in business software; per-seat SaaS pricing traps; offline-first field apps; hiring a Pakistani developer vs Upwork; what a discovery phase should cost you (third-party figures only); technical SEO checklist for a new site.
+- Local: Google Business Profile for Sialkot businesses; POS systems for Sialkot shops; ecommerce websites for Sialkot sports goods exporters; surgical instruments catalog websites; Urdu/English bilingual software; mobile app ideas for Sialkot businesses; how to brief a software house; domain and hosting basics for a Pakistani business.
