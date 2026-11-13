@@ -6,6 +6,138 @@ import type { Post } from "@/lib/content/posts";
 
 export const generatedPosts: Post[] = [
   {
+    "slug": "cheap-website-in-sialkot",
+    "title": "The 15,000 rupee website: what you're actually buying in Sialkot",
+    "description": "Cheap website development in Sialkot looks like a bargain. Here's what's usually inside a 10,000 to 20,000 rupee website, and when it's genuinely fine to buy one.",
+    "date": "2026-11-13",
+    "readingTime": "6 min read",
+    "tags": [
+      "Sialkot",
+      "Web Design",
+      "WordPress"
+    ],
+    "hub": "sialkot-business",
+    "targetKeyword": "cheap website development in sialkot",
+    "relatedService": "/web-design-sialkot",
+    "relatedServiceLabel": "Web design company in Sialkot",
+    "faqs": [
+      {
+        "question": "How much does a website cost in Sialkot?",
+        "answer": "Across the market, anywhere from about 10,000 rupees for a template site to lakhs for a custom-built one. The gap isn't greed. It's the difference between installing a theme and engineering a site. We quote every project as a fixed price against a written scope, so you know exactly what's in it."
+      },
+      {
+        "question": "Is a cheap WordPress website bad?",
+        "answer": "Not automatically. WordPress runs a huge share of the web and can be secure when it's maintained. The problem with most cheap builds is that nobody maintains them: plugins go out of date, the admin login stays at the default address, and nobody is responsible when something breaks."
+      },
+      {
+        "question": "When is a cheap website good enough?",
+        "answer": "When you need a few pages so people can find your phone number and see you exist, you aren't relying on it for international buyers or Google traffic, and you're happy to replace it in a couple of years. For that, a cheap template is honestly fine."
+      },
+      {
+        "question": "How do I know if my website was built from a template?",
+        "answer": "Look at the page source or the footer for a theme name, search Google for a sentence from your homepage, or check whether other businesses' sites have exactly the same layout. If the developer can't tell you which theme and plugins they used, that tells you something too."
+      },
+      {
+        "question": "Can you rebuild my cheap website without losing Google rankings?",
+        "answer": "Yes. We map every old URL to the new site with permanent redirects before launch, so whatever rankings you have carry over. Then the new site is fast, secure, and built so Google can actually read it."
+      }
+    ],
+    "secondaryKeywords": [
+      "website price in sialkot",
+      "wordpress template website",
+      "website for 15000 rupees",
+      "web design company in sialkot"
+    ]
+  },
+  {
+    "slug": "choosing-a-flutter-development-company-in-pakistan",
+    "title": "How to choose a Flutter development company in Pakistan (without paying for the app twice)",
+    "description": "Looking for the best Flutter development companies in Pakistan? Skip the ranked lists. Here are the checks that tell a real team from a pretty portfolio.",
+    "date": "2026-11-13",
+    "readingTime": "6 min read",
+    "tags": [
+      "Flutter",
+      "Hiring",
+      "Pakistan"
+    ],
+    "hub": "offshore-hiring",
+    "targetKeyword": "best flutter development companies in pakistan",
+    "relatedService": "/mobile-app-development-pakistan",
+    "relatedServiceLabel": "Mobile app development from Pakistan",
+    "faqs": [
+      {
+        "question": "Which are the best Flutter development companies in Pakistan?",
+        "answer": "The ones that can show you Flutter apps live on both stores, put a senior engineer on your project, hand over the full source code, and quote a fixed price against a written scope. Any list that ranks companies without checking those four things is ranking marketing budgets."
+      },
+      {
+        "question": "Is it safe to hire a Flutter developer from Pakistan?",
+        "answer": "Yes, if you protect yourself the same way you would anywhere: a written scope, a fixed price, weekly builds you can install, and code ownership in the contract. The risk isn't the country. It's hiring someone you can't verify."
+      },
+      {
+        "question": "Should I hire a Flutter freelancer or a Flutter agency in Pakistan?",
+        "answer": "A strong freelancer is great for a small, well-defined app. An agency makes more sense when you need store publishing, a backend, design and someone accountable if a person gets sick. The best of both is a small senior team where you talk directly to the people writing the code."
+      },
+      {
+        "question": "How long does a Flutter app take to build in Pakistan?",
+        "answer": "Most focused apps ship in 2-4 weeks with an experienced team, because one Flutter codebase covers iOS and Android. Bigger products with custom backends take longer, and a good company tells you the real timeline before you sign."
+      },
+      {
+        "question": "What should be in a Flutter app development contract?",
+        "answer": "The written scope, the fixed price and payment milestones, the delivery timeline, weekly demo builds, and a clause that hands you the source code, the store accounts and the backend access at the end. If any of those are missing, ask why."
+      }
+    ],
+    "secondaryKeywords": [
+      "flutter development company pakistan",
+      "hire flutter developers pakistan",
+      "flutter agency pakistan",
+      "mobile app developers in pakistan"
+    ]
+  },
+  {
+    "slug": "surveyor-admin-software-job-volume",
+    "title": "How surveyor admin software scales with job volume (and where it quietly breaks)",
+    "description": "How do admin packages for surveyors scale with job volume? Per-seat bills, quote chasing and evidence trails all grow differently. Here's what breaks first.",
+    "date": "2026-11-13",
+    "readingTime": "6 min read",
+    "tags": [
+      "Surveying",
+      "Job Management",
+      "Operations"
+    ],
+    "hub": "industry-software",
+    "targetKeyword": "how does surveyor admin software scale with job volume",
+    "relatedService": "/surveyor-management-software",
+    "relatedServiceLabel": "Job management software for surveyor-led firms",
+    "faqs": [
+      {
+        "question": "How do admin packages for surveyors scale with job volume?",
+        "answer": "Usually along two lines at once. The bill grows with users (or jobs, depending on the vendor), and the admin work grows with every job multiplied by every contractor you have to chase for a quote. A package that only fixes the first one leaves you paying more for the same amount of phoning around."
+      },
+      {
+        "question": "What is the best job tracking system for surveyors?",
+        "answer": "The one that matches your actual lifecycle: survey, scope, quotes, approval, scheduled visit, evidence, sign-off. If your firm does insurance reinstatement work, look hard at how a system handles contractor quotes and site evidence, because that's where generic job tracking falls short. If an off-the-shelf tool covers 90% of your process, buy it."
+      },
+      {
+        "question": "Is custom software cheaper than a per-seat package for a surveying firm?",
+        "answer": "It can be, once you have enough users or enough jobs that the subscription becomes a permanent, growing line item. Custom is a one-time build you own, so adding surveyors or contractors doesn't change the bill. For a small firm with simple jobs, a package is often the cheaper and saner option."
+      },
+      {
+        "question": "Can custom surveyor software work alongside Joblogic?",
+        "answer": "Yes. The platform we built for Space Maintenance sits alongside Joblogic. Scheduling stays where the team already works, and the custom layer handles quote requests, RAMS enforcement, visit evidence and WhatsApp notifications."
+      },
+      {
+        "question": "What should be automated first as job volume grows?",
+        "answer": "Quote requests to contractors, then visit evidence. Those two tasks grow fastest with volume and eat the most admin hours, while things like reporting can wait a few months without anyone losing sleep."
+      }
+    ],
+    "secondaryKeywords": [
+      "admin packages for surveyors",
+      "surveying firm job volume",
+      "per-seat pricing surveyors",
+      "best job tracking system for surveyors"
+    ]
+  },
+  {
     "slug": "software-house-in-sialkot",
     "title": "Software house in Sialkot: what working with Granyyte is like",
     "description": "Looking for a software company in Sialkot? Granyyte builds apps, websites and custom business systems for Sialkot businesses and clients abroad.",

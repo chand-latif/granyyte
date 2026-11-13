@@ -1,0 +1,102 @@
+---
+title: "How surveyor admin software scales with job volume (and where it quietly breaks)"
+description: "How do admin packages for surveyors scale with job volume? Per-seat bills, quote chasing and evidence trails all grow differently. Here's what breaks first."
+date: 2026-11-13
+tags: ["Surveying", "Job Management", "Operations"]
+hub: industry-software
+targetKeyword: "how does surveyor admin software scale with job volume"
+secondaryKeywords: ["admin packages for surveyors", "surveying firm job volume", "per-seat pricing surveyors", "best job tracking system for surveyors"]
+relatedService: "/surveyor-management-software"
+relatedServiceLabel: "Job management software for surveyor-led firms"
+faqs:
+  - question: "How do admin packages for surveyors scale with job volume?"
+    answer: "Usually along two lines at once. The bill grows with users (or jobs, depending on the vendor), and the admin work grows with every job multiplied by every contractor you have to chase for a quote. A package that only fixes the first one leaves you paying more for the same amount of phoning around."
+  - question: "What is the best job tracking system for surveyors?"
+    answer: "The one that matches your actual lifecycle: survey, scope, quotes, approval, scheduled visit, evidence, sign-off. If your firm does insurance reinstatement work, look hard at how a system handles contractor quotes and site evidence, because that's where generic job tracking falls short. If an off-the-shelf tool covers 90% of your process, buy it."
+  - question: "Is custom software cheaper than a per-seat package for a surveying firm?"
+    answer: "It can be, once you have enough users or enough jobs that the subscription becomes a permanent, growing line item. Custom is a one-time build you own, so adding surveyors or contractors doesn't change the bill. For a small firm with simple jobs, a package is often the cheaper and saner option."
+  - question: "Can custom surveyor software work alongside Joblogic?"
+    answer: "Yes. The platform we built for Space Maintenance sits alongside Joblogic. Scheduling stays where the team already works, and the custom layer handles quote requests, RAMS enforcement, visit evidence and WhatsApp notifications."
+  - question: "What should be automated first as job volume grows?"
+    answer: "Quote requests to contractors, then visit evidence. Those two tasks grow fastest with volume and eat the most admin hours, while things like reporting can wait a few months without anyone losing sleep."
+---
+
+Somebody typed this exact question into Google: *how do admin packages for surveyors scale with job volume?* And Google, apparently stuck for a better answer, kept showing them our case study. So here's the proper answer, written by the people who built the system a surveyor-led repairs firm in the UK now runs every job through.
+
+The short version: admin software for surveyors scales along two separate lines, and most packages only talk about one of them.
+
+## The two things that grow when your jobs grow
+
+When a surveying firm goes from 20 jobs a month to 80, two things change.
+
+**The software bill.** Most admin packages charge per user, per month. Some charge per job, or per "active" job, or per module. Either way, more surveyors and more admin staff means a bigger invoice, every month, forever.
+
+**The admin work.** This one doesn't appear on any pricing page. Every job needs quotes from contractors, a scheduled visit, RAMS, photos, a sign-off and a record someone can find in six months when an insurer asks a pointed question. That work grows with every job, and the quoting part grows faster than that, because each job means chasing several contractors.
+
+A package that scales the first line nicely while ignoring the second is a very organised way of paying more to stay just as busy.
+
+## How do admin packages for surveyors scale with job volume, in practice?
+
+Let's do the arithmetic, because it's more useful than any feature list.
+
+### The bill
+
+A per-seat package costs roughly *seats × monthly price × 12* a year. Hire two more surveyors and an admin to handle the growth, and you've added three seats permanently. Nobody gets a discount for being busy.
+
+Per-job pricing sounds fairer until your best month arrives and the software takes a cut of it. It's a bit like a landlord charging rent per customer.
+
+None of this is a scandal. SaaS companies have to make money, and for a small firm with steady volume a package is often the sensible, boring choice. We'll say that to your face. It just isn't free to grow inside one.
+
+### The admin hours
+
+Here's the part that actually hurts. Picture a reinstatement job that needs a plasterer and a decorator, with three contractors asked to quote for each trade. That's six phone calls or messages, six follow-ups when nobody replies, and six quotes arriving in six different formats across WhatsApp, email and, occasionally, a photo of a handwritten note.
+
+Now multiply by 80 jobs.
+
+Most admin packages give you a lovely place to *record* the quote once you finally get it. They don't do the chasing. So the admin team grows in step with job volume, and the software bill grows with the admin team. Both lines go up together, which is the opposite of what "scaling" is supposed to mean.
+
+### The evidence
+
+The third pressure is evidence. Insurers, loss adjusters and managing agents want proof: RAMS completed before work started, photos before, during and after, and a customer signature at the end. At 20 jobs a month you can keep that in folders. At 80, somebody is scrolling through a phone gallery at 9pm looking for "the bathroom one from March".
+
+Evidence doesn't scale by working harder. It scales by making it impossible to finish a visit without it.
+
+## What we changed for Space Maintenance
+
+[Space Maintenance](/work/surveyor-job-management-system) is a surveyor-led insurance reinstatement firm covering London and the South West. Before the platform, they ran jobs the way most surveying businesses do: WhatsApp threads, email chains, paper RAMS and photo folders scattered across phones. Their rule was "No RAMS, no work. No photos, no payment." It was a great rule. It was also, at the time, more of a hope.
+
+Here's what the system does about each growth line.
+
+**Quote chasing goes away.** When a surveyor creates a job, the matching contractors get a job link on WhatsApp and email at the same moment, and they quote straight from their phone. Nobody rings round. The client reviews and accepts in the same system, and every decision is recorded.
+
+**Evidence is enforced, not requested.** Each visit gets its own link with a six-step form: RAMS, before photos, progress, after photos, customer sign-off, completion. RAMS comes first, so no RAMS genuinely means no work. The form saves as you go, so a half-finished visit reopens exactly where it was left, even days later. Completed visits lock read-only, which turns "can you send me the photos from that job" into one click.
+
+**The bill doesn't grow with the team.** The platform runs on Supabase and PostgreSQL and was handed over completely. Adding a surveyor, a contractor or another hundred jobs doesn't add a line to an invoice.
+
+It also sits alongside Joblogic rather than replacing it. Scheduling stays where the team already works. We find "replace everything" projects tend to go well right up until the first Monday.
+
+## Where admin software quietly breaks as volume grows
+
+If you're evaluating a package (or a custom build, including ours), these are the places to poke.
+
+1. **Contractor communication.** Does it message contractors where they actually are, which in this industry is WhatsApp, or does it send an email they'll read next Thursday?
+2. **Visits without signal.** Surveyors and contractors work in basements and loft spaces. Ask what happens when the connection drops halfway through a form.
+3. **Evidence lock.** Can a completed record be edited later? If yes, it's a note, not evidence.
+4. **Incidents.** When something goes wrong on site, is there a proper incident report with escalation, and does it screen for what needs reporting under [RIDDOR](https://www.hse.gov.uk/riddor/)? Our platform does. Many tools leave it to a spreadsheet.
+5. **Who pays for growth.** Get the price for your team at today's size and at double it. If the second number makes you wince, that's your answer.
+
+## When you should just buy a package
+
+Honest bit. Custom software isn't automatically the grown-up choice.
+
+Buy off the shelf if your jobs are simple and similar, your contractors are a small fixed team you already talk to daily, and the package covers 90% of how you work. Paying for a custom build to fix the last 10% is how people end up owning software they resent.
+
+Custom starts making sense when the admin hours are what's actually growing, when compliance has to be enforced rather than hoped for, or when the subscription has turned into a permanent tax on getting bigger. We wrote more about that tradeoff in [custom software vs off-the-shelf](/blog/custom-software-vs-off-the-shelf).
+
+## The short answer to the question
+
+Admin packages for surveyors scale their price with your headcount and your job count, and they mostly leave the admin work to scale with your staff. Good software for a growing surveying firm does the reverse: the bill stays flat while the chasing, the evidence and the notifications are handled by the system.
+
+---
+
+*Running a surveyor-led firm and feeling the volume? See how we build [job management software for surveying firms](/surveyor-management-software), or [tell us how your jobs flow today](/contact). If a package will do the job, we'll tell you which features to look for, and you won't need us.*
