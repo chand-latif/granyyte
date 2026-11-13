@@ -20,6 +20,8 @@ export type Project = {
     appStore?: string;
     playStore?: string;
     web?: string;
+    /** In store review: shows a dimmed, non-clickable "Coming soon to the App Store" badge */
+    appStoreSoon?: boolean;
   };
   /** Internal/confidential tool — case study shows a "Private" pill instead of store links */
   private?: boolean;
@@ -39,6 +41,11 @@ export type Project = {
   features?: string[];
   /** Optional long-form case study: "How a job flows" numbered steps */
   workflow?: { step: string; description: string }[];
+  /**
+   * Phone screenshots shown in a "Screens" row on the case study. Hidden when
+   * empty. Files live in public/projects/<slug>/.
+   */
+  gallery?: { src: string; alt: string }[];
   /** Heading for the workflow section. Defaults to "How a job flows". */
   workflowTitle?: string;
 };
@@ -157,6 +164,28 @@ export const projects: Project[] = [
       "A polished, conversion-ready web presence that lets a B2B building-services firm pitch to national clients with confidence. It's live across London and the South West at spacebmr.co.uk.",
   },
   {
+    slug: "avc-dealer",
+    name: "AVC Dealer",
+    tagline:
+      "Gate passes, condition reports and floor plan payments for dealers across a US auto auction network",
+    category: "Auto Auction Services",
+    platforms: ["iOS"],
+    tech: ["Flutter", "FlutterFlow", "Firebase"],
+    cover: "from-orange-600/25 via-red-500/10 to-transparent",
+    mark: "AVC",
+    icon: "/projects/avc-dealer.webp",
+    links: {
+      appStore: "https://apps.apple.com/pk/app/avc-dealer/id1351709612",
+    },
+    featured: true,
+    problem:
+      "A dealer buying at an auction two states away needs a condition report before the car runs, a gate pass to get it off the lot, floor plan payment arranged, and transport booked. All of that meant phone calls, one auction at a time, each with its own service desk and its own hold music. Sellers had the same problem in reverse when they wanted run numbers reserved for consignment.",
+    solution:
+      "We built the dealer-facing app that takes those calls off the phone. Every request type gets its own short form: reports, floor plan payments, gate passes, transportation, inspections, arbitration, and run numbers for consignment. A dealer picks the auction, submits, and the request lands with the right desk. The app also keeps the auction platforms and industry tools a dealer uses on sale day within reach, and live assistance is still a tap away when a request needs a person.",
+    outcome:
+      "It's live on the App Store as the service app for a support network covering more than 50 auction locations across 25 US states, from Phoenix to Boston. Dealers buying on simulcast or online spend less time on hold and more time bidding.",
+  },
+  {
     slug: "meridian-retail-wholesale-store",
     name: "Meridian",
     metaTitle: "Retail & Wholesale Apparel Store: Export E-commerce Concept",
@@ -223,26 +252,79 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "avc-dealer",
-    name: "AVC Dealer",
-    tagline:
-      "Gate passes, condition reports and floor plan payments for dealers across a US auto auction network",
-    category: "Auto Auction Services",
-    platforms: ["iOS"],
-    tech: ["Flutter", "FlutterFlow", "Firebase"],
-    cover: "from-orange-600/25 via-red-500/10 to-transparent",
-    mark: "AVC",
-    icon: "/projects/avc-dealer.webp",
+    slug: "scamalicious",
+    name: "SCAMalicious",
+    metaTitle: "SCAMalicious: Anti-Scam App Built in Flutter (Case Study)",
+    metaDescription:
+      "Case study: SCAMalicious, an anti-scam mobile app with an instant scam-risk check, an AI chat assistant on OpenAI and Grok, country-by-country scam reporting and RevenueCat subscriptions. 5,000+ downloads on Google Play.",
+    tagline: "A pocket scam detector: check a situation, learn the warning signs, and report fraud in your country",
+    category: "Scam Protection / Safety",
+    platforms: ["iOS", "Android"],
+    tech: [
+      "Flutter",
+      "FlutterFlow",
+      "Firebase",
+      "Cloud Functions",
+      "OpenAI",
+      "xAI Grok",
+      "RevenueCat",
+      "Custom APIs",
+    ],
+    cover: "from-blue-600/25 via-amber-500/10 to-transparent",
+    mark: "SC",
+    icon: "/projects/scamalicious.png",
     links: {
-      appStore: "https://apps.apple.com/pk/app/avc-dealer/id1351709612",
+      playStore: "https://play.google.com/store/apps/details?id=com.TitanZenLimited.scammobileapp",
+      appStoreSoon: true,
     },
     featured: true,
     problem:
-      "A dealer buying at an auction two states away needs a condition report before the car runs, a gate pass to get it off the lot, floor plan payment arranged, and transport booked. All of that meant phone calls, one auction at a time, each with its own service desk and its own hold music. Sellers had the same problem in reverse when they wanted run numbers reserved for consignment.",
+      "Scams change faster than people's instincts do. One week it's a fake delivery text, the next it's a voice call from \"the bank\" or a prize that needs a small fee first. Most people only learn the warning signs after they've been caught, and even then they rarely know which authority to report it to. The client wanted an app that helps people stop and check before they pay, click or reply.",
     solution:
-      "We built the dealer-facing app that takes those calls off the phone. Every request type gets its own short form: reports, floor plan payments, gate passes, transportation, inspections, arbitration, and run numbers for consignment. A dealer picks the auction, submits, and the request lands with the right desk. The app also keeps the auction platforms and industry tools a dealer uses on sale day within reach, and live assistance is still a tap away when a request needs a person.",
+      "We built SCAMalicious for iOS and Android in Flutter and FlutterFlow, on Firebase with Cloud Functions behind it. The core is a scam-risk check: pick the type of scam you're worried about, answer a few quick questions, and get an instant result, saved to your history so you can look back at past checks. Around it sit a learning centre and warning-signs guides, a community space where people share their own scam stories, and country-by-country reporting that points you to the right fraud authority. An in-app AI assistant, running on OpenAI and Grok models through custom APIs, answers questions in plain language, and RevenueCat handles in-app subscriptions on both stores.",
     outcome:
-      "It's live on the App Store as the service app for a support network covering more than 50 auction locations across 25 US states, from Phoenix to Boston. Dealers buying on simulcast or online spend less time on hold and more time bidding.",
+      "SCAMalicious is live on Google Play with more than 5,000 downloads, and the App Store version is in review. The app keeps receiving updates, and its mix of instant checks, learning content and reporting gives people something useful to do in the moment they suspect a scam, instead of after.",
+    features: [
+      "Scam-risk check: choose a scam type, answer a few questions, get an instant likelihood result",
+      "History of every check you've run, so you can revisit past results",
+      "Learning centre and warning-signs guides for common scam types",
+      "Report a scam: pick your country and get the right fraud authority contacts",
+      "Anti-scam community where people share their stories and lessons",
+      "AI chat assistant powered by OpenAI and Grok models, served through custom APIs",
+      "Server-side logic on Firebase Cloud Functions, plus custom APIs for the AI models",
+      "In-app subscriptions and purchases on both stores via RevenueCat",
+      "Accounts with sign-in, built on Firebase",
+      "One Flutter codebase for iOS and Android, built with FlutterFlow plus custom Flutter code",
+    ],
+    workflowTitle: "How a check works",
+    workflow: [
+      {
+        step: "Something feels off",
+        description:
+          "A suspicious text, call, listing or prize. The user opens the app and picks the type of scam it looks like.",
+      },
+      {
+        step: "Answer a few questions",
+        description:
+          "A short set of plain-language questions about what happened, with no jargon to decode.",
+      },
+      {
+        step: "Get an instant result",
+        description:
+          "The app gives a scam-risk result straight away and saves it to the user's history.",
+      },
+      {
+        step: "Learn or ask",
+        description:
+          "Read the warning signs for that scam type, or ask the AI assistant a follow-up question in plain language.",
+      },
+      {
+        step: "Report it",
+        description:
+          "If it is a scam, the user picks their country and gets the right authority to report it to.",
+      },
+    ],
+    gallery: [],
   },
   {
     slug: "poland-portal",
