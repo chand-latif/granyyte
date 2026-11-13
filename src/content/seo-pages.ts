@@ -162,7 +162,7 @@ export const seoPages: SeoPage[] = [
       },
     ],
     relatedService: "mobile-app-development",
-    relatedProjects: ["bilge-ai", "poland-portal", "zwipe"],
+    relatedProjects: ["bilge-ai", "scamalicious", "poland-portal", "zwipe"],
   },
   {
     slug: "flutterflow-developer-pakistan",
@@ -246,7 +246,7 @@ export const seoPages: SeoPage[] = [
       },
     ],
     relatedService: "mobile-app-development",
-    relatedProjects: ["mindful-mantra", "thafath", "sacred-diary"],
+    relatedProjects: ["scamalicious", "mindful-mantra", "thafath", "sacred-diary"],
   },
   {
     slug: "web-development-pakistan",

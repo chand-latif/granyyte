@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Check, FlaskConical, Lock, Target, Lightbulb, TrendingUp } from "lucide-react";
@@ -148,6 +149,34 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
           </div>
         </Reveal>
       </section>
+
+      {/* App screens — optional phone screenshots. Hidden until a project has them. */}
+      {project.gallery && project.gallery.length > 0 && (
+        <section className="mx-auto max-w-6xl px-5 pt-16 md:px-8 md:pt-24">
+          <Reveal>
+            <p className="mb-4 font-mono text-sm text-lime">In the app</p>
+            <h2 className="font-display text-3xl font-bold tracking-tight text-fg md:text-4xl">
+              Screens
+            </h2>
+          </Reveal>
+          <div className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4">
+            {project.gallery.map((shot, i) => (
+              <div
+                key={`${shot.src}-${i}`}
+                className="relative aspect-[9/19.5] w-48 shrink-0 snap-start overflow-hidden rounded-[1.75rem] border border-edge-strong bg-raised md:w-56"
+              >
+                <Image
+                  src={shot.src}
+                  alt={shot.alt}
+                  fill
+                  sizes="(max-width: 768px) 192px, 224px"
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Problem → Solution → Outcome */}
       <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">

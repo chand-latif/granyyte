@@ -17,7 +17,7 @@ function PlayIcon({ className }: { className?: string }) {
   );
 }
 
-type Item = { href: string; Icon: React.ComponentType<{ className?: string }>; top: string; label: string };
+type Item = { href?: string; Icon: React.ComponentType<{ className?: string }>; top: string; label: string };
 
 export function StoreButtons({
   links,
@@ -34,6 +34,9 @@ export function StoreButtons({
   const items: Item[] = [];
   if (links.appStore)
     items.push({ href: links.appStore, Icon: AppleIcon, top: "Download on the", label: "App Store" });
+  // In review: same badge, no link, dimmed. Swap for the real URL once it's live.
+  else if (links.appStoreSoon)
+    items.push({ Icon: AppleIcon, top: "Coming soon to the", label: "App Store" });
   if (links.playStore)
     items.push({ href: links.playStore, Icon: PlayIcon, top: "Get it on", label: "Google Play" });
   if (links.web) items.push({ href: links.web, Icon: Globe, top: "Explore the", label: webLabel });
@@ -42,23 +45,38 @@ export function StoreButtons({
 
   return (
     <div className={`flex flex-wrap gap-3 ${className}`}>
-      {items.map(({ href, Icon, top, label }) => (
-        <a
-          key={label}
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group/store inline-flex items-center gap-3 rounded-xl border border-edge-strong bg-surface px-4 py-2.5 transition-all duration-300 hover:border-lime hover:bg-raised"
-        >
-          <Icon className="size-6 shrink-0 text-fg transition-colors group-hover/store:text-lime" />
-          <span className="text-left leading-tight">
-            <span className="block font-mono text-[10px] uppercase tracking-wider text-faint">
-              {top}
+      {items.map(({ href, Icon, top, label }) => {
+        const content = (
+          <>
+            <Icon className="size-6 shrink-0 text-fg transition-colors group-hover/store:text-lime" />
+            <span className="text-left leading-tight">
+              <span className="block font-mono text-[10px] uppercase tracking-wider text-faint">
+                {top}
+              </span>
+              <span className="block font-display text-sm font-bold text-fg">{label}</span>
             </span>
-            <span className="block font-display text-sm font-bold text-fg">{label}</span>
+          </>
+        );
+        return href ? (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group/store inline-flex items-center gap-3 rounded-xl border border-edge-strong bg-surface px-4 py-2.5 transition-all duration-300 hover:border-lime hover:bg-raised"
+          >
+            {content}
+          </a>
+        ) : (
+          <span
+            key={label}
+            aria-disabled="true"
+            className="inline-flex cursor-default items-center gap-3 rounded-xl border border-dashed border-edge-strong bg-surface px-4 py-2.5 opacity-60"
+          >
+            {content}
           </span>
-        </a>
-      ))}
+        );
+      })}
     </div>
   );
 }

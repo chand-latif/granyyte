@@ -68,7 +68,7 @@ export const services: Service[] = [
           "We build from Sialkot, Pakistan, for clients across Europe, the Middle East, and North America. It matters in one way only: our rates are a fraction of western agencies for the same stack and standards. Timezone overlap, weekly demo builds, and direct communication keep the distance irrelevant.",
       },
     ],
-    relatedProjects: ["poland-portal", "zwipe", "mindful-mantra"],
+    relatedProjects: ["scamalicious", "poland-portal", "zwipe", "mindful-mantra"],
   },
   {
     slug: "web-development",
