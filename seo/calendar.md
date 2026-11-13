@@ -11,7 +11,9 @@ Quality bar: every post needs a real story from `references/stories.md`, an hone
 | 1 | The 15,000 rupee website: what you're actually buying | cheap website development in sialkot | sialkot-business | /web-design-sialkot | local ✅ drafted |
 | 2 | Website for a Sialkot apparel and sportswear exporter: what buyers check first | apparel export website sialkot | sialkot-business | /web-development-sialkot | local ✅ drafted (Meridian) |
 | 2 | Retail and wholesale on one website (B2B ecommerce for clothing brands) | b2b wholesale ecommerce website | industry-software | /services/web-development | intl ✅ drafted (Meridian) |
-| 2 | How to scope an MVP in four weeks without building version one of everything | mvp scope | mvp-startups | /services/mobile-app-development | intl |
+| 2 | Adding an AI chat assistant to a mobile app | ai chatbot in mobile app | mvp-startups | /services/mobile-app-development | intl ✅ drafted (SCAMalicious) |
+| 2 | Building a scam awareness app (SCAMalicious) | scam detection app development | flutterflow | /flutterflow-developer-pakistan | intl ✅ drafted |
+| 3 | How to scope an MVP in four weeks without building version one of everything | mvp scope | mvp-startups | /services/mobile-app-development | intl |
 | 2 | Hiring offshore developers: the 6 questions that save you a rebuild | hire offshore developers | offshore-hiring | /mobile-app-development-pakistan | intl |
 | 2 | Inventory software for a Sialkot godown: what it needs to get right | inventory management system sialkot | sialkot-business | /software-development-sialkot | local |
 | 2 | FlutterFlow limits: when we tell clients not to use it | flutterflow limitations | flutterflow | /flutterflow-developer-pakistan | intl |

@@ -6,6 +6,51 @@ import type { Post } from "@/lib/content/posts";
 
 export const generatedPosts: Post[] = [
   {
+    "slug": "ai-chatbot-in-mobile-app",
+    "title": "Adding an AI chat assistant to a mobile app: what it actually takes",
+    "description": "Thinking about an AI chatbot in your mobile app? Where the API keys live, which model to use, what it costs, and when a chatbot is just a gimmick.",
+    "date": "2026-11-13",
+    "readingTime": "5 min read",
+    "tags": [
+      "AI",
+      "Mobile Development",
+      "Flutter"
+    ],
+    "hub": "mvp-startups",
+    "targetKeyword": "ai chatbot in mobile app",
+    "relatedService": "/services/mobile-app-development",
+    "relatedServiceLabel": "See our mobile app development service",
+    "faqs": [
+      {
+        "question": "How do I add an AI chatbot to my mobile app?",
+        "answer": "Put a small backend between the app and the AI provider, so the app talks to your server and your server talks to OpenAI, Grok or whoever you choose. That keeps your API keys safe, lets you add rules and limits, and means you can switch models later without shipping a new app version."
+      },
+      {
+        "question": "Can I call the OpenAI API directly from a Flutter app?",
+        "answer": "Technically yes, practically no. Anything shipped inside an app can be extracted, including API keys, and a leaked key means someone else runs up your bill. Route the calls through a backend such as Firebase Cloud Functions or your own API."
+      },
+      {
+        "question": "Which AI model should a mobile app use?",
+        "answer": "Start with the model that answers your users' questions well at a cost you can live with, then measure. Many apps use more than one provider, either to let users choose or to fall back when one is slow. Our Bilge AI app runs four providers side by side."
+      },
+      {
+        "question": "How much does an AI chatbot cost to run in an app?",
+        "answer": "AI providers charge per amount of text processed, so cost grows with users and conversation length. Set limits per user, keep prompts short, and tie heavier use to a paid plan. A subscription tool like RevenueCat makes that last part much easier on both app stores."
+      },
+      {
+        "question": "Is an AI chatbot worth adding to my app?",
+        "answer": "Only if it helps users do the thing your app is for, faster. A chatbot that answers follow-up questions in a specialist app earns its place. A chatbot bolted on because everyone has one tends to get opened once and forgotten."
+      }
+    ],
+    "secondaryKeywords": [
+      "add chatgpt to mobile app",
+      "ai assistant mobile app development",
+      "openai api mobile app",
+      "grok api app",
+      "flutter ai chatbot"
+    ]
+  },
+  {
     "slug": "apparel-export-website-sialkot",
     "title": "Website for a Sialkot apparel and sportswear exporter: what buyers check first",
     "description": "What an apparel export website in Sialkot needs before an importer replies: MOQ, GSM specs, private label, QC and FOB terms, explained plainly.",
@@ -181,6 +226,51 @@ export const generatedPosts: Post[] = [
       "hire flutter developers pakistan",
       "flutter agency pakistan",
       "mobile app developers in pakistan"
+    ]
+  },
+  {
+    "slug": "scam-detection-app-development",
+    "title": "Building a scam awareness app: what goes into one (from the team behind SCAMalicious)",
+    "description": "Scam detection app development, explained: risk checks, warning signs, reporting by country, an AI assistant and subscriptions, from the team that built SCAMalicious.",
+    "date": "2026-11-13",
+    "readingTime": "5 min read",
+    "tags": [
+      "Mobile Development",
+      "FlutterFlow",
+      "Security"
+    ],
+    "hub": "flutterflow",
+    "targetKeyword": "scam detection app development",
+    "relatedService": "/flutterflow-developer-pakistan",
+    "relatedServiceLabel": "Work with a certified FlutterFlow developer",
+    "faqs": [
+      {
+        "question": "How does a scam detection app work?",
+        "answer": "Most consumer scam apps don't magically know whether a message is a scam. They help the user check: pick the type of situation, answer a few questions about what happened, and get a risk result based on known warning signs. Good ones also teach the signs, point to the right place to report, and let people learn from others' experiences."
+      },
+      {
+        "question": "Can an app tell me for certain that something is a scam?",
+        "answer": "No, and an honest one won't claim to. It can tell you how many warning signs a situation has and how likely a scam is. The final call is yours, which is why clear guidance and reporting options matter as much as the result."
+      },
+      {
+        "question": "What features should an anti-scam app have?",
+        "answer": "A quick risk check, guides to common scam types and their warning signs, a way to report scams to the right authority in your country, a history of your past checks, and some form of community or stories. An AI assistant for follow-up questions is a strong addition if it's kept on topic."
+      },
+      {
+        "question": "Is FlutterFlow good for building an app like this?",
+        "answer": "Yes. A scam awareness app is mostly forms, content, accounts and lists, which FlutterFlow builds quickly, and the parts that need more control (AI, payments, server logic) can be handled in custom Flutter code and a backend. That's how we built SCAMalicious."
+      },
+      {
+        "question": "How do anti-scam apps make money?",
+        "answer": "Commonly through subscriptions or in-app purchases for premium features, while keeping core safety tools free. RevenueCat is a popular way to run subscriptions across both app stores from one setup."
+      }
+    ],
+    "secondaryKeywords": [
+      "anti scam app",
+      "fraud awareness app",
+      "scam checker app",
+      "build a safety app flutter",
+      "revenuecat flutterflow"
     ]
   },
   {

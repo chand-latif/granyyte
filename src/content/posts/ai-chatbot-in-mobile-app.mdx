@@ -1,0 +1,92 @@
+---
+title: "Adding an AI chat assistant to a mobile app: what it actually takes"
+description: "Thinking about an AI chatbot in your mobile app? Where the API keys live, which model to use, what it costs, and when a chatbot is just a gimmick."
+date: 2026-11-13
+tags: ["AI", "Mobile Development", "Flutter"]
+hub: mvp-startups
+targetKeyword: "ai chatbot in mobile app"
+secondaryKeywords: ["add chatgpt to mobile app", "ai assistant mobile app development", "openai api mobile app", "grok api app", "flutter ai chatbot"]
+relatedService: "/services/mobile-app-development"
+relatedServiceLabel: "See our mobile app development service"
+faqs:
+  - question: "How do I add an AI chatbot to my mobile app?"
+    answer: "Put a small backend between the app and the AI provider, so the app talks to your server and your server talks to OpenAI, Grok or whoever you choose. That keeps your API keys safe, lets you add rules and limits, and means you can switch models later without shipping a new app version."
+  - question: "Can I call the OpenAI API directly from a Flutter app?"
+    answer: "Technically yes, practically no. Anything shipped inside an app can be extracted, including API keys, and a leaked key means someone else runs up your bill. Route the calls through a backend such as Firebase Cloud Functions or your own API."
+  - question: "Which AI model should a mobile app use?"
+    answer: "Start with the model that answers your users' questions well at a cost you can live with, then measure. Many apps use more than one provider, either to let users choose or to fall back when one is slow. Our Bilge AI app runs four providers side by side."
+  - question: "How much does an AI chatbot cost to run in an app?"
+    answer: "AI providers charge per amount of text processed, so cost grows with users and conversation length. Set limits per user, keep prompts short, and tie heavier use to a paid plan. A subscription tool like RevenueCat makes that last part much easier on both app stores."
+  - question: "Is an AI chatbot worth adding to my app?"
+    answer: "Only if it helps users do the thing your app is for, faster. A chatbot that answers follow-up questions in a specialist app earns its place. A chatbot bolted on because everyone has one tends to get opened once and forgotten."
+---
+
+A lot of app briefs now have the same line somewhere near the bottom: "and an AI chatbot".
+
+Sometimes it's the best feature in the app. Sometimes it's a very expensive way to say "hello, how can I help you today?" to people who didn't ask. This post is about telling those two apart, and about what adding an **AI chatbot in a mobile app** actually involves once you get past the demo.
+
+We've shipped two apps with AI at the centre. [Bilge AI](/work/bilge-ai) puts GPT, Claude, Gemini and Grok behind one Turkish-first interface and has more than 15,000 users. [SCAMalicious](/work/scamalicious), an anti-scam app with more than 5,000 downloads on Google Play, has an assistant powered by OpenAI and Grok models that answers questions about suspicious situations in plain language. So this isn't theory, it's what we think about on every AI build.
+
+## Step one: the app should never hold the keys
+
+The quickest way to add a chatbot is to paste an API key into the app and call the AI provider directly. It works in the demo. It also hands your key to anyone patient enough to unpack the app, and a leaked key means a stranger can run up your bill at your expense.
+
+So the first rule: **the app talks to your backend, and your backend talks to the AI.** In SCAMalicious, the backend side is Firebase Cloud Functions plus custom APIs for the AI models. In other projects it might be a small server of your own. Either way, the middle layer is where the real work happens:
+
+- The API keys live there, out of reach.
+- You decide which model answers which kind of question.
+- You add limits per user, so one enthusiastic user can't spend your month's budget in an afternoon.
+- You can switch models or providers without waiting for app store review.
+
+That last point matters more than it sounds. AI models change monthly. App updates take days. Keep the decision on the server.
+
+## Step two: pick models for the job, not the headline
+
+There's no single best model. There's the one that answers *your* users' questions well, fast enough, at a cost that still works when you have ten thousand of them.
+
+Bilge AI took this to its logical end and offers four providers, because its whole point is putting every major model in one place. Most apps don't need that. But using more than one provider is worth considering for two practical reasons: you can fall back when one is slow or down, and you can send simple questions to a cheaper model and harder ones to a stronger model.
+
+We'd also say this plainly: test with real questions from real users, not the examples in the provider's launch post. Your users will ask things nobody in a marketing team imagined.
+
+## Step three: give it a job and some rules
+
+A general chatbot dropped into a specialist app is a liability. Ask a scam-awareness app's assistant about cooking and it shouldn't cheerfully help with lasagne.
+
+The fix is a clear system prompt and some guardrails:
+
+- **Stay on topic.** The assistant knows what the app is for and politely declines everything else.
+- **Know its limits.** In a safety app, the assistant should help users think a situation through and point them to proper reporting channels, not pretend to be the police.
+- **Be honest about uncertainty.** "This has several warning signs of a scam" is helpful. "This is 100% a scam" is a promise no model can keep.
+
+This is where most of the actual design work goes. The UI of a chat screen takes a day. Deciding what the assistant should and shouldn't say takes considerably longer, and it's the part users notice.
+
+## Step four: plan for the bill
+
+AI providers charge for every bit of text that goes in and comes out. More users, longer chats, longer prompts: all of it costs money, every month.
+
+A few habits keep it under control:
+
+- Keep the system prompt tight. It's sent with every message.
+- Trim old conversation history instead of resending the whole thing each time.
+- Set sensible daily limits per user.
+- Tie heavier use to a paid tier.
+
+On that last point, SCAMalicious uses [RevenueCat](https://www.revenuecat.com/docs) to handle subscriptions on both the App Store and Google Play. It saves you from building two separate billing systems and arguing with two separate stores about receipts. If the AI feature is expensive to run, it's perfectly reasonable for it to be part of what people pay for.
+
+## When a chatbot is a gimmick
+
+Here's the honest part. Plenty of apps don't need one.
+
+A chatbot earns its place when users have follow-up questions the app can't predict: "is this message from my bank real?", "what does this contract clause mean?", "which model writes better Turkish?". It doesn't earn its place when the app already has three buttons that do everything a user needs, and the chatbot just makes them type instead of tap.
+
+If you're building an MVP, ask: would the app still be useful without the assistant? If yes, ship without it, see what users actually ask for in your reviews and support messages, and add AI where those questions cluster. That's cheaper, and the assistant you build later will be far better aimed.
+
+## How we build it
+
+We build these in Flutter, with FlutterFlow where it speeds things up, and keep the AI behind a backend from day one. One codebase covers iOS and Android, so the assistant behaves the same on both. The model choice, prompts and limits all live server-side where we can tune them after launch.
+
+If you're weighing up an AI feature for your app, our [mobile app development service](/services/mobile-app-development) is where we'd start. And if you want to see how far one app can push the idea, have a look at how we built [Bilge AI](/work/bilge-ai).
+
+---
+
+*Got an app idea with "and an AI chatbot" at the bottom of the brief? [Tell us what it's for](/contact). We'll tell you honestly whether the chatbot is the feature or the decoration.*
