@@ -31,6 +31,20 @@ Quality bar: every post needs a real story from `references/stories.md`, an hone
 | 4 | Flutter app performance: where it beats native and where it doesn't | flutter app performance | flutterflow | /services/mobile-app-development | intl |
 | 4 | Is your website getting hacked? Signs on a cheap WordPress site | wordpress website security pakistan | sialkot-business | /web-development-pakistan | local |
 
+## Scam-awareness hub (funnels to /work/scamalicious)
+Drafted 2026-11-14: how to tell if a text is a scam · what to do if you've been scammed · online shopping scams.
+Next (one or two a week, high search demand, verify every reporting channel before publishing):
+- AI voice cloning scams: how to protect your family (kw: ai voice cloning scam)
+- WhatsApp scams: the common ones and how to report them (kw: whatsapp scams)
+- Fake job offer scams (kw: job offer scam)
+- Romance scams: warning signs (kw: romance scam signs)
+- Lottery and prize scams (kw: lottery scam)
+- Phone call scams pretending to be your bank, aka vishing (kw: bank phone scam)
+- How to protect elderly parents from scams (kw: protect elderly from scams)
+- Deepfake scams explained (kw: deepfake scam)
+- Investment and crypto scams (kw: crypto investment scam)
+- Pakistan: JazzCash/Easypaisa wallet scams and how to report (kw: easypaisa scam) — local
+
 ## Backlog for weeks 5-12 (re-rank with Semrush data)
 - Intl: app store rejection reasons and fixes; Supabase vs Firebase for an MVP; AI agents for small business ops; building a marketplace app (Zwipe); expat/city guide apps (Poland Portal); vehicle inspection apps (MainXpert); a dealer app for auctions (AVC Dealer); halal matchmaking app design (Thafath); meditation audio engines (Mindful Mantra); WhatsApp notifications in business software; per-seat SaaS pricing traps; offline-first field apps; hiring a Pakistani developer vs Upwork; what a discovery phase should cost you (third-party figures only); technical SEO checklist for a new site.
 - Local: Google Business Profile for Sialkot businesses; POS systems for Sialkot shops; ecommerce websites for Sialkot sports goods exporters; surgical instruments catalog websites; Urdu/English bilingual software; mobile app ideas for Sialkot businesses; how to brief a software house; domain and hosting basics for a Pakistani business.

@@ -140,6 +140,24 @@ export const topics: Topic[] = [
     relatedService: "/software-house-sialkot",
     relatedServiceLabel: "See our software house in Sialkot",
   },
+  {
+    slug: "scam-awareness",
+    name: "Scam awareness",
+    metaTitle: "Scam Awareness Guides: Spot, Avoid and Report Scams",
+    metaDescription:
+      "Plain guides to spotting scam texts, fake shops and phone scams, plus exactly what to do and who to report to if you've been caught. From the team behind the SCAMalicious app.",
+    title: "Spot it, stop it,",
+    accent: "report it.",
+    headerDescription:
+      "Practical scam guides from the team that built SCAMalicious, an anti-scam app with more than 5,000 downloads on Google Play.",
+    intro: [
+      "Scammers don't need you to be careless. They need you to be busy, worried or excited for about thirty seconds, which describes most of us most of the time.",
+      "These guides cover the scams people search about most: suspicious texts, fake online shops, calls from \"the bank\", and the awful question of what to do after money has already gone. They're written plainly, with the official places to report in the US, UK and Pakistan where we've checked them.",
+      "We build software for a living, including SCAMalicious, an app that helps people check a situation and report it in their country. These guides are written to be useful whether or not you ever download it.",
+    ],
+    relatedService: "/work/scamalicious",
+    relatedServiceLabel: "See the SCAMalicious app we built",
+  },
 ];
 
 export function getTopic(slug: string) {

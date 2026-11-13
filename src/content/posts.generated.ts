@@ -6,6 +6,155 @@ import type { Post } from "@/lib/content/posts";
 
 export const generatedPosts: Post[] = [
   {
+    "slug": "how-to-tell-if-a-text-is-a-scam",
+    "title": "How to tell if a text is a scam: 9 signs, and what to do with it",
+    "description": "How to tell if a text is a scam: the warning signs in fake delivery, bank and prize messages, and how to report them in the US, UK and Pakistan.",
+    "date": "2026-11-14",
+    "readingTime": "5 min read",
+    "tags": [
+      "Scams",
+      "Text Messages",
+      "Safety"
+    ],
+    "hub": "scam-awareness",
+    "targetKeyword": "how to tell if a text is a scam",
+    "relatedService": "/work/scamalicious",
+    "relatedServiceLabel": "See the SCAMalicious app we built",
+    "faqs": [
+      {
+        "question": "How can I tell if a text message is a scam?",
+        "answer": "Look for pressure to act right now, a link you weren't expecting, a request for a code, password or payment, a sender you don't recognise claiming to be a company you do, and small fees for things you never ordered. Real companies rarely ask for sensitive details by text. When in doubt, contact the company through its official app or website, not the link in the message."
+      },
+      {
+        "question": "What happens if I click a link in a scam text?",
+        "answer": "Clicking alone often does nothing, but the page may try to get you to enter card details, passwords or codes, or to install something. If you entered anything, change that password straight away, contact your bank if card details were involved, and watch your accounts. If you only clicked and closed the page, you're usually fine, but don't go back."
+      },
+      {
+        "question": "Should I reply STOP to a scam text?",
+        "answer": "No. Replying tells the scammer your number is live and usually brings more messages. Report it and delete it instead."
+      },
+      {
+        "question": "How do I report a scam text in the UK?",
+        "answer": "Forward it for free to 7726, which spells SPAM on a keypad, so your mobile network can investigate the sender. If you lost money or shared details, report it to Report Fraud (reportfraud.police.uk) in England, Wales and Northern Ireland, or to Police Scotland on 101."
+      },
+      {
+        "question": "How do I report a scam text in the US?",
+        "answer": "Report it to the FTC at ReportFraud.ftc.gov, and forward it to 7726 (SPAM), which most US carriers also support. If money was lost through an online scam, the FBI's IC3.gov is another place to report."
+      },
+      {
+        "question": "Where do I report a scam text in Pakistan?",
+        "answer": "Cybercrime complaints in Pakistan go to the National Cyber Crime Investigation Agency (NCCIA), which replaced the FIA's cybercrime wing. If money left your bank or wallet account, call your bank or wallet provider first, as fast as you can."
+      }
+    ],
+    "secondaryKeywords": [
+      "scam text messages",
+      "is this text a scam",
+      "fake delivery text",
+      "bank scam text",
+      "report scam text 7726",
+      "smishing"
+    ]
+  },
+  {
+    "slug": "online-shopping-scams",
+    "title": "Online shopping scams: how to spot a fake shop before you pay",
+    "description": "Online shopping scams explained: fake shops, too-good deals, social media ads and marketplace tricks, with the checks to run before you pay and what to do if you didn't.",
+    "date": "2026-11-14",
+    "readingTime": "4 min read",
+    "tags": [
+      "Scams",
+      "Online Shopping",
+      "Safety"
+    ],
+    "hub": "scam-awareness",
+    "targetKeyword": "online shopping scams",
+    "relatedService": "/work/scamalicious",
+    "relatedServiceLabel": "See the SCAMalicious app we built",
+    "faqs": [
+      {
+        "question": "How can I tell if an online shop is fake?",
+        "answer": "Check the web address carefully, search the shop's name with words like 'scam' or 'reviews', look for a real address and working contact details, and be wary of prices far below everywhere else. A shop that only accepts bank transfer, gift cards or crypto is a major warning sign."
+      },
+      {
+        "question": "What is the safest way to pay online?",
+        "answer": "A credit card or a payment service with buyer protection is usually safest, because you can dispute the charge if the goods never arrive. Avoid paying a stranger or an unfamiliar shop by direct bank transfer, gift card or cryptocurrency, which are very hard to get back."
+      },
+      {
+        "question": "Are deals in social media ads safe?",
+        "answer": "Some are, many aren't. Scammers run ads for fake shops selling heavily discounted branded goods, then disappear. Before buying from an ad, check the shop independently: its real reviews, how long it has existed, and whether the brand lists it as a stockist."
+      },
+      {
+        "question": "I ordered from a fake website. What should I do?",
+        "answer": "Contact your card provider or bank immediately to dispute the payment, change any password you created on the site, and report the shop. In the US report to ReportFraud.ftc.gov, in the UK to Report Fraud, and in Pakistan to your bank and the NCCIA."
+      },
+      {
+        "question": "Is it safe to buy from marketplace sellers?",
+        "answer": "It's safest when you stay inside the marketplace's own checkout and messaging, which is where buyer protection applies. Sellers who push you to pay outside the platform, or to send a deposit to hold an item, are a common scam pattern."
+      }
+    ],
+    "secondaryKeywords": [
+      "how to spot a fake website",
+      "is this website legit",
+      "fake online store",
+      "instagram shop scam",
+      "marketplace scam",
+      "safe way to pay online"
+    ]
+  },
+  {
+    "slug": "what-to-do-if-you-have-been-scammed",
+    "title": "What to do if you've been scammed: the first hour, the first day, the first week",
+    "description": "What to do if you've been scammed: who to call first, how to secure your accounts, where to report in the US, UK and Pakistan, and how to avoid recovery scams.",
+    "date": "2026-11-14",
+    "readingTime": "4 min read",
+    "tags": [
+      "Scams",
+      "Fraud",
+      "Safety"
+    ],
+    "hub": "scam-awareness",
+    "targetKeyword": "what to do if you've been scammed",
+    "relatedService": "/work/scamalicious",
+    "relatedServiceLabel": "See the SCAMalicious app we built",
+    "faqs": [
+      {
+        "question": "What is the first thing to do if you've been scammed?",
+        "answer": "Call your bank or the payment provider you used, using the number on your card or their official app, and tell them exactly what happened. Speed matters: the sooner they know, the better the chance of stopping or recovering a payment."
+      },
+      {
+        "question": "Can I get my money back after being scammed?",
+        "answer": "Sometimes. Card payments and some bank transfers can be disputed or recovered, especially if you report quickly. Gift cards, cryptocurrency and cash are much harder to recover. Your bank will tell you what's possible for the payment method you used."
+      },
+      {
+        "question": "Where do I report a scam in the UK?",
+        "answer": "Report it to Report Fraud at reportfraud.police.uk or on 0300 123 2040 if you're in England, Wales or Northern Ireland. In Scotland, contact Police Scotland on 101. Forward scam texts to 7726."
+      },
+      {
+        "question": "Where do I report a scam in the US?",
+        "answer": "Report it to the FTC at ReportFraud.ftc.gov. For online scams and cybercrime, you can also report to the FBI at IC3.gov. If someone used your identity, IdentityTheft.gov has a recovery plan."
+      },
+      {
+        "question": "Where do I report a scam in Pakistan?",
+        "answer": "Contact your bank or mobile wallet provider first, then file a complaint with the National Cyber Crime Investigation Agency (NCCIA), which replaced the FIA's cybercrime wing and handles cybercrime complaints."
+      },
+      {
+        "question": "Someone says they can recover my scammed money for a fee. Is it real?",
+        "answer": "Almost certainly not. Recovery scams target people who've just lost money, promising to get it back for an upfront fee. Genuine help comes from your bank, the police and official agencies, and they don't charge you to report or investigate."
+      },
+      {
+        "question": "Should I feel embarrassed about being scammed?",
+        "answer": "No. Scams are designed by people who do this full time, and they catch careful, intelligent people every day. Reporting it, and telling people you trust, protects you and the next person they target."
+      }
+    ],
+    "secondaryKeywords": [
+      "i got scammed what do i do",
+      "how to get money back after being scammed",
+      "report a scam",
+      "scammed online what to do",
+      "recovery scam"
+    ]
+  },
+  {
     "slug": "ai-chatbot-in-mobile-app",
     "title": "Adding an AI chat assistant to a mobile app: what it actually takes",
     "description": "Thinking about an AI chatbot in your mobile app? Where the API keys live, which model to use, what it costs, and when a chatbot is just a gimmick.",
