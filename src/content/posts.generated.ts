@@ -6,6 +6,96 @@ import type { Post } from "@/lib/content/posts";
 
 export const generatedPosts: Post[] = [
   {
+    "slug": "apparel-export-website-sialkot",
+    "title": "Website for a Sialkot apparel and sportswear exporter: what buyers check first",
+    "description": "What an apparel export website in Sialkot needs before an importer replies: MOQ, GSM specs, private label, QC and FOB terms, explained plainly.",
+    "date": "2026-11-13",
+    "readingTime": "5 min read",
+    "tags": [
+      "Sialkot",
+      "Export",
+      "Apparel"
+    ],
+    "hub": "sialkot-business",
+    "targetKeyword": "apparel export website sialkot",
+    "relatedService": "/web-development-sialkot",
+    "relatedServiceLabel": "Website development in Sialkot",
+    "faqs": [
+      {
+        "question": "What should an apparel export website in Sialkot include?",
+        "answer": "Products with real specs (fabric, GSM, sizes), your MOQ and how pricing changes with volume, a quote form that asks for quantity and private-label needs, pages on quality control and shipping terms, and fast loading on a phone. Plus proper titles and structured data so buyers can find you on Google in the first place."
+      },
+      {
+        "question": "Should a Sialkot exporter show wholesale prices on the website?",
+        "answer": "Show at least the MOQ and the fact that price drops with volume. Many exporters show tiered pricing openly to get faster, better-qualified inquiries. If your prices are sensitive, show the tiers as percentages and give exact figures after a buyer gets in touch."
+      },
+      {
+        "question": "Do importers really judge suppliers by their website?",
+        "answer": "They use it to shortlist. A buyer comparing several suppliers will drop the ones whose site is slow, vague or obviously a reused template before ever sending an email. The website doesn't close the order, but it decides whether you get the chance to."
+      },
+      {
+        "question": "Can my website take retail orders as well as wholesale?",
+        "answer": "Yes. One catalogue can show piece prices to retail shoppers and MOQ pricing to trade buyers with a simple switch. Our Meridian concept store shows exactly how that works."
+      },
+      {
+        "question": "How long does it take to build an export website in Sialkot?",
+        "answer": "Most export catalogue sites take 2-4 weeks with us, depending on how many products and pages you need. You get a fixed quote against a written scope first, so the timeline is clear before we start."
+      }
+    ],
+    "secondaryKeywords": [
+      "sportswear manufacturer website sialkot",
+      "garment export website",
+      "textile export website pakistan",
+      "wholesale clothing website",
+      "private label sportswear website"
+    ]
+  },
+  {
+    "slug": "b2b-wholesale-ecommerce-website",
+    "title": "Retail and wholesale on one website: how B2B ecommerce for clothing brands should work",
+    "description": "A B2B wholesale ecommerce website that also sells retail: MOQ pricing, quote requests, currencies and trade specs, and when Shopify plus an app is enough.",
+    "date": "2026-11-13",
+    "readingTime": "6 min read",
+    "tags": [
+      "Ecommerce",
+      "Wholesale",
+      "Apparel"
+    ],
+    "hub": "industry-software",
+    "targetKeyword": "b2b wholesale ecommerce website",
+    "relatedService": "/services/web-development",
+    "relatedServiceLabel": "See our web development service",
+    "faqs": [
+      {
+        "question": "What is a B2B wholesale ecommerce website?",
+        "answer": "A store built for trade buyers rather than (or as well as) shoppers. It shows minimum order quantities and volume pricing, lets buyers request quotes for big or custom orders, and answers the questions an importer asks before trusting a supplier, like quality control and shipping terms."
+      },
+      {
+        "question": "Can one website handle both retail and wholesale customers?",
+        "answer": "Yes, and it usually should. One catalogue with a retail and wholesale mode means you maintain products once, both audiences find you through the same search traffic, and a shopper who loves the product can become a stockist without moving to a different site."
+      },
+      {
+        "question": "Should wholesale prices be visible to everyone?",
+        "answer": "It depends on your market. Showing tiered pricing openly speeds up small and mid-size trade orders and filters out time-wasters. Hiding it behind an approved trade account protects your distributors' margins. Plenty of brands show volume tiers openly and keep negotiated contract prices for logged-in accounts."
+      },
+      {
+        "question": "Is Shopify good enough for B2B wholesale?",
+        "answer": "For many brands, yes. If your wholesale side is a handful of stockists on simple tiered pricing, Shopify with a wholesale app is quick and cheap to run. Custom starts to make sense when pricing rules, quote workflows, multiple currencies and trade specs all need to work together and the apps start fighting each other."
+      },
+      {
+        "question": "What features does an apparel wholesale website need?",
+        "answer": "MOQ and tiered pricing per product, filters for fabric weight (GSM), size ranges and fabric blend, a request-for-quote form with quantities and private-label options, currency switching, and clear pages on quality control and incoterms like FOB and CIF."
+      }
+    ],
+    "secondaryKeywords": [
+      "retail and wholesale website",
+      "wholesale pricing tiers ecommerce",
+      "moq ecommerce",
+      "apparel wholesale website",
+      "request for quote ecommerce"
+    ]
+  },
+  {
     "slug": "cheap-website-in-sialkot",
     "title": "The 15,000 rupee website: what you're actually buying in Sialkot",
     "description": "Cheap website development in Sialkot looks like a bargain. Here's what's usually inside a 10,000 to 20,000 rupee website, and when it's genuinely fine to buy one.",

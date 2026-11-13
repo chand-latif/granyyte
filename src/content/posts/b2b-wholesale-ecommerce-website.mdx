@@ -1,0 +1,110 @@
+---
+title: "Retail and wholesale on one website: how B2B ecommerce for clothing brands should work"
+description: "A B2B wholesale ecommerce website that also sells retail: MOQ pricing, quote requests, currencies and trade specs, and when Shopify plus an app is enough."
+date: 2026-11-13
+tags: ["Ecommerce", "Wholesale", "Apparel"]
+hub: industry-software
+targetKeyword: "b2b wholesale ecommerce website"
+secondaryKeywords: ["retail and wholesale website", "wholesale pricing tiers ecommerce", "moq ecommerce", "apparel wholesale website", "request for quote ecommerce"]
+relatedService: "/services/web-development"
+relatedServiceLabel: "See our web development service"
+faqs:
+  - question: "What is a B2B wholesale ecommerce website?"
+    answer: "A store built for trade buyers rather than (or as well as) shoppers. It shows minimum order quantities and volume pricing, lets buyers request quotes for big or custom orders, and answers the questions an importer asks before trusting a supplier, like quality control and shipping terms."
+  - question: "Can one website handle both retail and wholesale customers?"
+    answer: "Yes, and it usually should. One catalogue with a retail and wholesale mode means you maintain products once, both audiences find you through the same search traffic, and a shopper who loves the product can become a stockist without moving to a different site."
+  - question: "Should wholesale prices be visible to everyone?"
+    answer: "It depends on your market. Showing tiered pricing openly speeds up small and mid-size trade orders and filters out time-wasters. Hiding it behind an approved trade account protects your distributors' margins. Plenty of brands show volume tiers openly and keep negotiated contract prices for logged-in accounts."
+  - question: "Is Shopify good enough for B2B wholesale?"
+    answer: "For many brands, yes. If your wholesale side is a handful of stockists on simple tiered pricing, Shopify with a wholesale app is quick and cheap to run. Custom starts to make sense when pricing rules, quote workflows, multiple currencies and trade specs all need to work together and the apps start fighting each other."
+  - question: "What features does an apparel wholesale website need?"
+    answer: "MOQ and tiered pricing per product, filters for fabric weight (GSM), size ranges and fabric blend, a request-for-quote form with quantities and private-label options, currency switching, and clear pages on quality control and incoterms like FOB and CIF."
+---
+
+Picture a clothing brand that sells hoodies to two very different people.
+
+The first is a shopper in Leeds who wants one hoodie, in black, by Friday. The second is a buyer for a chain of gyms in Dubai who wants 600 hoodies with their logo on the chest, and needs to know the fabric weight, the MOQ, the price at 600 versus 1,200, and whether you ship CIF Jebel Ali.
+
+Most brands build a website for the first person and send the second one a PDF.
+
+This post is about building a **B2B wholesale ecommerce website** that serves both, properly, from one catalogue. We built a concept store called [Meridian](/work/meridian-retail-wholesale-store) to work the idea through end to end, so the examples below come from a real build you can click through, not a whiteboard.
+
+## Why two half-sites is the usual (bad) answer
+
+The typical setup goes like this. A retail shop on a hosted platform, which works fine. Then for trade buyers: a "Wholesale enquiries" link that opens an email, a catalogue PDF last updated two seasons ago, and a sales rep who replies when the timezone allows.
+
+That setup quietly costs you in three places.
+
+**Buyers leave.** An importer comparing five suppliers will message all five. The one who can see MOQ and volume pricing on the product page tonight gets the order. The one who replies "please share your requirement" on Tuesday doesn't.
+
+**You maintain everything twice.** New colourway? Update the shop, then the PDF, then the price list, then remember which version you sent to whom.
+
+**Search traffic gets split.** Your best product pages rank for retail searches, but the wholesale buyer who lands on them sees a "Buy one" button and nothing about volume. You paid for the click and gave them the wrong shop.
+
+## One catalogue, two modes
+
+The fix sounds simple: one set of products, two ways to buy them. In Meridian it's a switch in the header labelled Retail and Wholesale. Flip it, and every price on the site changes. Retail shows a piece price and a normal cart. Wholesale shows the MOQ and a volume pricing table on every product, with three quantity bands that get cheaper as the order grows.
+
+The shopper never sees trade complexity unless they go looking for it. The buyer never has to email to learn the basics. Same products, same URLs, same search rankings working for both.
+
+It's one of those features that looks obvious once it exists. It's also surprisingly rare.
+
+## What a B2B wholesale ecommerce website actually needs
+
+Here's the checklist we'd hold any wholesale build to, ours included.
+
+### MOQ and tiered pricing on the product page
+
+Not in a PDF. Not "on request". A trade buyer wants to see the minimum and the price breaks before they bother you. If your pricing is genuinely confidential, show the MOQ and the tiers as percentages, and put exact figures behind a trade login.
+
+### A quote request that collects the right details
+
+"Contact us" forms get you messages that say "price?". A proper request-for-quotation form asks for estimated quantity, the products, and whether the buyer needs private label or custom branding. You get a quotable request the first time, instead of a four-email interrogation.
+
+### Specs trade buyers filter by
+
+Shoppers filter by colour and size. Buyers filter by **fabric weight (GSM)**, fabric blend and size range, because that's what their own customers will ask them. If your product cards say "super soft and comfy" but not "450 GSM, cotton/polyester fleece", the buyer has to ask, and asking is friction.
+
+### Currencies that match where buyers are
+
+A buyer in Dubai thinks in AED. A buyer in Manchester thinks in GBP. Meridian switches between six currencies, including PKR for local buyers. It's a small thing that makes your prices feel like they were meant for the person reading them.
+
+### Answers to due-diligence questions
+
+Before an importer trusts a new supplier, they want to know about quality control, lead times, and shipping terms. A capabilities page covering production steps, a QC standard (Meridian's wholesale page mentions AQL 2.5 inspection), and incoterms like FOB and CIF does the job a sales call used to do. If incoterms are new to you, the [ICC's official guide](https://iccwbo.org/business-solutions/incoterms-rules/) is the source everyone else is paraphrasing.
+
+### Product data Google can read
+
+Wholesale or not, every product page should carry proper structured data so search engines understand what it is and what it costs. Google documents exactly what it wants in its [product structured data guide](https://developers.google.com/search/docs/appearance/structured-data/product). Most cheap stores skip this entirely, which is great news if yours doesn't.
+
+## Retail checkout vs quote request: you need both
+
+There's a debate about whether wholesale buyers should check out directly or request a quote. The honest answer is "yes".
+
+Small, standard trade orders (60 tees, stock colours, no branding) should be buyable straight from the cart at volume prices. Nobody wants a negotiation over 60 tees.
+
+Large or custom orders (private label, special fabrics, mixed containers) need a quote, because price depends on things a cart can't know. The site's job is to make both paths obvious from the same product page.
+
+## When Shopify plus an app is enough
+
+We build custom, so here's the part where we argue against our own invoice.
+
+If your wholesale side is a handful of stockists, simple tiered discounts, one currency, and you're happy approving trade accounts by hand, a hosted platform with a good wholesale app will do the job. It's quick to launch and cheap to run, and there's no shame in it.
+
+Custom starts paying off when several of these are true at once:
+
+- Pricing rules get complicated (per-customer, per-volume, per-currency).
+- Quote requests need to flow into a real process, not an inbox.
+- Trade specs and filters matter as much as photos.
+- Apps start conflicting, slowing the store down, and each charging monthly.
+- You want both audiences on one fast site that ranks, rather than a shop and a bolt-on.
+
+## The short version
+
+A B2B wholesale ecommerce website isn't a retail shop with a "wholesale enquiries" link. It's one catalogue that understands two kinds of buyer: piece prices and a cart for one, MOQs, volume tiers, quotes and specs for the other. Build it once, and every product page works twice as hard.
+
+You can click through the whole idea on the [Meridian concept store](/work/meridian-retail-wholesale-store). Flip it to wholesale and watch the prices move.
+
+---
+
+*Selling retail and wholesale from two places right now? [Tell us how your orders come in](/contact) and we'll tell you whether one site would help, or whether your current setup just needs a better wholesale app. See our [web development service](/services/web-development) for how we build.*

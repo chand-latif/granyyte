@@ -12,4 +12,5 @@ Only facts from `src/content/projects.ts` and `src/config/site.ts`. Chand: add w
 - **Zwipe** (UAE, iOS + Android). Swipe-style car marketplace with real-time chat, turning multi-day email back-and-forth into same-session conversations.
 - **THAFATH** (Android). Halal, marriage-focused matchmaking for the Amazigh (Algerian Berber) community.
 - **Sacred Diary** (iOS + Android). Spiritual journal with voice transcription, lunar phase tracking and private sharing.
+- **Meridian** (CONCEPT build, not a client; web, Next.js + React + Tailwind; live demo retail-wholesale-site.vercel.app). Apparel and textile store with a header Retail/Wholesale switch that reprices the whole catalogue, MOQ 12 and three volume price bands, six currencies (USD, EUR, GBP, AED, AUD, PKR), GSM/size/price filters, RFQ form with private-label option, wholesale page (private label, AQL 2.5, FOB/CIF), capabilities and sustainability pages, cart/wishlist/orders UI, three themes. Front-end with sample data: never claim users, sales or a client.
 - **Founder**: Chand Latif, senior software engineer, official FlutterFlow certification, building apps since 2021, based in Sialkot.

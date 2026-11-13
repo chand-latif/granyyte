@@ -9,7 +9,8 @@ Quality bar: every post needs a real story from `references/stories.md`, an hone
 | 1 | How surveyor admin software scales with job volume | how does surveyor admin software scale with job volume | industry-software | /surveyor-management-software | intl ✅ drafted |
 | 1 | How to choose a Flutter development company in Pakistan | best flutter development companies in pakistan | offshore-hiring | /mobile-app-development-pakistan | pk+intl ✅ drafted |
 | 1 | The 15,000 rupee website: what you're actually buying | cheap website development in sialkot | sialkot-business | /web-design-sialkot | local ✅ drafted |
-| 2 | What a German buyer checks on your export website in 10 seconds | export company website design | sialkot-business | /web-development-sialkot | local |
+| 2 | Website for a Sialkot apparel and sportswear exporter: what buyers check first | apparel export website sialkot | sialkot-business | /web-development-sialkot | local ✅ drafted (Meridian) |
+| 2 | Retail and wholesale on one website (B2B ecommerce for clothing brands) | b2b wholesale ecommerce website | industry-software | /services/web-development | intl ✅ drafted (Meridian) |
 | 2 | How to scope an MVP in four weeks without building version one of everything | mvp scope | mvp-startups | /services/mobile-app-development | intl |
 | 2 | Hiring offshore developers: the 6 questions that save you a rebuild | hire offshore developers | offshore-hiring | /mobile-app-development-pakistan | intl |
 | 2 | Inventory software for a Sialkot godown: what it needs to get right | inventory management system sialkot | sialkot-business | /software-development-sialkot | local |
