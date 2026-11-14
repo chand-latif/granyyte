@@ -167,7 +167,7 @@ export function Navbar() {
           <NavLogo compact={scrolled} />
 
           {/* Desktop links. At rest: a glass capsule with a lime light running
-              round its border and numbered links. On hover: a spotlight follows
+              round its border. On hover: a spotlight follows
               the cursor, a glowing pill glides under the link, and a lime hint
               drops down saying where the click goes. */}
           <div className="relative hidden md:block">
@@ -197,7 +197,7 @@ export function Navbar() {
               >
                 <span className="absolute inset-0 bg-[radial-gradient(110px_circle_at_var(--mx)_var(--my),rgb(200_243_29/0.22),transparent_70%)]" />
               </span>
-              {links.map((link, i) => {
+              {links.map((link) => {
                 const active = isActive(link.href, pathname);
                 return (
                   <li key={link.href}>
@@ -207,7 +207,7 @@ export function Navbar() {
                       onFocus={() => setHovered(link.href)}
                       onBlur={() => setHovered(null)}
                       aria-current={active ? "page" : undefined}
-                      className={`group/link relative z-10 flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-[13px] uppercase tracking-wider outline-none transition-colors duration-300 ${
+                      className={`group/link relative z-10 flex items-center rounded-full px-4 py-1.5 font-mono text-[13px] uppercase tracking-wider outline-none transition-colors duration-300 ${
                         active
                           ? "font-semibold text-ink"
                           : "text-muted hover:text-lime focus-visible:text-lime"
@@ -229,14 +229,6 @@ export function Navbar() {
                           aria-hidden
                         />
                       )}
-                      <span
-                        className={`hidden text-[10px] transition-colors duration-300 lg:inline ${
-                          active ? "text-ink/55" : "text-lime/60 group-hover/link:text-lime"
-                        }`}
-                        aria-hidden
-                      >
-                        0{i + 1}
-                      </span>
                       <ScrambleText text={link.label} />
 
                       {/* Drop-down hint */}
