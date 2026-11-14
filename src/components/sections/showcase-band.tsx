@@ -23,7 +23,7 @@ export function ShowcaseBand({
   flip?: boolean;
 }) {
   return (
-    <section className="border-y border-edge bg-surface/60">
+    <section className="overflow-x-clip border-y border-edge bg-surface/60">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-24 md:px-8 md:py-32 lg:grid-cols-2 lg:gap-16">
         <Reveal className={flip ? "lg:order-2" : ""}>
           <p className="mb-4 font-mono text-sm text-lime">

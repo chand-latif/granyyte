@@ -7,7 +7,6 @@ import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
 import { JsonLd } from "@/components/ui/json-ld";
 import { CtaBand } from "@/components/sections/cta-band";
-import { ShowcaseBand } from "@/components/sections/showcase-band";
 import { SystemBlueprint } from "@/components/fx/showcase";
 
 export const metadata: Metadata = {
@@ -53,6 +52,11 @@ export default function ServicesPage() {
         label="Services"
         title="End-to-end for the"
         accent="whole journey."
+        aside={
+          <div className="ml-auto w-full max-w-[440px]">
+            <SystemBlueprint />
+          </div>
+        }
         description="Design, development, deployment, and beyond. Pick a discipline, or bring us an idea and we'll tell you exactly what it needs."
         specs={[
           { label: "Disciplines", value: "Mobile · Web · Software" },
@@ -94,15 +98,6 @@ export default function ServicesPage() {
         })}
       </section>
 
-      <ShowcaseBand
-        label="How it fits together"
-        title="Every layer,"
-        accent="wired by one team."
-        description="An app is rarely just an app. There's an API behind it, a database under that, and usually payments, notifications or an AI model on the side. We build all of it, and we hand all of it over."
-        flip
-      >
-        <SystemBlueprint />
-      </ShowcaseBand>
       <CtaBand />
     </>
   );

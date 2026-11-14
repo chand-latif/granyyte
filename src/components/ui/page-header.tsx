@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Reveal } from "./reveal";
 import { AnimatedText } from "@/components/fx/animated-text";
 import { ParticleField } from "@/components/fx/particle-field";
@@ -13,6 +14,11 @@ type PageHeaderProps = {
   description?: string;
   /** Technical meta row rendered at the bottom of the header */
   specs?: HeaderSpec[];
+  /**
+   * Card shown to the right of the title, like the home hero. Desktop only
+   * (lg+): below that there is no second column for it to fill.
+   */
+  aside?: ReactNode;
 };
 
 const defaultSpecs: HeaderSpec[] = [
@@ -27,6 +33,7 @@ export function PageHeader({
   accent,
   description,
   specs = defaultSpecs,
+  aside,
 }: PageHeaderProps) {
   return (
     <section className="relative overflow-hidden border-b border-edge bg-dot-grid">
@@ -37,41 +44,62 @@ export function PageHeader({
         className="absolute -left-24 top-6 size-[340px] rounded-full bg-lime/[0.07] blur-[120px] animate-orb-a"
         aria-hidden
       />
-      {/* Giant ghost watermark of the section label */}
-      <span
-        className="pointer-events-none absolute -right-4 bottom-6 hidden select-none font-display text-[9rem] font-bold uppercase leading-none text-stroke opacity-25 lg:block xl:text-[11rem]"
-        aria-hidden
-      >
-        {label}
-      </span>
+      {/* Giant ghost watermark of the section label (skipped when a card sits there) */}
+      {!aside && (
+        <span
+          className="pointer-events-none absolute -right-4 bottom-6 hidden select-none font-display text-[9rem] font-bold uppercase leading-none text-stroke opacity-25 lg:block xl:text-[11rem]"
+          aria-hidden
+        >
+          {label}
+        </span>
+      )}
 
       <div className="relative mx-auto max-w-6xl px-5 pb-12 pt-32 md:px-8 md:pb-14 md:pt-40">
-        <Reveal>
-          <p className="mb-5 font-mono text-sm text-lime">
-            <span aria-hidden>// </span>
-            {label}
-          </p>
-        </Reveal>
+        <div
+          className={
+            aside
+              ? "lg:grid lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-center lg:gap-12"
+              : undefined
+          }
+        >
+          <div>
+            <Reveal>
+              <p className="mb-5 font-mono text-sm text-lime">
+                <span aria-hidden>// </span>
+                {label}
+              </p>
+            </Reveal>
 
-        <h1 className="max-w-4xl font-display text-4xl font-bold leading-[1.02] tracking-tight text-fg sm:text-5xl md:text-6xl lg:text-7xl">
-          <AnimatedText text={title} delay={0.1} trigger="mount" />
-          {accent && (
-            <>
-              {" "}
-              <span className="font-serif italic tracking-normal text-lime">
-                <AnimatedText text={accent} delay={0.3} trigger="mount" />
-              </span>
-            </>
+            <h1
+              className={`max-w-4xl font-display text-4xl font-bold leading-[1.02] tracking-tight text-fg sm:text-5xl md:text-6xl ${
+                aside ? "lg:text-6xl" : "lg:text-7xl"
+              }`}
+            >
+              <AnimatedText text={title} delay={0.1} trigger="mount" />
+              {accent && (
+                <>
+                  {" "}
+                  <span className="font-serif italic tracking-normal text-lime">
+                    <AnimatedText text={accent} delay={0.3} trigger="mount" />
+                  </span>
+                </>
+              )}
+            </h1>
+
+            {description && (
+              <Reveal delay={0.4}>
+                <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
+                  {description}
+                </p>
+              </Reveal>
+            )}
+          </div>
+          {aside && (
+            <div className="hidden lg:block">
+              <Reveal delay={0.35}>{aside}</Reveal>
+            </div>
           )}
-        </h1>
-
-        {description && (
-          <Reveal delay={0.4}>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
-              {description}
-            </p>
-          </Reveal>
-        )}
+        </div>
 
         {/* Compact meta line */}
         <Reveal delay={0.5}>
@@ -81,7 +109,9 @@ export function PageHeader({
                 <span className="text-lime" aria-hidden>
                   ◇
                 </span>
-                <span className="uppercase tracking-widest text-faint">{spec.label}</span>
+                <span className="uppercase tracking-widest text-faint">
+                  {spec.label}
+                </span>
                 <span className="text-fg">{spec.value}</span>
               </div>
             ))}

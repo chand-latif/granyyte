@@ -3,7 +3,6 @@ import { projects } from "@/content/projects";
 import { PageHeader } from "@/components/ui/page-header";
 import { WorkGrid } from "@/components/sections/work-grid";
 import { CtaBand } from "@/components/sections/cta-band";
-import { ShowcaseBand } from "@/components/sections/showcase-band";
 import { DeployConsole } from "@/components/fx/showcase";
 
 export const metadata: Metadata = {
@@ -20,6 +19,11 @@ export default function WorkPage() {
         label="Work"
         title="Shipped products,"
         accent="real outcomes."
+        aside={
+          <div className="ml-auto w-full max-w-[440px]">
+            <DeployConsole />
+          </div>
+        }
         description="Every project here started as an idea in someone's head. Here's how we turned them into products people use every day."
         specs={[
           { label: "Projects", value: "25 shipped" },
@@ -30,14 +34,6 @@ export default function WorkPage() {
       <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
         <WorkGrid projects={[...projects]} />
       </section>
-      <ShowcaseBand
-        label="How a build ships"
-        title="Four kinds of build,"
-        accent="one way of shipping."
-        description="Mobile, web, AI and backend work all go out the same way: a written scope, a demo every week that you can tap through, then launch. Most are live in 2-4 weeks."
-      >
-        <DeployConsole />
-      </ShowcaseBand>
       <CtaBand />
     </>
   );

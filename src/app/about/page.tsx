@@ -6,7 +6,6 @@ import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
 import { CtaBand } from "@/components/sections/cta-band";
 import { Stats } from "@/components/sections/stats";
-import { ShowcaseBand } from "@/components/sections/showcase-band";
 import { StackOrbit } from "@/components/fx/showcase";
 import { JsonLd } from "@/components/ui/json-ld";
 
@@ -64,6 +63,11 @@ export default function AboutPage() {
         label="About"
         title="The agency that treats your product like"
         accent="its own."
+        aside={
+          <div className="ml-auto w-full max-w-[390px]">
+            <StackOrbit />
+          </div>
+        }
         description="We started Granyyte because too many good ideas die between agencies that overpromise and freelancers who disappear. We're the third option: senior execution, real reliability, and founder-level care on every build."
         specs={[
           { label: "Building since", value: "2021" },
@@ -179,16 +183,6 @@ export default function AboutPage() {
       </section>
 
       <Stats />
-
-      <ShowcaseBand
-        label="What we work with"
-        title="A small team with"
-        accent="a wide orbit."
-        description="Granyyte is deliberately lean, which means the people you talk to are the people who know every tool on this chart. No handoffs to a specialist you'll never meet."
-        flip
-      >
-        <StackOrbit />
-      </ShowcaseBand>
 
       {/* Values */}
       <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
