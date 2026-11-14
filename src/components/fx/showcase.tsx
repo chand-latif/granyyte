@@ -27,7 +27,7 @@ function subscribeLite(cb: () => void) {
   return () => mql.removeEventListener("change", cb);
 }
 
-function useLite() {
+export function useLite() {
   const reduce = useReducedMotion();
   const coarse = useSyncExternalStore(
     subscribeLite,
