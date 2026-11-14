@@ -3,19 +3,23 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { motion, useAnimate, useReducedMotion } from "motion/react";
+import { motion, stagger, useAnimate, useReducedMotion } from "motion/react";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { ScrambleText } from "@/components/fx/scramble-text";
 import { Magnetic } from "@/components/fx/magnetic";
 import { LOGO_PATH, LOGO_VIEWBOX } from "@/components/ui/logo";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
-  { href: "/blog", label: "Blog" },
+  { href: "/", label: "Home", hint: "Back to the start" },
+  { href: "/services", label: "Services", hint: "Apps, web and custom software" },
+  { href: "/work", label: "Work", hint: "Live apps you can download" },
+  { href: "/about", label: "About", hint: "Who builds your product" },
+  { href: "/blog", label: "Blog", hint: "Straight-talking guides" },
 ];
+
+/** A lime light that runs round a pill's border. Sits in an overflow-hidden layer. */
+const BEAM =
+  "absolute left-1/2 top-1/2 aspect-square w-[115%] -translate-x-1/2 -translate-y-1/2 bg-[conic-gradient(from_0deg,transparent_0deg,transparent_285deg,var(--color-lime)_360deg)] motion-reduce:animate-none";
 
 const isActive = (href: string, pathname: string) =>
   href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -30,9 +34,13 @@ const FIRST_VISIT =
 const EASE = [0.22, 1, 0.36, 1] as const;
 const PILL_SPRING = { type: "spring", stiffness: 380, damping: 32, mass: 0.6 } as const;
 
-/** The G draws itself in on load, and redraws (with a glow) on hover. */
+/**
+ * The G draws itself in on load. On hover it spins a full turn while redrawing,
+ * a dashed orbit with a satellite dot appears round it, and the wordmark does a
+ * lime wave, letter by letter.
+ */
 function NavLogo({ compact }: { compact: boolean }) {
-  const [scope, animate] = useAnimate<HTMLSpanElement>();
+  const [scope, animate] = useAnimate<HTMLAnchorElement>();
   const reduce = useReducedMotion();
 
   useEffect(() => {
@@ -44,30 +52,44 @@ function NavLogo({ compact }: { compact: boolean }) {
     );
   }, [animate, reduce]);
 
-  const redraw = () => {
+  const play = () => {
     if (reduce) return;
-    animate("path", { pathLength: [0.15, 1] }, { duration: 0.7, ease: EASE });
+    animate("path", { pathLength: [0, 1] }, { duration: 0.9, ease: EASE });
+    animate("svg", { rotate: [0, -360] }, { duration: 0.9, ease: EASE });
+    animate(
+      ".ltr",
+      { y: [0, -7, 0], color: ["#fafaf9", "#c8f31d", "#fafaf9"] },
+      { duration: 0.45, delay: stagger(0.035) }
+    );
   };
 
   return (
     <Link
+      ref={scope}
       href="/"
-      onMouseEnter={redraw}
-      onFocus={redraw}
-      className="group flex items-center gap-2 font-display text-xl font-bold tracking-tight text-fg md:gap-2.5 md:text-2xl"
+      onMouseEnter={play}
+      onFocus={play}
+      className="group flex items-center gap-2.5 font-display text-xl font-bold tracking-tight text-fg md:gap-3 md:text-2xl"
       aria-label="Granyyte home"
     >
-      <span ref={scope} className="relative inline-flex">
+      <span className="relative inline-flex">
         {/* Glow that blooms behind the mark on hover */}
         <span
-          className="absolute inset-0 scale-75 rounded-full bg-lime/40 opacity-0 blur-xl transition-all duration-500 group-hover:scale-110 group-hover:opacity-100"
+          className="absolute inset-0 scale-75 rounded-full bg-lime/40 opacity-0 blur-xl transition-all duration-500 group-hover:scale-125 group-hover:opacity-100"
           aria-hidden
         />
+        {/* Dashed orbit with a satellite dot, desktop hover only */}
+        <span
+          className="absolute -inset-1.5 hidden rounded-full border border-dashed border-lime/50 opacity-0 transition-opacity duration-300 group-hover:animate-[spin_3s_linear_infinite] group-hover:opacity-100 motion-reduce:animate-none md:block"
+          aria-hidden
+        >
+          <span className="absolute -top-[3px] left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-lime shadow-[0_0_8px_var(--color-lime)]" />
+        </span>
         <svg
           viewBox={LOGO_VIEWBOX}
           fill="none"
           aria-hidden
-          className={`relative size-8 text-lime transition-all duration-500 ease-out group-hover:-rotate-12 ${
+          className={`relative size-8 text-lime transition-[width,height] duration-500 ease-out ${
             compact ? "md:size-9" : "md:size-11"
           }`}
         >
@@ -80,9 +102,13 @@ function NavLogo({ compact }: { compact: boolean }) {
           />
         </svg>
       </span>
-      <span>
-        Granyyte
-        <span className="inline-block text-lime transition-transform duration-300 ease-[cubic-bezier(.34,1.56,.64,1)] group-hover:-translate-y-1.5 group-hover:scale-125">
+      <span aria-hidden>
+        {"Granyyte".split("").map((ch, i) => (
+          <span key={i} className="ltr inline-block">
+            {ch}
+          </span>
+        ))}
+        <span className="inline-block text-lime transition-transform duration-300 ease-[cubic-bezier(.34,1.56,.64,1)] group-hover:-translate-y-1.5 group-hover:scale-150">
           .
         </span>
       </span>
@@ -134,74 +160,131 @@ export function Navbar() {
         <nav
           className={`mx-auto flex h-16 items-center justify-between px-5 transition-all duration-500 ease-out md:border ${
             scrolled
-              ? "md:mt-3 md:h-14 md:max-w-5xl md:rounded-full md:border-edge-strong md:bg-page/70 md:pl-6 md:pr-2 md:shadow-[0_10px_40px_-14px_rgb(0_0_0/0.9),0_0_0_1px_rgb(200_243_29/0.04)] md:backdrop-blur-xl"
+              ? "md:mt-3 md:h-14 md:max-w-5xl md:rounded-full md:border-edge-strong md:bg-page/70 md:pl-6 md:pr-1.5 md:shadow-[0_10px_40px_-14px_rgb(0_0_0/0.9),0_0_0_1px_rgb(200_243_29/0.04)] md:backdrop-blur-xl"
               : "md:h-18 md:max-w-6xl md:border-transparent md:px-8"
           }`}
         >
           <NavLogo compact={scrolled} />
 
-          {/* Desktop links: sliding lime pill on the active page, a soft
-              highlight that glides under whichever link is hovered. */}
-          <ul
-            onMouseLeave={() => setHovered(null)}
-            className={`hidden items-center gap-1 rounded-full border p-1 transition-colors duration-500 md:flex ${
-              scrolled ? "border-transparent bg-transparent" : "border-edge bg-surface/50 backdrop-blur-md"
-            }`}
-          >
-            {links.map((link) => {
-              const active = isActive(link.href, pathname);
-              return (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    onMouseEnter={() => setHovered(link.href)}
-                    onFocus={() => setHovered(link.href)}
-                    aria-current={active ? "page" : undefined}
-                    className={`relative z-10 block rounded-full px-4 py-1.5 font-mono text-[13px] uppercase tracking-wider transition-colors duration-300 ${
-                      active ? "font-semibold text-ink" : "text-muted hover:text-lime"
-                    }`}
-                  >
-                    {active && (
-                      <motion.span
-                        layoutId="nav-active"
-                        transition={PILL_SPRING}
-                        className="absolute inset-0 -z-10 rounded-full bg-lime shadow-[0_0_22px_-6px_var(--color-lime)]"
-                        aria-hidden
-                      />
-                    )}
-                    {hovered === link.href && !active && (
-                      <motion.span
-                        layoutId="nav-hover"
-                        transition={PILL_SPRING}
-                        className="absolute inset-0 -z-10 rounded-full border border-lime/30 bg-lime/10"
-                        aria-hidden
-                      />
-                    )}
-                    <ScrambleText text={link.label} />
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-
-          <div className="hidden md:block">
-            <Magnetic strength={0.25}>
-              <Link
-                href="/contact"
-                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-lime px-5 py-2 text-sm font-medium text-ink shadow-[0_0_20px_-8px_var(--color-lime)] transition-shadow duration-300 hover:shadow-[0_0_30px_-4px_var(--color-lime)]"
+          {/* Desktop links. At rest: a glass capsule with a lime light running
+              round its border and numbered links. On hover: a spotlight follows
+              the cursor, a glowing pill glides under the link, and a lime hint
+              drops down saying where the click goes. */}
+          <div className="relative hidden md:block">
+            <span
+              className={`absolute inset-0 overflow-hidden rounded-full bg-edge-strong transition-opacity duration-500 ${
+                scrolled ? "opacity-0" : "opacity-100"
+              }`}
+              aria-hidden
+            >
+              <span className={`${BEAM} animate-[spin_7s_linear_infinite]`} />
+            </span>
+            <ul
+              onMouseLeave={() => setHovered(null)}
+              onMouseMove={(e) => {
+                const r = e.currentTarget.getBoundingClientRect();
+                e.currentTarget.style.setProperty("--mx", `${e.clientX - r.left}px`);
+                e.currentTarget.style.setProperty("--my", `${e.clientY - r.top}px`);
+              }}
+              className={`group/nav relative m-px flex items-center gap-1 rounded-full p-1 transition-colors duration-500 ${
+                scrolled ? "bg-transparent" : "bg-page/85 backdrop-blur-md"
+              }`}
+            >
+              {/* Cursor spotlight */}
+              <span
+                className="pointer-events-none absolute inset-0 overflow-hidden rounded-full opacity-0 transition-opacity duration-300 group-hover/nav:opacity-100"
+                aria-hidden
               >
-                {/* Sheen that sweeps across on hover */}
-                <span
-                  className="pointer-events-none absolute inset-y-0 -left-1/2 w-1/3 -skew-x-12 bg-white/45 blur-[2px] transition-transform duration-700 ease-out group-hover:translate-x-[480%]"
-                  aria-hidden
-                />
-                <span className="relative">Start a project</span>
-                {/* Arrow shoots out right, a fresh one slides in from the left */}
-                <span className="relative grid size-4 overflow-hidden" aria-hidden>
-                  <ArrowRight className="col-start-1 row-start-1 size-4 transition-transform duration-300 ease-out group-hover:translate-x-5" />
-                  <ArrowRight className="col-start-1 row-start-1 size-4 -translate-x-5 transition-transform duration-300 ease-out group-hover:translate-x-0" />
+                <span className="absolute inset-0 bg-[radial-gradient(110px_circle_at_var(--mx)_var(--my),rgb(200_243_29/0.22),transparent_70%)]" />
+              </span>
+              {links.map((link, i) => {
+                const active = isActive(link.href, pathname);
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      onMouseEnter={() => setHovered(link.href)}
+                      onFocus={() => setHovered(link.href)}
+                      onBlur={() => setHovered(null)}
+                      aria-current={active ? "page" : undefined}
+                      className={`group/link relative z-10 flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-[13px] uppercase tracking-wider outline-none transition-colors duration-300 ${
+                        active
+                          ? "font-semibold text-ink"
+                          : "text-muted hover:text-lime focus-visible:text-lime"
+                      }`}
+                    >
+                      {active && (
+                        <motion.span
+                          layoutId="nav-active"
+                          transition={PILL_SPRING}
+                          className="absolute inset-0 -z-10 rounded-full bg-lime shadow-[0_0_24px_-4px_var(--color-lime)]"
+                          aria-hidden
+                        />
+                      )}
+                      {hovered === link.href && !active && (
+                        <motion.span
+                          layoutId="nav-hover"
+                          transition={PILL_SPRING}
+                          className="absolute inset-0 -z-10 rounded-full border border-lime/70 bg-lime/15 shadow-[0_0_22px_-6px_var(--color-lime)]"
+                          aria-hidden
+                        />
+                      )}
+                      <span
+                        className={`hidden text-[10px] transition-colors duration-300 lg:inline ${
+                          active ? "text-ink/55" : "text-lime/60 group-hover/link:text-lime"
+                        }`}
+                        aria-hidden
+                      >
+                        0{i + 1}
+                      </span>
+                      <ScrambleText text={link.label} />
+
+                      {/* Drop-down hint */}
+                      <span
+                        className="pointer-events-none absolute left-1/2 top-full mt-3.5 flex -translate-x-1/2 -translate-y-2 items-center gap-1.5 whitespace-nowrap rounded-full bg-lime px-3.5 py-1.5 font-mono text-[11px] font-medium normal-case tracking-normal text-ink opacity-0 shadow-[0_0_24px_-6px_var(--color-lime)] transition-all duration-300 ease-out group-hover/link:translate-y-0 group-hover/link:opacity-100 group-focus-visible/link:translate-y-0 group-focus-visible/link:opacity-100"
+                        aria-hidden
+                      >
+                        <span className="absolute -top-1 left-1/2 size-2 -translate-x-1/2 rotate-45 bg-lime" />
+                        {link.hint}
+                        <span>→</span>
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+          {/* CTA. At rest: lime pill with a dark arrow chip and a light orbiting
+              its border. On hover: the dark chip floods the whole button, the
+              text turns lime, and the chip flips to lime with a fresh arrow. */}
+          <div className="hidden md:block">
+            <Magnetic strength={0.3}>
+              <span className="group/cta relative inline-flex rounded-full p-1 transition-shadow duration-500 hover:shadow-[0_0_34px_-6px_var(--color-lime)]">
+                <span className="absolute inset-0 overflow-hidden rounded-full bg-lime/25" aria-hidden>
+                  <span className={`${BEAM} animate-[spin_3.5s_linear_infinite]`} />
                 </span>
-              </Link>
+                <span className="absolute inset-[1.5px] rounded-full bg-page" aria-hidden />
+                <Link
+                  href="/contact"
+                  className="relative inline-flex items-center gap-2.5 overflow-hidden rounded-full bg-lime py-1 pl-5 pr-1 text-sm font-medium text-ink outline-none"
+                >
+                  <span
+                    className="absolute right-1 top-1/2 size-7 -translate-y-1/2 rounded-full bg-ink transition-transform duration-500 ease-out group-hover/cta:scale-[16] group-focus-within/cta:scale-[16]"
+                    aria-hidden
+                  />
+                  <span className="relative transition-colors duration-300 group-hover/cta:text-lime group-focus-within/cta:text-lime">
+                    Start a project
+                  </span>
+                  <span
+                    className="relative grid size-7 place-items-center overflow-hidden rounded-full bg-ink text-lime transition-colors duration-300 group-hover/cta:bg-lime group-hover/cta:text-ink group-focus-within/cta:bg-lime group-focus-within/cta:text-ink"
+                    aria-hidden
+                  >
+                    <ArrowRight className="col-start-1 row-start-1 size-4 transition-transform duration-300 ease-out group-hover/cta:translate-x-6" />
+                    <ArrowRight className="col-start-1 row-start-1 size-4 -translate-x-6 transition-transform duration-300 ease-out group-hover/cta:translate-x-0" />
+                  </span>
+                </Link>
+              </span>
             </Magnetic>
           </div>
 
