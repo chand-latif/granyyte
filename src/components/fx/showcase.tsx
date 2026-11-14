@@ -2,7 +2,7 @@
 
 /**
  * The five "engineering" showcase cards, one per main page:
- *   IdeaCompiler    → home hero          StackElements → home (stack section)
+ *   IdeaCompiler    → home hero          StackElements → /blog
  *   SystemBlueprint → /services          DeployConsole → /work
  *   StackOrbit      → /about
  *

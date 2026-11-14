@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/ui/page-header";
 import { PostList, TopicNav, Pagination } from "@/components/sections/post-list";
 import { JsonLd } from "@/components/ui/json-ld";
 import { CtaBand } from "@/components/sections/cta-band";
+import { StackElements } from "@/components/fx/showcase";
 
 export const metadata: Metadata = {
   title: "Blog: Insights on Apps, Web & Custom Software",
@@ -35,6 +36,11 @@ export default function BlogPage() {
         label="Blog"
         title="Notes from the"
         accent="build floor."
+        aside={
+          <div className="ml-auto w-full max-w-[400px]">
+            <StackElements />
+          </div>
+        }
         description="Practical, no-fluff guides on mobile apps, web platforms, and custom software, written by the people who ship them."
         specs={[
           { label: "Topics", value: "Apps · Web · Software" },
