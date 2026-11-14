@@ -494,7 +494,7 @@ export function SystemBlueprint({ className }: { className?: string }) {
           viewBox="0 0 460 340"
           className="w-full"
           role="img"
-          aria-label="How we wire a product together: iOS, Android and web apps on top, an API layer in the middle, then data, AI models and services underneath"
+          aria-label="How we wire a product together: iOS, Android and web apps on top, a backend and API layer in the middle, then data, AI models and services underneath"
         >
           {WIRES.map((d, i) => (
             <g key={d}>
@@ -522,7 +522,7 @@ export function SystemBlueprint({ className }: { className?: string }) {
             y={146}
             w={260}
             h={54}
-            label="API layer"
+            label="Backend / API layer"
             subs={["Node.js · Cloud Functions · REST APIs"]}
             strong
           />
