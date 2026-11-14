@@ -7,7 +7,8 @@ import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
 import { JsonLd } from "@/components/ui/json-ld";
 import { CtaBand } from "@/components/sections/cta-band";
-import { TechMarquee } from "@/components/sections/marquee";
+import { ShowcaseBand } from "@/components/sections/showcase-band";
+import { SystemBlueprint } from "@/components/fx/showcase";
 
 export const metadata: Metadata = {
   title: "Services: Mobile Apps, Web Development & Custom Software",
@@ -93,7 +94,15 @@ export default function ServicesPage() {
         })}
       </section>
 
-      <TechMarquee />
+      <ShowcaseBand
+        label="How it fits together"
+        title="Every layer,"
+        accent="wired by one team."
+        description="An app is rarely just an app. There's an API behind it, a database under that, and usually payments, notifications or an AI model on the side. We build all of it, and we hand all of it over."
+        flip
+      >
+        <SystemBlueprint />
+      </ShowcaseBand>
       <CtaBand />
     </>
   );

@@ -11,7 +11,7 @@ import { AnimatedText } from "@/components/fx/animated-text";
 import { FlipWords } from "@/components/fx/flip-words";
 import { Magnetic } from "@/components/fx/magnetic";
 import { ParticleField } from "@/components/fx/particle-field";
-import { BuildConsole } from "@/components/fx/build-console";
+import { IdeaCompiler } from "@/components/fx/showcase";
 
 function ScrollBadge() {
   return (
@@ -115,11 +115,11 @@ export function Hero() {
           </Reveal>
         </div>
 
-        {/* Right — live deploy console. Desktop only: it exists to fill the
+        {/* Right — idea compiler card. Desktop only: it exists to fill the
             second grid column, which doesn't exist below lg. */}
         <div className="hidden lg:block">
           <Reveal delay={0.35}>
-            <BuildConsole />
+            <IdeaCompiler />
           </Reveal>
         </div>
       </motion.div>
