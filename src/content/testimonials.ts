@@ -7,7 +7,10 @@ export type VideoTestimonial = {
   poster: string;
   /** Who is speaking. No names until the clients have OK'd a caption. */
   who: string;
-  /** What the video is about, from the LinkedIn post it was shared in */
+  /**
+   * One generic line. Chand's call: don't tie a video to a named project or a
+   * stack, since there are only a few of them.
+   */
   about: string;
   /** Small chips under the title */
   tags: string[];
@@ -17,19 +20,19 @@ export const testimonials: VideoTestimonial[] = [
   {
     embedUrl:
       "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7386450061733314560?compact=1",
-    label: "Video testimonial from a regular client",
+    label: "Video testimonial from a regular mobile app client",
     poster: "/testimonials/client-01.webp",
-    who: "One of our regular clients",
-    about: "On what it's like to keep building Flutter and FlutterFlow apps with us.",
-    tags: ["Flutter", "FlutterFlow"],
+    who: "A regular client",
+    about: "On what it's like to keep coming back to us for mobile apps.",
+    tags: ["Mobile app", "iOS + Android"],
   },
   {
     embedUrl:
       "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7396960564914163712?compact=1",
-    label: "Video testimonial from the client behind Poland Portal",
+    label: "Video testimonial from a mobile app client",
     poster: "/testimonials/client-02.webp",
-    who: "The client behind Poland Portal",
-    about: "On building Poland Portal, the app for life in Poland.",
-    tags: ["Poland Portal", "iOS + Android"],
+    who: "A mobile app client",
+    about: "On taking an app from idea to both stores with us.",
+    tags: ["Mobile app", "iOS + Android"],
   },
 ];
