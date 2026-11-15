@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { getActiveTopics, getTopicForPost, type Post } from "@/lib/content/posts";
 import { Reveal } from "@/components/ui/reveal";
-import { Tag } from "@/components/ui/badge";
 
 const dateFormat = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
@@ -16,37 +15,50 @@ export function PostCard({ post, index = 0 }: { post: Post; index?: number }) {
   return (
     // Cap the stagger: an uncapped index * 0.08 puts the twelfth card six
     // seconds out, and every card past that never appears at all.
-    <Reveal delay={Math.min(index, 5) * 0.08}>
-      <article className="group relative rounded-2xl border border-edge bg-surface p-8 transition-all duration-300 hover:border-lime/40 hover:bg-raised">
-        <div className="flex items-center gap-3 font-mono text-xs text-faint">
-          <time dateTime={post.date}>{dateFormat.format(new Date(post.date))}</time>
-          <span aria-hidden>·</span>
-          <span>{post.readingTime}</span>
-        </div>
+    <Reveal delay={Math.min(index % 3, 2) * 0.08} className="h-full">
+      <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-edge bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-lime/50 hover:bg-raised hover:shadow-[0_18px_40px_-24px_var(--color-lime)]">
+        {/* Lime hairline that draws across the top on hover */}
+        <span
+          className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-lime transition-transform duration-500 group-hover:scale-x-100"
+          aria-hidden
+        />
 
-        <h2 className="mt-4 flex items-start justify-between gap-4 font-display text-2xl font-bold text-fg md:text-3xl">
-          {/* Stretched link keeps the whole card clickable without nesting the
-              topic link inside an anchor, which is invalid HTML. */}
-          <Link href={`/blog/${post.slug}`} className="after:absolute after:inset-0">
-            {post.title}
-          </Link>
-          <ArrowUpRight className="mt-1.5 size-6 shrink-0 text-faint transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-lime" />
-        </h2>
-
-        <p className="mt-3 text-base leading-relaxed text-muted">{post.description}</p>
-
-        <div className="mt-6 flex flex-wrap items-center gap-2">
-          {topic && (
+        <div className="flex items-center justify-between gap-3">
+          {topic ? (
             <Link
               href={`/blog/topic/${topic.slug}`}
-              className="relative z-10 inline-flex items-center rounded-full border border-lime/30 bg-lime/5 px-3 py-1 font-mono text-xs text-lime transition-colors hover:border-lime/60 hover:bg-lime/10"
+              className="relative z-10 inline-flex max-w-[70%] items-center truncate rounded-full border border-lime/30 bg-lime/5 px-2.5 py-0.5 font-mono text-[10px] text-lime transition-colors hover:border-lime/60 hover:bg-lime/10"
             >
               {topic.name}
             </Link>
+          ) : (
+            <span />
           )}
-          {post.tags.map((tag) => (
-            <Tag key={tag}>{tag}</Tag>
-          ))}
+          <span className="shrink-0 font-mono text-[10px] uppercase tracking-widest text-faint">
+            {post.readingTime}
+          </span>
+        </div>
+
+        <h2 className="mt-5 font-display text-lg font-bold leading-snug text-fg transition-colors duration-300 group-hover:text-lime md:text-xl">
+          {/* Stretched link keeps the whole card clickable without nesting the
+              topic link inside an anchor, which is invalid HTML. */}
+          <Link href={`/blog/${post.slug}`} className="line-clamp-3 after:absolute after:inset-0">
+            {post.title}
+          </Link>
+        </h2>
+
+        <p className="mb-6 mt-3 line-clamp-3 text-sm leading-relaxed text-muted">{post.description}</p>
+
+        <div className="mt-auto flex items-center justify-between gap-3 border-t border-edge pt-4">
+          <time dateTime={post.date} className="font-mono text-[11px] text-faint">
+            {dateFormat.format(new Date(post.date))}
+          </time>
+          <span
+            className="flex size-8 items-center justify-center rounded-full border border-edge-strong text-faint transition-all duration-300 group-hover:border-lime group-hover:bg-lime group-hover:text-ink"
+            aria-hidden
+          >
+            <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          </span>
         </div>
       </article>
     </Reveal>
@@ -55,7 +67,7 @@ export function PostCard({ post, index = 0 }: { post: Post; index?: number }) {
 
 export function PostList({ posts }: { posts: Post[] }) {
   return (
-    <div className="space-y-6">
+    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {posts.map((post, i) => (
         <PostCard key={post.slug} post={post} index={i} />
       ))}

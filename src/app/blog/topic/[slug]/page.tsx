@@ -92,11 +92,11 @@ export default async function TopicPage({ params }: { params: Promise<Params> })
         ]}
       />
 
-      <section className="mx-auto max-w-4xl px-5 py-20 md:px-8 md:py-28">
+      <section className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
         <TopicNav activeSlug={topic.slug} />
 
         <Reveal>
-          <div className="mb-14 border-l-2 border-lime/40 pl-6">
+          <div className="mb-14 max-w-3xl border-l-2 border-lime/40 pl-6">
             {topic.intro.map((paragraph) => (
               <p key={paragraph} className="mt-4 text-base leading-relaxed text-muted first:mt-0">
                 {paragraph}
