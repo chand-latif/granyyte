@@ -128,43 +128,29 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Link directory */}
-        <div className="mt-12 grid overflow-hidden rounded-2xl border border-edge bg-page/60 grid-cols-2 lg:grid-cols-4">
+        {/* Link directory: open columns with hairline dividers. Pages is the
+            narrowest group, so the long location names get the room. */}
+        <div className="mt-14 grid grid-cols-2 gap-y-10 border-t border-edge pt-10 lg:grid-cols-[0.55fr_1.15fr_1.15fr_1.15fr] lg:gap-y-0">
           {directory.map((group, i) => (
             <nav
               key={group.path}
               aria-label={group.aria}
-              className={`border-edge p-4 sm:p-6 ${i % 2 === 1 ? "border-l" : ""} ${
-                i >= 2 ? "border-t lg:border-t-0" : ""
-              } ${i === 2 ? "lg:border-l" : ""}`}
+              className={`pr-4 lg:px-7 ${i === 0 ? "lg:pl-0" : "lg:border-l lg:border-edge"} ${
+                i === directory.length - 1 ? "lg:pr-0" : ""
+              }`}
             >
-              <h3 className="flex items-center justify-between gap-3 font-mono text-[11px] uppercase tracking-widest text-faint">
-                <span>
-                  <span className="text-lime" aria-hidden>
-                    ~/
-                  </span>
-                  {group.title}
-                </span>
-                <span
-                  className="rounded-full border border-edge-strong px-2 py-0.5 text-[10px] text-faint"
-                  aria-hidden
-                >
-                  {String(group.links.length).padStart(2, "0")}
-                </span>
-              </h3>
-              <ul className="mt-4 space-y-2.5">
+              <h3 className="font-mono text-[11px] uppercase tracking-widest text-lime">{group.title}</h3>
+              <ul className="mt-5 space-y-3">
                 {group.links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="group relative block text-sm text-muted transition-all duration-300 hover:pl-5 hover:text-lime focus-visible:pl-5 focus-visible:text-lime focus-visible:outline-none"
+                      className="group inline-flex items-baseline text-sm text-muted transition-colors duration-300 hover:text-fg focus-visible:text-fg focus-visible:outline-none"
                     >
                       <span
-                        className="absolute left-0 top-0 -translate-x-2 text-lime opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100"
+                        className="mr-0 inline-block h-px w-0 translate-y-[-0.3em] bg-lime transition-all duration-300 group-hover:mr-2 group-hover:w-3 group-focus-visible:mr-2 group-focus-visible:w-3"
                         aria-hidden
-                      >
-                        →
-                      </span>
+                      />
                       {link.label}
                     </Link>
                   </li>
@@ -173,7 +159,6 @@ export function Footer() {
             </nav>
           ))}
         </div>
-
 
         {/* Mega wordmark */}
         <Link href="/" aria-label="Granyyte home" className="mt-14 block overflow-hidden md:mt-20">
