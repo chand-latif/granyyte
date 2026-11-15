@@ -64,7 +64,7 @@ export default function ServicesPage() {
         ]}
       />
 
-      <section className="mx-auto max-w-6xl space-y-6 px-5 py-24 md:px-8 md:py-32">
+      <section className="mx-auto max-w-6xl space-y-6 px-5 py-20 md:px-8 md:py-28">
         {services.map((service, i) => {
           const Icon = service.icon;
           return (

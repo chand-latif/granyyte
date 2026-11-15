@@ -31,7 +31,7 @@ export default function WorkPage() {
           { label: "Regions", value: "Europe · MENA · Asia" },
         ]}
       />
-      <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+      <section className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
         <WorkGrid projects={[...projects]} />
       </section>
       <CtaBand />

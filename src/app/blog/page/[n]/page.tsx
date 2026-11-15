@@ -53,7 +53,7 @@ export default async function BlogPaginatedPage({ params }: { params: Promise<Pa
         ]}
       />
 
-      <section className="mx-auto max-w-4xl px-5 py-24 md:px-8 md:py-32">
+      <section className="mx-auto max-w-4xl px-5 py-20 md:px-8 md:py-28">
         <TopicNav />
         <PostList posts={getPageOfPosts(page)} />
         <Pagination page={page} totalPages={totalPages} />

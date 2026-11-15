@@ -76,7 +76,7 @@ export default function ContactPage() {
         ]}
       />
 
-      <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+      <section className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
           <Reveal>
             <div className="space-y-4">

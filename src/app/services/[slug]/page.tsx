@@ -110,7 +110,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
       <PageHeader label="Services" title={service.title} description={service.intro} />
 
       {/* Deliverables + tech */}
-      <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+      <section className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr] md:gap-16">
           <Reveal>
             <p className="mb-4 font-mono text-sm text-lime">01 / What you get</p>
@@ -204,7 +204,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
 
       {/* FAQ */}
       <section className="border-y border-edge bg-surface/60">
-        <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+        <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
           <Reveal>
             <div className="mb-12 max-w-2xl">
               <p className="mb-4 font-mono text-sm text-lime">02 / FAQ</p>
@@ -228,7 +228,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
 
       {/* Related work */}
       {related.length > 0 && (
-        <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+        <section className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
           <Reveal>
             <div className="mb-12 max-w-2xl">
               <p className="mb-4 font-mono text-sm text-lime">03 / Related work</p>

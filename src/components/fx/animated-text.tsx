@@ -28,19 +28,29 @@ export function AnimatedText({
   const reduce = useReducedMotion();
   const words = text.split(" ");
 
-  const revealProps =
+  // The trigger lives on the outer, visible slot. The inner word starts clipped
+  // out of view (y: 110% inside overflow-hidden), so an observer watching it
+  // would never fire and the heading could stay invisible.
+  const outerProps =
     trigger === "mount"
-      ? { animate: { y: 0 } }
-      : { whileInView: { y: 0 }, viewport: { once } };
+      ? { initial: "hidden" as const, animate: "show" as const }
+      : {
+          initial: "hidden" as const,
+          whileInView: "show" as const,
+          viewport: { once, amount: 0.2 },
+        };
 
   return (
     <span className={className}>
       {words.map((word, i) => (
-        <span key={i} className="inline-block overflow-hidden pb-[0.1em] align-bottom">
+        <motion.span
+          key={i}
+          className="inline-block overflow-hidden pb-[0.1em] align-bottom"
+          {...(reduce ? {} : outerProps)}
+        >
           <motion.span
             className="inline-block will-change-transform"
-            initial={reduce ? false : { y: "110%" }}
-            {...revealProps}
+            variants={{ hidden: { y: "110%" }, show: { y: 0 } }}
             transition={{
               duration: 0.75,
               delay: delay + i * stagger,
@@ -50,7 +60,7 @@ export function AnimatedText({
             {word}
           </motion.span>
           {i < words.length - 1 && <span>&nbsp;</span>}
-        </span>
+        </motion.span>
       ))}
     </span>
   );

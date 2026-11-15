@@ -134,7 +134,7 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
       />
 
       {/* Overview */}
-      <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+      <section className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr] md:gap-16">
           <Reveal>
             <p className="mb-4 font-mono text-sm text-lime">01 / Overview</p>
@@ -177,7 +177,7 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
 
       {/* Why points */}
       <section className="border-y border-edge bg-surface/60">
-        <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+        <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
           <Reveal>
             <div className="mb-12 max-w-2xl">
               <p className="mb-4 font-mono text-sm text-lime">02 / Why Granyyte</p>
@@ -205,7 +205,7 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
       </section>
 
       {/* FAQ */}
-      <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+      <section className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
         <Reveal>
           <div className="mb-12 max-w-2xl">
             <p className="mb-4 font-mono text-sm text-lime">03 / FAQ</p>
@@ -229,7 +229,7 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
       {/* Related work */}
       {related.length > 0 && (
         <section className="border-t border-edge">
-          <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+          <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
             <Reveal>
               <div className="mb-12 max-w-2xl">
                 <p className="mb-4 font-mono text-sm text-lime">04 / Proof of work</p>
@@ -245,7 +245,7 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
 
       {/* Further reading — links the commercial page into the blog. */}
       {relatedPosts.length > 0 && (
-        <section className="mx-auto max-w-6xl px-5 pb-24 md:px-8 md:pb-32">
+        <section className="mx-auto max-w-6xl px-5 pb-20 md:px-8 md:pb-28">
           <Reveal>
             <div className="rounded-2xl border border-edge bg-surface p-8 md:p-10">
               <p className="font-mono text-sm text-lime">

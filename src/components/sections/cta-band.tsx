@@ -14,7 +14,7 @@ export function CtaBand() {
         className="absolute -bottom-24 left-1/2 size-[500px] -translate-x-1/2 rounded-full bg-lime/[0.08] blur-[140px] animate-orb-c"
         aria-hidden
       />
-      <div className="relative mx-auto max-w-6xl px-5 py-28 text-center md:px-8 md:py-44">
+      <div className="relative mx-auto max-w-6xl px-5 py-20 text-center md:px-8 md:py-28">
         <h2 className="mx-auto font-display text-5xl font-bold tracking-tight text-fg md:text-8xl">
           <AnimatedText text="Have an idea?" />
           <br />

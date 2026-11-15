@@ -252,7 +252,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
       )}
 
       {/* More work */}
-      <section className="mx-auto max-w-6xl px-5 pb-24 md:px-8 md:pb-32">
+      <section className="mx-auto max-w-6xl px-5 pb-20 md:px-8 md:pb-28">
         <Reveal>
           <div className="mb-12">
             <p className="mb-4 font-mono text-sm text-lime">More work</p>

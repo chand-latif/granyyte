@@ -77,7 +77,7 @@ export default function AboutPage() {
       />
 
       {/* Founder */}
-      <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+      <section className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
         <div className="grid items-center gap-12 md:grid-cols-[2fr_3fr] md:gap-16">
           <Reveal>
             <div className="group relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl border border-edge bg-surface">
@@ -185,7 +185,7 @@ export default function AboutPage() {
       <Stats />
 
       {/* Values */}
-      <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+      <section className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
         <Reveal>
           <div className="mb-12 max-w-2xl md:mb-16">
             <p className="mb-4 font-mono text-sm text-lime">03 / What we stand for</p>

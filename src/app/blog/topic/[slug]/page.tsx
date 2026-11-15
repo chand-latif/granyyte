@@ -92,7 +92,7 @@ export default async function TopicPage({ params }: { params: Promise<Params> })
         ]}
       />
 
-      <section className="mx-auto max-w-4xl px-5 py-24 md:px-8 md:py-32">
+      <section className="mx-auto max-w-4xl px-5 py-20 md:px-8 md:py-28">
         <TopicNav activeSlug={topic.slug} />
 
         <Reveal>

@@ -7,7 +7,7 @@ import { Magnetic } from "@/components/fx/magnetic";
 
 export function FeaturedWork() {
   return (
-    <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-36">
+    <section className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
       <SectionHeading
         number="02"
         label="Selected Work"
