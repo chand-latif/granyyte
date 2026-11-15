@@ -122,7 +122,7 @@ export default function ContactPage() {
                 <span>
                   <span className="block font-mono text-xs text-faint">Location</span>
                   <span className="mt-0.5 block text-sm font-medium text-fg">
-                    {site.contact.location}, working worldwide
+                    {site.contact.location}
                   </span>
                 </span>
               </div>

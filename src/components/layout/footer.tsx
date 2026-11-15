@@ -1,9 +1,8 @@
 import type { ComponentType } from "react";
 import Link from "next/link";
-import { Mail, MessageCircle, Phone, MapPin } from "lucide-react";
+import { Mail, MessageCircle, Phone } from "lucide-react";
 import { LogoMark } from "@/components/ui/logo";
 import { site } from "@/config/site";
-import { LocalTime } from "@/components/fx/local-time";
 import { BackToTop } from "@/components/layout/back-to-top";
 
 function LinkedInIcon({ className }: { className?: string }) {
@@ -175,26 +174,9 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Status strip */}
-        <div className="mt-6 flex flex-col gap-3 rounded-2xl border border-edge bg-page/60 px-5 py-4 font-mono text-[11px] uppercase tracking-widest text-faint md:flex-row md:items-center md:justify-between">
-          <span className="inline-flex items-center gap-2.5 text-lime">
-            <span className="size-1.5 animate-pulse-dot rounded-full bg-lime" />
-            Currently accepting projects
-          </span>
-          <span className="inline-flex items-center gap-2">
-            <MapPin className="size-3.5 text-lime" />
-            {site.contact.location}
-            <span aria-hidden>·</span>
-            <span className="text-fg">
-              <LocalTime />
-            </span>
-            PKT
-          </span>
-          <span>Working worldwide ↗</span>
-        </div>
 
         {/* Mega wordmark */}
-        <Link href="/" aria-label="Granyyte home" className="mt-12 block overflow-hidden md:mt-16">
+        <Link href="/" aria-label="Granyyte home" className="mt-14 block overflow-hidden md:mt-20">
           <span
             className="block select-none whitespace-nowrap text-center font-display text-[17.5vw] font-bold leading-[0.85] tracking-tight text-stroke transition-colors duration-500 hover:text-lime hover:[-webkit-text-stroke:0px]"
             aria-hidden
