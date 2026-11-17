@@ -427,7 +427,7 @@ const TOP = [
 const BOTTOM = [
   { x: 8, label: "Data", subs: ["Supabase · Firebase", "PostgreSQL"] },
   { x: 160, label: "AI models", subs: ["Claude · GPT", "Gemini · Grok"] },
-  { x: 312, label: "Services", subs: ["RevenueCat · Brevo", "WhatsApp alerts"] },
+  { x: 312, label: "Integrations", subs: ["Automations · Agents", "Any third-party API"] },
 ];
 const WIRES = [
   "M78 86 C78 120, 196 112, 196 146",
@@ -494,7 +494,7 @@ export function SystemBlueprint({ className }: { className?: string }) {
           viewBox="0 0 460 340"
           className="w-full"
           role="img"
-          aria-label="How we wire a product together: iOS, Android and web apps on top, a backend and API layer in the middle, then data, AI models and services underneath"
+          aria-label="How we wire a product together: iOS, Android and web apps on top, a backend and API layer in the middle, then data, AI models, and integrations, automations and custom agents underneath"
         >
           {WIRES.map((d, i) => (
             <g key={d}>
