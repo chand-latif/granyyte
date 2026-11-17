@@ -144,7 +144,7 @@ export function IdeaCompiler({ className }: { className?: string }) {
     >
       <div key={n} className="min-h-[272px] px-5 py-5">
         <p className="font-mono text-[10px] uppercase tracking-widest text-faint">your idea</p>
-        <div className="mt-2 rounded-xl border border-edge-strong bg-page px-3.5 py-3 font-mono text-[13px] text-fg">
+        <div className="mt-2 min-h-[65px] rounded-xl border border-edge-strong bg-page px-3.5 py-3 font-mono text-[13px] text-fg">
           <span className="text-lime">› </span>
           <Typed key={it.idea} text={it.idea} speed={30} still={still} />
         </div>
