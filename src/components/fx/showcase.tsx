@@ -110,7 +110,7 @@ const IDEAS = [
     like: "Bilge AI, 15,000+ users",
   },
   {
-    idea: "job tracking for a field team",
+    idea: "surveyor job tracking and automation for a field team",
     stack: ["Supabase", "PostgreSQL", "Brevo", "WhatsApp alerts"],
     out: "Web platform",
     like: "Space Maintenance ops, UK",
@@ -427,7 +427,7 @@ const TOP = [
 const BOTTOM = [
   { x: 8, label: "Data", subs: ["Supabase · Firebase", "PostgreSQL"] },
   { x: 160, label: "AI models", subs: ["Claude · GPT", "Gemini · Grok"] },
-  { x: 312, label: "Integrations", subs: ["Automations · Agents", "Any third-party API"] },
+  { x: 312, label: "Services", subs: ["Automations", "Custom agents", "3rd-party integrations"] },
 ];
 const WIRES = [
   "M78 86 C78 120, 196 112, 196 146",
@@ -530,7 +530,7 @@ export function SystemBlueprint({ className }: { className?: string }) {
             behind the scenes
           </text>
           {BOTTOM.map((n) => (
-            <BlueprintNode key={n.label} x={n.x} y={260} w={140} h={68} label={n.label} subs={n.subs} />
+            <BlueprintNode key={n.label} x={n.x} y={260} w={140} h={74} label={n.label} subs={n.subs} />
           ))}
         </svg>
       </div>
