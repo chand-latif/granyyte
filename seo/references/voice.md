@@ -8,7 +8,7 @@ A senior engineer who has seen every way software projects go wrong, finds most 
 ## Dial by page type
 | Page | Humour level | Why |
 |---|---|---|
-| Blog posts | **High.** A joke or wry aside every few paragraphs, a funny H2 now and then | People read posts. Readers who laugh stay, and dwell time is a ranking signal |
+| Blog posts | **High, sarcastic, unconventional** (Chand, 2026-11-20). Open with a jab at the reader's real pain, sarcastic H2s, a running gag paid off at the end, one-line punchline paragraphs. Mock the practice, never the reader | People read posts. Readers who laugh stay, and dwell time is a ranking signal |
 | Sialkot / Pakistan landing pages | **Medium.** One sharp line per section at most, mostly in intros and FAQ answers | Buyers skim these. Wit makes us memorable; the answer still comes first |
 | Service pages, home, international landing pages | **Low.** Dry, understated, the occasional bracketed aside | Western buyers are checking whether we're serious |
 | Legal, contact form, errors | None | |

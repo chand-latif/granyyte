@@ -6,6 +6,190 @@ import type { Post } from "@/lib/content/posts";
 
 export const generatedPosts: Post[] = [
   {
+    "slug": "attendance-system-for-factory-pakistan",
+    "title": "Attendance management system in Pakistan: biometric or app?",
+    "description": "An attendance management system in Pakistan has to beat proxy punching, greasy fingerprints and payroll day. Biometric, app or both: what works in a factory.",
+    "date": "2026-11-20",
+    "readingTime": "5 min read",
+    "tags": [
+      "Sialkot",
+      "HR",
+      "Custom Software"
+    ],
+    "hub": "sialkot-business",
+    "targetKeyword": "attendance management system pakistan",
+    "relatedService": "/software-development-sialkot",
+    "relatedServiceLabel": "Custom software development in Sialkot",
+    "faqs": [
+      {
+        "question": "What is the best attendance system for a factory?",
+        "answer": "Usually a biometric or face-recognition device at the gate, connected to software that handles shifts, overtime and payroll. The device stops proxy punching. The software is what turns punches into wages. Most problems come from the software side, not the machine."
+      },
+      {
+        "question": "Does fingerprint attendance work in a factory?",
+        "answer": "It works, with limits. Fingerprint scanners struggle with worn, cut or greasy fingers, which is common in stitching, leather and metal work. Face recognition avoids that and is contactless, so many factories now use face devices or keep fingerprint as a backup."
+      },
+      {
+        "question": "Can workers mark attendance from a mobile app?",
+        "answer": "Yes, and it suits field staff, drivers and supervisors who move between sites. An app can confirm location and take a photo at check-in. For a fixed factory gate with hundreds of workers, a device at the entrance is faster than everyone opening an app."
+      },
+      {
+        "question": "Can the attendance system calculate overtime and payroll?",
+        "answer": "It should. Shift timings, late arrivals, half days, overtime rates and leave balances can all be calculated automatically and exported to payroll. If someone is still adding up overtime by hand from the machine's report, the system is only half done."
+      },
+      {
+        "question": "Can an attendance system work with the biometric machine we already have?",
+        "answer": "Often, yes. Many machines can export punches or connect to software over the network. We check the model first. If it can't share data reliably, it's cheaper to replace the device than to fight it every month."
+      }
+    ],
+    "secondaryKeywords": [
+      "attendance system for factory",
+      "biometric attendance system pakistan",
+      "attendance app for employees",
+      "face attendance system",
+      "attendance and payroll software",
+      "attendance system sialkot"
+    ]
+  },
+  {
+    "slug": "inventory-management-system-sialkot",
+    "title": "Inventory management system in Sialkot: what a godown needs",
+    "description": "What an inventory management system in Sialkot must handle: cartons, production stages and stock reserved for export orders. Plus when Excel is honestly fine.",
+    "date": "2026-11-20",
+    "readingTime": "6 min read",
+    "tags": [
+      "Sialkot",
+      "Inventory",
+      "Custom Software"
+    ],
+    "hub": "sialkot-business",
+    "targetKeyword": "inventory management system sialkot",
+    "relatedService": "/software-development-sialkot",
+    "relatedServiceLabel": "Custom software development in Sialkot",
+    "faqs": [
+      {
+        "question": "Do I need custom inventory software or will a ready-made package work?",
+        "answer": "If you sell finished goods off a shelf, a ready-made package usually works and you should buy one. Custom makes sense when your stock moves through stages (raw material, cutting, stitching, packing), when you track by carton and by piece, or when export orders reserve stock months ahead. Packages tend to break exactly there."
+      },
+      {
+        "question": "Can inventory software work when the internet goes down?",
+        "answer": "Yes, if it's built for it. A mobile app can record stock movements offline and sync when the connection comes back. That matters in a godown where the signal dies behind the third rack."
+      },
+      {
+        "question": "Can my staff use it if they aren't comfortable with computers?",
+        "answer": "They can if the screens are built around what they already do: scan or pick a carton, enter a count, press one button. Big buttons, Urdu labels where they help, and no menus five levels deep. If it needs a training day, it was designed wrong."
+      },
+      {
+        "question": "How long does it take to build an inventory system?",
+        "answer": "A focused first version, covering stock in, stock out, stock levels and a few reports, usually takes 2 to 4 weeks. Production stages, barcode printing and accounting links come after, once the basics are in daily use."
+      },
+      {
+        "question": "Can it send stock alerts on WhatsApp?",
+        "answer": "Yes. Low-stock warnings, daily summaries and order updates can go to WhatsApp and email automatically. We already run WhatsApp and email notifications in a live operations platform for a UK client."
+      }
+    ],
+    "secondaryKeywords": [
+      "inventory software sialkot",
+      "stock management software pakistan",
+      "godown management software",
+      "warehouse software for exporters",
+      "inventory app for manufacturers"
+    ]
+  },
+  {
+    "slug": "school-management-software-sialkot",
+    "title": "School management software in Sialkot, minus the chaos",
+    "description": "School management software in Sialkot: fee vouchers that collect themselves, attendance alerts for parents, and when a ready-made package is enough.",
+    "date": "2026-11-20",
+    "readingTime": "5 min read",
+    "tags": [
+      "Sialkot",
+      "Education",
+      "Custom Software"
+    ],
+    "hub": "sialkot-business",
+    "targetKeyword": "school management software sialkot",
+    "relatedService": "/software-development-sialkot",
+    "relatedServiceLabel": "Custom software development in Sialkot",
+    "faqs": [
+      {
+        "question": "What should school management software include?",
+        "answer": "At minimum: student records, fee vouchers with defaulter tracking, daily attendance, results, and a way to reach parents. Timetables, staff payroll, transport and a parent app are useful additions once the basics are working."
+      },
+      {
+        "question": "Should a school buy ready-made software or get it built?",
+        "answer": "Most single-campus schools should start with a good ready-made system. Custom software makes sense when you run several branches with different fee structures, when your fee and discount rules don't fit any package, or when you want your own branded parent app and full ownership of the data."
+      },
+      {
+        "question": "Can parents pay fees online through the software?",
+        "answer": "Yes. Fee vouchers can carry a QR code or bill reference so parents pay through their banking app or wallet, and the payment is marked against the student automatically, so nobody has to match bank slips by hand."
+      },
+      {
+        "question": "Can the software send attendance and fee alerts on WhatsApp?",
+        "answer": "Yes. Absence alerts, fee reminders and result notifications can go out on WhatsApp, SMS or email automatically. Parents read WhatsApp, so that's usually the channel that actually works."
+      },
+      {
+        "question": "Is student data safe in school management software?",
+        "answer": "It should be. Look for role-based access (a teacher sees their class, not the fee ledger), proper logins, regular backups and a clear answer to where the data is stored. If a vendor can't answer those plainly, keep looking."
+      }
+    ],
+    "secondaryKeywords": [
+      "school management system sialkot",
+      "school software pakistan",
+      "fee management software",
+      "student attendance app",
+      "school erp pakistan",
+      "parent app for school"
+    ]
+  },
+  {
+    "slug": "wordpress-vs-nextjs-for-business-website",
+    "title": "WordPress vs Next.js for business: 31 plugins, 0 visitors",
+    "description": "WordPress vs Next.js for a business website, minus the tribalism: speed, SEO, security and editing compared, plus when WordPress is honestly the right call.",
+    "date": "2026-11-20",
+    "readingTime": "5 min read",
+    "tags": [
+      "Web Design",
+      "WordPress",
+      "Next.js",
+      "Sialkot"
+    ],
+    "hub": "sialkot-business",
+    "targetKeyword": "wordpress vs nextjs for business website",
+    "relatedService": "/web-design-sialkot",
+    "relatedServiceLabel": "Web design company in Sialkot",
+    "faqs": [
+      {
+        "question": "Is Next.js better than WordPress for a business website?",
+        "answer": "For speed, security and custom features, usually yes. For a site where you want to edit every page yourself on a tight budget, WordPress is often the better fit. Neither is better in general. It depends on who maintains the site and what it needs to do."
+      },
+      {
+        "question": "Is Next.js better for SEO than WordPress?",
+        "answer": "Both can rank well. Next.js makes it easier to ship fast pages with clean, crawlable HTML, which helps Core Web Vitals. A well-built, maintained WordPress site can rank too. Most WordPress SEO problems come from slow themes, heavy plugins and nobody maintaining them, not from WordPress itself."
+      },
+      {
+        "question": "Can I update a Next.js website myself?",
+        "answer": "Yes, if it's built with an editing layer, such as a headless CMS or a simple admin for the content you change often. Without one, content changes go through a developer. Ask for this upfront if you plan to post often."
+      },
+      {
+        "question": "Is WordPress safe for a business website?",
+        "answer": "It can be. WordPress core is maintained by a large team. Most hacked WordPress sites get in through outdated plugins, nulled themes and weak admin logins. Keep everything updated, remove what you don't use, and someone has to actually own that job."
+      },
+      {
+        "question": "Can I move my WordPress site to Next.js without losing Google rankings?",
+        "answer": "Yes. Map every old URL to its new address with permanent redirects before launch, carry over titles and descriptions, and resubmit the sitemap. Done properly, rankings carry over and usually improve once the site is faster."
+      }
+    ],
+    "secondaryKeywords": [
+      "next.js vs wordpress",
+      "wordpress or custom website",
+      "is wordpress good for business website",
+      "fast website for business",
+      "website developer sialkot nextjs",
+      "headless wordpress"
+    ]
+  },
+  {
     "slug": "how-to-tell-if-a-text-is-a-scam",
     "title": "How to tell if a text is a scam: 9 signs, and what to do with it",
     "description": "How to tell if a text is a scam: the warning signs in fake delivery, bank and prize messages, and how to report them in the US, UK and Pakistan.",
