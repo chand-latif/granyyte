@@ -1,0 +1,116 @@
+---
+title: "Inventory management system in Sialkot: what a godown needs"
+description: "What an inventory management system in Sialkot must handle: cartons, production stages and stock reserved for export orders. Plus when Excel is honestly fine."
+date: 2026-11-20
+tags: ["Sialkot", "Inventory", "Custom Software"]
+hub: sialkot-business
+targetKeyword: "inventory management system sialkot"
+secondaryKeywords: ["inventory software sialkot", "stock management software pakistan", "godown management software", "warehouse software for exporters", "inventory app for manufacturers"]
+relatedService: "/software-development-sialkot"
+relatedServiceLabel: "Custom software development in Sialkot"
+faqs:
+  - question: "Do I need custom inventory software or will a ready-made package work?"
+    answer: "If you sell finished goods off a shelf, a ready-made package usually works and you should buy one. Custom makes sense when your stock moves through stages (raw material, cutting, stitching, packing), when you track by carton and by piece, or when export orders reserve stock months ahead. Packages tend to break exactly there."
+  - question: "Can inventory software work when the internet goes down?"
+    answer: "Yes, if it's built for it. A mobile app can record stock movements offline and sync when the connection comes back. That matters in a godown where the signal dies behind the third rack."
+  - question: "Can my staff use it if they aren't comfortable with computers?"
+    answer: "They can if the screens are built around what they already do: scan or pick a carton, enter a count, press one button. Big buttons, Urdu labels where they help, and no menus five levels deep. If it needs a training day, it was designed wrong."
+  - question: "How long does it take to build an inventory system?"
+    answer: "A focused first version, covering stock in, stock out, stock levels and a few reports, usually takes 2 to 4 weeks. Production stages, barcode printing and accounting links come after, once the basics are in daily use."
+  - question: "Can it send stock alerts on WhatsApp?"
+    answer: "Yes. Low-stock warnings, daily summaries and order updates can go to WhatsApp and email automatically. We already run WhatsApp and email notifications in a live operations platform for a UK client."
+---
+
+Every godown in Sialkot already has an inventory management system. It's a register, a WhatsApp group, and Bilal's memory.
+
+Two of those go on leave.
+
+The register is in pencil, the WhatsApp group has 214 unread messages and a photo of somebody's nephew, and Bilal is at a wedding in Daska with his phone on silent. Meanwhile a buyer in Germany wants to know if you can ship 3,000 pieces of the navy training top by the 15th. You'll know on Monday. Probably.
+
+So let's talk about what an inventory management system in Sialkot actually needs to do, which bits a ready-made package handles fine, and which bits make ready-made packages cry.
+
+## The register is not a system (it's a diary with numbers)
+
+A system answers questions. A register records that something happened, in somebody's handwriting, at some point, maybe.
+
+Ask your register "how many medium navy tops are packed and not reserved for another order?" and watch it do nothing. That one question is the whole job. If your inventory setup can't answer it in ten seconds, standing in the godown, from a phone, you don't have a system. You have an archive.
+
+Here's the short list of questions a real one answers instantly:
+
+- What do we have, by item, size, colour, and stage?
+- What's already promised to an order, and to whom?
+- What came in this week, and what went out?
+- What's about to run out?
+
+Simple questions. Your current setup answers them with "let me check and call you back".
+
+## What an inventory management system in Sialkot has to get right
+
+Sialkot isn't a supermarket. Stock here doesn't just sit on a shelf until someone buys it. It travels, it changes form, it gets promised to people. That's where the generic stuff falls over.
+
+### Stock that changes shape halfway through
+
+Fabric becomes cut panels. Cut panels become stitched garments. Stitched garments become packed cartons. A leather hide becomes gloves, a ball, or offcuts that someone swears they'll use one day.
+
+Most off-the-shelf inventory software knows two states: in stock, and sold. Your factory has six. If the software can't follow stock through stages, your team keeps a second register for the stages, and now you have two registers that disagree. Congratulations, you've doubled the problem and paid for it.
+
+### Cartons and pieces at the same time
+
+Buyers order in pieces. The godown counts in cartons. Somebody does the conversion in their head, and that somebody is usually right, until the carton size changes for one buyer and nobody tells the head.
+
+A proper system stores both. Twelve pieces per carton for this order, twenty for that one, and it does the arithmetic so Bilal doesn't have to.
+
+### Stock that's here but isn't yours anymore
+
+This is the big one for exporters. Stock reserved for an order is physically in your godown but it is not available. Sell it twice and you've made one buyer very unhappy and possibly lost them.
+
+The system needs "reserved" as a real state, attached to an order, released when the order ships or gets cancelled. Not a sticky note on the carton. (We've seen the sticky note. It fell off.)
+
+### Wholesale and retail out of the same pile
+
+If you sell to a buyer abroad and also through a shop or website at home, the same stock feeds both. When we built [Meridian](/work/meridian-retail-wholesale-store), a concept store for apparel brands, the entire catalogue reprices when you flip between retail and wholesale, with a minimum order of 12 and three volume price bands. That's the shop window. Behind it, the stock count has to be one number, not one number per sales channel.
+
+## The Excel phase (and why it ends badly)
+
+Most businesses graduate from the register to Excel, which is a genuine improvement. Excel can add up. Excel doesn't smudge.
+
+Then the file gets emailed. Then there are two files. Then someone saves `stock_FINAL_final_v3_REAL.xlsx` and goes home, and the next morning three people are working from three versions of the truth. Excel isn't the problem. Excel with more than one person editing it is the problem.
+
+The honest bit: **if you're a small operation with one person managing stock, Excel is fine.** Really. Keep it, learn a couple of formulas, back it up. Don't let anybody sell you software you don't need, including us.
+
+You've outgrown it when more than two people touch the stock, when you're promising stock to orders weeks ahead, or when "let me check the file" has become a 40-minute task.
+
+## Features worth paying for (and a few that aren't)
+
+Worth it:
+
+- **Stock in and out from a phone**, so the count happens where the cartons are, not at a desk later from memory.
+- **Offline mode.** The signal in your godown is weaker than your cousin's excuse for missing the wedding. A mobile app can record movements offline and sync when it reconnects. [Firebase supports this out of the box](https://firebase.google.com/docs/firestore/manage-data/enable-offline), which is one of the reasons we use it.
+- **Low-stock and order alerts on WhatsApp.** Your team already lives there. We run WhatsApp and email notifications in a live [operations platform for a UK surveying firm](/work/surveyor-job-management-system), where contractors get the job link the moment it's ready. Same idea, different cartons.
+- **An audit trail.** Who changed this number, when, and from what. This one feature ends roughly half of all godown arguments.
+
+Not worth it on day one:
+
+- A dashboard with eleven charts nobody will open after the first week.
+- AI demand forecasting, before you have a single year of clean data for it to forecast from.
+- Integration with every accounting package ever made. Pick the one you use.
+
+## Ready-made package or custom?
+
+We wrote a whole [decision guide on custom software vs off-the-shelf](/blog/custom-software-vs-off-the-shelf), but here's the Sialkot version.
+
+**Buy a package** if you sell finished goods, your stock doesn't change form, and you don't reserve stock for export orders. There are perfectly decent ones, they're cheaper upfront, and you'll be running in a week.
+
+**Build custom** if your stock moves through production stages, you count in cartons and pieces, export orders lock stock months ahead, or you've already bought a package and your team quietly went back to the register. That last one is the most common sign. The software didn't fit how you work, so people stopped using it.
+
+One more thing on custom: you should own it. The code, the data, all of it, with no per-user monthly fee that grows every time you hire. That's how we built the UK platform above, and that's how we build everything.
+
+## The day Bilal comes back from the wedding
+
+He walks in, opens the app, and sees what came in while he was gone, what went out, and which order took the last 400 navy tops. Nobody called him. Nobody needed to.
+
+He's mildly offended. He'll get over it.
+
+Stock is only half of it. If your gate register is just as creative, read [our guide to factory attendance systems](/blog/attendance-system-for-factory-pakistan) next.
+
+*Running stock on a register, an Excel file and good intentions? [Tell us how your godown works](/software-development-sialkot) and we'll tell you honestly whether you need custom software or a ready-made package.*
