@@ -3,7 +3,7 @@
 For "near me" queries and the Sialkot map pack, the profile matters more than anything on the site. GSC already shows us at positions 5-13 for "website developer near me", "crm developer near me" and "software maker near me", so the profile needs to back that up.
 
 ## 1. NAP must match the site exactly ✅ done 2026-11-20
-Site now carries the GBP address (Plaza opposite HBL Bank, Khadim Ali Road, Aalam Chowk, Sialkot 51310), phone and 24h hours: `site.contact.address/hours/mapsUrl`, JSON-LD via `src/lib/schema.ts`, visible on /contact and the Sialkot pages. Still useful: the Maps **share link** (swap into `mapsUrl`, add to `sameAs`).
+Site now carries the GBP address (Plaza opposite HBL Bank, Khadim Ali Road, Aalam Chowk, Sialkot 51310), phone and 24h hours: `site.contact.address/hours/mapsUrl`, JSON-LD via `src/lib/schema.ts`, visible on /contact and the Sialkot pages. GBP share link added to `mapsUrl` + `sameAs` (2026-11-20).
 
 _Original note:_
 The site's JSON-LD says: **Granyyte**, Sialkot, Punjab, PK, phone **+92 318 728 9616**. The profile's name and phone should be identical, with no "Granyyte Software House Best IT Company" keyword stuffing in the name (Google suspends for that).

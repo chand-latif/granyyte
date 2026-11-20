@@ -35,8 +35,8 @@ export const site = {
       country: "PK",
     },
     hours: "Open 24 hours",
-    // Search link that resolves to the GBP listing. Swap for the Maps share link if available.
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Granyyte+Sialkot",
+    // Google Business Profile share link (Chand, 2026-11-20). Used for directions, hasMap and sameAs.
+    mapsUrl: "https://share.google/i7znUvexo2CUgFCQK",
   },
   socials: {
     linkedin: "https://www.linkedin.com/in/chand-latif",

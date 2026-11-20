@@ -112,7 +112,7 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
         },
         areaServed: { "@type": "City", name: "Sialkot" },
         knowsAbout: sialkotKnowsAbout,
-        sameAs: [site.socials.linkedin, site.socials.facebook].filter(Boolean),
+        sameAs: [site.socials.linkedin, site.socials.facebook, site.contact.mapsUrl].filter(Boolean),
       }
     : null;
 

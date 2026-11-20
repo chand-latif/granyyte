@@ -29,7 +29,7 @@ const professionalServiceJsonLd = {
   openingHoursSpecification: openingHoursJsonLd,
   hasMap: site.contact.mapsUrl,
   areaServed: "Worldwide",
-  sameAs: [site.socials.linkedin, site.socials.facebook].filter(Boolean),
+  sameAs: [site.socials.linkedin, site.socials.facebook, site.contact.mapsUrl].filter(Boolean),
 };
 
 const channels = [

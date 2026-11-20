@@ -103,7 +103,7 @@ export const metadata: Metadata = {
 
 // Only include profiles that are actually filled in (empty strings would be
 // invalid sameAs entries).
-const sameAs = [site.socials.linkedin, site.socials.facebook].filter(Boolean);
+const sameAs = [site.socials.linkedin, site.socials.facebook, site.contact.mapsUrl].filter(Boolean);
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
