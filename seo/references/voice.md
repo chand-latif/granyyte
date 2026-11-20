@@ -1,6 +1,20 @@
 # Granyyte voice: how to be funny without being a clown
 
-Read with the Writing rules in CLAUDE.md, which always win. This file adds the humour layer and the local positioning. It's a draft to tune once Chand pastes 5-10 of his LinkedIn/Facebook posts.
+Read with the Writing rules in CLAUDE.md, which always win. This file adds the humour layer and the local positioning. Tuned 2026-11-20 from Chand's LinkedIn posts (see "Chand's own voice" below).
+
+## Chand's own voice (from his LinkedIn, 2026-11-20)
+Facebook is personal and wasn't used. On LinkedIn he writes like this:
+- **Blunt verdicts, no hedging.** He calls the AI rush in low-code tools "a dead end" for new projects and says outright that scaling means getting your hands dirty.
+- **The honest out, every time.** Already on low-code? Keep it there. Starting fresh? Start with code. He never sells one answer to everybody.
+- **The money angle.** One of his reasons is simply that you pay for one subscription instead of two.
+- **Hands-on authority, zero marketing.** "I've worked with both" grounds every claim. No adjectives doing the work.
+- **Self-aware throwaway lines.** Four days writing one prompt, one hour for the agent to build it, and a dry aside about not mentioning that to the client.
+- **System thinking.** A coding agent is only as good as the developer's grasp of the whole system; it fills gaps with guesses.
+
+How to use it on the site:
+- **Keep:** the bluntness, the honest out, the money angle, the short throwaway closer.
+- **Translate:** his trailing "..." becomes a one-line punchline paragraph; "tho" becomes a normal contraction; lowercase openers become sentence case.
+- **Drop:** hashtags, "..." trails, typos, anything about specific clients' timelines or billing.
 
 ## The one-line version
 A senior engineer who has seen every way software projects go wrong, finds most of it funny, and tells you the truth even when it loses us the job.
