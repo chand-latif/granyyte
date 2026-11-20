@@ -7,6 +7,7 @@ import { getService } from "@/content/services";
 import { projects } from "@/content/projects";
 import { getPostsForService } from "@/lib/content/posts";
 import { site } from "@/config/site";
+import { addressLine, openingHoursJsonLd, postalAddressJsonLd } from "@/lib/schema";
 import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
 import { JsonLd } from "@/components/ui/json-ld";
@@ -101,12 +102,9 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
         image: `${site.url}/logo.png`,
         telephone: site.contact.phone,
         priceRange: "$",
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Sialkot",
-          addressRegion: "Punjab",
-          addressCountry: "PK",
-        },
+        address: postalAddressJsonLd,
+        openingHoursSpecification: openingHoursJsonLd,
+        hasMap: site.contact.mapsUrl,
         geo: {
           "@type": "GeoCoordinates",
           latitude: sialkotGeo.latitude,
@@ -277,6 +275,25 @@ export default async function SeoLandingPage({ params }: { params: Promise<Param
       {/* Sialkot cluster cross-link — contained to the Sialkot pages only */}
       {otherSialkotPages.length > 0 && (
         <div className="mx-auto max-w-6xl px-5 pb-12 md:px-8">
+          {/* Visible NAP, identical to the Google Business Profile */}
+          <p className="mb-3 font-mono text-xs text-faint">
+            Visit us: <span className="text-muted">{addressLine}</span>
+            {" · "}
+            <a href={site.contact.phoneHref} className="text-muted transition-colors hover:text-lime">
+              {site.contact.phone}
+            </a>
+            {" · "}
+            <a
+              href={site.contact.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lime transition-colors hover:text-fg"
+            >
+              Directions
+            </a>
+            {" · "}
+            <span className="text-muted">{site.contact.hours}</span>
+          </p>
           <p className="font-mono text-xs text-faint">
             Also in Sialkot:{" "}
             {otherSialkotPages.map((p, i) => (

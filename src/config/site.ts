@@ -26,6 +26,17 @@ export const site = {
     whatsapp: "https://wa.me/923187289616",
     calendly: "https://calendly.com/chandlatif-dev/30min", // free 30-min consultation booking
     location: "Sialkot, Pakistan",
+    // Must match the Google Business Profile exactly (NAP consistency for the map pack).
+    address: {
+      street: "Plaza opposite HBL Bank, Khadim Ali Road, Aalam Chowk",
+      locality: "Sialkot",
+      region: "Punjab",
+      postalCode: "51310",
+      country: "PK",
+    },
+    hours: "Open 24 hours",
+    // Search link that resolves to the GBP listing. Swap for the Maps share link if available.
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Granyyte+Sialkot",
   },
   socials: {
     linkedin: "https://www.linkedin.com/in/chand-latif",

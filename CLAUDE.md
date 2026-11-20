@@ -94,6 +94,9 @@ Edit these first — most content changes are one-file edits:
     JSON-LD schema.
   - `contact.emailDirect` = `chandlatif.dev@gmail.com`, the founder's direct line. Both emails are
     shown on the footer + contact page so visitors choose company vs. personal.
+  - `contact.address` / `hours` / `mapsUrl` = the **Google Business Profile** NAP, verbatim. Feeds
+    every JSON-LD address via `src/lib/schema.ts` and the visible address on /contact + Sialkot pages.
+    Change it only when the GBP changes.
 - `src/content/projects.ts` — portfolio. `Project` type has `icon?`, `screenshot?`, `logo?`,
   `links?: {appStore?, playStore?, web?, appStoreSoon?}`, plus optional `private?`, `concept?`,
   `features?`, `workflow?` + `workflowTitle?`, `gallery?` (phone screens, hidden when empty) for

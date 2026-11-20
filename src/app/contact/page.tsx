@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Mail, MessageCircle, Phone, MapPin, Clock, CalendarDays } from "lucide-react";
 import { site } from "@/config/site";
+import { addressLine, openingHoursJsonLd, postalAddressJsonLd } from "@/lib/schema";
 import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
 import { JsonLd } from "@/components/ui/json-ld";
@@ -24,12 +25,9 @@ const professionalServiceJsonLd = {
   telephone: site.contact.phone,
   image: `${site.url}/logo.png`,
   priceRange: "$",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Sialkot",
-    addressRegion: "Punjab",
-    addressCountry: "PK",
-  },
+  address: postalAddressJsonLd,
+  openingHoursSpecification: openingHoursJsonLd,
+  hasMap: site.contact.mapsUrl,
   areaServed: "Worldwide",
   sameAs: [site.socials.linkedin, site.socials.facebook].filter(Boolean),
 };
@@ -122,8 +120,16 @@ export default function ContactPage() {
                 <span>
                   <span className="block font-mono text-xs text-faint">Location</span>
                   <span className="mt-0.5 block text-sm font-medium text-fg">
-                    {site.contact.location}
+                    {addressLine}, Pakistan
                   </span>
+                  <a
+                    href={site.contact.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 inline-block font-mono text-xs text-lime transition-colors hover:text-fg"
+                  >
+                    Get directions ↗
+                  </a>
                 </span>
               </div>
 

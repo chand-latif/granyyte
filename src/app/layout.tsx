@@ -11,6 +11,7 @@ import { AmbientBackground } from "@/components/fx/ambient-background";
 import { SideRails } from "@/components/fx/side-rails";
 import { WhatsAppFloat } from "@/components/layout/whatsapp-float";
 import { site } from "@/config/site";
+import { postalAddressJsonLd } from "@/lib/schema";
 import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
@@ -129,12 +130,7 @@ const organizationJsonLd = {
     jobTitle: [...site.founder.jobTitles],
     sameAs: site.founder.linkedin,
   },
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Sialkot",
-    addressRegion: "Punjab",
-    addressCountry: "PK",
-  },
+  address: postalAddressJsonLd,
   areaServed: ["Sialkot", "Pakistan", "Worldwide"],
   knowsAbout: site.knowsAbout,
   contactPoint: {
