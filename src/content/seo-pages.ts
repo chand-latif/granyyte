@@ -183,6 +183,7 @@ export const seoPages: SeoPage[] = [
       "FlutterFlow mobile app development from Pakistan is one of the best value propositions in software right now, and hiring a certified FlutterFlow developer makes the difference between a demo that impresses and a product that ships. Granyyte is founded by Chand Latif, an officially certified FlutterFlow expert building production apps from Sialkot, Pakistan for clients across Europe, the Middle East, and North America.",
       "FlutterFlow isn't a toy builder. It generates real Flutter code you fully own, which means your app runs natively on both iOS and Android and can be extended with hand-written code whenever you outgrow visual development. In our hands it cuts delivery to 2-4 weeks, roughly three times less time and money than native development for the same product.",
       "Combine that speed with Pakistani rates and a complete, store-published app costs a fraction of what a western agency charges. Often less than what one of their discovery phases would bill.",
+      "One honest caveat, because we'd rather you hear it from us. AI coding agents have changed the maths. An agent working on plain Flutter code has no platform ceiling, while the same agent bolted onto a low-code tool can only do what the tool allows, and you end up paying for two subscriptions instead of one. So we use FlutterFlow where it fits and tell you when it doesn't. Quick validation and apps your team wants to edit visually? FlutterFlow. A new product you expect to grow for years? Often plain Flutter from day one. Already on FlutterFlow? Stay there, and we'll extend it.",
     ],
     whyTitle: "Why a certified FlutterFlow expert from Pakistan",
     whyPoints: [
@@ -205,6 +206,11 @@ export const seoPages: SeoPage[] = [
         title: "Rescues and takeovers welcome",
         description:
           "Half-finished FlutterFlow project from another freelancer? We audit, fix, and ship stalled builds regularly.",
+      },
+      {
+        title: "We'll tell you when not to use it",
+        description:
+          "Certified doesn't mean sold on it for everything. If plain Flutter code suits your app better, you'll hear that in the first call, along with why.",
       },
     ],
     quoteNote: "Fixed-price proposal within 1-2 days of our first conversation.",
@@ -243,6 +249,11 @@ export const seoPages: SeoPage[] = [
         question: "When should you not use FlutterFlow?",
         answer:
           "When most of the app lives deep in the device: heavy Bluetooth hardware work, long-running background processing, or AR. You can still get there by writing custom Flutter code inside FlutterFlow, but at some point you're fighting the tool, and plain Flutter is the better call. We'll tell you which side of that line your app sits on in the first conversation. Being certified in something doesn't mean selling it for everything.",
+      },
+      {
+        question: "Should a new app start in FlutterFlow or in plain Flutter code?",
+        answer:
+          "It depends on how long the app has to live. For fast validation, or when your team wants to edit screens visually, FlutterFlow is still quick and sensible. For a new product you expect to grow for years, we increasingly start in plain Flutter, because AI coding agents now make hand-written code fast too, and code has no platform ceiling or second subscription. If your app is already in FlutterFlow, keep it there. Moving costs real money and rarely pays for itself.",
       },
     ],
     relatedService: "mobile-app-development",

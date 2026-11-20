@@ -706,8 +706,8 @@ export const generatedPosts: Post[] = [
     "title": "FlutterFlow vs. Native Development: What to Choose in 2026",
     "description": "Native means two separate codebases, more time, and more budget. With Flutter and FlutterFlow you ship the same product in roughly three times less time and money. Here's the honest breakdown from a certified FlutterFlow expert.",
     "date": "2026-07-02",
-    "updated": "2026-11-13",
-    "readingTime": "4 min read",
+    "updated": "2026-11-20",
+    "readingTime": "6 min read",
     "tags": [
       "FlutterFlow",
       "Mobile Development",
