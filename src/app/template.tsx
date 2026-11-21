@@ -11,6 +11,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
   return (
     <>
       <motion.div
+        data-page-wipe
         className="pointer-events-none fixed inset-0 z-[240] bg-lime"
         initial={{ scaleY: 1 }}
         animate={{ scaleY: 0 }}
@@ -19,6 +20,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         aria-hidden
       />
       <motion.div
+        data-page-wipe
         className="pointer-events-none fixed inset-0 z-[241] bg-raised"
         initial={{ scaleY: 1 }}
         animate={{ scaleY: 0 }}

@@ -49,6 +49,7 @@ export function AnimatedText({
           {...(reduce ? {} : outerProps)}
         >
           <motion.span
+            data-reveal-word
             className="inline-block will-change-transform"
             variants={{ hidden: { y: "110%" }, show: { y: 0 } }}
             transition={{

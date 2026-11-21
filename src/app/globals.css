@@ -189,6 +189,23 @@ html.has-custom-cursor * {
   .animate-orb-c {
     animation: none !important;
   }
+
+  /* Page content must never start hidden on phones. Motion writes opacity:0 /
+     translateY into the server HTML, so on a slow iPhone the screen stays blank
+     until JS has loaded and hydrated, then the reveals fire one by one. These
+     !important rules beat the inline styles, so text is visible on first paint.
+     Desktop keeps every reveal untouched. */
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  [data-reveal-word] {
+    transform: none !important;
+  }
+  /* The full-screen wipe between routes just reads as a blank/stuck frame on iOS. */
+  [data-page-wipe] {
+    display: none !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
