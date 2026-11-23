@@ -1,0 +1,99 @@
+---
+title: "Source code ownership in software development, explained"
+description: "Source code ownership in software development is more than a contract line: the repository, accounts and handover you need, and how code goes missing."
+date: 2026-11-23
+tags: ["Offshore Hiring", "Contracts", "Custom Software"]
+hub: offshore-hiring
+targetKeyword: "source code ownership software development"
+secondaryKeywords: ["who owns the source code", "software development ip ownership", "intellectual property in software contracts", "source code handover", "app developer won't give source code", "vendor lock-in software"]
+relatedService: "/services/custom-software"
+relatedServiceLabel: "Custom software development"
+faqs:
+  - question: "Who owns the source code when I hire a developer?"
+    answer: "Whoever the contract says owns it. In many places the default is that the creator keeps copyright unless it's assigned in writing, so make sure your contract explicitly assigns the code and related intellectual property to you once it's paid for. This isn't legal advice, so have a lawyer check anything important."
+  - question: "What should I get at the end of a software project?"
+    answer: "The full source code in a repository you control, admin access to every account the product runs on (app stores, cloud, database, domain, email and payments), the keys and credentials, and enough documentation for another developer to set it up and keep going."
+  - question: "My developer won't give me the source code. What can I do?"
+    answer: "Check your contract first. If it assigns the code to you, ask in writing and set a deadline. If it doesn't, you may have to negotiate. For the future, insist that code lives in your own repository from week one, so this can't happen again."
+  - question: "Does owning the code mean I own the libraries inside it?"
+    answer: "No. Almost every app uses open-source libraries that stay under their own licences. Owning your code means owning what was written for you, plus the right to use those libraries under their licence terms, which for common ones is very permissive."
+  - question: "Can I own the code if the app is built on a low-code platform?"
+    answer: "It depends on the platform. Some, like FlutterFlow, can export real code you can keep and run elsewhere. Others keep your app inside their system, and you can't take it with you. Ask before you start, not when you want to leave."
+---
+
+"You'll own the code." Every developer says it. It's the "the cheque is in the post" of software.
+
+Then the project ends, or the relationship sours, and you discover that "own the code" meant something different to them. Maybe you get a zip file from three months ago. Maybe you get the code, but not the database, the server, the app store account, or the password to anything. Maybe you get a polite email explaining it's "on our infrastructure".
+
+Source code ownership in software development is not a sentence in a proposal. It's a short list of things you physically hold. Here's the list.
+
+## What "owning the code" actually means
+
+There are four parts. Miss one and you don't fully own your product.
+
+### 1. The legal part: the contract
+
+Your contract should say, plainly, that the code and related intellectual property written for your project belong to you once it's paid for.
+
+Don't assume it. In many countries, whoever writes the code holds the copyright by default unless it's assigned in writing. A contract that says nothing doesn't mean you own it. It might mean you don't. (We're engineers, not lawyers, so get a lawyer to read anything important.)
+
+### 2. The physical part: the repository
+
+The code should live in a repository (GitHub, GitLab, Bitbucket) that **you** own, from the first week, with you as an admin. Not theirs, shared with you. Yours, with them invited.
+
+This one setting solves most ownership arguments before they start. If the code is in your account, nobody can hold it hostage, and you can see the work happening as it happens. A team that pushes code to your repository every week is a team that's building. A team that "will share everything at the end" might be.
+
+### 3. The operational part: the accounts
+
+This is the one everyone forgets. Your app doesn't run on code alone. It runs on:
+
+- the Apple and Google developer accounts the apps are published under
+- the cloud and database accounts (Firebase, Supabase, AWS, and so on)
+- the domain and DNS
+- email sending, payments, analytics and any third-party APIs
+
+If those are registered to your developer's personal email, you own a very nice pile of code that can't go anywhere. Every account should be in your company's name, with your email as the owner. Your developer gets access. You keep the keys.
+
+### 4. The practical part: the handover
+
+Owning code you can't run is like owning a car with no keys and the manual in Latvian.
+
+At handover you want a short README that lets another developer set the project up, a list of every account and service, how deployments work, and anything unusual about the setup. It doesn't need to be a novel. It needs to exist.
+
+## How ownership quietly goes missing
+
+Nobody signs a contract saying "the agency keeps everything". It happens more subtly:
+
+- **"We'll send the code at the end."** Then the end gets disputed.
+- **Accounts on their email.** Set up "to save you time" at the start. Expensive to untangle later.
+- **Proprietary frameworks.** The app is built on the agency's in-house platform, and you can only run it with them. Ask directly: can another developer pick this up?
+- **Low-code lock-in.** Some platforms keep your app inside their system with no export. FlutterFlow is one of the better ones here, because it exports real Flutter code, but check before you start on any tool. We cover the tradeoffs in [FlutterFlow vs native development](/blog/flutterflow-vs-native-development).
+- **Per-seat software dressed up as custom.** You pay monthly, per user, forever, and the code is never actually yours.
+
+## The open-source footnote
+
+Owning your code doesn't mean you own every line in the project. Nearly every modern app uses open-source libraries, and those stay under their own licences. That's normal and fine: the common ones (MIT, Apache 2.0, BSD) let you use them commercially without fuss. What you own is the code written for you, and your right to use the rest under its licence.
+
+If someone tells you open source means you can't own your app, they're confused, or they're selling something.
+
+## How we do it
+
+On every Granyyte project you get the full source, the database and the logins, with accounts in your name and no per-seat fees. We're happy to work in your own repository from day one, and we'd encourage it. The [operations platform we built for a UK surveying firm](/work/surveyor-job-management-system) has no per-seat pricing by design: the client owns it, rather than renting it by the user.
+
+The honest tradeoff: full ownership also means full responsibility. If you own the servers, someone has to keep them updated and paid for. We can keep doing that for you, or hand it to your own team. Either way, it's your choice, which is the whole point.
+
+## A source code ownership checklist
+
+Before you sign with anyone, including us:
+
+1. Does the contract assign the code and IP to you on payment?
+2. Is the repository in your account from week one?
+3. Are the app store, cloud, domain and payment accounts in your company's name?
+4. Can another developer run the project from the handover notes?
+5. Is anything built on a platform you can't leave?
+
+Five yeses and you own your software. Anything less and you're renting it from someone who hasn't mentioned the rent yet.
+
+Hiring offshore? Pair this with the [6 questions that save you a rebuild](/blog/hire-offshore-developers) and our guide to [fixed price vs hourly](/blog/fixed-price-vs-hourly-app-development).
+
+*Want software you actually own? [Tell us what you need built](/services/custom-software). Bring your own repository, or we'll set one up in your name.*
