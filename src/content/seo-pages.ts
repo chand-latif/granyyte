@@ -6,7 +6,8 @@
  * gets in touch — never reintroduce a figure, tier, or "from $X" into any
  * field, including metaTitle/metaDescription and FAQ questions. Third-party
  * market figures (what a US agency charges) are fine; ours are not.
- * Delivery stays 2-4 weeks. Don't copy-paste copy between
+ * Delivery (Chand, 2026-11-23): MVP 1-3 weeks, full product 2-4 weeks, large
+ * software 3-6 weeks. "2-4 weeks" is the typical build. Don't copy-paste copy between
  * pages — Google devalues near-duplicates. Target search queries verbatim in
  * FAQ questions — that's what has been ranking.
  *
@@ -133,7 +134,7 @@ export const seoPages: SeoPage[] = [
       {
         question: "How long does it take to build an app from Pakistan?",
         answer:
-          "Most of our apps ship in 2-4 weeks, whether iOS, Android, or both, since one Flutter codebase covers both platforms. Larger builds with heavy custom backends can take longer, and you'll know the real timeline before we start.",
+          "Most of our apps ship in 2-4 weeks, whether iOS, Android, or both, since one Flutter codebase covers both platforms. A focused MVP can be ready in 1-3 weeks, and large builds with heavy custom backends take 3-6 weeks. You'll know the real timeline before we start.",
       },
       {
         question: "Do you handle App Store and Google Play publishing from Pakistan?",
@@ -317,7 +318,7 @@ export const seoPages: SeoPage[] = [
       {
         question: "How long does a website take to build from Pakistan?",
         answer:
-          "Most sites ship in 2-4 weeks, and smaller landing pages often within days. Larger web applications with custom backends can take longer, with the real timeline fixed in the proposal.",
+          "Most sites ship in 2-4 weeks, and smaller landing pages often within days. Larger web applications with custom backends take 3-6 weeks, with the real timeline fixed in the proposal.",
       },
       {
         question: "Can you redesign or migrate my existing website?",
@@ -411,7 +412,7 @@ export const seoPages: SeoPage[] = [
       {
         question: "How long does custom software take from Pakistan?",
         answer:
-          "Focused tools and CRMs ship in 2-4 weeks. Larger multi-role systems take longer and are built phase by phase, with the timeline fixed in the proposal so it never becomes a moving target.",
+          "Focused tools ship in 1-3 weeks and full CRMs in 2-4 weeks. Larger multi-role systems take 3-6 weeks and are built phase by phase, with the timeline fixed in the proposal so it never becomes a moving target.",
       },
     ],
     relatedService: "custom-software",
@@ -571,7 +572,7 @@ export const seoPages: SeoPage[] = [
       {
         question: "How long does it take to build?",
         answer:
-          "A focused system ships in 2-4 weeks. A full operations platform is built module by module, so your team starts using the first pieces within weeks rather than months. You get a fixed timeline and price in the proposal, usually within 1-2 days of our first call.",
+          "A focused system ships in 1-3 weeks. A full operations platform takes 3-6 weeks and is built module by module, so your team starts using the first pieces within days rather than months. You get a fixed timeline and price in the proposal, usually within 1-2 days of our first call.",
       },
     ],
     relatedService: "custom-software",
@@ -814,7 +815,7 @@ export const seoPages: SeoPage[] = [
       {
         question: "Can you build an attendance management system for our staff?",
         answer:
-          "Yes. Staff attendance systems covering check-in and check-out, shift schedules, leave requests, and monthly payroll-ready reports are among the quicker builds we do, usually delivered within 2-4 weeks. They can also plug into a larger HR or payroll workflow later.",
+          "Yes. Staff attendance systems covering check-in and check-out, shift schedules, leave requests, and monthly payroll-ready reports are among the quicker builds we do, usually delivered within 1-3 weeks. They can also plug into a larger HR or payroll workflow later.",
       },
       {
         question: "Which industries in Sialkot do you build software for?",

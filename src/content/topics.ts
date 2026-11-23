@@ -81,7 +81,7 @@ export const topics: Topic[] = [
     intro: [
       "Most failed MVPs are not failed products, they are failed scopes. Someone spent eleven months and their entire budget building version one of everything, launched, and learned the same thing a four-week build would have told them.",
       "These guides are about the cutting. Which features earn their place in a first release, which ones you can fake convincingly, what you can defer to an admin panel and a human for the first hundred users, and how to structure the build so version two is not a rewrite.",
-      "We ship first versions in two to four weeks, so the trade-offs here are ones we make with founders every month, not theory.",
+      "We ship first versions in one to three weeks, so the trade-offs here are ones we make with founders every month, not theory.",
     ],
     relatedService: "/services/mobile-app-development",
     relatedServiceLabel: "Start your MVP with us",

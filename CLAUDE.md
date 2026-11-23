@@ -172,7 +172,7 @@ What is still allowed, and is used deliberately: **third-party market figures** 
 agency charges ($15-40k), US consulting engagements ($30k), SaaS subscription costs ($36k/yr),
 the "$99 template" scam reference. Those aren't our rates and they carry the value argument.
 
-Timelines (**2-4 weeks**, proposal in **1-2 days**) are unaffected and stay. "Affordable",
+Timelines (Chand, 2026-11-23, AI-agent era): **MVP 1-3 weeks, full product 2-4 weeks, large software 3-6 weeks**, proposal in **1-2 days**. "Most builds ship in 2-4 weeks" stays as the typical figure; never say "larger builds take longer" without the 3-6 week number, and never quote months. "Affordable",
 "fixed-price", and "a fraction of western rates" as positioning language are fine — just never a
 number of ours. `priceRange: "$"` remains in the `ProfessionalService` JSON-LD (a coarse Google
 band, not a rate); remove it if Chand wants even that gone.

@@ -1,6 +1,6 @@
 # Granyyte
 
-> Granyyte is a software development agency in Sialkot, Pakistan, founded by Chand Latif (senior software engineer, certified FlutterFlow expert). We build mobile apps (Flutter and FlutterFlow, iOS and Android), SEO-first websites and web apps (Next.js), and custom business software for clients in Turkey, the UAE, Poland, the UK, the US and Pakistan. Projects are quoted as a fixed price against a written scope, and most ship in 2-4 weeks. Clients own the full source code.
+> Granyyte is a software development agency in Sialkot, Pakistan, founded by Chand Latif (senior software engineer, certified FlutterFlow expert). We build mobile apps (Flutter and FlutterFlow, iOS and Android), SEO-first websites and web apps (Next.js), and custom business software for clients in Turkey, the UAE, Poland, the UK, the US and Pakistan. Projects are quoted as a fixed price against a written scope, and most ship in 2-4 weeks (a focused MVP in 1-3 weeks, large software in 3-6 weeks). Clients own the full source code.
 
 ## Services
 - [Mobile app development](https://www.granyyte.com/services/mobile-app-development): Flutter and FlutterFlow apps for iOS and Android from one codebase

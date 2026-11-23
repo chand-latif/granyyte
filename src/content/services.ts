@@ -40,7 +40,7 @@ export const services: Service[] = [
       {
         question: "How long does it take to build a mobile app?",
         answer:
-          "Most apps ship in 2-4 weeks, whether it's mobile, web, or custom software. Larger products with heavier custom backends can take longer. We scope precisely before we start, so you get a real timeline instead of a moving target.",
+          "Most apps ship in 2-4 weeks, whether it's mobile, web, or custom software. A focused MVP can take 1-3 weeks, and larger products with heavier custom backends 3-6 weeks. We scope precisely before we start, so you get a real timeline instead of a moving target.",
       },
       {
         question: "Do you build for both iOS and Android?",
@@ -158,7 +158,7 @@ export const services: Service[] = [
       {
         question: "How do we get started?",
         answer:
-          "We start with a discovery call to map your workflows, then deliver a scoped proposal with fixed pricing and a delivery timeline, usually within a day or two. Most builds ship in 2-4 weeks, and only larger, more complex systems take longer.",
+          "We start with a discovery call to map your workflows, then deliver a scoped proposal with fixed pricing and a delivery timeline, usually within a day or two. Most builds ship in 2-4 weeks, focused tools in as little as 1-3, and larger, more complex systems in 3-6.",
       },
       {
         question: "How much does a custom CRM cost?",
