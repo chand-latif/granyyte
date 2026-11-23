@@ -11,7 +11,7 @@ import { JsonLd } from "@/components/ui/json-ld";
 
 export const metadata: Metadata = {
   title: `About ${site.founder.name}, Founder of Granyyte`,
-  description: `Granyyte is a software development agency founded by ${site.founder.name}. We build mobile apps, web platforms, and custom software. Learn how we take products from idea to launch.`,
+  description: `${site.founder.name} is a senior software engineer and certified FlutterFlow expert in Sialkot, and the founder of Granyyte. Apps he's led are live in Turkey, the UAE, Poland and the US.`,
   alternates: { canonical: "/about" },
 };
 

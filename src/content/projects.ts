@@ -129,6 +129,7 @@ export const projects: Project[] = [
   {
     slug: "bilge-ai",
     name: "Bilge AI",
+    metaTitle: "Bilge AI app: how we built a multi-model Turkish AI assistant",
     tagline: "Every major AI model (Claude, GPT, Gemini & Grok) in one Turkish-first app",
     category: "AI Assistant",
     platforms: ["iOS", "Android"],

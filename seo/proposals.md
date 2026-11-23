@@ -1,4 +1,6 @@
-# Proposals waiting for Chand's approval (protected fields, not applied)
+# Proposals for protected fields
+
+**1 and 2 approved by Chand and applied 2026-11-23.** Item 3 still waits for Semrush data.
 
 ## 1. /about, query "chand latif" (pos 2.4-3.2, 20 impressions, 0 clicks)
 - Current title: `About Chand Latif, Founder of Granyyte` (fine, keep)
