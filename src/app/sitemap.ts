@@ -20,7 +20,7 @@ import {
  * ignore, which then devalues the dates on pages that genuinely did change.
  * Blog URLs derive their own dates from post frontmatter instead.
  */
-const CONTENT_UPDATED = new Date("2026-11-20");
+const CONTENT_UPDATED = new Date("2026-11-23");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();

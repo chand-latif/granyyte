@@ -6,6 +6,198 @@ import type { Post } from "@/lib/content/posts";
 
 export const generatedPosts: Post[] = [
   {
+    "slug": "fixed-price-vs-hourly-app-development",
+    "title": "Fixed price vs hourly app development: who carries the risk",
+    "description": "Fixed price vs hourly app development, explained by who carries the risk: when each model works, how each goes wrong, and what the contract needs.",
+    "date": "2026-11-23",
+    "readingTime": "4 min read",
+    "tags": [
+      "Offshore Hiring",
+      "Pricing Models",
+      "Contracts"
+    ],
+    "hub": "offshore-hiring",
+    "targetKeyword": "fixed price vs hourly app development",
+    "relatedService": "/affordable-app-development",
+    "relatedServiceLabel": "Affordable app development",
+    "faqs": [
+      {
+        "question": "Is fixed price or hourly better for app development?",
+        "answer": "Fixed price is usually better for a first version with a clear scope, because the developer carries the risk of it taking longer. Hourly suits ongoing work, research and products whose direction changes week to week, as long as you can watch the hours closely."
+      },
+      {
+        "question": "Why do some developers refuse fixed price?",
+        "answer": "Sometimes because the scope genuinely isn't clear yet, which is fair. Sometimes because they don't want the risk of estimating wrong. Ask which one it is. A team that can't estimate a well-defined first version may not have built one like it before."
+      },
+      {
+        "question": "What happens if the scope changes on a fixed price project?",
+        "answer": "A good contract has a simple change process: the new request is written down, estimated separately, and you approve it or not before any work starts. Nothing gets added quietly and billed later."
+      },
+      {
+        "question": "Is fixed price more expensive than hourly?",
+        "answer": "The quote can look higher, because the developer prices in some risk. But the final bill is known upfront, while hourly projects often end well above the first estimate. Compare the likely final cost, not the opening number."
+      },
+      {
+        "question": "What should a fixed price app development contract include?",
+        "answer": "A written scope with screens and features, what's explicitly not included, milestones with payments tied to working deliverables, a change request process, who owns the code, and what support looks like after launch."
+      }
+    ],
+    "secondaryKeywords": [
+      "fixed price contract software development",
+      "time and materials vs fixed price",
+      "hourly rate app developer",
+      "app development pricing models",
+      "fixed bid software project",
+      "software development contract types"
+    ]
+  },
+  {
+    "slug": "hire-offshore-developers",
+    "title": "Hire offshore developers: 6 questions that save you a rebuild",
+    "description": "Before you hire offshore developers, ask these 6 questions. They catch the vanishing freelancer, hidden subcontractors and code you never get.",
+    "date": "2026-11-23",
+    "readingTime": "5 min read",
+    "tags": [
+      "Offshore Hiring",
+      "Outsourcing",
+      "Mobile Development"
+    ],
+    "hub": "offshore-hiring",
+    "targetKeyword": "hire offshore developers",
+    "relatedService": "/mobile-app-development-pakistan",
+    "relatedServiceLabel": "Mobile app development from Pakistan",
+    "faqs": [
+      {
+        "question": "Is it safe to hire offshore developers?",
+        "answer": "It's as safe as your contract and your checks. Ask for live apps you can download, a named person who writes the code, a written scope, and source code in your own repository from week one. Most offshore horror stories skipped at least two of those."
+      },
+      {
+        "question": "How do I find good offshore developers?",
+        "answer": "Start from shipped work, not profiles. Download their apps, read the store listings, and ask who built what. Then run a short paid first milestone before committing to the whole project. A good team won't mind being tested."
+      },
+      {
+        "question": "Should I hire an offshore freelancer or an agency?",
+        "answer": "A freelancer can be great for a small, well-defined job. For a full product, you want someone with a process: written scope, fixed milestones, handover, and more than one person who understands the code if someone gets sick."
+      },
+      {
+        "question": "What are the risks of offshore software development?",
+        "answer": "The usual ones: unclear scope, poor communication, invisible subcontracting, code you don't own, and a team that disappears after launch. Every one of them can be checked for before you sign."
+      },
+      {
+        "question": "How do time zones work with offshore developers?",
+        "answer": "Better than you'd expect if it's planned. A few hours of daily overlap for calls is plenty, and the time difference can work in your favour: you send feedback at the end of your day and wake up to the changes."
+      },
+      {
+        "question": "Why hire developers from Pakistan?",
+        "answer": "A large pool of strong engineers, good English, a few hours of overlap with Europe and the Gulf, and rates well below western agencies. The quality range is wide, though, so the checks in this article matter more than the country."
+      }
+    ],
+    "secondaryKeywords": [
+      "offshore software development",
+      "hire remote developers",
+      "outsource app development",
+      "offshore development team",
+      "hire developers in pakistan",
+      "how to hire offshore developers"
+    ]
+  },
+  {
+    "slug": "how-long-does-it-take-to-build-an-app",
+    "title": "How long does it take to build an app? Honest timelines",
+    "description": "How long does it take to build an app with AI coding agents? Honest timelines: 1 to 3 weeks for an MVP, 2 to 4 for a full product, 3 to 6 for large ones.",
+    "date": "2026-11-23",
+    "readingTime": "6 min read",
+    "tags": [
+      "MVP",
+      "Mobile Development",
+      "Planning"
+    ],
+    "hub": "mvp-startups",
+    "targetKeyword": "how long does it take to build an app",
+    "relatedService": "/services/mobile-app-development",
+    "relatedServiceLabel": "Mobile app development",
+    "faqs": [
+      {
+        "question": "How long does it take to build an app?",
+        "answer": "With a senior team using AI coding agents, a focused MVP usually takes 1 to 3 weeks, a full product with payments, several user roles and integrations 2 to 4 weeks, and large software 3 to 6 weeks, depending on the requirements. The scope decides the timeline far more than the technology does."
+      },
+      {
+        "question": "How long does App Store review take?",
+        "answer": "Apple says most submissions are reviewed within 24 hours, and Google Play is often similar, but a first submission can take longer and a rejection restarts the clock. Plan a few days of buffer before any launch date you've announced."
+      },
+      {
+        "question": "Why do app projects take longer than quoted?",
+        "answer": "Usually scope creep, slow feedback, missing content like copy and images, late decisions about payments or logins, and a first app store rejection. Very few delays come from the code itself."
+      },
+      {
+        "question": "Can an app be built in one week?",
+        "answer": "A small, well-defined MVP can be, with an experienced team and AI coding agents. The catch is that one week only works when the scope is fixed, the designs or references are ready, and someone on your side answers questions the same day."
+      },
+      {
+        "question": "Do AI coding agents make app development faster?",
+        "answer": "Much faster, in the right hands. Agents write a large share of the code in hours instead of days, which is why timelines have dropped from months to weeks. But an agent is only as good as the engineer directing it. Without someone who understands the whole system, it fills the gaps with guesses."
+      },
+      {
+        "question": "Does building for iOS and Android take twice as long?",
+        "answer": "Not with a cross-platform framework. Flutter and FlutterFlow build both from one codebase, so you get both apps in roughly the time of one. Fully native development does mean two codebases and more time."
+      }
+    ],
+    "secondaryKeywords": [
+      "app development timeline",
+      "how long to develop an app",
+      "mvp development time",
+      "app store review time",
+      "how long to make an app",
+      "mobile app development process"
+    ]
+  },
+  {
+    "slug": "source-code-ownership-software-development",
+    "title": "Source code ownership in software development, explained",
+    "description": "Source code ownership in software development is more than a contract line: the repository, accounts and handover you need, and how code goes missing.",
+    "date": "2026-11-23",
+    "readingTime": "5 min read",
+    "tags": [
+      "Offshore Hiring",
+      "Contracts",
+      "Custom Software"
+    ],
+    "hub": "offshore-hiring",
+    "targetKeyword": "source code ownership software development",
+    "relatedService": "/services/custom-software",
+    "relatedServiceLabel": "Custom software development",
+    "faqs": [
+      {
+        "question": "Who owns the source code when I hire a developer?",
+        "answer": "Whoever the contract says owns it. In many places the default is that the creator keeps copyright unless it's assigned in writing, so make sure your contract explicitly assigns the code and related intellectual property to you once it's paid for. This isn't legal advice, so have a lawyer check anything important."
+      },
+      {
+        "question": "What should I get at the end of a software project?",
+        "answer": "The full source code in a repository you control, admin access to every account the product runs on (app stores, cloud, database, domain, email and payments), the keys and credentials, and enough documentation for another developer to set it up and keep going."
+      },
+      {
+        "question": "My developer won't give me the source code. What can I do?",
+        "answer": "Check your contract first. If it assigns the code to you, ask in writing and set a deadline. If it doesn't, you may have to negotiate. For the future, insist that code lives in your own repository from week one, so this can't happen again."
+      },
+      {
+        "question": "Does owning the code mean I own the libraries inside it?",
+        "answer": "No. Almost every app uses open-source libraries that stay under their own licences. Owning your code means owning what was written for you, plus the right to use those libraries under their licence terms, which for common ones is very permissive."
+      },
+      {
+        "question": "Can I own the code if the app is built on a low-code platform?",
+        "answer": "It depends on the platform. Some, like FlutterFlow, can export real code you can keep and run elsewhere. Others keep your app inside their system, and you can't take it with you. Ask before you start, not when you want to leave."
+      }
+    ],
+    "secondaryKeywords": [
+      "who owns the source code",
+      "software development ip ownership",
+      "intellectual property in software contracts",
+      "source code handover",
+      "app developer won't give source code",
+      "vendor lock-in software"
+    ]
+  },
+  {
     "slug": "attendance-system-for-factory-pakistan",
     "title": "Attendance management system in Pakistan: biometric or app?",
     "description": "An attendance management system in Pakistan has to beat proxy punching, greasy fingerprints and payroll day. Biometric, app or both: what works in a factory.",
@@ -81,7 +273,7 @@ export const generatedPosts: Post[] = [
       },
       {
         "question": "How long does it take to build an inventory system?",
-        "answer": "A focused first version, covering stock in, stock out, stock levels and a few reports, usually takes 2 to 4 weeks. Production stages, barcode printing and accounting links come after, once the basics are in daily use."
+        "answer": "A focused first version, covering stock in, stock out, stock levels and a few reports, usually takes 1 to 3 weeks. Production stages, barcode printing and accounting links come after, once the basics are in daily use."
       },
       {
         "question": "Can it send stock alerts on WhatsApp?",
@@ -547,7 +739,7 @@ export const generatedPosts: Post[] = [
       },
       {
         "question": "How long does a Flutter app take to build in Pakistan?",
-        "answer": "Most focused apps ship in 2-4 weeks with an experienced team, because one Flutter codebase covers iOS and Android. Bigger products with custom backends take longer, and a good company tells you the real timeline before you sign."
+        "answer": "With an experienced team using AI coding agents, a focused MVP ships in 1-3 weeks and a full app in 2-4, because one Flutter codebase covers iOS and Android. Bigger products with custom backends take 3-6 weeks, and a good company tells you the real timeline before you sign."
       },
       {
         "question": "What should be in a Flutter app development contract?",

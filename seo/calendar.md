@@ -14,7 +14,7 @@ Quality bar: every post needs a real story from `references/stories.md`, an hone
 | 2 | Adding an AI chat assistant to a mobile app | ai chatbot in mobile app | mvp-startups | /services/mobile-app-development | intl ✅ drafted (SCAMalicious) |
 | 2 | Building a scam awareness app (SCAMalicious) | scam detection app development | flutterflow | /flutterflow-developer-pakistan | intl ✅ drafted |
 | 3 | How to scope an MVP in four weeks without building version one of everything | mvp scope | mvp-startups | /services/mobile-app-development | intl |
-| 2 | Hiring offshore developers: the 6 questions that save you a rebuild | hire offshore developers | offshore-hiring | /mobile-app-development-pakistan | intl |
+| 2 | Hiring offshore developers: the 6 questions that save you a rebuild | hire offshore developers | offshore-hiring | /mobile-app-development-pakistan | intl intl ✅ drafted |
 | 2 | Inventory software for a Sialkot godown: what it needs to get right | inventory management system sialkot | sialkot-business | /software-development-sialkot | local ✅ drafted |
 | 2 | FlutterFlow limits: when we tell clients not to use it | flutterflow limitations | flutterflow | /flutterflow-developer-pakistan | intl |
 | 3 | School management software in Sialkot: fee vouchers, attendance and WhatsApp | school management software sialkot | sialkot-business | /software-development-sialkot | local ✅ drafted |
@@ -22,11 +22,11 @@ Quality bar: every post needs a real story from `references/stories.md`, an hone
 | 3 | Custom CRM vs HubSpot for a 10-person team: the arithmetic | custom crm vs hubspot | custom-vs-saas | /crm-development-pakistan | intl |
 | 3 | WordPress vs Next.js for a business website | wordpress vs nextjs for business website | sialkot-business | /web-design-sialkot | local ✅ drafted |
 | 3 | RAMS enforcement in software: "no RAMS, no work" | rams software for contractors | industry-software | /surveyor-management-software | intl |
-| 3 | What owning your source code actually means | source code ownership software development | offshore-hiring | /services/custom-software | intl |
+| 3 | What owning your source code actually means | source code ownership software development | offshore-hiring | /services/custom-software | intl intl ✅ drafted |
 | 4 | Building an AI app with several models behind one interface (Bilge AI) | multi model ai app development | mvp-startups | /services/mobile-app-development | intl |
 | 4 | Attendance system for a factory: biometric, app, or both? | attendance management system pakistan | sialkot-business | /software-development-sialkot | local ✅ drafted |
-| 4 | Fixed price vs hourly for app development | fixed price vs hourly app development | offshore-hiring | /affordable-app-development | intl |
-| 4 | How long does it take to build an app? Honest timelines | how long does it take to build an app | mvp-startups | /services/mobile-app-development | intl |
+| 4 | Fixed price vs hourly for app development | fixed price vs hourly app development | offshore-hiring | /affordable-app-development | intl intl ✅ drafted |
+| 4 | How long does it take to build an app? Honest timelines | how long does it take to build an app | mvp-startups | /services/mobile-app-development | intl intl ✅ drafted |
 | 4 | Export order tracking: from inquiry to QC to shipment | export order tracking software | sialkot-business | /software-development-sialkot | local |
 | 4 | Flutter app performance: where it beats native and where it doesn't | flutter app performance | flutterflow | /services/mobile-app-development | intl |
 | 4 | Is your website getting hacked? Signs on a cheap WordPress site | wordpress website security pakistan | sialkot-business | /web-development-pakistan | local |
