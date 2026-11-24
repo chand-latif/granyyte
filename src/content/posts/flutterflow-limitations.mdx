@@ -1,0 +1,88 @@
+---
+title: "FlutterFlow limitations: when we tell clients not to use it"
+description: "FlutterFlow limitations, from a certified FlutterFlow team: where it shines, where it fights you, and why new long-lived apps now lean to plain Flutter."
+date: 2026-11-24
+tags: ["FlutterFlow", "Flutter", "Low-code"]
+hub: flutterflow
+targetKeyword: "flutterflow limitations"
+secondaryKeywords: ["flutterflow disadvantages", "flutterflow pros and cons", "is flutterflow good for production", "flutterflow vs flutter", "flutterflow code export", "low code vs code", "flutterflow scalability"]
+relatedService: "/flutterflow-developer-pakistan"
+relatedServiceLabel: "FlutterFlow developers in Pakistan"
+faqs:
+  - question: "What are the main limitations of FlutterFlow?"
+    answer: "Complex custom logic, unusual UI, heavy device-level features and large teams working on the same project all get harder in FlutterFlow. You can get around most of it with custom code, but the more custom code you add, the less you're getting from the platform."
+  - question: "Is FlutterFlow good enough for production apps?"
+    answer: "Yes, for the right app. Plenty of FlutterFlow apps are live on both stores with real users. It suits apps built from standard screens, forms, lists and a Firebase or Supabase backend. It suits apps that keep getting more complex every month much less."
+  - question: "Can you export code from FlutterFlow?"
+    answer: "Yes, on the paid plans, and that's one of its best features. You get a real Flutter project you can open, build and keep. Once you start editing the exported code by hand, though, you can't easily bring those changes back into the visual builder."
+  - question: "Should a new app start in FlutterFlow or in plain Flutter code?"
+    answer: "In the AI coding agent era, a new app meant to live for years usually leans to plain Flutter, because agents work fully in code and you pay for one toolset instead of two. FlutterFlow still makes sense for quick validation builds and for teams already using it."
+  - question: "Should I migrate my existing FlutterFlow app to Flutter?"
+    answer: "Usually not, if it works. Migration costs real money and delivers nothing your users can see. Move off only when the platform is actively blocking features you need, and even then do it in steps."
+  - question: "Does FlutterFlow scale?"
+    answer: "The app itself scales as well as the backend behind it, usually Firebase or Supabase. What scales less well is the project: lots of custom code, lots of screens and several developers in one visual builder gets messy faster than the same app in code."
+---
+
+FlutterFlow limitations are a strange thing to write about when we hold the official FlutterFlow certification and have shipped apps with it on both stores. It's a bit like a car dealer listing the problems with the car. But here we are, because the honest version wins more clients than the brochure does.
+
+Short answer first: FlutterFlow is excellent for apps built from standard pieces, and it starts to fight you once your app stops being standard. In 2026, with AI coding agents writing most of the code, that line has moved. A new app meant to last for years now usually leans to plain Flutter.
+
+FlutterFlow is still a good tool. It just isn't the answer to everything, and anyone telling you it is is selling FlutterFlow hours.
+
+## Where FlutterFlow is genuinely great
+
+Give it credit where it's earned:
+
+- **Standard apps, fast.** Logins, lists, forms, profiles, a Firebase or Supabase backend. FlutterFlow builds this quickly and well.
+- **Real Flutter underneath.** It isn't a toy runtime. It generates a Flutter app, and on paid plans you can [export the code](https://docs.flutterflow.io/) and own it outright.
+- **Validating an idea.** When the goal is "get something in front of users before the money runs out", it's hard to beat.
+
+We built [AVC Dealer](/work/avc-dealer), a dealer app covering 50+ auction locations across 25 US states, with Flutter and FlutterFlow. It works. Nobody using it is wondering how the screens were made.
+
+## FlutterFlow limitations we actually run into
+
+Not a list copied from a forum. The ones that show up on real projects:
+
+### 1. Complex logic lives in custom code anyway
+
+Every serious app has some logic that doesn't fit a visual action chain. Pricing rules, multi-step validation, anything with lots of branches. In FlutterFlow that goes into custom code. Add enough custom code and you're writing a Flutter app with a visual builder sitting awkwardly on top.
+
+### 2. Unusual UI takes negotiation
+
+Standard layouts are quick. A design that does something the widget panel didn't anticipate turns into a back-and-forth between the designer, the developer and the builder. The builder usually wins. Your design usually loses a little.
+
+### 3. Device-level and heavy features
+
+Bluetooth hardware, long background tasks, custom audio engines, AR. These were never FlutterFlow's strength, and they push you to custom code or plain Flutter. (They're also where native development still earns its keep. We compare all three in [FlutterFlow vs native development](/blog/flutterflow-vs-native-development).)
+
+### 4. Teams and history
+
+Code has decades of tooling for several people working on the same thing: branches, reviews, diffs you can read. A visual builder has improved here, but reviewing a change in a visual project is still harder than reading a pull request.
+
+### 5. The one-way door
+
+You can export the code and keep editing it by hand. Once you do, those hand edits don't flow back into the visual builder. That's fine if you planned it. It's a nasty surprise if you didn't.
+
+## Why AI agents moved the line
+
+This is the newer argument, and it's one Chand makes bluntly: for a brand-new project, starting in low-code is now often the wrong bet.
+
+Two reasons. First, an AI coding agent working in plain code can do almost anything the language allows. An agent working inside a low-code platform is still capped by what the platform allows. Second, the money: you'd be paying for the agent and the platform, two subscriptions instead of one, to get the less flexible result.
+
+Low-code made building easier and brought its own problems. If you want something that scales, you end up getting your hands dirty anyway. Agents just made getting your hands dirty a lot cheaper. We wrote more on what agents change, and what they don't, in [AI coding agents won't save a project nobody understands](/blog/ai-coding-agents-software-development).
+
+## When we still recommend FlutterFlow
+
+- **You're already on it and it works.** Keep it. Migrating costs real money and delivers nothing your users can see. Move only when the platform is actively blocking you, and then do it in steps.
+- **Your team maintains it.** If the people looking after the app afterwards work in FlutterFlow and not in code, that matters more than our preference.
+- **A quick validation build.** One core flow, a few weeks, a real answer about whether anyone wants it. FlutterFlow is still very good at that.
+
+And when we'd point you to plain Flutter: a new product you expect to grow for years, lots of custom logic, several developers, or features near the device. Either way, it's still one codebase for iOS and Android, so you're not paying for the app twice.
+
+## The honest bottom line
+
+FlutterFlow is a good tool with a ceiling. The ceiling is higher than its critics say and lower than its fans hope. Know where yours is before you start, not in month four when the custom code folder is bigger than the app.
+
+If you're not sure which side of the line you're on, that's a normal place to be. We'll tell you, even when the answer is "you don't need us for this".
+
+*Weighing FlutterFlow against plain Flutter for your app? [Ask our certified FlutterFlow team](/flutterflow-developer-pakistan) and you'll get a straight answer and a written scope within 1 to 2 days.*
