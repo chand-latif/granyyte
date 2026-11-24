@@ -1,0 +1,87 @@
+---
+title: "AI coding agents won't save a project nobody understands"
+description: "AI coding agents for software development are fast, and they guess when the context runs out. What they change, what they don't, and who should steer them."
+date: 2026-11-24
+tags: ["AI", "Software Development", "Planning"]
+hub: mvp-startups
+targetKeyword: "ai coding agents for software development"
+secondaryKeywords: ["ai coding agents", "ai assisted software development", "ai for software development", "will ai replace developers", "agentic coding", "ai code generation risks", "vibe coding"]
+relatedService: "/services/custom-software"
+relatedServiceLabel: "Custom software development"
+faqs:
+  - question: "Are AI coding agents good enough for real software development?"
+    answer: "Yes, in the right hands. A good agent writes screens, data models, tests and plumbing far faster than a person typing. What it can't do is understand your business for you. It works from the context it's given and fills every gap with an assumption."
+  - question: "Will AI coding agents replace developers?"
+    answer: "They replace a lot of typing, not the thinking. Someone still has to understand the whole system, decide what to build, split the work sensibly and check what the agent wrote. AI multiplies a good engineer. It doesn't stand in for a missing one."
+  - question: "Can a non-technical founder build an app with AI agents alone?"
+    answer: "A prototype, often yes, and that's a fine way to test an idea. A product with payments, user data and real customers is different. The agent will happily build something that works in the demo and falls over in ways you won't spot until users do."
+  - question: "Do AI coding agents make software development cheaper?"
+    answer: "They make it faster, and faster usually means cheaper. The savings only hold if the scope is clear, because an agent turns a vague brief into a lot of confident code very quickly, and rebuilding that costs money too."
+  - question: "What are the risks of using AI coding agents?"
+    answer: "Confidently wrong code, hidden assumptions about how your business works, security mistakes nobody reviewed, and a codebase no human on the team actually understands. All of them shrink when an experienced engineer directs the agent and reads its output."
+  - question: "Should I ask my developer whether they use AI agents?"
+    answer: "Yes, and the right answer is usually yes. The better follow-up question is who reviews what the agent writes, and how. A team that can't answer that is just shipping faster guesses."
+---
+
+AI coding agents for software development are the best thing to happen to developers in years, and the worst thing to happen to projects nobody understands. Both at once. Same tool.
+
+You've seen the demos. Someone types a sentence, an agent writes an app, everyone claps. What the demo doesn't show is month two, when that app needs to do the thing the sentence didn't mention, and nobody in the room knows how it works.
+
+We use agents every day. They're a big part of why we now ship a focused MVP in 1 to 3 weeks instead of months. So this isn't an anti-AI post. It's a post about the one thing agents still can't supply: someone who understands the whole system.
+
+## What AI coding agents for software development actually change
+
+The honest list:
+
+- **The typing got cheap.** Screens, forms, data models, API calls, tests, the boring plumbing. An agent writes in an afternoon what used to take a week.
+- **Trying things got cheap.** Two approaches to a problem? Build both, keep the better one. That used to be a luxury.
+- **Refactoring got less scary.** Renaming a concept across 80 files is a prompt, not a weekend.
+
+Timelines dropped because of this, and we wrote about it in [how long it takes to build an app](/blog/how-long-does-it-take-to-build-an-app). Any agency still quoting nine months for a focused app is billing you for how software used to be built.
+
+## What they don't change
+
+The agent doesn't know your business. It knows what's in its context window, which is a fancy way of saying "whatever someone remembered to tell it".
+
+When something's missing, it doesn't stop and ask. It guesses. Politely, confidently, and in well-formatted code.
+
+Does a refund cancel the whole order or one item? Can a manager see another branch's data? What happens when a contractor uploads the same photo twice? If nobody told the agent, it picked an answer. You'll find out which one in production.
+
+This is the point Chand keeps making on LinkedIn, and it's the whole post in one line: an agent is only as good as the developer's understanding of the whole system. The less you understand, the more it guesses.
+
+## The guessing problem, illustrated
+
+Picture a hypothetical founder with a booking app idea and a free weekend. They describe it to an agent. By Sunday night there's an app with logins, a calendar and a payments screen. Genuinely impressive.
+
+Then the questions start. What if two people book the same slot at the same second? What if a payment succeeds but the booking fails? Who refunds whom when a provider cancels?
+
+The agent answered all of those over the weekend. Nobody asked it to. Nobody checked what it decided. The app works perfectly, right up until it meets more than one user at a time.
+
+That's not the agent's fault. It did exactly what it was asked. It just wasn't asked the right things, by someone who knew which things matter.
+
+## Who should be steering the agent
+
+Someone who could have written the code themselves. Not because they'll write it, but because they'll know when the agent's version is wrong.
+
+In practice that means a person who:
+
+- **Holds the whole system in their head.** How the data flows, which parts talk to which, what breaks if one piece changes.
+- **Writes the scope before the prompt.** A clear written scope is what the agent builds from. A vague scope gets built vaguely, at speed. We go into this in [how to scope an MVP](/blog/how-to-scope-an-mvp).
+- **Reads what came back.** Every time. Agents are fast. Reviews are what keep fast from turning into expensive.
+- **Knows when to throw it away.** Sometimes the agent's approach is wrong from the first file. Spotting that in ten minutes instead of ten days is most of the job now.
+
+Martin Fowler's team wrote a good piece on [the role of developer skills in agentic coding](https://www.martinfowler.com/articles/exploring-gen-ai/13-role-of-developer-skills.html), and it lands in the same place: the skills that matter shifted, they didn't disappear.
+
+## Where we use agents, and where we slow down
+
+Agents do most of our typing. Screens, CRUD, integrations, test scaffolding, migrations. That's where the speed comes from, and we pass it on as shorter timelines.
+
+We slow down on the parts where a wrong guess costs real money: payments, permissions, anything touching user data, and the data model itself. On [Bilge AI](/work/bilge-ai), which runs four AI providers for more than 15,000 users, the decisions that matter are about keys, limits and which provider answers, not about drawing chat bubbles. On the [surveyor job management system](/work/surveyor-job-management-system) we built for a UK firm, the rule "No RAMS, no work" had to be enforced by the software. An agent writes that check in seconds. Knowing it has to exist is the engineer's job.
+
+## The honest tradeoff
+
+If you're testing an idea and nobody will pay or store anything real yet, go ahead and build it with an agent yourself. Seriously. It's the cheapest market research there's ever been, and you'll learn more from a rough prototype than from a pitch deck.
+
+Just don't mistake the prototype for the product. The day real users, real money or real data show up, you need someone who understands what the agent built. Otherwise you don't have an app. You have a very fast way of producing a rebuild.
+
+*Got a project, or a prototype that's outgrown its weekend? [Tell us what you're building](/services/custom-software) and you'll get a written scope and a real timeline within 1 to 2 days.*
