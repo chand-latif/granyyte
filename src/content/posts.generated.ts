@@ -6,6 +6,210 @@ import type { Post } from "@/lib/content/posts";
 
 export const generatedPosts: Post[] = [
   {
+    "slug": "ai-coding-agents-software-development",
+    "title": "AI coding agents won't save a project nobody understands",
+    "description": "AI coding agents for software development are fast, and they guess when the context runs out. What they change, what they don't, and who should steer them.",
+    "date": "2026-11-24",
+    "readingTime": "5 min read",
+    "tags": [
+      "AI",
+      "Software Development",
+      "Planning"
+    ],
+    "hub": "mvp-startups",
+    "targetKeyword": "ai coding agents for software development",
+    "relatedService": "/services/custom-software",
+    "relatedServiceLabel": "Custom software development",
+    "faqs": [
+      {
+        "question": "Are AI coding agents good enough for real software development?",
+        "answer": "Yes, in the right hands. A good agent writes screens, data models, tests and plumbing far faster than a person typing. What it can't do is understand your business for you. It works from the context it's given and fills every gap with an assumption."
+      },
+      {
+        "question": "Will AI coding agents replace developers?",
+        "answer": "They replace a lot of typing, not the thinking. Someone still has to understand the whole system, decide what to build, split the work sensibly and check what the agent wrote. AI multiplies a good engineer. It doesn't stand in for a missing one."
+      },
+      {
+        "question": "Can a non-technical founder build an app with AI agents alone?",
+        "answer": "A prototype, often yes, and that's a fine way to test an idea. A product with payments, user data and real customers is different. The agent will happily build something that works in the demo and falls over in ways you won't spot until users do."
+      },
+      {
+        "question": "Do AI coding agents make software development cheaper?",
+        "answer": "They make it faster, and faster usually means cheaper. The savings only hold if the scope is clear, because an agent turns a vague brief into a lot of confident code very quickly, and rebuilding that costs money too."
+      },
+      {
+        "question": "What are the risks of using AI coding agents?",
+        "answer": "Confidently wrong code, hidden assumptions about how your business works, security mistakes nobody reviewed, and a codebase no human on the team actually understands. All of them shrink when an experienced engineer directs the agent and reads its output."
+      },
+      {
+        "question": "Should I ask my developer whether they use AI agents?",
+        "answer": "Yes, and the right answer is usually yes. The better follow-up question is who reviews what the agent writes, and how. A team that can't answer that is just shipping faster guesses."
+      }
+    ],
+    "secondaryKeywords": [
+      "ai coding agents",
+      "ai assisted software development",
+      "ai for software development",
+      "will ai replace developers",
+      "agentic coding",
+      "ai code generation risks",
+      "vibe coding"
+    ]
+  },
+  {
+    "slug": "flutterflow-limitations",
+    "title": "FlutterFlow limitations: when we tell clients not to use it",
+    "description": "FlutterFlow limitations, from a certified FlutterFlow team: where it shines, where it fights you, and why new long-lived apps now lean to plain Flutter.",
+    "date": "2026-11-24",
+    "readingTime": "4 min read",
+    "tags": [
+      "FlutterFlow",
+      "Flutter",
+      "Low-code"
+    ],
+    "hub": "flutterflow",
+    "targetKeyword": "flutterflow limitations",
+    "relatedService": "/flutterflow-developer-pakistan",
+    "relatedServiceLabel": "FlutterFlow developers in Pakistan",
+    "faqs": [
+      {
+        "question": "What are the main limitations of FlutterFlow?",
+        "answer": "Complex custom logic, unusual UI, heavy device-level features and large teams working on the same project all get harder in FlutterFlow. You can get around most of it with custom code, but the more custom code you add, the less you're getting from the platform."
+      },
+      {
+        "question": "Is FlutterFlow good enough for production apps?",
+        "answer": "Yes, for the right app. Plenty of FlutterFlow apps are live on both stores with real users. It suits apps built from standard screens, forms, lists and a Firebase or Supabase backend. It suits apps that keep getting more complex every month much less."
+      },
+      {
+        "question": "Can you export code from FlutterFlow?",
+        "answer": "Yes, on the paid plans, and that's one of its best features. You get a real Flutter project you can open, build and keep. Once you start editing the exported code by hand, though, you can't easily bring those changes back into the visual builder."
+      },
+      {
+        "question": "Should a new app start in FlutterFlow or in plain Flutter code?",
+        "answer": "In the AI coding agent era, a new app meant to live for years usually leans to plain Flutter, because agents work fully in code and you pay for one toolset instead of two. FlutterFlow still makes sense for quick validation builds and for teams already using it."
+      },
+      {
+        "question": "Should I migrate my existing FlutterFlow app to Flutter?",
+        "answer": "Usually not, if it works. Migration costs real money and delivers nothing your users can see. Move off only when the platform is actively blocking features you need, and even then do it in steps."
+      },
+      {
+        "question": "Does FlutterFlow scale?",
+        "answer": "The app itself scales as well as the backend behind it, usually Firebase or Supabase. What scales less well is the project: lots of custom code, lots of screens and several developers in one visual builder gets messy faster than the same app in code."
+      }
+    ],
+    "secondaryKeywords": [
+      "flutterflow disadvantages",
+      "flutterflow pros and cons",
+      "is flutterflow good for production",
+      "flutterflow vs flutter",
+      "flutterflow code export",
+      "low code vs code",
+      "flutterflow scalability"
+    ]
+  },
+  {
+    "slug": "how-to-scope-an-mvp",
+    "title": "How to scope an MVP without building everything at once",
+    "description": "MVP scope, done properly: one core job, a written not-included list, and a one-page template you can fill in before you talk to any developer.",
+    "date": "2026-11-24",
+    "readingTime": "5 min read",
+    "tags": [
+      "MVP",
+      "Planning",
+      "Startups"
+    ],
+    "hub": "mvp-startups",
+    "targetKeyword": "mvp scope",
+    "relatedService": "/services/mobile-app-development",
+    "relatedServiceLabel": "Mobile app development",
+    "faqs": [
+      {
+        "question": "What should an MVP scope include?",
+        "answer": "The one problem the app solves, who it's for, the single core flow from opening the app to getting the result, the screens that flow needs, the user roles, any must-have integrations, and a written list of everything that is not included in version one."
+      },
+      {
+        "question": "How many features should an MVP have?",
+        "answer": "As few as it takes to complete one core job properly. That usually means a handful of screens plus logins and a basic admin side. If you're counting features in the dozens, you're scoping version three."
+      },
+      {
+        "question": "How do I decide what to cut from my MVP?",
+        "answer": "Ask whether a user can still get the core result without it. If they can, it goes on the version two list. Also ask whether it could be done by hand for the first few months, like approving accounts or sending reports, before anyone automates it."
+      },
+      {
+        "question": "How long should it take to scope an MVP?",
+        "answer": "A couple of days of focused work, not weeks. One or two conversations, a written draft, one round of cuts. The goal is a document clear enough that a developer can quote a fixed price from it."
+      },
+      {
+        "question": "What is the difference between an MVP and a prototype?",
+        "answer": "A prototype shows how something might work, often with fake data, to test an idea or a design. An MVP is a real, working product that real users can sign up for, use and rely on, just with a deliberately small scope."
+      },
+      {
+        "question": "How do I stop scope creep on an MVP?",
+        "answer": "Write down what's not included before the build starts, agree a simple change process, and keep a version two list so good ideas have somewhere to go that isn't the current build. One decision-maker on your side helps more than any process."
+      }
+    ],
+    "secondaryKeywords": [
+      "how to scope an mvp",
+      "mvp scope document",
+      "define mvp features",
+      "minimum viable product scope",
+      "mvp feature list",
+      "mvp scope creep",
+      "what to include in an mvp"
+    ]
+  },
+  {
+    "slug": "multi-model-ai-app-development",
+    "title": "Multi-model AI app development: lessons from Bilge AI",
+    "description": "Multi-model AI app development, explained through Bilge AI: putting GPT, Claude, Gemini and Grok behind one app, and what that architecture really costs you.",
+    "date": "2026-11-24",
+    "readingTime": "4 min read",
+    "tags": [
+      "AI",
+      "Mobile Development",
+      "Flutter"
+    ],
+    "hub": "mvp-startups",
+    "targetKeyword": "multi model ai app development",
+    "relatedService": "/services/mobile-app-development",
+    "relatedServiceLabel": "Mobile app development",
+    "faqs": [
+      {
+        "question": "What is a multi-model AI app?",
+        "answer": "An app that lets users, or the app itself, use more than one AI model, such as GPT, Claude, Gemini or Grok, behind a single interface. The user gets one app, one account and one conversation history instead of four separate subscriptions."
+      },
+      {
+        "question": "How do you connect several AI models to one app?",
+        "answer": "Through a backend layer that talks to each provider's API and gives the app one consistent way to send messages and receive answers. The app never calls the providers directly, which keeps keys safe and lets you add or swap models without shipping a new app version."
+      },
+      {
+        "question": "Is a multi-model AI app just a wrapper?",
+        "answer": "Technically every AI app is built on someone's model. What makes it a product is everything around the model: language and cultural tuning, a good interface, history, limits, billing and a reason for a specific audience to choose it. Bilge AI's reason is being Turkish-first."
+      },
+      {
+        "question": "How long does it take to build a multi-model AI app?",
+        "answer": "A focused version with chat, model switching, logins and history can be built in 1 to 3 weeks with a senior team. Adding subscriptions, file uploads, voice and admin tools takes it toward 2 to 4 weeks, depending on the requirements."
+      },
+      {
+        "question": "What does it cost to run an app with several AI models?",
+        "answer": "Each provider bills per amount of text processed, at different rates, so running costs depend on which models your users pick and how much they chat. Usage limits per user and a paid plan for heavier use keep the bill predictable."
+      },
+      {
+        "question": "Can I build a multi-model AI app with Flutter?",
+        "answer": "Yes. Bilge AI is built with Flutter, so one codebase covers iOS and Android. With the model integrations in a backend layer, the Flutter side mostly handles the interface, streaming the answers and the conversation history."
+      }
+    ],
+    "secondaryKeywords": [
+      "multi model ai app",
+      "build an app with multiple ai models",
+      "chatgpt claude gemini in one app",
+      "ai model router",
+      "llm api integration app",
+      "ai wrapper app",
+      "multiple llm providers"
+    ]
+  },
+  {
     "slug": "fixed-price-vs-hourly-app-development",
     "title": "Fixed price vs hourly app development: who carries the risk",
     "description": "Fixed price vs hourly app development, explained by who carries the risk: when each model works, how each goes wrong, and what the contract needs.",
