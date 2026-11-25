@@ -19,7 +19,7 @@ Quality bar: every post needs a real story from `references/stories.md`, an hone
 | 2 | FlutterFlow limits: when we tell clients not to use it | flutterflow limitations | flutterflow | /flutterflow-developer-pakistan | intl ✅ drafted (folds in low-code vs code) |
 | 3 | School management software in Sialkot: fee vouchers, attendance and WhatsApp | school management software sialkot | sialkot-business | /software-development-sialkot | local ✅ drafted |
 | 3 | Taking over a half-finished FlutterFlow project | flutterflow project takeover | flutterflow | /flutterflow-developer-pakistan | intl |
-| 3 | Custom CRM vs HubSpot for a 10-person team: the arithmetic | custom crm vs hubspot | custom-vs-saas | /crm-development-pakistan | intl |
+| 3 | Custom CRM vs HubSpot for a 10-person team: the arithmetic | custom crm vs hubspot | custom-vs-saas | /crm-development-pakistan | intl ✅ drafted |
 | 3 | WordPress vs Next.js for a business website | wordpress vs nextjs for business website | sialkot-business | /web-design-sialkot | local ✅ drafted |
 | 3 | RAMS enforcement in software: "no RAMS, no work" | rams software for contractors | industry-software | /surveyor-management-software | intl |
 | 3 | What owning your source code actually means | source code ownership software development | offshore-hiring | /services/custom-software | intl intl ✅ drafted |
@@ -27,9 +27,9 @@ Quality bar: every post needs a real story from `references/stories.md`, an hone
 | 4 | Attendance system for a factory: biometric, app, or both? | attendance management system pakistan | sialkot-business | /software-development-sialkot | local ✅ drafted |
 | 4 | Fixed price vs hourly for app development | fixed price vs hourly app development | offshore-hiring | /affordable-app-development | intl intl ✅ drafted |
 | 4 | How long does it take to build an app? Honest timelines | how long does it take to build an app | mvp-startups | /services/mobile-app-development | intl intl ✅ drafted |
-| 4 | Export order tracking: from inquiry to QC to shipment | export order tracking software | sialkot-business | /software-development-sialkot | local |
-| 4 | Flutter app performance: where it beats native and where it doesn't | flutter app performance | flutterflow | /services/mobile-app-development | intl |
-| 4 | Is your website getting hacked? Signs on a cheap WordPress site | wordpress website security pakistan | sialkot-business | /web-development-pakistan | local |
+| 4 | Export order tracking: from inquiry to QC to shipment | export order tracking software | sialkot-business | /software-development-sialkot | local ✅ drafted |
+| 4 | Flutter app performance: where it beats native and where it doesn't | flutter app performance | flutterflow | /services/mobile-app-development | intl ✅ drafted |
+| 4 | Is your website getting hacked? Signs on a cheap WordPress site | wordpress website security pakistan | sialkot-business | /web-development-pakistan | local ✅ drafted |
 
 ## Scam-awareness hub (funnels to /work/scamalicious)
 Drafted 2026-11-14: how to tell if a text is a scam · what to do if you've been scammed · online shopping scams.
