@@ -6,6 +6,210 @@ import type { Post } from "@/lib/content/posts";
 
 export const generatedPosts: Post[] = [
   {
+    "slug": "custom-crm-vs-hubspot",
+    "title": "Custom CRM vs HubSpot for a 10-person team: the arithmetic",
+    "description": "Custom CRM vs HubSpot, worked out for a 10-person team: per-seat costs over three years, when HubSpot is the right call, and when building your own wins.",
+    "date": "2026-11-25",
+    "readingTime": "4 min read",
+    "tags": [
+      "CRM",
+      "Custom Software",
+      "SaaS"
+    ],
+    "hub": "custom-vs-saas",
+    "targetKeyword": "custom crm vs hubspot",
+    "relatedService": "/crm-development-pakistan",
+    "relatedServiceLabel": "CRM development from Pakistan",
+    "faqs": [
+      {
+        "question": "Is a custom CRM cheaper than HubSpot?",
+        "answer": "Over several years it often is for a team that needs paid tiers, because HubSpot charges per seat and the bill grows with every hire. In the first year HubSpot is almost always cheaper. Do the sum over three years, with the team size you expect, before deciding."
+      },
+      {
+        "question": "When should a small business just use HubSpot?",
+        "answer": "When your sales process looks like most sales processes: leads, deals, emails, a pipeline and some reporting. If HubSpot fits 90% of how you work, use it and spend the money on selling instead of software."
+      },
+      {
+        "question": "What does a custom CRM do that HubSpot can't?",
+        "answer": "It fits a process HubSpot wasn't built for, like jobs with site visits, multi-step approvals, industry rules or data that has to connect tightly to your other systems. It also has no per-seat pricing, so adding people doesn't add to the bill."
+      },
+      {
+        "question": "How long does it take to build a custom CRM?",
+        "answer": "A focused CRM for one team usually takes 1 to 3 weeks, and a fuller one with several roles, automations and integrations 2 to 4 weeks. Large multi-department systems take 3 to 6 weeks and are best built in phases."
+      },
+      {
+        "question": "Can a custom CRM work alongside HubSpot?",
+        "answer": "Yes, and sometimes that's the smartest option. Keep HubSpot for marketing and email, and build a custom tool for the part of your operation HubSpot handles badly, connected through HubSpot's API."
+      },
+      {
+        "question": "Who owns the data in a custom CRM?",
+        "answer": "You do, if it's built properly: the code in your repository, the database in your account, and no vendor deciding what happens to it when prices or terms change."
+      }
+    ],
+    "secondaryKeywords": [
+      "hubspot alternative",
+      "build your own crm",
+      "custom crm development",
+      "hubspot cost per user",
+      "hubspot too expensive",
+      "crm for small business",
+      "custom crm cost"
+    ]
+  },
+  {
+    "slug": "export-order-tracking-software",
+    "title": "Export order tracking software: inquiry to QC to shipment",
+    "description": "Export order tracking software for Sialkot manufacturers: one system from buyer inquiry to sampling, production, QC and shipment, instead of WhatsApp and Excel.",
+    "date": "2026-11-25",
+    "readingTime": "5 min read",
+    "tags": [
+      "Sialkot",
+      "Export",
+      "Custom Software"
+    ],
+    "hub": "sialkot-business",
+    "targetKeyword": "export order tracking software",
+    "relatedService": "/software-development-sialkot",
+    "relatedServiceLabel": "Software development in Sialkot",
+    "faqs": [
+      {
+        "question": "What is export order tracking software?",
+        "answer": "A system that follows every buyer order from the first inquiry through sampling, costing, production, quality checks, packing and shipment, so anyone in the company can see where an order stands without phoning the floor."
+      },
+      {
+        "question": "Can't we just track export orders in Excel?",
+        "answer": "You can, and many Sialkot exporters do. It works until several people edit different copies, the file lives on one person's laptop, and nobody can see an order's status from their phone. That's usually when orders start slipping."
+      },
+      {
+        "question": "What should export order tracking software include?",
+        "answer": "Buyer and inquiry records, sample tracking with approvals, order details with sizes and quantities, production stages, QC inspections with photos, packing lists, shipment details and a clear status for each order that the whole team can see."
+      },
+      {
+        "question": "Can buyers see their order status?",
+        "answer": "If you want them to. A buyer portal or a simple status link can show production and shipment stages without exposing your internal notes, which saves a lot of 'any update?' emails."
+      },
+      {
+        "question": "How long does it take to build an order tracking system?",
+        "answer": "A focused system covering orders, stages and QC can take 1 to 3 weeks. A fuller one with buyer access, documents, reports and links to inventory or accounts takes 2 to 4 weeks, depending on the requirements."
+      },
+      {
+        "question": "Is ready-made ERP software better than a custom tracking system?",
+        "answer": "A full ERP can be the right choice for a large exporter with the budget and staff to run it. Many small and mid-sized Sialkot manufacturers only need one clear tracking system that fits how they already work, and a big ERP ends up half used."
+      }
+    ],
+    "secondaryKeywords": [
+      "order tracking system for exporters",
+      "export management software pakistan",
+      "production tracking software sialkot",
+      "garment order tracking system",
+      "sialkot exporter software",
+      "qc inspection tracking",
+      "sample tracking software"
+    ]
+  },
+  {
+    "slug": "flutter-app-performance",
+    "title": "Flutter app performance: where native still wins",
+    "description": "Flutter app performance, honestly: where it matches native, where it falls short, and the mistakes that make Flutter apps slow (it's rarely Flutter's fault).",
+    "date": "2026-11-25",
+    "readingTime": "4 min read",
+    "tags": [
+      "Flutter",
+      "Mobile Development",
+      "Performance"
+    ],
+    "hub": "flutterflow",
+    "targetKeyword": "flutter app performance",
+    "relatedService": "/services/mobile-app-development",
+    "relatedServiceLabel": "Mobile app development",
+    "faqs": [
+      {
+        "question": "Is Flutter as fast as native?",
+        "answer": "For most apps, users can't tell the difference. Flutter compiles to native machine code and draws its own interface with its own rendering engine. Native still has the edge for heavy device-level work and for apps that need the smallest possible download size."
+      },
+      {
+        "question": "Why is my Flutter app slow?",
+        "answer": "Usually because of how it was built, not because of Flutter. Rebuilding huge parts of the screen on every change, loading full-size images into small thumbnails, doing heavy work on the main thread and fetching too much data are the common causes."
+      },
+      {
+        "question": "Are Flutter apps bigger than native apps?",
+        "answer": "A little. Flutter ships its engine inside the app, which adds a few megabytes to the download. For most apps that doesn't matter. For apps aimed at users with very limited storage or data, it's worth measuring."
+      },
+      {
+        "question": "What is Impeller in Flutter?",
+        "answer": "Impeller is Flutter's newer rendering engine, built to remove the stutter that could happen the first time an animation ran. It's now the default on iOS and on most modern Android devices."
+      },
+      {
+        "question": "How do you measure Flutter app performance?",
+        "answer": "Run the app in profile mode on a real, mid-range device, not in debug mode on a simulator. Flutter DevTools shows which frames take too long and why, so you fix the actual bottleneck instead of guessing."
+      },
+      {
+        "question": "When should I choose native over Flutter for performance?",
+        "answer": "When the app's core job is device-level: complex AR, heavy real-time video processing, long background tasks or deep integration with brand-new platform features. For typical business, marketplace and consumer apps, Flutter is fast enough."
+      }
+    ],
+    "secondaryKeywords": [
+      "is flutter slow",
+      "flutter vs native performance",
+      "flutter performance optimization",
+      "flutter jank",
+      "flutter app size",
+      "impeller flutter",
+      "flutter performance tips"
+    ]
+  },
+  {
+    "slug": "wordpress-website-security-pakistan",
+    "title": "Is your cheap WordPress site hacked? Signs and what to do",
+    "description": "WordPress website security in Pakistan: signs your cheap WordPress site has been hacked, what to do first, and how to stop it happening again.",
+    "date": "2026-11-25",
+    "readingTime": "4 min read",
+    "tags": [
+      "WordPress",
+      "Website Security",
+      "Pakistan"
+    ],
+    "hub": "sialkot-business",
+    "targetKeyword": "wordpress website security pakistan",
+    "relatedService": "/web-development-pakistan",
+    "relatedServiceLabel": "Web development in Pakistan",
+    "faqs": [
+      {
+        "question": "How do I know if my WordPress site has been hacked?",
+        "answer": "Common signs are visitors being redirected to spam or gambling sites, strange pages in Google results under your domain, a 'This site may be hacked' label in search, admin users you didn't create, your host suspending the account, or a warning in Google Search Console's Security Issues report."
+      },
+      {
+        "question": "Why do cheap WordPress websites get hacked so often?",
+        "answer": "Usually not because of WordPress itself. It's outdated plugins, nulled or pirated themes, an 'admin' username with a weak password, and nobody responsible for updates after the site is handed over."
+      },
+      {
+        "question": "What should I do first if my WordPress site is hacked?",
+        "answer": "Change every password, including hosting, WordPress and email. Take a full backup of the current state for evidence, contact your host, and then clean or restore the site. Check Google Search Console for security warnings and request a review once it's fixed."
+      },
+      {
+        "question": "Can a hacked WordPress site hurt my Google ranking?",
+        "answer": "Yes. Google can label the site as hacked in search results, show warnings to visitors and drop the spam pages a hack creates into your listings. Cleaning up quickly and requesting a review in Search Console limits the damage."
+      },
+      {
+        "question": "How do I protect my WordPress website?",
+        "answer": "Keep WordPress, themes and plugins updated, delete what you don't use, never install nulled themes, use a unique admin username and strong password with two-factor login, keep regular off-site backups, and make one named person responsible for updates."
+      },
+      {
+        "question": "Is a static website more secure than WordPress?",
+        "answer": "Generally, yes, because there's no public admin login, no plugins and no database behind every page. That doesn't make it invincible, but it gives attackers far less to work with."
+      }
+    ],
+    "secondaryKeywords": [
+      "wordpress site hacked",
+      "signs website is hacked",
+      "wordpress hacked redirect",
+      "this site may be hacked",
+      "wordpress security sialkot",
+      "fix hacked wordpress site",
+      "japanese keyword hack"
+    ]
+  },
+  {
     "slug": "ai-coding-agents-software-development",
     "title": "AI coding agents won't save a project nobody understands",
     "description": "AI coding agents for software development are fast, and they guess when the context runs out. What they change, what they don't, and who should steer them.",
@@ -1087,6 +1291,7 @@ export const generatedPosts: Post[] = [
     "title": "Custom Software vs. Off-the-Shelf: A Decision Guide",
     "description": "Paying for five SaaS tools that almost fit? A practical framework for deciding when custom software pays for itself, plus why owning software you can ship in weeks changes the math.",
     "date": "2026-07-02",
+    "updated": "2026-11-25",
     "readingTime": "3 min read",
     "tags": [
       "Custom Software",
