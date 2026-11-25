@@ -1,0 +1,86 @@
+---
+title: "Flutter app performance: where native still wins"
+description: "Flutter app performance, honestly: where it matches native, where it falls short, and the mistakes that make Flutter apps slow (it's rarely Flutter's fault)."
+date: 2026-11-25
+tags: ["Flutter", "Mobile Development", "Performance"]
+hub: flutterflow
+targetKeyword: "flutter app performance"
+secondaryKeywords: ["is flutter slow", "flutter vs native performance", "flutter performance optimization", "flutter jank", "flutter app size", "impeller flutter", "flutter performance tips"]
+relatedService: "/services/mobile-app-development"
+relatedServiceLabel: "Mobile app development"
+faqs:
+  - question: "Is Flutter as fast as native?"
+    answer: "For most apps, users can't tell the difference. Flutter compiles to native machine code and draws its own interface with its own rendering engine. Native still has the edge for heavy device-level work and for apps that need the smallest possible download size."
+  - question: "Why is my Flutter app slow?"
+    answer: "Usually because of how it was built, not because of Flutter. Rebuilding huge parts of the screen on every change, loading full-size images into small thumbnails, doing heavy work on the main thread and fetching too much data are the common causes."
+  - question: "Are Flutter apps bigger than native apps?"
+    answer: "A little. Flutter ships its engine inside the app, which adds a few megabytes to the download. For most apps that doesn't matter. For apps aimed at users with very limited storage or data, it's worth measuring."
+  - question: "What is Impeller in Flutter?"
+    answer: "Impeller is Flutter's newer rendering engine, built to remove the stutter that could happen the first time an animation ran. It's now the default on iOS and on most modern Android devices."
+  - question: "How do you measure Flutter app performance?"
+    answer: "Run the app in profile mode on a real, mid-range device, not in debug mode on a simulator. Flutter DevTools shows which frames take too long and why, so you fix the actual bottleneck instead of guessing."
+  - question: "When should I choose native over Flutter for performance?"
+    answer: "When the app's core job is device-level: complex AR, heavy real-time video processing, long background tasks or deep integration with brand-new platform features. For typical business, marketplace and consumer apps, Flutter is fast enough."
+---
+
+Flutter app performance is one of those topics where everybody has an opinion and almost nobody has opened the profiler. "Flutter is slow" usually means "the Flutter app I saw was slow". Those are very different sentences.
+
+Here's the short answer. For most apps, Flutter performance is indistinguishable from native to the people actually using them. It compiles to native machine code and renders its own interface. Where it falls short is heavy device-level work and download size. And when a Flutter app is slow, the cause is usually the code, not the framework.
+
+We build almost everything in Flutter, so we're biased. We also know where the usual problems hide, and it's rarely where people look first.
+
+## How Flutter app performance actually works
+
+Two things make Flutter fast.
+
+**It compiles to native code.** Release builds are compiled ahead of time into machine code for the phone's processor. There's no interpreter translating your app at runtime.
+
+**It draws its own pixels.** Instead of asking iOS and Android to draw buttons and lists, Flutter renders the whole interface with its own engine. That's why a Flutter app looks the same on both platforms, and why it can hit smooth frame rates without the platform's UI toolkit in the way. The newer engine, [Impeller](https://docs.flutter.dev/perf/impeller), was built to remove the stutter that could happen the first time an animation ran, and it's now the default on iOS and most modern Android devices.
+
+## Where Flutter matches native
+
+- **Scrolling, animations and transitions.** Built well, they're smooth. Users don't send reviews saying "this list feels cross-platform".
+- **Typical app work.** Forms, feeds, chat, maps, payments, dashboards. This is most apps, and Flutter handles it comfortably.
+- **Streaming and real-time UI.** [Bilge AI](/work/bilge-ai), our Turkish-first app with more than 15,000 users, streams answers from several AI models word by word. That's continuous UI updates on a mobile connection, built in Flutter.
+- **Audio, with care.** [Mindful Mantra](/work/mindful-mantra) lets users layer frequencies, binaural beats and soundscapes, kept in sync by a custom audio engine. That one took real engineering, which is the point of the next section.
+
+## Where native still wins
+
+Honest tradeoff time:
+
+- **Heavy device-level work.** Complex AR, real-time video processing, long-running background tasks. You can do these in Flutter with platform code underneath, but at that point you're writing native code anyway.
+- **Brand-new platform features.** When Apple or Google ships something new, native gets it first. Flutter plugins catch up, but not on launch day.
+- **The smallest possible download.** Flutter ships its engine inside the app, which adds a few megabytes. Rarely a problem. Occasionally a real one.
+
+We compare all three paths, native, Flutter and FlutterFlow, in [FlutterFlow vs native development](/blog/flutterflow-vs-native-development).
+
+## Why your Flutter app is actually slow
+
+Now the uncomfortable part. When we look at a slow Flutter app, it's almost never the framework. It's usually one of these:
+
+1. **Rebuilding the world.** One small change, and the code rebuilds the entire screen. Do that on every keystroke and the phone gets warm.
+2. **Giant images in tiny boxes.** A 4,000-pixel photo shrunk into a 60-pixel thumbnail is still a 4,000-pixel photo in memory. Twenty of them in a list is a bad afternoon.
+3. **Heavy work on the main thread.** Parsing big data or crunching numbers on the same thread that draws the screen. The screen waits. Users notice.
+4. **Fetching everything.** Loading 5,000 records to show the first 20. The database is happy to help. Your users are less happy.
+5. **Testing in debug mode.** Debug builds are deliberately slow. Judging performance there is like timing a sprinter while they tie their shoes.
+
+None of these are Flutter problems. They'd make a native app slow too. Flutter just gets the blame because it's the newest name on the box.
+
+## How to check yours properly
+
+- **Use profile mode on a real phone.** Run it with `flutter run --profile` on a mid-range Android, not your own flagship. Your users don't all have one.
+- **Open DevTools.** [Flutter's performance docs](https://docs.flutter.dev/perf) show how to find the slow frames and what's causing them.
+- **Measure app size.** `flutter build apk --analyze-size` tells you what's taking up space, so you cut the right thing.
+- **Fix the biggest problem first.** One bad list often costs more than everything else combined.
+
+## FlutterFlow apps too?
+
+Mostly the same rules apply, since FlutterFlow generates a Flutter app. The difference is control: some performance fixes are easier in plain code. We cover that in [FlutterFlow limitations](/blog/flutterflow-limitations).
+
+## The honest bottom line
+
+Flutter is fast enough for the vast majority of apps, and the one-codebase saving is real. If your app's main job is pushing the hardware to its limit, go native, and we'll tell you so.
+
+For everything else, a slow Flutter app is a code review waiting to happen. The framework is rarely the bottleneck. The developer occasionally is.
+
+*Got a Flutter app that stutters, or one you want built right first time? [Tell us about it](/services/mobile-app-development) and you'll get a straight answer within 1 to 2 days.*
