@@ -6,6 +6,211 @@ import type { Post } from "@/lib/content/posts";
 
 export const generatedPosts: Post[] = [
   {
+    "slug": "ai-voice-cloning-scams",
+    "title": "AI voice cloning scams: how to protect your family",
+    "description": "An AI voice cloning scam can copy a loved one's voice from a short clip. How the fake emergency call works, the family safe word, and where to report it.",
+    "date": "2026-11-27",
+    "readingTime": "5 min read",
+    "tags": [
+      "Scams",
+      "AI",
+      "Safety"
+    ],
+    "hub": "scam-awareness",
+    "targetKeyword": "ai voice cloning scam",
+    "relatedService": "/work/scamalicious",
+    "relatedServiceLabel": "See the SCAMalicious app we built",
+    "faqs": [
+      {
+        "question": "What is an AI voice cloning scam?",
+        "answer": "A scam where criminals use AI to copy the voice of someone you know, often from a short clip posted online, and then call you pretending to be them in an emergency. The goal is to panic you into sending money before you can check."
+      },
+      {
+        "question": "How much audio do scammers need to clone a voice?",
+        "answer": "Not much. The US Federal Trade Commission warns that a short audio clip, like one from a video posted online, can be enough for a voice cloning program. That's why the voice alone is no longer proof of who's calling."
+      },
+      {
+        "question": "How can I tell if a call is a voice clone?",
+        "answer": "Often you can't by listening, so don't rely on that. Rely on checking instead: hang up and call the person back on the number you already have for them, or ask a question only they would know, or use a family safe word agreed in advance."
+      },
+      {
+        "question": "What is a family safe word?",
+        "answer": "A word or phrase your family agrees on in person and never posts anywhere. If someone calls claiming to be a relative in trouble, ask for it. A real family member knows it. A voice clone doesn't."
+      },
+      {
+        "question": "What should I do if I sent money to a voice cloning scammer?",
+        "answer": "Call your bank or payment provider immediately and ask them to stop or reverse the payment, then report it to the police or your national fraud service, such as ReportFraud.ftc.gov in the US or Report Fraud in the UK. Keep the call log and any messages."
+      },
+      {
+        "question": "Who do voice cloning scammers target?",
+        "answer": "Anyone with family, but older relatives are a favourite, because the classic version is a grandchild in trouble. Parents get fake calls from children, and businesses get calls that sound like the boss asking for an urgent transfer."
+      }
+    ],
+    "secondaryKeywords": [
+      "voice cloning scam",
+      "ai voice scam call",
+      "family emergency scam",
+      "grandparent scam ai",
+      "deepfake voice scam",
+      "how to protect against voice cloning",
+      "family safe word"
+    ]
+  },
+  {
+    "slug": "easypaisa-jazzcash-scams",
+    "title": "Easypaisa and JazzCash scams: how they work, how to report",
+    "description": "An Easypaisa scam or JazzCash fraud usually wants your PIN or OTP. The common tricks in Pakistan, how to protect your wallet, and where to report it fast.",
+    "date": "2026-11-27",
+    "readingTime": "4 min read",
+    "tags": [
+      "Scams",
+      "Pakistan",
+      "Mobile Wallets"
+    ],
+    "hub": "scam-awareness",
+    "targetKeyword": "easypaisa scam",
+    "relatedService": "/work/scamalicious",
+    "relatedServiceLabel": "See the SCAMalicious app we built",
+    "faqs": [
+      {
+        "question": "What is the most common Easypaisa scam?",
+        "answer": "A call or message pretending to be from Easypaisa, a bank or a government programme, saying your account will be blocked or you've won a prize, and asking for your PIN or the OTP sent to your phone. With those, the scammer can empty your wallet."
+      },
+      {
+        "question": "Does Easypaisa or JazzCash ever ask for my PIN or OTP?",
+        "answer": "No. Genuine staff never need your PIN or the one-time code sent to your phone. Anyone asking for them is a scammer, however official they sound."
+      },
+      {
+        "question": "How do I report an Easypaisa scam?",
+        "answer": "Call Easypaisa's helpline straight away. Easypaisa lists 3737 for Telenor users, and the contact numbers for other networks are in the app and on its website. Then file a complaint with the NCCIA, Pakistan's National Cyber Crime Investigation Agency, through its 1799 helpline or online portal."
+      },
+      {
+        "question": "How do I report a JazzCash scam?",
+        "answer": "Contact JazzCash through the helpline listed in the JazzCash app or on its official website as fast as you can, so they can try to block the account or transaction. Then file a complaint with the NCCIA."
+      },
+      {
+        "question": "Someone sent money to my account by mistake and wants it back. Is it a scam?",
+        "answer": "Often, yes. Check your actual balance in the app, not the SMS. Fake 'payment received' messages are easy to make. If money really did arrive by mistake, let your wallet provider reverse it, instead of sending anything yourself."
+      },
+      {
+        "question": "Are BISP or Ehsaas prize messages real?",
+        "answer": "Be very careful. Scammers regularly impersonate government support programmes to ask for fees, PINs or codes. A genuine programme never asks you to pay to receive money. Check only through the programme's official channels."
+      }
+    ],
+    "secondaryKeywords": [
+      "jazzcash scam",
+      "jazzcash fraud",
+      "easypaisa fraud call",
+      "easypaisa account blocked message",
+      "bisp fake message",
+      "mobile wallet fraud pakistan",
+      "report easypaisa fraud",
+      "nccia complaint"
+    ]
+  },
+  {
+    "slug": "fake-job-offer-scams",
+    "title": "Job offer scams: how to spot a fake job before you pay",
+    "description": "A job offer scam promises easy work, then asks you to pay. The warning signs, task scams, fake cheques and how to check a recruiter is real before you reply.",
+    "date": "2026-11-27",
+    "readingTime": "4 min read",
+    "tags": [
+      "Scams",
+      "Jobs",
+      "Safety"
+    ],
+    "hub": "scam-awareness",
+    "targetKeyword": "job offer scam",
+    "relatedService": "/work/scamalicious",
+    "relatedServiceLabel": "See the SCAMalicious app we built",
+    "faqs": [
+      {
+        "question": "How can I tell if a job offer is a scam?",
+        "answer": "Be suspicious if the job came to you out of nowhere, pays a lot for very little, skips a real interview, happens only over chat, or asks you to pay anything at all. Real employers pay you. They don't charge you to start."
+      },
+      {
+        "question": "What is a task scam?",
+        "answer": "A fake job where you're paid small amounts to like videos, rate products or 'optimise' apps, then asked to deposit your own money to get bigger tasks or withdraw earnings. The deposits never come back. The US Federal Trade Commission reports these scams have grown sharply."
+      },
+      {
+        "question": "Do real employers ask for a registration or training fee?",
+        "answer": "No. Legitimate employers don't charge you for applying, training, equipment or a uniform before you start. Any fee to get a job is a red flag."
+      },
+      {
+        "question": "Is it a scam if an employer sends me a cheque to buy equipment?",
+        "answer": "Almost always. The cheque bounces after you've sent money to their 'supplier', and you're left owing the bank. A real company buys its own equipment or reimburses you through payroll."
+      },
+      {
+        "question": "How do I check if a recruiter is real?",
+        "answer": "Find the company's official website yourself, not from the link they sent, and contact them through it to confirm the job and the recruiter. Check the email domain matches the company, and look the recruiter up on LinkedIn."
+      },
+      {
+        "question": "What should I do if I already paid a job scammer?",
+        "answer": "Contact your bank or wallet provider immediately to try to stop the payment, stop sending money even if they promise a refund, and report it to the police or your national fraud service. Keep all chats and receipts."
+      }
+    ],
+    "secondaryKeywords": [
+      "fake job offer",
+      "task scam",
+      "work from home scam",
+      "job scam whatsapp",
+      "fake recruiter",
+      "how to spot a job scam",
+      "online job scam pakistan"
+    ]
+  },
+  {
+    "slug": "whatsapp-scams",
+    "title": "WhatsApp scams: the common ones and how to report them",
+    "description": "WhatsApp scams explained: the 'new number' message, the 6-digit code takeover, job and investment groups, plus how to secure your account and report a scammer.",
+    "date": "2026-11-27",
+    "readingTime": "4 min read",
+    "tags": [
+      "Scams",
+      "WhatsApp",
+      "Safety"
+    ],
+    "hub": "scam-awareness",
+    "targetKeyword": "whatsapp scams",
+    "relatedService": "/work/scamalicious",
+    "relatedServiceLabel": "See the SCAMalicious app we built",
+    "faqs": [
+      {
+        "question": "What are the most common WhatsApp scams?",
+        "answer": "The 'hi Mum, this is my new number' message asking for money, requests for your 6-digit verification code so someone can take over your account, fake job and task offers, investment or trading groups, and fake prize or delivery messages with links."
+      },
+      {
+        "question": "Why would someone ask for my WhatsApp code?",
+        "answer": "Because that code lets them register your WhatsApp number on their phone and take over your account. Then they message your contacts as you, usually asking for money. Never share the code with anyone, even a friend asking for it."
+      },
+      {
+        "question": "How do I protect my WhatsApp account from being hacked?",
+        "answer": "Turn on two-step verification in Settings, then Account, then Two-step verification. Never share your 6-digit code, check your linked devices regularly and remove any you don't recognise, and be careful with links and QR codes from people you don't know."
+      },
+      {
+        "question": "How do I report a scammer on WhatsApp?",
+        "answer": "Open the chat, tap the contact or group name, and choose Report, which also lets you block them. If you lost money, contact your bank straight away and report it to the police or your national fraud service as well."
+      },
+      {
+        "question": "What should I do if my WhatsApp account has been taken over?",
+        "answer": "Reinstall WhatsApp and register your number again with the code sent to your phone, which logs the scammer out. Turn on two-step verification, warn your contacts through another channel, and contact WhatsApp support if you can't get back in."
+      },
+      {
+        "question": "Can scammers see my messages if they take over my WhatsApp?",
+        "answer": "They can see new messages arriving and message your contacts as you. Old chat history usually stays on your own phone, but treat everything as exposed and warn your contacts quickly so nobody sends money."
+      }
+    ],
+    "secondaryKeywords": [
+      "whatsapp scam messages",
+      "hi mum whatsapp scam",
+      "whatsapp verification code scam",
+      "whatsapp account hacked",
+      "report scammer on whatsapp",
+      "whatsapp two step verification",
+      "whatsapp investment group scam"
+    ]
+  },
+  {
     "slug": "custom-crm-vs-hubspot",
     "title": "Custom CRM vs HubSpot for a 10-person team: the arithmetic",
     "description": "Custom CRM vs HubSpot, worked out for a 10-person team: per-seat costs over three years, when HubSpot is the right call, and when building your own wins.",
