@@ -34,16 +34,16 @@ Quality bar: every post needs a real story from `references/stories.md`, an hone
 ## Scam-awareness hub (funnels to /work/scamalicious)
 Drafted 2026-11-14: how to tell if a text is a scam · what to do if you've been scammed · online shopping scams.
 Next (one or two a week, high search demand, verify every reporting channel before publishing):
-- AI voice cloning scams: how to protect your family (kw: ai voice cloning scam)
-- WhatsApp scams: the common ones and how to report them (kw: whatsapp scams)
-- Fake job offer scams (kw: job offer scam)
+- AI voice cloning scams: how to protect your family (kw: ai voice cloning scam) ✅ drafted 2026-11-27
+- WhatsApp scams: the common ones and how to report them (kw: whatsapp scams) ✅ drafted 2026-11-27
+- Fake job offer scams (kw: job offer scam) ✅ drafted 2026-11-27
 - Romance scams: warning signs (kw: romance scam signs)
 - Lottery and prize scams (kw: lottery scam)
 - Phone call scams pretending to be your bank, aka vishing (kw: bank phone scam)
 - How to protect elderly parents from scams (kw: protect elderly from scams)
 - Deepfake scams explained (kw: deepfake scam)
 - Investment and crypto scams (kw: crypto investment scam)
-- Pakistan: JazzCash/Easypaisa wallet scams and how to report (kw: easypaisa scam) — local
+- Pakistan: JazzCash/Easypaisa wallet scams and how to report (kw: easypaisa scam) — local ✅ drafted 2026-11-27
 
 ## Backlog for weeks 5-12 (re-rank with Semrush data)
 - From Chand's LinkedIn opinions (2026-11-20): "AI coding agents won't save a project nobody understands" (intl, mvp-startups, kw: ai coding agents for software development) ✅ drafted 2026-11-24; "Low-code or code for a new app in the AI agent era" (intl, flutterflow, kw: low code vs code ai): folded into /blog/flutterflow-limitations 2026-11-24.
